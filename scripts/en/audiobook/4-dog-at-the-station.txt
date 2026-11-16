@@ -1,0 +1,63 @@
+# The station
+@energy 2
+> Narrate tenderly.
+
+At the little station of San Lorenzo, the seven o'clock train always arrived on time.
+And always, on the platform, a dog the color of **cinnamon**, with one floppy ear, was waiting for it.
+No one knew where he had come from.
+Rafael, the stationmaster, called him Captain, because he seemed to inspect every car.
+He saved him bread, a little rice and fresh water in an old dish.
+Captain never got on the train.
+He only wagged his tail when the doors opened, as if he were greeting each passenger.
+The travelers got used to him.
+Some brought him cookies, which he ate with pleasure; others patted his head before boarding.
+"Who are you waiting for, my friend?" Rafael would ask him every morning.
+The dog just looked at him with calm eyes, as if the answer were **obvious**.
+
+# The day of the fair
+@energy 3
+> The tension builds.
+
+One spring Saturday, the train arrived full of families heading to the town fair.
+There were balloons, music and a noise Captain had never heard before.
+In the crowd, a five-year-old girl let go of her mother's hand to look at a **red** balloon.
+When she turned around, her mother was gone.
+[pause 2s]
+Lucia started walking between legs and suitcases, farther and farther away.
+She reached the end of the platform, where the roof ended and the tracks began.
+She sat down on the edge and started to cry.
+On the other side of the station, her mother was calling her name again and again.
+"Lucia! Lucia!"
+The stationmaster dropped everything to look for her, but there were too many **people**.
+
+# Captain
+@energy 4
+> The climax: urgency and relief.
+
+Then Captain lifted his floppy ear and broke into a run.
+He shot through the crowd like an arrow, dodging bags, wheels and shoes.
+He found Lucia at the edge of the platform, just as a freight train was approaching.
+He stood in front of her and barked once, **loud**.
+The little girl jumped and stepped back toward the wall.
+[pause 2s]
+The train roared past a few meters away.
+Captain lay down beside her and rested his head on her knees.
+Lucia stopped crying and hugged him.
+That was how Rafael and her mother found them, a minute later.
+"This dog is a **hero**!" the woman said, her voice breaking.
+Rafael smiled: "I always knew he was waiting for something."
+
+# Back home
+@energy 2
+> Calm. End with a smile.
+
+Lucia's family wanted to take Captain home with them.
+Rafael agreed, although that night he missed his friend on the platform.
+But the next morning, at seven o'clock sharp, something **curious** happened.
+Down the road from town came Lucia, with her school backpack, and Captain, wagging his tail.
+The dog sat on the platform, as always, to wait for the train.
+[soft]When the doors opened, he greeted the passengers one by one.[/soft]
+Then he walked Lucia to school, crossing the tracks at the pedestrian crossing.
+Since that day, Captain has two jobs and two homes.
+In the evenings, he sleeps beside Lucia's bed, with his floppy ear on the pillow.
+And Rafael no longer wonders who he's **waiting** for. [down]

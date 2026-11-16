@@ -1,0 +1,75 @@
+# Titulares
+@fuerza 4
+> Voz de noticiero del tiempo: clara, amable y firme.
+
+Buenas noches, este es el pronóstico del tiempo para Puerto Alba, una ciudad **inventada** junto al mar.
+La semana llega con de todo un poco: sol, lluvia y un viento que no se quedará quieto.
+Quienes planean actividades al aire libre deberán revisar el informe con atención.
+Habrá un cambio **brusco** a mitad de semana, cuando entre un frente frío desde el sur.
+Las temperaturas bajarán casi diez grados en apenas un día.
+También repasaremos el estado de las playas, los cerros y las carreteras de la región.
+Y al final, algunos consejos para no salir sin paraguas en el peor momento.
+Les recordamos que Puerto Alba no existe: es una ciudad creada para este ejercicio.
+Comenzamos con el **lunes**.
+[pausa]
+
+# Lunes y martes
+@fuerza 4
+> Datos claros, ritmo constante.
+
+El lunes amanecerá despejado, con una mínima de **ocho** grados y una máxima de veinte.
+Será el mejor día de la semana para lavar ropa, salir en bicicleta o ir a la playa.
+El viento soplará suave desde el oeste, con ráfagas que no superarán los veinte kilómetros por hora.
+El martes, en cambio, llegarán las primeras nubes por la tarde.
+No se esperan lluvias, pero el cielo se verá gris y el aire, más **húmedo**.
+Las temperaturas se mantendrán parecidas, con una máxima de dieciocho grados.
+¿Conviene llevar chaqueta? [sube]
+Por la noche, sí: la temperatura caerá rápido después de las ocho.
+Los pescadores podrán salir sin problemas durante la **mañana**.
+Los modelos globales coinciden en que el cambio llegará el miércoles.
+[pausa]
+
+# Miércoles: llega el frente frío
+@fuerza 4
+> La nota principal: firme, sin dramatizar.
+
+La noticia principal de la semana llegará el miércoles con un frente frío desde el sur.
+Se esperan lluvias **intensas** durante toda la tarde y parte de la noche.
+En algunos sectores podrían caer más de treinta milímetros en pocas horas.
+El viento aumentará, con ráfagas de hasta setenta kilómetros por hora en la costa.
+Las autoridades recomiendan asegurar techos, toldos y objetos sueltos en patios y balcones.
+También piden evitar los paseos por el muelle mientras dure el temporal.
+La temperatura máxima no pasará de los **once** grados.
+Hay que tomar precauciones, pero no es motivo de alarma: el frente pasará rápido.
+Para el jueves por la mañana, la lluvia ya se habrá alejado hacia el **norte**.
+[pausa]
+
+# Jueves y viernes
+@fuerza 4
+> Tono más tranquilo.
+
+El jueves será un día frío, pero con el cielo cada vez más limpio.
+Tras la lluvia, se esperan heladas en las zonas altas de los cerros durante la madrugada.
+Quienes crucen el paso de montaña deberán manejar con cuidado y llevar cadenas.
+En la ciudad, la mínima rondará los **tres** grados.
+El viernes volverá el sol, aunque el aire seguirá fresco durante todo el día.
+La máxima subirá a quince grados, ideal para una caminata por el paseo costero.
+¿Y el fin de semana? [sube]
+Por ahora, todo indica un sábado **soleado** y un domingo con algunas nubes.
+Será un buen momento para el mercado de la plaza y las ferias al aire libre.
+Las playas volverán a tener salvavidas desde el sábado a las diez.
+[pausa]
+
+# Consejos para la semana
+@fuerza 4
+> Cierre del pronóstico: amable y firme.
+
+Para cerrar, algunos consejos prácticos para enfrentar estos cambios.
+Les recomendamos revisar el pronóstico cada mañana, porque el frente podría adelantarse unas horas.
+Conviene dejar a mano un paraguas, una chaqueta impermeable y calzado que no resbale.
+Quienes tengan plantas en el balcón deberían protegerlas del viento del **miércoles**.
+Y quienes salgan a la montaña deben avisar siempre su ruta a alguien de confianza.
+La **clave** es simple: planificar con tiempo.
+El clima de Puerto Alba es cambiante, pero con un poco de previsión, la semana será tranquila.
+Este fue el pronóstico del tiempo.
+Gracias por su compañía, y que tengan una **buena** semana. [baja]

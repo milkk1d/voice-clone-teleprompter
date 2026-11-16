@@ -1,0 +1,66 @@
+# The discovery
+@energy 2
+> Narrate calmly.
+
+Julian had been working as the town's mail carrier for only a month.
+That week, the post office was being renovated, and the old furniture had to be moved.
+When they pushed a heavy cabinet aside, an envelope covered in dust fell to the floor.
+It had an old stamp and a date from **forty** years ago.
+It was addressed to Carmen Ibanez, fourteen Orange Tree Street.
+"It must have been stuck behind the cabinet," said the head of the office.
+Julian looked at the envelope for a long time.
+No one had opened it, and the handwriting was **careful**, almost shy.
+Could that woman still be living there? [up]
+That afternoon, after finishing his route, he decided to find out.
+
+# The search
+@energy 3
+> Curiosity grows.
+
+At number fourteen on Orange Tree Street, there was now a bakery.
+The owner didn't know any Carmen, but she called her mother on the phone.
+"Of course! Carmen lives in the blue house next to the church," came the answer.
+Julian crossed the square with the envelope in his hand and his heart racing.
+People in the neighborhood waved at him without knowing what he was carrying.
+The door was opened by a woman with white hair, wearing an apron covered in flour.
+[pause 2s]
+"Carmen Ibanez?" Julian asked.
+"That's me. Is something wrong?"
+Julian explained the story and handed her the envelope.
+Carmen read the sender's **name** and stood very still.
+It was Martin, the young man who had gone to work in the south when she was twenty.
+She had never heard from **him** again.
+
+# The letter
+@energy 4
+> The climax: restrained emotion, no exaggeration.
+
+Carmen sat down in the kitchen and opened the envelope with care.
+She read it aloud, her voice breaking.
+"Carmen: the work in the south is hard, but I've saved enough for a small house."
+"If you still love me, wait for me at the station on the first day of spring."
+[pause 2s]
+Carmen set the letter on the table.
+"I thought he had forgotten me," she whispered. "I waited a whole year."
+"And he must have thought I didn't **want** to wait."
+Julian didn't know what to say.
+At the bottom of the letter was an address in a city in the south.
+"Maybe he still lives there!" Julian said all of a sudden.
+Carmen looked at him with **shining** eyes.
+"Then help me write to him!"
+
+# The reply
+@energy 2
+> End tenderly.
+
+That night they wrote a short letter together, with no frills.
+Carmen told him about her life: a happy marriage, two children, a garden and the calm of her seventies.
+At the end, she added a single sentence: "I got your letter. It arrived forty years late."
+Julian took it to the office himself the next day.
+Three weeks went by.
+[soft]Every morning, Carmen waited for the mail carrier at her door, with a cup of coffee for him.[/soft]
+One Monday, Julian came running with an envelope in his hand.
+It had the **same** careful handwriting, now a little shaky.
+Carmen didn't open it at the door.
+She tucked it into her apron pocket like a treasure and smiled.
+"I'll read this one alone," she said. "But tomorrow I'll tell you **everything**." [down]

@@ -12,7 +12,7 @@ Documento de definición. **No cambia el código todavía**: describe la quest, 
 6. [Prompt base — Español](#6-prompt-base--español)
 7. [Base prompt — English](#7-base-prompt--english)
 8. [Los 10 estilos de narración](#8-los-10-estilos-de-narración)
-9. [Los 5 temas sugeridos](#9-los-5-temas-sugeridos)
+9. [Los temas de cada estilo](#9-los-temas-de-cada-estilo)
 10. [Validación del guion pegado](#10-validación-del-guion-pegado)
 11. [Historial de pruebas](#11-historial-de-pruebas)
 12. [Pendientes](#12-pendientes)
@@ -82,7 +82,7 @@ Ajustes a partir de las pruebas v1 con Gemini y ChatGPT (sección 11).
 ## 1. Decisiones tomadas
 
 - **Solo teleprompter.** La grabación se hace en Audacity (u otro programa); la web incluye una guía de grabación.
-- **Camino principal: guiones listos.** Para los 5 temas sugeridos, la web entrega guiones ya escritos, validados y revisados (sección 13): la persona solo elige y lee. Generar el guion con su IA queda como opción para temas propios.
+- **Camino principal: guiones listos.** Para los 5 temas de cada estilo, la web entrega guiones ya escritos, validados y revisados (sección 13): la persona solo elige y lee. Generar el guion con su IA queda como opción para temas propios.
 - **Opción secundaria: el guion lo escribe la IA del usuario** (ChatGPT, Claude, Gemini…) con un prompt que arma la web. La web no llama a ninguna IA: costo cero.
 - **Un prompt por estilo.** Si el usuario elige varios estilos, recibe un prompt por cada uno y graba cada guion en una sesión aparte.
 - **Bilingüe.** La web, los prompts, los estilos y los temas existen en español e inglés.
@@ -139,7 +139,7 @@ Tres caminos:
 
 Si el estilo elegido todavía no tiene guiones listos, los temas sugeridos también llevan al prompt.
 
-Los 5 temas están en la sección 9. El mismo tema sirve para todos los estilos elegidos; cada bloque de estilo le dice a la IA cómo adaptarlo.
+Cada estilo tiene sus propios 5 temas (sección 9). Si se eligen varios estilos, el paso muestra un grupo de temas por estilo, y se elige uno en cada grupo. El tema propio, si se escribe, sirve para todos los estilos.
 
 ### Paso 5 — Tipo de clon / Clone type
 
@@ -685,10 +685,66 @@ Nobody tells you this about **coffee**.
 
 ---
 
-## 9. Los 5 temas sugeridos
+## 9. Los temas de cada estilo
 
-| # | ES | EN |
-|---|---|---|
+Cada estilo tiene **sus propios 5 temas**, pensados para ese estilo: así, al elegir otro estilo no aparecen los mismos temas contados de otra forma. Los guiones listos (sección 13) siguen exactamente estos temas, y el número del archivo es el número del tema.
+
+En la quest, el paso del tema muestra los 5 temas de cada estilo elegido. El usuario también puede escribir su propio tema. Los productos, ligas, ciudades y personajes de los temas son inventados: nunca marcas ni personas reales.
+
+| Estilo | # | ES | EN |
+|---|---|---|---|
+| Documental | 1 | **El océano profundo:** animales, presión y oscuridad. | **The deep ocean:** creatures, pressure and darkness. |
+| Documental | 2 | **La historia del chocolate:** del cacao maya a la tableta. | **The history of chocolate:** from Maya cacao to the bar. |
+| Documental | 3 | **El desierto de Atacama:** el lugar más seco del planeta. | **The Atacama Desert:** the driest place on the planet. |
+| Documental | 4 | **Cómo sabe tu celular dónde estás:** satélites y señales. | **How your phone knows where you are:** satellites and signals. |
+| Documental | 5 | **Los nervios del primer día:** qué pasa en el cuerpo y cómo calmarlos. | **First-day nerves:** what happens in your body and how to calm them. |
+| Noticiero | 1 | **El clima de la semana:** el pronóstico de una ciudad inventada, día por día. | **This week's weather:** the forecast for a made-up city, day by day. |
+| Noticiero | 2 | **La final del campeonato:** un partido decisivo de una liga inventada. | **The championship final:** a deciding match in a made-up league. |
+| Noticiero | 3 | **La lluvia de estrellas de esta noche:** qué es, a qué hora y cómo verla. | **Tonight's meteor shower:** what it is, when and how to see it. |
+| Noticiero | 4 | **El nuevo tren de la ciudad:** la inauguración de una línea en una ciudad inventada. | **The city's new train:** the opening of a line in a made-up city. |
+| Noticiero | 5 | **Noticiero de Villa Serena:** las noticias pequeñas de un pueblo inventado. | **The Villa Serena newscast:** the small news of a made-up town. |
+| Audiolibro | 1 | **La guardiana del faro:** una noche de tormenta y un barco perdido. | **The lighthouse keeper:** a stormy night and a lost ship. |
+| Audiolibro | 2 | **El reloj que se atrasaba:** un relojero y un reloj con un secreto. | **The clock that ran late:** a watchmaker and a clock with a secret. |
+| Audiolibro | 3 | **La carta que llegó cuarenta años tarde:** un cartero y un amor antiguo. | **The letter that arrived forty years late:** a mail carrier and an old love. |
+| Audiolibro | 4 | **El perro que esperaba en la estación:** una amistad de todos los días. | **The dog who waited at the station:** an everyday friendship. |
+| Audiolibro | 5 | **La niña que coleccionaba nubes:** un cuento para soñar. | **The girl who collected clouds:** a story for dreaming. |
+| Podcast | 1 | **Cocinando con mi abuela:** recetas, recuerdos y desastres en la cocina. | **Cooking with my grandma:** recipes, memories and kitchen disasters. |
+| Podcast | 2 | **Mi primera mascota:** lo que aprendí cuidando a otro ser. | **My first pet:** what I learned caring for another living being. |
+| Podcast | 3 | **Cómo dejé de dejarlo todo para mañana:** mi pelea con la procrastinación. | **How I stopped putting everything off:** my fight with procrastination. |
+| Podcast | 4 | **Mi peor corte de pelo:** una historia de vergüenza y risa. | **My worst haircut:** a story of embarrassment and laughter. |
+| Podcast | 5 | **Aprender algo nuevo de grande:** tocar un instrumento después de los treinta. | **Learning something new as an adult:** picking up an instrument after thirty. |
+| Comercial | 1 | **Una heladería artesanal:** sabores, ingredientes y el local. | **An artisan ice cream shop:** flavors, ingredients and the shop. |
+| Comercial | 2 | **Un gimnasio de barrio:** clases, horarios y comunidad. | **A neighborhood gym:** classes, schedules and community. |
+| Comercial | 3 | **Zapatillas para correr:** comodidad, diseño y duración. | **Running shoes:** comfort, design and durability. |
+| Comercial | 4 | **Un viaje en tren:** paisajes, comodidad y destinos. | **A train journey:** scenery, comfort and destinations. |
+| Comercial | 5 | **Una app para aprender idiomas:** lecciones cortas, práctica y progreso. | **A language-learning app:** short lessons, practice and progress. |
+| Tutorial | 1 | **Cómo hacer pan casero:** ingredientes, amasado y horneado. | **How to make homemade bread:** ingredients, kneading and baking. |
+| Tutorial | 2 | **Un huerto en el balcón:** macetas, tierra, riego y primeras cosechas. | **A balcony garden:** pots, soil, watering and first harvests. |
+| Tutorial | 3 | **Cómo grabar tu voz en casa:** el lugar, el micrófono y la grabación. | **How to record your voice at home:** the room, the microphone and the recording. |
+| Tutorial | 4 | **Cómo armar una mochila de viaje:** qué llevar y cómo ordenarlo. | **How to pack a travel backpack:** what to bring and how to organize it. |
+| Tutorial | 5 | **Cómo cuidar plantas de interior:** luz, agua y errores comunes. | **How to care for houseplants:** light, water and common mistakes. |
+| Motivacional | 1 | **Empezar de nuevo:** cuando un plan se cae y hay que volver a empezar. | **Starting over:** when a plan falls apart and you begin again. |
+| Motivacional | 2 | **El poder de los pasos pequeños:** hábitos que lo cambian todo. | **The power of small steps:** habits that change everything. |
+| Motivacional | 3 | **Fallar sin rendirse:** lo que enseñan los errores. | **Failing without giving up:** what mistakes teach you. |
+| Motivacional | 4 | **Tu primera carrera:** del sillón a la meta. | **Your first race:** from the couch to the finish line. |
+| Motivacional | 5 | **Cuidar tu energía:** descanso, límites y prioridades. | **Protecting your energy:** rest, boundaries and priorities. |
+| Suspenso | 1 | **La casa del final de la calle:** una luz que se enciende en una casa vacía. | **The house at the end of the street:** a light that turns on in an empty house. |
+| Suspenso | 2 | **El tren que no aparece en el horario:** un viaje nocturno que no debería existir. | **The train that isn't on the schedule:** a night trip that shouldn't exist. |
+| Suspenso | 3 | **La llamada de las tres de la mañana:** una voz conocida desde un número imposible. | **The three a.m. call:** a familiar voice from an impossible number. |
+| Suspenso | 4 | **El pueblo que desapareció del mapa:** un lugar que nadie recuerda. | **The town that vanished from the map:** a place nobody remembers. |
+| Suspenso | 5 | **El retrato del ático:** una pintura que parece cambiar. | **The portrait in the attic:** a painting that seems to change. |
+| Reels | 1 | **Datos curiosos del cuerpo humano:** lo que tu cuerpo hace sin que lo notes. | **Fun facts about the human body:** what your body does without you noticing. |
+| Reels | 2 | **Animales con superpoderes:** habilidades reales que parecen ficción. | **Animals with superpowers:** real abilities that sound like fiction. |
+| Reels | 3 | **Trucos de cocina:** atajos simples que funcionan. | **Kitchen hacks:** simple shortcuts that work. |
+| Reels | 4 | **Inventos que nacieron por accidente:** errores que cambiaron el mundo. | **Inventions born by accident:** mistakes that changed the world. |
+| Reels | 5 | **Récords de la naturaleza:** lo más alto, lo más rápido y lo más antiguo. | **Nature's records:** the tallest, the fastest and the oldest. |
+| Meditación | 1 | **Lluvia en la ventana:** escuchar la lluvia desde un lugar seguro. | **Rain on the window:** listening to the rain from a safe place. |
+| Meditación | 2 | **Un campo de lavanda:** caminar despacio bajo el sol de la tarde. | **A lavender field:** a slow walk under the afternoon sun. |
+| Meditación | 3 | **Una noche estrellada:** mirar el cielo y soltar el día. | **A starry night:** looking at the sky and letting go of the day. |
+| Meditación | 4 | **Relajar el cuerpo para dormir:** un recorrido de la cabeza a los pies. | **Relaxing your body for sleep:** a journey from head to toe. |
+| Meditación | 5 | **Un río de montaña:** el agua que corre y se lleva las preocupaciones. | **A mountain river:** running water that carries your worries away. |
+
+---|---|---|
 | 1 | **El océano profundo:** animales, presión, oscuridad. | **The deep ocean:** creatures, pressure, darkness. |
 | 2 | **La historia de algo cotidiano:** el café, la bicicleta o el chocolate. | **The story of an everyday thing:** coffee, the bicycle or chocolate. |
 | 3 | **Un viaje por un lugar:** la Patagonia, una gran ciudad o un desierto. | **A journey through a place:** Patagonia, a big city or a desert. |
@@ -971,7 +1027,7 @@ El script también imprime el comando de revisión que corresponde.
 
 ## 13. Biblioteca de guiones listos
 
-Guiones ya escritos para los 5 temas sugeridos. La persona elige estilo y tema, y lee: sin prompt, sin IA, sin revisar nada.
+Guiones ya escritos para los 5 temas de cada estilo. La persona elige estilo y tema, y lee: sin prompt, sin IA, sin revisar nada.
 
 ### Por qué
 - Quita el paso más difícil (ir a una IA, copiar, pegar y revisar).

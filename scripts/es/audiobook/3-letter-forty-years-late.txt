@@ -1,0 +1,66 @@
+# El hallazgo
+@fuerza 2
+> Narra con calma.
+
+Julián llevaba apenas un mes trabajando como cartero en el pueblo.
+Esa semana, la oficina de correos estaba en obras, y había que mover los muebles viejos.
+Al correr un armario pesado, cayó al suelo un sobre cubierto de polvo.
+Tenía un sello antiguo y una fecha de hacía **cuarenta** años.
+Iba dirigido a Carmen Ibáñez, calle de los Naranjos, número catorce.
+"Se debe haber quedado atrapado detrás del mueble", dijo la jefa de la oficina.
+Julián miró el sobre un largo rato.
+Nadie lo había abierto, y la letra era **cuidadosa**, casi tímida.
+¿Seguiría viviendo allí esa señora? [sube]
+Esa tarde, al terminar su recorrido, decidió averiguarlo.
+
+# La búsqueda
+@fuerza 3
+> Crece la curiosidad.
+
+En el número catorce de la calle de los Naranjos ahora había una panadería.
+La dueña no conocía a ninguna Carmen, pero llamó a su madre por teléfono.
+"¡Claro que sí! La señora Carmen vive en la casa azul, junto a la iglesia", le dijeron.
+Julián cruzó la plaza con el sobre en la mano y el corazón acelerado.
+La gente del barrio lo saludaba sin saber qué llevaba.
+Le abrió una mujer de cabello blanco, con un delantal lleno de harina.
+[pausa 2s]
+"¿Carmen Ibáñez?", preguntó Julián.
+"Ella misma. ¿Pasó algo?"
+Julián le explicó la historia y le entregó el sobre.
+Carmen leyó el **nombre** del remitente y se quedó quieta.
+Era Martín, el muchacho que se había ido a trabajar al sur cuando ella tenía veinte años.
+Nunca había vuelto a saber de **él**.
+
+# La carta
+@fuerza 4
+> El clímax: emoción contenida, sin exagerar.
+
+Carmen se sentó en la cocina y abrió el sobre con cuidado.
+Leyó en voz alta, con la voz quebrada.
+"Carmen: el trabajo en el sur es duro, pero ya ahorré para una casa pequeña."
+"Si todavía me quieres, espérame en la estación el primer día de primavera."
+[pausa 2s]
+Carmen dejó la carta sobre la mesa.
+"Pensé que se había olvidado de mí", susurró. "Lo esperé un año entero."
+"Y él seguramente pensó que yo no lo **quise** esperar."
+Julián no supo qué decir.
+Al final de la carta había una dirección en una ciudad del sur.
+"¡Tal vez todavía viva ahí!", dijo Julián de pronto.
+Carmen lo miró con los ojos **brillantes**.
+"¡Entonces ayúdame a escribirle!"
+
+# La respuesta
+@fuerza 2
+> Termina con ternura.
+
+Esa noche escribieron juntos una carta corta, sin adornos.
+Carmen contó su vida: un matrimonio feliz, dos hijos, un jardín y la tranquilidad de los setenta.
+Al final agregó una sola frase: "Recibí tu carta. Llegó con cuarenta años de atraso."
+Julián la llevó él mismo a la oficina al día siguiente.
+Pasaron tres semanas.
+[suave]Cada mañana, Carmen esperaba al cartero en la puerta, con una taza de café para él.[/suave]
+Un lunes, Julián llegó corriendo con un sobre en la mano.
+Tenía la **misma** letra cuidadosa, ahora un poco temblorosa.
+Carmen no lo abrió en la puerta.
+Lo guardó en el bolsillo del delantal y sonrió.
+"Este lo leo sola", dijo. "Pero mañana te cuento **todo**." [baja]

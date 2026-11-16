@@ -1,0 +1,73 @@
+# Titulares
+@fuerza 4
+> Voz de noticiero: clara y con buen ánimo.
+
+Buenas noches, hoy es un día histórico para Valle Hondo, una ciudad **inventada** para este noticiero.
+Esta mañana se inauguró la **primera** línea de tren urbano de la ciudad.
+Une el barrio de la estación Vieja con el hospital, la universidad y la plaza central.
+Son doce kilómetros y catorce estaciones que antes tomaban más de una **hora** en bus.
+Ahora, el mismo viaje dura apenas veinticinco minutos.
+En esta edición: cómo fue el primer viaje, cuánto cuesta el pasaje y qué cambia para los vecinos.
+También les contamos los horarios y las reglas para viajar con bicicleta.
+Recuerden que la ciudad, el tren y las personas de esta nota son ficticios.
+Comenzamos.
+[pausa]
+
+# El primer viaje
+@fuerza 4
+> Ritmo constante, con un toque de alegría.
+
+A las seis en punto, el primer tren salió de la estación Vieja con todos los asientos ocupados.
+Entre los pasajeros había estudiantes, trabajadores del hospital y muchos curiosos.
+Algunos vecinos llegaron dos horas antes solo para ser parte del **primer** viaje.
+"Esperé este tren durante veinte años", contó una vecina de ochenta, con una sonrisa enorme.
+Los vagones son silenciosos, tienen aire acondicionado y grandes ventanas panorámicas.
+Desde el puente que cruza el río, los pasajeros sacaron fotos de la ciudad al amanecer.
+¿Hubo problemas? [sube]
+Solo uno: una puerta tardó en cerrarse en la tercera estación, y el tren se retrasó dos **minutos**.
+Los ingenieros lo solucionaron rápido y el servicio siguió con **normalidad**.
+[pausa]
+
+# Precios y horarios
+@fuerza 4
+> Datos claros y precisos.
+
+El pasaje costará lo mismo que un viaje en bus, y se podrá pagar con la misma **tarjeta**.
+Los estudiantes y las personas mayores tendrán un descuento de la mitad del precio.
+Durante el primer mes, los domingos el viaje será **gratis**.
+El tren funcionará todos los días, desde las seis de la mañana hasta la medianoche.
+En las horas de mayor demanda, la frecuencia será de un tren cada cinco minutos.
+El resto del día, la espera no superará los diez minutos.
+Las bicicletas podrán subir en el último vagón, excepto entre las siete y las nueve de la mañana.
+Todas las estaciones tienen ascensores, rampas y señales para personas con discapacidad **visual**.
+La empresa calcula que el tren llevará más de cincuenta mil pasajeros por día.
+[pausa]
+
+# Qué cambia para los vecinos
+@fuerza 4
+> Nota con distintas voces, tono neutral.
+
+Para muchas familias, el tren cambia la **rutina** diaria.
+Quienes viven en los barrios del norte ganarán casi una hora al día.
+Los comerciantes cerca de las estaciones esperan más clientes y más movimiento.
+Sin embargo, algunos vecinos de la calle Larga se quejan del ruido de las obras de los últimos meses.
+El gobierno de la ciudad prometió plantar trescientos árboles a lo largo de la vía como **compensación**.
+También se espera menos tráfico en el centro y un aire más limpio.
+Los expertos calculan que miles de autos dejarán de circular cada día.
+¿Será suficiente para convencer a los conductores? [sube]
+Según los expertos, el éxito dependerá de que el servicio sea puntual y **seguro**.
+[pausa]
+
+# Cierre
+@fuerza 4
+> Cierre de noticiero: sereno y firme.
+
+Y para terminar, lo que viene.
+La segunda línea del tren ya está en estudio y uniría el aeropuerto con el centro.
+Las autoridades estiman que las obras podrían comenzar en dos años.
+La **meta** es tener tres líneas antes del final de la década.
+Mientras tanto, la primera línea será puesta a prueba por miles de pasajeros cada día.
+Hoy, en Valle Hondo, muchas personas llegaron a su trabajo un poco más **temprano**.
+Y algunas, simplemente, viajaron de ida y vuelta para disfrutar del paisaje.
+Estas fueron las noticias de Valle Hondo, una ciudad inventada con un tren nuevo.
+Gracias por acompañarnos y hasta la próxima **edición**. [baja]

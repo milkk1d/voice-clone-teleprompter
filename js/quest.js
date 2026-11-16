@@ -36,7 +36,7 @@
       q2: "¿Cómo quieres que hable tu clon?", q2hint: "Puedes elegir más de uno.",
       warnStyle: "<b>Ojo: tu clon hablará como lo grabes.</b> Elige el estilo de los videos que vas a hacer. Si eliges varios, grabarás cada uno en una sesión aparte, para que tu voz se mantenga pareja.",
       ready: "Guiones listos",
-      q3: "¿De qué quieres hablar?", ownTopic: "Mi propio tema", ownTopicPh: "Por ejemplo: la historia del fútbol en mi ciudad",
+      q3: "¿De qué quieres hablar?", q3hint: "Cada estilo tiene sus propios temas. Elige uno por estilo.", pickStyleFirst: "Primero elige un estilo en el paso 2.", ownTopic: "Mi propio tema", ownTopicPh: "Por ejemplo: la historia del fútbol en mi ciudad",
       haveScript: "¿Ya tienes tu guion?", haveScriptLink: "Pégalo directo en el teleprompter",
       q4: "¿Qué tipo de clon?", quick: "Clon rápido", quickD: "Unos 4 minutos por estilo. Ideal para probar.",
       pro: "Clon profesional", proD: "30 minutos o más, en partes de unos 10 minutos. Mejor calidad.",
@@ -85,7 +85,7 @@
       q2: "How should your clone sound?", q2hint: "You can pick more than one.",
       warnStyle: "<b>Heads up: your clone will sound the way you record it.</b> Pick the style of the content you'll create. If you pick several, you'll record each one in its own session, so your voice stays consistent.",
       ready: "Ready-made scripts",
-      q3: "What do you want to talk about?", ownTopic: "My own topic", ownTopicPh: "For example: the history of football in my city",
+      q3: "What do you want to talk about?", q3hint: "Each style has its own topics. Pick one per style.", pickStyleFirst: "First, pick a style in step 2.", ownTopic: "My own topic", ownTopicPh: "For example: the history of football in my city",
       haveScript: "Already have your script?", haveScriptLink: "Paste it straight into the teleprompter",
       q4: "What kind of clone?", quick: "Quick clone", quickD: "About 4 minutes per style. Great for trying it out.",
       pro: "Professional clone", proD: "30 minutes or more, in parts of about 10 minutes. Better quality.",
@@ -112,9 +112,13 @@
   };
 
   let ui = store.get("ui", (navigator.language || "es").toLowerCase().startsWith("es") ? "es" : "en");
-  const q = Object.assign({ lang: ui, accent: { es: "Latino neutro", en: "Neutral / International" }, styles: ["documentary"], topic: 1, own: "", tipo: "rapido", shown: false }, store.get("quest", {}));
+  const q = Object.assign({ lang: ui, accent: { es: "Latino neutro", en: "Neutral / International" }, styles: ["documentary"], topics: {}, own: "", tipo: "rapido", shown: false }, store.get("quest", {}));
   q.styles = (Array.isArray(q.styles) ? q.styles : []).filter((s) => D.styles[s]); // descarta claves viejas guardadas
   if (!q.styles.length) q.styles = ["documentary"];
+  if (!q.topics || typeof q.topics !== "object") q.topics = {}; // antes había un solo tema para todos los estilos
+  delete q.topic;
+  // tema elegido para un estilo: número 1-5 (de los temas de ese estilo) o "propio"
+  const topicOf = (style) => (q.topics[style] === "propio" || (q.topics[style] >= 1 && q.topics[style] <= 5) ? q.topics[style] : 1);
   const t = (k) => S[ui][k];
   const save = () => store.set("quest", q);
   const langs = () => (q.lang === "ambos" ? ["es", "en"] : [q.lang]);
@@ -174,18 +178,24 @@
       </fieldset>
 
       <fieldset class="panel stack">
-        <legend class="step-head"><span class="kicker">${t("step")} 3</span><h3>${t("q3")}</h3></legend>
-        <div class="grid three">${D.topics.map((tp) => {
-          const [title, rest] = tp[ui].split(/:\s*/);
-          return `<label class="card"><input type="radio" name="topic" value="${tp.n}" ${q.topic === tp.n ? "checked" : ""}>
-            <span class="top"><span class="name">${esc(title)}</span><span class="check round" aria-hidden="true">●</span></span>
-            <span class="uso">${esc(rest || "")}</span></label>`;
+        <legend class="step-head"><span class="kicker">${t("step")} 3</span><h3>${t("q3")}</h3>${q.styles.length > 1 ? `<span class="muted">${t("q3hint")}</span>` : ""}</legend>
+        ${q.styles.length ? "" : `<p class="muted">${t("pickStyleFirst")}</p>`}
+        ${D.order.filter((k) => q.styles.includes(k)).map((k) => {
+          const st = D.styles[k], cur = topicOf(k);
+          return `<div class="stack topic-group" role="radiogroup" aria-label="${esc(st.nombre[ui])}">
+            ${q.styles.length > 1 ? `<h4 class="kicker" style="margin:0">${esc(st.nombre[ui])}</h4>` : ""}
+            <div class="grid three">${st.topics.map((tp) => {
+              const [title, rest] = tp[ui].split(/:\s*/);
+              return `<label class="card"><input type="radio" name="topic-${k}" value="${tp.n}" ${cur === tp.n ? "checked" : ""}>
+                <span class="top"><span class="name">${esc(title)}</span><span class="check round" aria-hidden="true">●</span></span>
+                <span class="uso">${esc(rest || "")}</span></label>`;
+            }).join("")}
+              <label class="card"><input type="radio" name="topic-${k}" value="propio" ${cur === "propio" ? "checked" : ""}>
+                <span class="top"><span class="name">${t("ownTopic")}</span><span class="check round" aria-hidden="true">●</span></span>
+                <input type="text" class="own" data-style="${k}" value="${esc(q.own)}" placeholder="${esc(t("ownTopicPh"))}" style="position:static;opacity:1" ${cur === "propio" ? "" : "tabindex=\"-1\""}>
+              </label>
+            </div></div>`;
         }).join("")}
-          <label class="card"><input type="radio" name="topic" value="propio" ${q.topic === "propio" ? "checked" : ""}>
-            <span class="top"><span class="name">${t("ownTopic")}</span><span class="check round" aria-hidden="true">●</span></span>
-            <input type="text" id="own" value="${esc(q.own)}" placeholder="${esc(t("ownTopicPh"))}" style="position:static;opacity:1" ${q.topic === "propio" ? "" : "tabindex=\"-1\""}>
-          </label>
-        </div>
         <p class="muted">${t("haveScript")} <a href="teleprompter.html?paste=1&lang=${L[0]}&style=${q.styles[0] || "documentary"}">${t("haveScriptLink")}</a></p>
       </fieldset>
 
@@ -203,7 +213,7 @@
 
   function validity() {
     if (!q.styles.length) return t("needStyle");
-    if (q.topic === "propio" && !q.own.trim()) return t("needTopic");
+    if (q.styles.some((k) => topicOf(k) === "propio") && !q.own.trim()) return t("needTopic");
     return "";
   }
 
@@ -235,9 +245,10 @@
     const items = [];
     for (const lang of langs()) for (const style of q.styles) {
       const st = D.styles[style];
-      const r = Prompt.build(D, { lang, style, accent: q.accent[lang], topic: q.topic === "propio" ? q.own : q.topic, minutes: pro ? 10 : 4, parts: pro ? 3 : 1 });
+      const topic = topicOf(style);
+      const r = Prompt.build(D, { lang, style, accent: q.accent[lang], topic: topic === "propio" ? q.own : topic, minutes: pro ? 10 : 4, parts: pro ? 3 : 1 });
       const ready = LISTOS.filter((g) => g.idioma === lang && g.estilo === style).sort((a, b) => a.tema - b.tema);
-      const one = typeof q.topic === "number" ? ready.find((g) => g.tema === q.topic) : null;
+      const one = typeof topic === "number" ? ready.find((g) => g.tema === topic) : null;
       const langName = lang === "es" ? t("es") : t("en");
       let body = "";
       const accentNote = lang === "es" && ready.length && /rioplatense|españa/i.test(q.accent.es) && t("neutralNote") ? `<p class="note">${t("neutralNote")}</p>` : "";
@@ -268,20 +279,26 @@
     const el = e.target;
     if (el.name === "lang") q.lang = el.value;
     else if (el.name === "style") q.styles = [...document.querySelectorAll('input[name="style"]:checked')].map((x) => x.value);
-    else if (el.name === "topic") q.topic = el.value === "propio" ? "propio" : Number(el.value);
+    else if (el.name?.startsWith("topic-")) q.topics[el.name.slice(6)] = el.value === "propio" ? "propio" : Number(el.value);
     else if (el.name === "tipo") q.tipo = el.value;
     else if (el.dataset.accent) q.accent[el.dataset.accent] = el.value;
     else return;
     save();
-    if (el.name === "lang" || el.name === "topic") renderQuest();
-    if (el.name === "topic" && q.topic === "propio") $("#own")?.focus();
+    const isTopic = el.name?.startsWith("topic-");
+    if (el.name === "lang" || el.name === "style" || isTopic) {
+      renderQuest(); // el paso del tema depende del idioma y de los estilos elegidos; se devuelve el foco al mismo control
+      if (isTopic && el.value === "propio") document.querySelector(`.own[data-style="${el.name.slice(6)}"]`)?.focus();
+      else document.querySelector(`input[name="${el.name}"][value="${el.value}"]`)?.focus();
+    }
     renderPlan();
     $("#planHint").textContent = q.shown ? validity() : "";
   });
   document.addEventListener("input", (e) => {
-    if (e.target.id !== "own") return;
+    if (!e.target.classList.contains("own")) return;
     q.own = e.target.value;
-    if (q.own && q.topic !== "propio") { q.topic = "propio"; const r = document.querySelector('input[name="topic"][value="propio"]'); if (r) r.checked = true; }
+    document.querySelectorAll(".own").forEach((x) => { if (x !== e.target) x.value = q.own; }); // el tema propio es el mismo para todos los estilos
+    const k = e.target.dataset.style;
+    if (q.own && topicOf(k) !== "propio") { q.topics[k] = "propio"; const r = document.querySelector(`input[name="topic-${k}"][value="propio"]`); if (r) r.checked = true; }
     save();
     renderPlan();
   });

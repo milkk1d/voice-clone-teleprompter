@@ -1,0 +1,63 @@
+# The island
+@energy 2
+> Narrate calmly, like telling a story by the fire.
+
+Elvira had looked after the lighthouse on Crow Island for thirty years.
+She lived alone, with a gray cat, an old radio and a library of worn-out books.
+Every evening she climbed the hundred and twelve steps of the tower to switch on the light.
+She had only one rule: the lighthouse light never goes out.
+[soft]She used to say the sea spoke to her, and that you had to know how to listen.[/soft]
+That autumn evening, the sky turned a **strange** color, somewhere between green and purple.
+The gulls flew low, and the wind carried the smell of rain.
+Elvira closed the windows and checked the generator twice.
+"It's going to be a long night," she told the cat.
+The cat didn't answer, but it hid under the bed.
+Down below, the waves began to pound the rocks and the beach with real **force**.
+
+# The storm
+@energy 3
+> The tension builds.
+
+At midnight, the storm hit the island with all its fury.
+The rain beat against the windows as if someone were trying to get in.
+All at once, the radio crackled and a desperate voice filled the kitchen.
+"This is the fishing boat Southern Star. We can't see a thing, we're near the rocks!"
+Elvira ran up the tower.
+[pause 2s]
+The lighthouse was **dark**.
+Lightning had damaged the generator, and the great lamp wouldn't respond.
+Out among the waves, a tiny red light was drifting toward the rocks.
+That boat was heading straight for the **reef**.
+How could she guide them without a light? [up]
+
+# The light
+@energy 4
+> The climax: firmness and urgency.
+
+Then she remembered the oil lamp her grandfather had kept in the cellar.
+She went down to find it, wiped it with her sleeve and lit it with trembling hands.
+She climbed the hundred and twelve steps again, soaked and out of breath.
+She set the lamp in front of the great mirror and began to turn it by hand.
+It was heavy, but it moved.
+A **faint** beam of light swept out to sea, then another, and another.
+[pause 2s]
+The tiny red light hesitated for a moment, then changed course.
+"I see you! You're turning!" Elvira shouted, though no one could hear her.
+She kept turning the mirror all night long, until her arms ached.
+At dawn, the fishing boat sailed into the harbor on the other side of the island, **safe** and sound.
+
+# The visit
+@energy 2
+> Calm after the storm. End tenderly.
+
+Two days later, a small boat pulled up to the island's dock.
+It was Simon, the captain of the fishing boat, with his daughter and a basket of bread, cheese and fruit.
+"You saved our lives," he said, taking off his cap.
+Elvira smiled and showed him the old oil lamp, her new treasure.
+"To be honest, it was my grandfather who saved you."
+In the afternoon they drank tea in the kitchen while the cat slept by the **stove**.
+The captain's daughter asked if she could climb the tower.
+[soft]From the top, the sea looked calm, as if it had never been angry at all.[/soft]
+Before leaving, Simon promised to come back every autumn.
+And he kept his word: every year, when the sky turns strange, a boat arrives with **fresh** bread.
+Elvira waits for it on the dock, with the oil lamp still **burning**. [down]

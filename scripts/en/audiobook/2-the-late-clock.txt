@@ -1,0 +1,65 @@
+# The workshop
+@energy 2
+> Narrate calmly, with a touch of mystery.
+
+Don Aurelio had a clock shop on a narrow street downtown.
+The walls were covered with clocks of every size, and all of them showed the same time.
+People in the neighborhood said time never made mistakes in there.
+That steady ticking was, to him, the most **beautiful** music in the world.
+One rainy morning, a young woman named Ines came in with a wooden box under her arm.
+Inside was a table clock, golden, with flowers painted on its face.
+"It was my grandmother's," she explained. "It works, but it always runs seven minutes slow."
+Don Aurelio examined it through his magnifying glass.
+It had dust, a tired spring and a small crack in the glass.
+"Leave it with me for a week. I'll make it **perfect**," he promised.
+Ines hesitated before letting go of the box.
+[soft]It was as if she were saying goodbye to someone.[/soft]
+
+# The problem
+@energy 3
+> The tension builds: something doesn't make sense.
+
+Don Aurelio cleaned every piece, changed the spring and adjusted the wheels one by one.
+He left it running all night beside the most accurate clock in the shop.
+The next morning, Ines's clock was seven minutes slow.
+"Impossible!" the clockmaker muttered, taking off his glasses.
+He repeated the work twice more, with the same **result**.
+It wasn't six minutes, or eight: it was always exactly seven.
+He no longer knew what else to check.
+[pause 2s]
+Then he noticed something he hadn't seen before.
+On the back, hidden under a brass plate, there was a tiny **door**.
+What could a clock be hiding in a place like that? [up]
+With a fine needle, he opened it very slowly.
+
+# The secret
+@energy 4
+> The climax: restrained emotion.
+
+Inside was a small treasure: a folded piece of paper, yellow with age.
+He sat down at his workbench and unfolded it with care.
+It was a handwritten note, in elegant writing and almost faded ink.
+"Rosa: I set this clock back so I could have seven more minutes with you every morning."
+Below it was a signature and a date from sixty years earlier.
+All at once, Don Aurelio understood.
+Ines's grandfather had set the clock slow **on purpose**.
+[pause 2s]
+Every morning, the clock told them it was still early, and they ate breakfast together without hurrying.
+He arrived at work seven minutes late, but he gained seven minutes with her.
+"What a **strange** deal, and what a beautiful one!" he said out loud, alone in the shop.
+
+# The decision
+@energy 2
+> Intimate and warm. End slowly.
+
+A week later, Ines came back to the shop.
+Don Aurelio handed her the clock, clean and shiny, with new glass.
+"I fixed it," he said. "But first, I want to show you something."
+He gave her the note and waited in silence while she read it.
+Ines put a hand over her mouth.
+[soft]"My grandmother always said my grandfather was the least punctual man in the world."[/soft]
+She laughed through her tears.
+"Would you like me to set it to the exact time?" the clockmaker asked.
+Ines thought for a moment and shook her head.
+"No. Leave it with its seven **minutes**. They belong to them."
+Since then, Ines's house has a clock that runs seven minutes late, and nobody **minds**. [down]

@@ -1,0 +1,66 @@
+# Los frascos
+@fuerza 2
+> Voz de cuento para dormir, suave y cálida.
+
+En un pueblo de colinas amarillas vivía una niña llamada Amalia.
+Tenía una colección que nadie más en el mundo tenía: guardaba **nubes**.
+Las atrapaba al amanecer, cuando bajaban a descansar sobre el prado.
+Usaba frascos de vidrio, de esos que su abuela llenaba de mermelada.
+Tenía nubes redondas, nubes largas, una gigante y una pequeñita con forma de conejo.
+Cada noche las ordenaba en la repisa de su ventana.
+[suave]A veces, en silencio, una de ellas dejaba caer tres gotas sobre el cristal.[/suave]
+Su abuela era la única que no se reía de ella.
+Su hermano mayor, en cambio, se burlaba sin parar.
+"¿Y para qué sirve una nube en un frasco?", le preguntaba.
+Amalia se encogía de hombros.
+"Todavía no lo sé. Pero algún día **servirán**."
+
+# La sequía
+@fuerza 3
+> La tensión crece despacio.
+
+Ese verano no llovió ni una sola vez.
+El río se volvió un hilo de agua y las vacas buscaban sombra bajo los árboles secos.
+Hasta los pájaros dejaron de cantar por las tardes.
+Los adultos miraban el cielo cada mañana, con la frente **arrugada**.
+En la plaza, frente a la iglesia, el alcalde anunció que el pozo del pueblo estaba casi vacío.
+[pausa 2s]
+Esa noche, Amalia no pudo dormir.
+Su hermano ya no se burlaba: también tenía sed.
+Miró sus frascos uno por uno, iluminados por la luna.
+Las nubes se movían inquietas, como si también tuvieran sed.
+Entonces entendió para qué las había guardado **tanto** tiempo.
+Se puso las zapatillas sin hacer ruido y salió de la casa con los frascos en brazos.
+
+# La lluvia
+@fuerza 4
+> El clímax: alegría que crece.
+
+Subió a la colina más alta del pueblo en plena madrugada.
+Dejó los frascos en el pasto y respiró hondo.
+Luego los abrió uno a uno, con mucho cuidado.
+Por un momento, las nubes dudaron, como si tuvieran miedo de alejarse de ella.
+Después salieron despacio, estirándose como gatos después de una siesta.
+Subieron, se juntaron y crecieron hasta cubrir todo el **cielo**.
+[pausa 2s]
+La primera gota cayó sobre su nariz.
+Después vino otra, y otra, y de pronto llovía sobre todo el valle.
+Los vecinos salieron de sus casas en pijama, riendo y mirando hacia arriba.
+"¡Está lloviendo! ¡Por fin está lloviendo!", gritaba su hermano, empapado.
+Amalia levantó los brazos y dejó que el agua le mojara la **cara**.
+
+# El último frasco
+@fuerza 2
+> Termina muy despacio, como al final de un cuento.
+
+Llovió durante tres días seguidos.
+El río volvió a cantar, el pozo se llenó y los campos se pusieron verdes otra vez.
+Las vacas volvieron a los campos y el alcalde dio un discurso que nadie escuchó.
+Nadie supo explicar de dónde habían salido esas nubes.
+Bueno, casi nadie.
+Su hermano le regaló un frasco nuevo, el más grande que encontró en la cocina.
+"Para que empieces otra colección", le dijo, un poco avergonzado.
+Amalia lo dejó en la repisa, vacío y brillante.
+[suave]Cada amanecer lo mira con paciencia, esperando la nube **correcta**.[/suave]
+Dicen que, si miras con atención esa ventana, a veces la ves sonreír.
+Y en ese pueblo, desde entonces, nadie se burla de los **sueños** de una niña. [baja]

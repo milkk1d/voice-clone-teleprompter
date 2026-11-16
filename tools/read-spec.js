@@ -108,7 +108,12 @@ function leer(specPath = path.join(__dirname, "..", "prompt-spec.md")) {
 
   // 6. temas (sección 9)
   const strip = (s) => s.replace(/\*\*/g, "");
-  const topics = tableAfter(/^## 9\. Los 5 temas/).map((r) => ({ n: +r[0], es: strip(r[1]), en: strip(r[2]) }));
+  for (const r of tableAfter(/^## 9\. Los temas de cada estilo/)) {
+    const k = KEY[norm(r[0])];
+    if (!k || !styles[k]) fail(`tema con estilo desconocido: ${r[0]}`);
+    (styles[k].topics ||= []).push({ n: +r[1], es: strip(r[2]), en: strip(r[3]) });
+  }
+  for (const k of keys) if ((styles[k].topics || []).length !== 5) fail(`el estilo ${k} no tiene 5 temas`);
 
   // 7. plantillas y textos de partes
   const templates = { es: block(/^Eres guionista experto/, /^Entrega SOLO el guion/), en: block(/^You are an expert voice-over/, /^Return ONLY the script/) };
@@ -121,7 +126,7 @@ function leer(specPath = path.join(__dirname, "..", "prompt-spec.md")) {
   const continuacion = after(/^### Mensaje de continuación/);
 
   const order = keys.sort((a, b) => styles[a].num - styles[b].num);
-  return { version: (L[0].match(/v[\d.]+/) || ["?"])[0], order, styles, largo, accents, topics, templates, parte, continuacion };
+  return { version: (L[0].match(/v[\d.]+/) || ["?"])[0], order, styles, largo, accents, templates, parte, continuacion };
 }
 
 module.exports = { leer, norm, KEY };

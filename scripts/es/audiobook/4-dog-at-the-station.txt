@@ -1,0 +1,63 @@
+# La estación
+@fuerza 2
+> Narra con ternura.
+
+En la pequeña estación de San Lorenzo, el tren de las siete llegaba siempre puntual.
+Y siempre, en el andén, lo esperaba un perro de color **canela** con una oreja doblada.
+Nadie sabía de dónde había salido.
+Rafael, el jefe de estación, lo llamaba Capitán, porque parecía vigilar cada vagón.
+Le guardaba pan, un poco de arroz y agua fresca en un plato viejo.
+Capitán no subía nunca al tren.
+Solo movía la cola cuando se abrían las puertas, como si saludara a cada pasajero.
+Los viajeros se acostumbraron a él.
+Algunos le traían galletas; otros le acariciaban la cabeza antes de subir.
+"¿A quién esperas tanto, amigo?", le preguntaba Rafael cada mañana.
+El perro lo miraba con ojos tranquilos, como si la respuesta fuera **evidente**.
+
+# El día de la feria
+@fuerza 3
+> Crece la tensión.
+
+Un sábado de primavera, el tren llegó lleno de familias que iban a la feria del pueblo.
+Había globos, música y un ruido que Capitán nunca había escuchado.
+Entre la multitud, una niña de cinco años soltó la mano de su madre para mirar un globo **rojo**.
+Cuando se dio vuelta, ya no la veía.
+[pausa 2s]
+Lucía empezó a caminar entre piernas y maletas, cada vez más lejos.
+Llegó al final del andén, donde terminaba el techo y empezaban las vías.
+Se sentó en el borde y se puso a llorar.
+Al otro lado de la estación, su madre gritaba su nombre sin parar.
+"¡Lucía! ¡Lucía!"
+El jefe de estación dejó todo y salió a buscarla, pero había demasiada **gente**.
+
+# Capitán
+@fuerza 4
+> El clímax: urgencia y alivio.
+
+Entonces Capitán levantó la oreja doblada y echó a correr.
+Atravesó la multitud como una flecha, esquivando bolsos, ruedas y zapatos.
+Encontró a Lucía en el borde del andén, justo cuando un tren de carga se acercaba.
+Se puso delante de ella y le ladró una sola vez, **fuerte**.
+La niña se asustó y retrocedió hacia la pared.
+[pausa 2s]
+El tren pasó rugiendo a pocos metros.
+Capitán se acostó a su lado y apoyó la cabeza en sus rodillas.
+Lucía dejó de llorar y lo abrazó.
+Así los encontraron Rafael y la madre, un minuto después.
+"¡Este perro es un **héroe**!", dijo la mujer, con la voz rota.
+Rafael sonrió: "Siempre supe que estaba esperando algo."
+
+# El regreso
+@fuerza 2
+> Calma. Termina con una sonrisa.
+
+La familia de Lucía quiso llevarse a Capitán a su casa.
+Rafael aceptó, aunque esa noche extrañó a su compañero del andén.
+Pero a la mañana siguiente, a las siete en punto, pasó algo **curioso**.
+Por el camino del pueblo aparecieron Lucía, con su mochila del colegio, y Capitán, moviendo la cola.
+El perro se sentó en el andén, como siempre, a esperar el tren.
+[suave]Cuando las puertas se abrieron, saludó a los pasajeros uno por uno.[/suave]
+Después acompañó a Lucía hasta la escuela, cruzando la vía por el paso de peatones.
+Desde ese día, Capitán tiene dos trabajos y dos casas.
+Por las tardes, duerme junto a la cama de Lucía, con la oreja doblada sobre la almohada.
+Y Rafael ya no se pregunta a quién **espera**. [baja]

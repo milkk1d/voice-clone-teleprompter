@@ -60,7 +60,34 @@ window.DATOS = {
      "es": "Como máximo 2 [pausa] y 2 [respira] por sección.",
      "en": "At most 2 [pause] and 2 [breathe] per section."
     }
-   }
+   },
+   "topics": [
+    {
+     "n": 1,
+     "es": "El océano profundo: animales, presión y oscuridad.",
+     "en": "The deep ocean: creatures, pressure and darkness."
+    },
+    {
+     "n": 2,
+     "es": "La historia del chocolate: del cacao maya a la tableta.",
+     "en": "The history of chocolate: from Maya cacao to the bar."
+    },
+    {
+     "n": 3,
+     "es": "El desierto de Atacama: el lugar más seco del planeta.",
+     "en": "The Atacama Desert: the driest place on the planet."
+    },
+    {
+     "n": 4,
+     "es": "Cómo sabe tu celular dónde estás: satélites y señales.",
+     "en": "How your phone knows where you are: satellites and signals."
+    },
+    {
+     "n": 5,
+     "es": "Los nervios del primer día: qué pasa en el cuerpo y cómo calmarlos.",
+     "en": "First-day nerves: what happens in your body and how to calm them."
+    }
+   ]
   },
   "news": {
    "key": "news",
@@ -108,7 +135,34 @@ window.DATOS = {
      "es": "Usa [pausa] solo entre notas: como máximo 1 por sección, al final.",
      "en": "Use [pause] only between items: at most 1 per section, at the end."
     }
-   }
+   },
+   "topics": [
+    {
+     "n": 1,
+     "es": "El clima de la semana: el pronóstico de una ciudad inventada, día por día.",
+     "en": "This week's weather: the forecast for a made-up city, day by day."
+    },
+    {
+     "n": 2,
+     "es": "La final del campeonato: un partido decisivo de una liga inventada.",
+     "en": "The championship final: a deciding match in a made-up league."
+    },
+    {
+     "n": 3,
+     "es": "La lluvia de estrellas de esta noche: qué es, a qué hora y cómo verla.",
+     "en": "Tonight's meteor shower: what it is, when and how to see it."
+    },
+    {
+     "n": 4,
+     "es": "El nuevo tren de la ciudad: la inauguración de una línea en una ciudad inventada.",
+     "en": "The city's new train: the opening of a line in a made-up city."
+    },
+    {
+     "n": 5,
+     "es": "Noticiero de Villa Serena: las noticias pequeñas de un pueblo inventado.",
+     "en": "The Villa Serena newscast: the small news of a made-up town."
+    }
+   ]
   },
   "audiobook": {
    "key": "audiobook",
@@ -156,7 +210,34 @@ window.DATOS = {
      "es": "Como máximo 2 [pausa] y 2 [respira] por sección.",
      "en": "At most 2 [pause] and 2 [breathe] per section."
     }
-   }
+   },
+   "topics": [
+    {
+     "n": 1,
+     "es": "La guardiana del faro: una noche de tormenta y un barco perdido.",
+     "en": "The lighthouse keeper: a stormy night and a lost ship."
+    },
+    {
+     "n": 2,
+     "es": "El reloj que se atrasaba: un relojero y un reloj con un secreto.",
+     "en": "The clock that ran late: a watchmaker and a clock with a secret."
+    },
+    {
+     "n": 3,
+     "es": "La carta que llegó cuarenta años tarde: un cartero y un amor antiguo.",
+     "en": "The letter that arrived forty years late: a mail carrier and an old love."
+    },
+    {
+     "n": 4,
+     "es": "El perro que esperaba en la estación: una amistad de todos los días.",
+     "en": "The dog who waited at the station: an everyday friendship."
+    },
+    {
+     "n": 5,
+     "es": "La niña que coleccionaba nubes: un cuento para soñar.",
+     "en": "The girl who collected clouds: a story for dreaming."
+    }
+   ]
   },
   "podcast": {
    "key": "podcast",
@@ -204,7 +285,34 @@ window.DATOS = {
      "es": "Como máximo 2 [pausa] y 2 [respira] por sección.",
      "en": "At most 2 [pause] and 2 [breathe] per section."
     }
-   }
+   },
+   "topics": [
+    {
+     "n": 1,
+     "es": "Cocinando con mi abuela: recetas, recuerdos y desastres en la cocina.",
+     "en": "Cooking with my grandma: recipes, memories and kitchen disasters."
+    },
+    {
+     "n": 2,
+     "es": "Mi primera mascota: lo que aprendí cuidando a otro ser.",
+     "en": "My first pet: what I learned caring for another living being."
+    },
+    {
+     "n": 3,
+     "es": "Cómo dejé de dejarlo todo para mañana: mi pelea con la procrastinación.",
+     "en": "How I stopped putting everything off: my fight with procrastination."
+    },
+    {
+     "n": 4,
+     "es": "Mi peor corte de pelo: una historia de vergüenza y risa.",
+     "en": "My worst haircut: a story of embarrassment and laughter."
+    },
+    {
+     "n": 5,
+     "es": "Aprender algo nuevo de grande: tocar un instrumento después de los treinta.",
+     "en": "Learning something new as an adult: picking up an instrument after thirty."
+    }
+   ]
   },
   "commercial": {
    "key": "commercial",
@@ -252,7 +360,34 @@ window.DATOS = {
      "es": "Como máximo 2 [pausa] y 2 [respira] por sección.",
      "en": "At most 2 [pause] and 2 [breathe] per section."
     }
-   }
+   },
+   "topics": [
+    {
+     "n": 1,
+     "es": "Una heladería artesanal: sabores, ingredientes y el local.",
+     "en": "An artisan ice cream shop: flavors, ingredients and the shop."
+    },
+    {
+     "n": 2,
+     "es": "Un gimnasio de barrio: clases, horarios y comunidad.",
+     "en": "A neighborhood gym: classes, schedules and community."
+    },
+    {
+     "n": 3,
+     "es": "Zapatillas para correr: comodidad, diseño y duración.",
+     "en": "Running shoes: comfort, design and durability."
+    },
+    {
+     "n": 4,
+     "es": "Un viaje en tren: paisajes, comodidad y destinos.",
+     "en": "A train journey: scenery, comfort and destinations."
+    },
+    {
+     "n": 5,
+     "es": "Una app para aprender idiomas: lecciones cortas, práctica y progreso.",
+     "en": "A language-learning app: short lessons, practice and progress."
+    }
+   ]
   },
   "tutorial": {
    "key": "tutorial",
@@ -300,7 +435,34 @@ window.DATOS = {
      "es": "Como máximo 2 [pausa] y 2 [respira] por sección.",
      "en": "At most 2 [pause] and 2 [breathe] per section."
     }
-   }
+   },
+   "topics": [
+    {
+     "n": 1,
+     "es": "Cómo hacer pan casero: ingredientes, amasado y horneado.",
+     "en": "How to make homemade bread: ingredients, kneading and baking."
+    },
+    {
+     "n": 2,
+     "es": "Un huerto en el balcón: macetas, tierra, riego y primeras cosechas.",
+     "en": "A balcony garden: pots, soil, watering and first harvests."
+    },
+    {
+     "n": 3,
+     "es": "Cómo grabar tu voz en casa: el lugar, el micrófono y la grabación.",
+     "en": "How to record your voice at home: the room, the microphone and the recording."
+    },
+    {
+     "n": 4,
+     "es": "Cómo armar una mochila de viaje: qué llevar y cómo ordenarlo.",
+     "en": "How to pack a travel backpack: what to bring and how to organize it."
+    },
+    {
+     "n": 5,
+     "es": "Cómo cuidar plantas de interior: luz, agua y errores comunes.",
+     "en": "How to care for houseplants: light, water and common mistakes."
+    }
+   ]
   },
   "motivational": {
    "key": "motivational",
@@ -348,7 +510,34 @@ window.DATOS = {
      "es": "Como máximo 2 [pausa] y 2 [respira] por sección.",
      "en": "At most 2 [pause] and 2 [breathe] per section."
     }
-   }
+   },
+   "topics": [
+    {
+     "n": 1,
+     "es": "Empezar de nuevo: cuando un plan se cae y hay que volver a empezar.",
+     "en": "Starting over: when a plan falls apart and you begin again."
+    },
+    {
+     "n": 2,
+     "es": "El poder de los pasos pequeños: hábitos que lo cambian todo.",
+     "en": "The power of small steps: habits that change everything."
+    },
+    {
+     "n": 3,
+     "es": "Fallar sin rendirse: lo que enseñan los errores.",
+     "en": "Failing without giving up: what mistakes teach you."
+    },
+    {
+     "n": 4,
+     "es": "Tu primera carrera: del sillón a la meta.",
+     "en": "Your first race: from the couch to the finish line."
+    },
+    {
+     "n": 5,
+     "es": "Cuidar tu energía: descanso, límites y prioridades.",
+     "en": "Protecting your energy: rest, boundaries and priorities."
+    }
+   ]
   },
   "mystery": {
    "key": "mystery",
@@ -396,7 +585,34 @@ window.DATOS = {
      "es": "Como máximo 2 [pausa] y 2 [respira] por sección.",
      "en": "At most 2 [pause] and 2 [breathe] per section."
     }
-   }
+   },
+   "topics": [
+    {
+     "n": 1,
+     "es": "La casa del final de la calle: una luz que se enciende en una casa vacía.",
+     "en": "The house at the end of the street: a light that turns on in an empty house."
+    },
+    {
+     "n": 2,
+     "es": "El tren que no aparece en el horario: un viaje nocturno que no debería existir.",
+     "en": "The train that isn't on the schedule: a night trip that shouldn't exist."
+    },
+    {
+     "n": 3,
+     "es": "La llamada de las tres de la mañana: una voz conocida desde un número imposible.",
+     "en": "The three a.m. call: a familiar voice from an impossible number."
+    },
+    {
+     "n": 4,
+     "es": "El pueblo que desapareció del mapa: un lugar que nadie recuerda.",
+     "en": "The town that vanished from the map: a place nobody remembers."
+    },
+    {
+     "n": 5,
+     "es": "El retrato del ático: una pintura que parece cambiar.",
+     "en": "The portrait in the attic: a painting that seems to change."
+    }
+   ]
   },
   "social": {
    "key": "social",
@@ -444,7 +660,34 @@ window.DATOS = {
      "es": "Casi sin pausas: como máximo 1 [pausa] por clip.",
      "en": "Almost no pauses: at most 1 [pause] per clip."
     }
-   }
+   },
+   "topics": [
+    {
+     "n": 1,
+     "es": "Datos curiosos del cuerpo humano: lo que tu cuerpo hace sin que lo notes.",
+     "en": "Fun facts about the human body: what your body does without you noticing."
+    },
+    {
+     "n": 2,
+     "es": "Animales con superpoderes: habilidades reales que parecen ficción.",
+     "en": "Animals with superpowers: real abilities that sound like fiction."
+    },
+    {
+     "n": 3,
+     "es": "Trucos de cocina: atajos simples que funcionan.",
+     "en": "Kitchen hacks: simple shortcuts that work."
+    },
+    {
+     "n": 4,
+     "es": "Inventos que nacieron por accidente: errores que cambiaron el mundo.",
+     "en": "Inventions born by accident: mistakes that changed the world."
+    },
+    {
+     "n": 5,
+     "es": "Récords de la naturaleza: lo más alto, lo más rápido y lo más antiguo.",
+     "en": "Nature's records: the tallest, the fastest and the oldest."
+    }
+   ]
   },
   "calm": {
    "key": "calm",
@@ -492,7 +735,34 @@ window.DATOS = {
      "es": "Usa [respira] cada 2 o 3 frases y [pausa 3s] al final de cada sección.",
      "en": "Use [breathe] every 2 or 3 sentences and [pause 3s] at the end of each section."
     }
-   }
+   },
+   "topics": [
+    {
+     "n": 1,
+     "es": "Lluvia en la ventana: escuchar la lluvia desde un lugar seguro.",
+     "en": "Rain on the window: listening to the rain from a safe place."
+    },
+    {
+     "n": 2,
+     "es": "Un campo de lavanda: caminar despacio bajo el sol de la tarde.",
+     "en": "A lavender field: a slow walk under the afternoon sun."
+    },
+    {
+     "n": 3,
+     "es": "Una noche estrellada: mirar el cielo y soltar el día.",
+     "en": "A starry night: looking at the sky and letting go of the day."
+    },
+    {
+     "n": 4,
+     "es": "Relajar el cuerpo para dormir: un recorrido de la cabeza a los pies.",
+     "en": "Relaxing your body for sleep: a journey from head to toe."
+    },
+    {
+     "n": 5,
+     "es": "Un río de montaña: el agua que corre y se lleva las preocupaciones.",
+     "en": "A mountain river: running water that carries your worries away."
+    }
+   ]
   }
  },
  "largo": {
@@ -575,33 +845,6 @@ window.DATOS = {
    }
   ]
  },
- "topics": [
-  {
-   "n": 1,
-   "es": "El océano profundo: animales, presión, oscuridad.",
-   "en": "The deep ocean: creatures, pressure, darkness."
-  },
-  {
-   "n": 2,
-   "es": "La historia de algo cotidiano: el café, la bicicleta o el chocolate.",
-   "en": "The story of an everyday thing: coffee, the bicycle or chocolate."
-  },
-  {
-   "n": 3,
-   "es": "Un viaje por un lugar: la Patagonia, una gran ciudad o un desierto.",
-   "en": "A journey through a place: Patagonia, a big city or a desert."
-  },
-  {
-   "n": 4,
-   "es": "Cómo funciona la tecnología de todos los días: la ubicación del celular, el wifi o la cámara.",
-   "en": "How everyday technology works: phone location, wifi or the camera."
-  },
-  {
-   "n": 5,
-   "es": "Una anécdota personal ficticia: un primer día de trabajo o un viaje que salió mal.",
-   "en": "A fictional personal story: a first day at work or a trip that went wrong."
-  }
- ],
  "templates": {
   "es": "Eres guionista experto en locución. Escribe un guion para que una persona lo lea\nen voz alta y grabe su voz para crear un clon de voz con IA.\n\nDATOS\n- Idioma: {IDIOMA}\n- Acento: {ACENTO}. {GUIA_ACENTO}\n- Estilo: {ESTILO}\n- Tema: {TEMA}\n- Largo: {LARGO}\n  En total, unas {PALABRAS} palabras ≈ {MINUTOS} minutos.\n  Cuenta las frases de cada sección antes de entregar.\n{PARTE}\n\nCÓMO DEBE SONAR ESTE ESTILO\n{BLOQUE_ESTILO}\nSi el estilo contradice alguna regla de abajo, manda el estilo.\n\nESCRIBE COMO SE HABLA\n- {REGLA_FRASES}\n- Como máximo 2 adverbios terminados en \"-mente\" en todo el guion.\n- Evita palabras de texto escrito (conforme, asimismo, considerablemente,\n  \"podemos mencionar\") y no repitas el mismo adjetivo.\n- {CONTENIDO_MINIMO}\n- {REGLA_VARIEDAD}\n- Usa, de forma natural, al menos una palabra con cada sonido:\n  r inicial, rr, ñ, ll/y, j/ge/gi, ch, x, z/ce/ci, tr, bl, pl, cr, gl, pr, fr, dr.\n  Ejemplos de referencia: río, tierra, año, lluvia, gente, noche, examen, cielo,\n  tren, blanco, planeta, cristal, siglo (o regla, iglú, inglés), profundo, frío, piedra.\n  No copies estos ejemplos: busca palabras que encajen con el tema.\n- Las palabras de la guía de acento son referencia: úsalas solo si encajan natural.\n- Escribe números, siglas y símbolos como se pronuncian (\"mil trescientos\", \"por ciento\").\n- Usa datos generales correctos. Si no estás seguro de una cifra, no la pongas\n  o redondéala con \"cerca de\".\n- No inventes hechos sobre personas reales ni uses marcas comerciales reales.\n- Nada de emojis, títulos decorativos ni acotaciones entre paréntesis.\n\nÉNFASIS\n- En cada sección, marca con **palabra** exactamente {ENFASIS} palabras.\n  Nunca más de una por frase; las demás frases van sin énfasis.\n- Elige la palabra que carga el sentido: un dato, un contraste o algo nuevo.\n  No la pongas por defecto al final de la frase.\n  Bien: La presión es **mil** veces mayor que en la superficie.\n  Mal:  La presión es mil veces mayor que en la **superficie**.\n\nFORMATO OBLIGATORIO (el teleprompter lo lee automáticamente)\n- # Título de sección   → una por cada sección pedida\n- @fuerza 1-5           → justo debajo de cada título; vale para toda la sección\n                          (si una parte necesita otra energía, haz otra sección)\n- > nota                → una indicación breve para quien lee (no se lee en voz alta)\n- [pausa] o [pausa 2s]  → pausa extra; al final de una frase o en su propia línea\n- [respira]             → dónde tomar aire\n- Pausas: {LIMITE_PAUSAS}\n- [lento]...[/lento]  [rápido]...[/rápido]  [suave]...[/suave]  [fuerte]...[/fuerte]\n                        → pueden abarcar varias líneas, cerrándose en la misma sección\n- [sube]                → solo en preguntas, después del signo:\n                          ¿Qué hay en el fondo del mar? [sube]\n- [baja]                → solo al final de la última frase de una sección\n                          Ejemplo: Y ahora ya sabes por qué. [baja]\n- palabra{pro-nun-CIA}  → solo para nombres difíciles, sílaba tónica en mayúsculas;\n                          con énfasis: **Tajumulco{ta-hu-MUL-co}**\n- Una frase por línea. Las líneas en blanco solo separan; no hacen pausa.\n- No uses ningún otro símbolo ni comando, y escríbelos exactamente así.\n\nEntrega SOLO el guion, dentro de un bloque de código, sin explicaciones antes ni después.",
   "en": "You are an expert voice-over scriptwriter. Write a script for a person to read aloud\nand record their voice to create an AI voice clone.\n\nDETAILS\n- Language: {LANGUAGE}\n- Accent: {ACCENT}. {ACCENT_GUIDE}\n- Style: {STYLE}\n- Topic: {TOPIC}\n- Length: {LENGTH}\n  In total, about {WORDS} words ≈ {MINUTES} minutes.\n  Count the sentences in each section before you answer.\n{PART}\n\nHOW THIS STYLE SHOULD SOUND\n{STYLE_BLOCK}\nIf the style contradicts any rule below, the style wins.\n\nWRITE THE WAY PEOPLE SPEAK\n- {SENTENCE_RULE}\n- No more than 3 adverbs ending in \"-ly\" in the whole script.\n- Avoid formal written words (furthermore, moreover, considerably,\n  \"it is worth mentioning\") and don't repeat the same adjective.\n- {MIN_CONTENT}\n- {VARIETY_RULE}\n- Naturally use at least one word with each sound:\n  voiced th, voiceless th, r, l, v, b, sh, ch, j, zh, ng, w, wh,\n  long and short vowels, and diphthongs.\n  Reference examples: this, think, river, light, voice, blue, shell, chair, jump,\n  measure, sing, water, whale, sheep, ship, now, boy.\n  Don't copy these examples: find words that fit the topic.\n- The accent guide words are a reference: use them only if they fit naturally.\n- Write numbers, acronyms and symbols as spoken (\"thirteen hundred\", \"percent\").\n- Use correct general facts. If you're not sure about a number, leave it out\n  or round it with \"about\".\n- Don't invent facts about real people or use real brand names.\n- No emojis, decorative headings or stage directions in parentheses.\n\nEMPHASIS\n- In each section, mark exactly {EMPHASIS} words with **word**.\n  Never more than one per sentence; the other sentences have no emphasis.\n- Pick the word that carries the meaning: a fact, a contrast or something new.\n  Don't put it at the end of the sentence by default.\n  Good: The pressure is a **thousand** times greater than at the surface.\n  Bad:  The pressure is a thousand times greater than at the **surface**.\n\nREQUIRED FORMAT (the teleprompter reads it automatically)\n- # Section title       → one for each requested section\n- @energy 1-5           → right below each title; applies to the whole section\n                          (if a part needs different energy, make another section)\n- > note                → a short direction for the reader (not read aloud)\n- [pause] or [pause 2s] → extra pause; at the end of a sentence or on its own line\n- [breathe]             → where to take a breath\n- Pauses: {PAUSE_LIMIT}\n- [slow]...[/slow]  [fast]...[/fast]  [soft]...[/soft]  [loud]...[/loud]\n                        → may span several lines, closing within the same section\n- [up]                  → only on questions, after the question mark:\n                          What's at the bottom of the sea? [up]\n- [down]                → only at the end of the last sentence of a section\n                          Example: And now you know why. [down]\n- word{pro-NUN-ci-a-tion} → only for hard names, stressed syllable in capitals;\n                          with emphasis: **Tajumulco{ta-hu-MUL-co}**\n- One sentence per line. Blank lines only separate; they don't add a pause.\n- Don't use any other symbol or command, and write them exactly as shown.\n\nReturn ONLY the script, inside a code block, with no explanation before or after."

@@ -1,0 +1,63 @@
+# La isla
+@fuerza 2
+> Narra con calma, como quien cuenta una historia junto al fuego.
+
+Elvira llevaba treinta años cuidando el faro de la isla del Cuervo.
+Vivía sola, con un gato gris, una radio vieja y una biblioteca de libros gastados.
+Cada tarde subía los ciento doce escalones de la torre para encender la luz.
+Tenía una sola regla: la luz del faro nunca se apaga.
+[suave]Decía que el mar le hablaba, y que había que saber escucharlo.[/suave]
+Aquella tarde de otoño, el cielo se puso de un color **extraño**, entre verde y morado.
+Las gaviotas volaban bajo y el viento traía olor a lluvia.
+Elvira cerró las ventanas y revisó dos veces el generador.
+"Esta noche va a ser larga", le dijo al gato.
+El gato no respondió, pero se escondió debajo de la cama.
+Abajo, las olas empezaron a golpear las rocas y la playa con **fuerza**.
+
+# La tormenta
+@fuerza 3
+> La tensión crece.
+
+A medianoche, la tormenta cayó sobre la isla con toda su furia.
+La lluvia golpeaba los cristales como si alguien quisiera entrar.
+De pronto, la radio crujió y una voz desesperada llenó la cocina.
+"Aquí el pesquero Estrella del Sur. ¡No vemos nada, estamos cerca de las rocas!"
+Elvira subió corriendo a la torre.
+[pausa 2s]
+La luz del faro estaba **apagada**.
+Un rayo había dañado el generador, y la gran lámpara no respondía.
+Afuera, entre las olas, se veía una lucecita roja que se acercaba a las rocas.
+Ese barco iba directo hacia los **arrecifes**.
+¿Cómo iba a guiarlos sin luz? [sube]
+
+# La luz
+@fuerza 4
+> El clímax: firmeza y urgencia.
+
+Elvira recordó la lámpara de aceite que su abuelo guardaba en el sótano.
+Bajó a buscarla, la limpió con la manga y la encendió con manos temblorosas.
+Volvió a subir los ciento doce escalones, empapada y sin aliento.
+Puso la lámpara frente al gran espejo del faro y empezó a girarlo con las manos.
+Era pesado, pero se movía.
+Un haz de luz **débil** salió hacia el mar, y luego otro, y otro más.
+[pausa 2s]
+La lucecita roja dudó un momento y después cambió de rumbo.
+"¡Los veo! ¡Están girando!", gritó Elvira, aunque nadie podía escucharla.
+Siguió moviendo el espejo toda la madrugada, hasta que le dolieron los brazos.
+Al amanecer, el pesquero entró al puerto del otro lado de la isla, **sano** y salvo.
+
+# La visita
+@fuerza 2
+> Calma después de la tormenta. Termina con ternura.
+
+Dos días después, un bote pequeño llegó al muelle de la isla.
+Era Simón, el capitán del pesquero, con su hija y una canasta de pan, queso y frutas.
+"Usted nos salvó la vida", le dijo, quitándose el gorro.
+Elvira sonrió y le mostró la vieja lámpara de aceite.
+"La verdad es que nos salvó mi abuelo."
+Esa tarde tomaron té en la cocina, mientras el gato dormía junto a la **estufa**.
+La hija del capitán preguntó si podía subir a la torre.
+[suave]Desde arriba, el mar parecía tranquilo, como si nunca se hubiera enojado.[/suave]
+Antes de irse, Simón prometió volver cada otoño.
+Y cumplió: cada año, cuando el cielo se pone extraño, un bote llega con pan **fresco**.
+Elvira lo espera en el muelle, con la lámpara de aceite **encendida**. [baja]

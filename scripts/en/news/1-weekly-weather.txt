@@ -1,0 +1,75 @@
+# Headlines
+@energy 4
+> Weather newscast voice: clear, friendly and firm.
+
+Good evening, here is the weather forecast for Puerto Alba, an **imaginary** city by the sea.
+This week brings a bit of everything: sunshine, rain and a wind that won't sit still.
+Anyone planning outdoor activities should pay close attention to this report.
+There will be a **sharp** change in the middle of the week, when a cold front arrives from the south.
+Temperatures will drop by almost ten degrees in just one day.
+We'll also look at conditions on the beaches, the hills and the roads in the region.
+And at the end, a few tips so you don't get caught without an umbrella.
+Remember, Puerto Alba does not exist: it is a city created for this exercise.
+Let's start with **Monday**.
+[pause]
+
+# Monday and Tuesday
+@energy 4
+> Clear facts, steady pace.
+
+Monday will begin with clear skies, a low of **eight** degrees and a high of twenty.
+It will be the best day of the week to dry laundry, ride a bike or go to the beach.
+A light wind will blow from the west, with gusts of no more than twenty kilometers per hour.
+On Tuesday, however, the first clouds will roll in during the afternoon.
+No rain is expected, but the sky will turn gray and the air will feel more **humid**.
+Temperatures will stay close to usual, with a high of eighteen degrees.
+Should you bring a jacket? [up]
+At night, yes: the temperature will fall fast after eight o'clock.
+Fishing boats will be able to head out without trouble in the **morning**.
+Global weather models agree that the change will arrive on Wednesday.
+[pause]
+
+# Wednesday: the cold front arrives
+@energy 4
+> The main story: firm, without drama.
+
+The main weather story of the week arrives on Wednesday, with a cold front from the south.
+**Heavy** rain is expected all afternoon and into the night.
+Some areas could see more than thirty millimeters in just a few hours.
+The wind will pick up, with gusts of up to seventy kilometers per hour along the coast.
+Officials recommend securing roofs, awnings and loose objects on patios and balconies.
+They also ask people to avoid walking on the pier while the storm lasts.
+The high will not go above **eleven** degrees.
+Precautions are needed, but there's no reason for alarm: the front will move through fast.
+By Thursday morning, the rain will have moved off to the **north**.
+[pause]
+
+# Thursday and Friday
+@energy 4
+> A calmer tone.
+
+Thursday will be cold, but the sky will grow clearer as the day goes on.
+After the rain, frost is expected on the higher hills before dawn.
+Drivers crossing the mountain pass should take care and carry snow chains.
+In the city, the low will be around **three** degrees.
+On Friday the sun will return, although the air will stay cool all day.
+The high will climb to fifteen degrees, perfect for a walk along the seafront.
+And the weekend? [up]
+For now, everything points to a **sunny** Saturday and a Sunday with a few clouds.
+It will be a good time for the market in the square and the outdoor fairs.
+Lifeguards will be back on the beaches from ten o'clock on Saturday.
+[pause]
+
+# Tips for the week
+@energy 4
+> Forecast sign-off: friendly and firm.
+
+To close, a few practical tips for dealing with these changes.
+We recommend checking the forecast every morning, because the front could arrive a few hours early.
+Keep an umbrella, a waterproof jacket and shoes with good grip close at hand.
+If you have plants on your balcony, protect them from **Wednesday's** wind.
+And if you head into the mountains, always tell someone you trust about your route.
+The **key** is simple: plan ahead.
+The weather in Puerto Alba can change fast, but with a little planning, the week will go well.
+That was the weather forecast.
+Thank you for joining us, and have a **good** week. [down]

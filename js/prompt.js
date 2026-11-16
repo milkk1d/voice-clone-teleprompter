@@ -20,7 +20,7 @@
     return { name: a.nombre, guide: g };
   }
 
-  // o: { lang: "es"|"en", style, accent, topic: número 1-5 o texto propio, minutes: 4|10, parts: 1|3|6 }
+  // o: { lang: "es"|"en", style, accent, topic: número 1-5 (de los temas del estilo) o texto propio, minutes: 4|10, parts: 1|3|6 }
   function build(D, o) {
     const lang = o.lang === "en" ? "en" : "es";
     const S = D.styles[o.style];
@@ -36,7 +36,7 @@
       .replace(/\{(SECCIONES|SECTIONS)\}/, sections).replace(/\{(COMPLETAS|FULL)\}/, full)
       .replace(/\{(FRASES|SENTENCES)\}/, S.frases[lang]).replace(/\{(PALABRAS_SECCION|SECTION_WORDS)\}/, S.wps);
     const acc = accentGuide(D, lang, o.accent, S.key);
-    const topicText = typeof o.topic === "number" ? D.topics[o.topic - 1][lang] : String(o.topic || "").trim();
+    const topicText = typeof o.topic === "number" ? S.topics[o.topic - 1][lang] : String(o.topic || "").trim();
     const parte = parts > 1 ? D.parte[lang].replace("{TOTAL}", parts) : "";
     const v = S.vars;
     const vars = lang === "es"

@@ -1,0 +1,67 @@
+# The jars
+@energy 2
+> A bedtime story voice, soft and warm.
+
+In a village of yellow hills lived a girl named Amalia.
+She had a collection that no one else in the world had: she kept **clouds**.
+She caught them at dawn, when they came down to rest on the meadow.
+She used glass jars, the kind her grandmother filled with jam.
+She had round clouds, long clouds, a giant one and a tiny one shaped like a rabbit.
+Each jar was a small treasure.
+Every night she lined them up on the shelf by her window.
+[soft]Sometimes, in the silence, one of them let three drops fall on the glass.[/soft]
+Her grandmother was the only one who never laughed at her.
+Her older brother, on the other hand, teased her all the time.
+"What good is a cloud in a jar?" he would ask.
+Amalia just shrugged.
+"I don't know yet. But **someday** they'll be useful."
+
+# The drought
+@energy 3
+> The tension builds, without hurry.
+
+That summer, it didn't rain a single time.
+The river shrank to a trickle, and the cows looked for shade under the dry trees.
+Even the birds stopped singing in the afternoons.
+The grown-ups looked at the sky every morning, their foreheads **wrinkled** with worry.
+In the square, in front of the church, the mayor announced that the village well was almost empty.
+[pause 2s]
+That night, Amalia couldn't sleep.
+Her brother wasn't teasing anymore: he was thirsty too.
+She looked at her jars one by one, lit by the moon.
+The clouds were stirring, as if they were thirsty as well.
+Then she understood **why** she had kept them for so long.
+She put on her sneakers without a sound and slipped out of the house with the jars in her arms.
+
+# The rain
+@energy 4
+> The climax: growing joy.
+
+She climbed the highest hill in the village in the middle of the night.
+She set the jars on the grass and took a deep breath.
+Then she opened them one by one, very carefully.
+For a moment, the clouds hesitated, as if they were afraid to leave her.
+Then they drifted out, stretching like cats after a nap.
+They rose, gathered and grew until they covered the **whole** sky.
+[pause 2s]
+The first drop landed on her nose.
+Then came another, and another, and suddenly it was raining over the whole valley.
+The neighbors came out of their houses in pajamas, laughing and looking up.
+"It's raining! It's finally raining!" her brother shouted, soaking wet.
+Amalia raised her arms and let the water run down her **face**.
+
+# The last jar
+@energy 2
+> End very slowly, like the end of a fairy tale.
+
+It rained for three days straight.
+The river sang again, the well filled up and the fields turned green once more.
+The cows went back to the fields, and the mayor gave a speech that nobody listened to.
+No one could explain where those clouds had come from.
+Well, almost no one.
+Her brother gave her a new jar, the biggest one he could find in the kitchen.
+"So you can start a new collection," he said, a little embarrassed.
+Amalia put it on the shelf, empty and shining.
+[soft]Every morning at dawn, she looks at it with patience, waiting for the **right** cloud.[/soft]
+They say that if you watch that window with care, you'll sometimes see her smile.
+And in that village, ever since, no one laughs at a little girl's **dreams**. [down]
