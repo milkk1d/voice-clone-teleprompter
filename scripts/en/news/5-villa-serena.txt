@@ -1,0 +1,76 @@
+# Headlines
+@energy 4
+> The newscast of an imaginary town: a serious tone, even if the news is small.
+
+Good evening, and welcome to the Villa Serena newscast, from an **imaginary** town by the sea.
+Tonight's edition is full of first times and plans that didn't go as expected.
+We'll tell you about the first day of a new bakery in the **main** square.
+We'll also report on a school trip that ended somewhere very different from the plan.
+And on the harvest festival, which this year had an unexpected guest: the **rain**.
+Remember, everything you'll hear tonight is fiction.
+Any resemblance to your own town is purely coincidental.
+Let's start with our first story.
+[pause]
+
+# The bakery's first day
+@energy 4
+> Local news, steady pace.
+
+La Espiga bakery opened its doors this Monday at six in the morning.
+Before dawn, there was already a line of **twenty** neighbors outside the door.
+Its owner, young Rosa Fuentes, said she didn't sleep at all the night before.
+"I've been dreaming of this day for three years," she said, her hands covered in flour.
+However, the opening had a small **setback**.
+At eight o'clock, the main oven stopped working.
+Rosa and her assistant had to bake in shifts in an oven lent by the school.
+The neighbors waited patiently, and no one left without their bread.
+Among the first customers was the mayor, who ordered twelve rolls and a coffee.
+By closing time, the bakery had sold more than **five hundred** loaves.
+[pause]
+
+# The school trip
+@energy 4
+> Report without losing the serious tone.
+
+A school trip to the science museum in the capital ended with a **change** of plans.
+The bus left on time at seven, with forty students and three teachers on board.
+Halfway there, a tire blew out in an area with no cell signal.
+What did they do while they waited for help? [up]
+The teachers set up an outdoor **class** next to a field of sunflowers.
+The students counted petals, measured shadows and drew insects.
+No one was hurt, and not a single student wanted to go back early.
+The tow truck arrived three hours later, when it was too late for the museum.
+One of the teachers described it as "the best science day of the year."
+The school confirmed that the museum trip will be **rescheduled** for the spring.
+[pause]
+
+# A festival in the rain
+@energy 4
+> Stay serious, with a touch of joy.
+
+The traditional harvest festival took place this Saturday under **heavy** rain.
+The organizers had forecast sunshine for the whole week.
+That morning, however, dark clouds covered the sky over Villa Serena.
+At eleven, it started to rain, and it didn't stop until **nightfall**.
+Instead of canceling the festival, residents moved the stalls to the town gym.
+The food stalls sold more hot soup than at any other festival.
+The town band played in soaked shoes, and the crowd danced among open umbrellas.
+The prize for the biggest pumpkin went to a giant weighing **ninety** kilos, according to the official rules.
+Nobody remembers a festival so wet and so joyful!
+The organizers are already promising a giant tent for next year.
+[pause]
+
+# Sign-off
+@energy 4
+> Newscast close: calm and firm.
+
+And before we say goodbye, tomorrow's forecast.
+Clear skies and light winds from the sea are expected.
+The bakery on the square will open at six, this time with its oven **repaired**.
+The students from the school trip will show their insect drawings at the library.
+Admission is free, and there will be rice pudding for everyone.
+Families are welcome from five in the afternoon.
+And the town gym is still looking for the owner of a **yellow** umbrella with polka dots.
+If it's yours, you can pick it up at the front desk.
+That was the news from Villa Serena, the town where small things are news too.
+Thank you for joining us, and good **night**. [down]

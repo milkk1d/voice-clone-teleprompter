@@ -1,0 +1,64 @@
+# El descenso
+@fuerza 2
+> Narra con calma, como quien abre un libro de noche.
+
+Marina llevaba doce años pilotando el pequeño submarino de investigación.
+Esa mañana, el mar estaba quieto y el cielo tenía un color gris perla.
+Desde el barco, Julio revisó el oxígeno, las luces y la radio por última vez.
+"Es tu última inmersión antes de jubilarte", le dijo con una sonrisa.
+"Entonces que sea **inolvidable**", respondió ella.
+La escotilla se cerró con un golpe seco.
+El submarino empezó a bajar, y el azul se volvió cada vez más oscuro.
+A los doscientos metros, la luz del sol ya casi había desaparecido.
+A los mil, solo quedaban la **negrura** y el zumbido de los motores.
+Marina encendió los focos y vio pasar una nube de partículas blancas, como nieve.
+[suave]Le gustaba ese silencio más que cualquier otra cosa en el mundo.[/suave]
+
+# El apagón
+@fuerza 3
+> Sin dramatizar todavía: la tensión crece de a poco.
+
+A los dos mil metros, una alarma rompió la calma.
+Las luces parpadearon y, de pronto, **todo** quedó a oscuras.
+"Julio, perdí la energía principal", dijo Marina, sin levantar la voz.
+La radio crujió durante unos segundos eternos.
+"Te escucho. ¿Cuánto oxígeno te queda?" [sube]
+"Unas seis horas", contestó ella.
+Era suficiente para subir, pero sin motores no podía moverse.
+El submarino flotaba quieto, suspendido en la oscuridad como una piedra en el aire.
+[pausa 2s]
+Entonces vio algo que **no** aparecía en ningún manual.
+Una luz azul se encendió frente al cristal, y después otra, y otra más.
+Eran medusas, peces linterna y calamares diminutos, brillando al mismo **ritmo**.
+
+# La danza de luces
+@fuerza 4
+> El clímax: más energía, pero sin gritar.
+
+"¡Julio, tienes que ver esto!", exclamó, olvidando el miedo.
+Las luces giraban alrededor del submarino, formando un **círculo** perfecto.
+Luego se movieron todas hacia arriba, como si le indicaran el camino.
+Marina recordó una regla que le enseñó su madre: cuando no sabes qué hacer, observa.
+Soltó los pesos de emergencia, y el submarino empezó a subir despacio.
+Las luces la acompañaron, subiendo con ella metro a metro.
+"¡Vas bien, sigue así!", repetía Julio desde la superficie, con la voz quebrada.
+[pausa 2s]
+A los quinientos metros, los animales se apagaron de **golpe**.
+Ya no la necesitaban, o tal vez ella ya no los necesitaba a ellos.
+Arriba, el agua se volvió gris, luego verde y después de un azul **brillante**.
+
+# De vuelta
+@fuerza 2
+> Vuelve la calma. Termina despacio.
+
+Cuando abrió la escotilla, el aire frío le golpeó la cara.
+Julio la ayudó a salir a la plataforma y la abrazó sin decir nada.
+Después de un rato, le preguntó en voz baja: "¿Qué pasó allá abajo?" [sube]
+Marina miró el mar durante un largo rato.
+[suave]"Me trajeron de vuelta", susurró.[/suave]
+Nadie en el barco entendió del todo esa respuesta.
+Esa noche escribió el informe con datos exactos: profundidad, tiempo y temperatura.
+Pero guardó una página **aparte**, solo para ella.
+En esa página dibujó un círculo de luces azules.
+Años después, en el puerto todavía cuentan la historia de la piloto guiada por el fondo del mar.
+Y ella, cada vez que la escucha, sonríe y no **corrige** nada. [baja]

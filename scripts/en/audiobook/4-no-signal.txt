@@ -1,0 +1,66 @@
+# The shortcut
+@energy 2
+> Narrate with gentle humor.
+
+Mateo trusted his phone more than any person.
+So when his grandmother Elena suggested walking to the lake, he opened the map.
+"It says forty minutes through the woods," he announced, very sure of himself.
+His grandmother preferred the long way, the one she had known since she was a girl.
+Mateo insisted: "Why walk two hours if there's a shortcut?" [up]
+Elena agreed, though she slipped her father's old compass into her pocket.
+At first, everything was perfect.
+The **blue** dot moved across the screen, just as they moved among the trees.
+Sounding like an expert, he explained that the phone listened to satellites flying very high.
+"It works even without a **signal**," he said proudly.
+His grandmother just raised an eyebrow.
+
+# The woods
+@energy 3
+> Worry grows.
+
+An hour later, there was still no sign of the lake.
+The trail had turned into a maze of fallen logs, mud and dry branches.
+Mateo turned the phone from side to side, confused.
+The blue dot jumped from place to place, as if it were **dizzy**.
+"It's the trees; they block the signals," he muttered.
+Then the screen went black.
+[pause 2s]
+The battery had hit **zero**.
+Mateo felt a chill in his stomach.
+The wind shook the treetops with a strange sound.
+It was starting to get dark, and he had no idea where the house was.
+In a small voice, he asked: "So what do we do now?" [up]
+His grandmother took the compass out of her pocket without saying a **word**.
+
+# The compass
+@energy 4
+> The climax: relief and joy.
+
+"It's a very old rule: water always runs down toward the lake," Elena explained.
+"If we follow the **stream**, we'll get there."
+They walked beside the water, listening to it rush over the stones.
+His grandmother checked the compass every so often and corrected their course.
+Her grandson didn't say a word for a long while.
+Only their footsteps, the water and a hidden bird broke the silence.
+[pause 2s]
+Then, between the trees, a **silver** glint appeared.
+"The lake!" Mateo shouted, running toward the shore.
+On the other side were the dock and his grandmother's house, with the light on.
+"Grandma, you're better than any app!"
+Elena laughed and ruffled his hair.
+"Apps are useful, but you also have to look **around** you."
+
+# What he learned
+@energy 2
+> A quiet tone. End with affection.
+
+That night, Mateo charged his phone and looked up why the blue dot had gone crazy.
+He read that the system needs to see four satellites or more, whenever possible.
+Among tall trees, buildings or mountains, the signals bounce and the calculation **fails**.
+The next day, he downloaded a map of the woods and bought a spare battery.
+But he did something more.
+He asked his grandmother to teach him how to use the compass.
+[soft]She gave him her father's, a small treasure worn smooth by the years.[/soft]
+"Now it's your turn to look after it," she told him.
+He still uses the map on his phone, especially in the city.
+But every time he goes into the woods, his grandmother's **compass** goes with him. [down]

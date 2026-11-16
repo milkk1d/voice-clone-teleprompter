@@ -952,7 +952,7 @@ El script también imprime el comando de revisión que corresponde.
 
 ## 12. Pendientes
 
-**Hecho** (ver secciones 13 y 14): v1.4 aplicada · 40 guiones listos (ES y EN, cuatro estilos) · la web completa (quest bilingüe, armado de prompts, revisión de guiones pegados, teleprompter conectado) · guía de grabación con Audacity · política de privacidad. La web no recomienda una sola IA: ofrece ChatGPT, Claude y Gemini y confía en la revisión del guion.
+**Hecho** (ver secciones 13 y 14): v1.4 aplicada · 60 guiones listos (ES y EN, seis estilos) · la web completa (quest bilingüe, armado de prompts, revisión de guiones pegados, teleprompter conectado) · guía de grabación con Audacity · política de privacidad. La web no recomienda una sola IA: ofrece ChatGPT, Claude y Gemini y confía en la revisión del guion.
 
 **Necesita a una persona:**
 - **Probar el prompt v1.4 con ChatGPT** (Meditación en inglés y Comercial en español): requiere una sesión iniciada. Los prompts están en `tests/prompts/v1.4-*.txt`.
@@ -962,7 +962,7 @@ El script también imprime el comando de revisión que corresponde.
 
 **Decisiones abiertas:**
 - Insistir o no en las 6 secciones del Documental cuando lo genera una IA (por ejemplo, con una estructura numerada), o aceptar que haga 5.
-- Guiones listos para los otros 6 estilos (Noticiero, Audiolibro, Tutorial, Motivacional, Suspenso, Reels).
+- Guiones listos para los otros 4 estilos: Tutorial y Motivacional (próxima tanda), y después Suspenso y Reels.
 - Variantes de los guiones listos en rioplatense (voseo) y español de España (vosotros), si hay demanda.
 - Versión de unos 6 minutos de cada guion, para que un solo estilo alcance los 30 minutos de un clon profesional.
 - Anuncios (AdSense): activar recién con contenido y visitas, y nunca en el modo grabación. Revisar los términos del programa de afiliados de ElevenLabs (aviso de afiliado, uso de la marca).
@@ -1046,12 +1046,27 @@ Los guiones los escribió Claude con las mismas reglas del prompt, y **cayó en 
 
 - Los guiones en inglés adaptan los mismos temas y productos ficticios que los españoles, con vocabulario internacional y ortografía de EE. UU.
 - Las meditaciones usan cada tema como paisaje o ritual (el mar, una taza de chocolate, un bosque patagónico, soltar el celular, la noche antes de un día importante).
-- Los 25 pasan el validador con 0 errores y 0 avisos. En total la biblioteca tiene **40 guiones listos** (unos 150 minutos de lectura) más el del cobre.
+- Los 25 pasan el validador con 0 errores y 0 avisos.
+
+### Tercera tanda (Noticiero y Audiolibro)
+
+| Tema | Noticiero (ES) | News (EN) | Audiolibro (ES) | Audiobook (EN) |
+|---|---|---|---|---|
+| 1 | Noticias del océano profundo | Deep ocean news | La última inmersión | The last dive |
+| 2 | La historia del chocolate, en noticias | The history of chocolate, as news | La bicicleta del abuelo | Grandpa's bicycle |
+| 3 | Informe especial desde Atacama | Special report from the Atacama | Viento en la Patagonia | Wind in Patagonia |
+| 4 | Noticias de la tecnología diaria | Everyday tech news | Sin señal | No signal |
+| 5 | Noticiero de Villa Serena | The Villa Serena newscast | El primer día de Julia | Julia's first day |
+
+- **Noticiero:** cinco notas por guion, con datos generales y verificables (fechas y cifras redondeadas). El tema 5 es el noticiero de **Villa Serena, un pueblo inventado**, y lo dice en voz alta: así las noticias ficticias nunca se atribuyen a personas o lugares reales.
+- **Audiolibro:** cuentos con narrador en tercera persona, inicio, conflicto y desenlace, diálogos entre comillas, `[suave]` en los momentos íntimos y `[pausa 2s]` en los giros. Como el narrador no habla de sí, la regla de no darle género no aplica; los personajes sí tienen nombre y género.
+- Los 20 pasan el validador con 0 errores y 0 avisos. Igual que en las tandas anteriores, la primera versión de los noticieros quedó corta (un 12–17 % bajo el largo pedido) y se alargó con datos antes de publicar.
+- En total la biblioteca tiene **60 guiones listos** (unos 227 minutos de lectura) más el del cobre.
 
 ### Pendientes de la biblioteca
 - **Leerlos en voz alta** y corregir lo que suene raro al decirlo (el validador no ve eso).
 - Variantes rioplatense y España, si hay demanda.
-- Los otros 6 estilos, si hay demanda.
+- Los otros 4 estilos: Tutorial, Motivacional, Suspenso y Reels.
 
 ---
 

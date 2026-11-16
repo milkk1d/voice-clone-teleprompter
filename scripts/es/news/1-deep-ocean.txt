@@ -1,0 +1,78 @@
+# Titulares
+@fuerza 4
+> Voz de noticiero: clara, firme y sin opinar.
+
+Buenas noches, estas son las noticias del océano profundo.
+El fondo del mar sigue siendo uno de los lugares **menos** explorados del planeta.
+El océano cubre cerca del setenta por ciento de la Tierra.
+Su profundidad promedio supera los **tres mil** setecientos metros.
+Aun así, la mayor parte del fondo marino no tiene **mapas** detallados.
+Muchos científicos dicen que conocemos mejor la superficie de la Luna que algunas zonas del océano.
+En esta edición: la presión extrema, los animales que brillan y las fuentes de agua caliente.
+También les contamos cómo se exploran hoy esas aguas oscuras.
+Es un territorio enorme, frío y casi sin luz.
+Comenzamos.
+[pausa]
+
+# La presión
+@fuerza 4
+> Datos firmes, sin apuro.
+
+En la fosa de las Marianas, en el océano Pacífico, el fondo está a casi **once** mil metros.
+Es el punto más profundo que se conoce.
+Si se pusiera allí la montaña más alta del mundo, su cima quedaría bajo el agua.
+Allí, la presión del agua es más de **mil** veces mayor que en la superficie.
+¿Cómo se compara eso con algo cotidiano? [sube]
+Es como tener el peso de un auto sobre la punta de un dedo.
+Por eso, los vehículos que bajan necesitan paredes muy gruesas de metal.
+En mil novecientos sesenta, dos personas llegaron por primera vez a ese fondo.
+Viajaron en un batiscafo y estuvieron abajo unos **veinte** minutos.
+Desde entonces, solo un grupo pequeño de expediciones ha repetido el viaje.
+[pausa]
+
+# Animales que brillan
+@fuerza 4
+> Mantén el ritmo constante.
+
+Bajo los mil metros, la luz del sol ya no llega.
+Sin embargo, el fondo del mar no está completamente a oscuras.
+Muchos animales producen su **propia** luz, un fenómeno llamado bioluminiscencia.
+La usan para atraer presas, confundir a sus enemigos o encontrar pareja.
+Ese brillo también les sirve para comunicarse con otros de su misma especie.
+El pez linterna, el calamar vampiro y varias medusas están entre los casos más conocidos.
+Los investigadores estiman que la **mayoría** de los animales de aguas profundas puede brillar.
+Su luz suele ser azul o verde, los colores que mejor viajan en el agua fría.
+Algunos peces tienen ojos **enormes** para captar el brillo más débil.
+Otros casi no tienen ojos y se guían por el tacto y las vibraciones.
+[pausa]
+
+# Las fuentes calientes
+@fuerza 4
+> Sigue la nota con interés, sin opinar.
+
+Otra noticia del fondo: en el océano también hay **chimeneas** de agua caliente.
+Se descubrieron en mil novecientos setenta y siete, cerca de las islas Galápagos.
+Por esas grietas sale agua a más de **trescientos** grados, cargada de minerales.
+Alrededor viven gusanos gigantes, cangrejos blancos y bacterias que no necesitan la luz del sol.
+Fue un hallazgo que cambió lo que sabíamos sobre la vida.
+Hasta entonces, se pensaba que toda la cadena de alimentos dependía del sol.
+Hoy, algunos científicos estudian estas zonas para entender cómo **empezó** la vida en la Tierra.
+También buscan ambientes parecidos en lunas heladas de otros planetas.
+¿Podría haber vida en lugares así? [sube]
+Por ahora, es una pregunta abierta.
+[pausa]
+
+# Cierre
+@fuerza 4
+> Cierre de noticiero: sereno y firme.
+
+Y para terminar, una mirada al trabajo que viene.
+Hoy, robots submarinos recorren el fondo durante horas sin nadie a bordo.
+Algunos pueden bajar a más de seis mil metros de profundidad.
+Toman fotos, miden la temperatura y recogen muestras de agua y de roca.
+Cada expedición encuentra especies que **nadie** había visto antes.
+Varios equipos internacionales trabajan para completar un mapa de todo el fondo marino.
+Es una de las grandes tareas de este siglo, y avanza cada año.
+Mientras tanto, el océano profundo sigue guardando muchos **secretos**.
+Esto fue todo por hoy.
+Gracias por su compañía y hasta la **próxima** edición. [baja]

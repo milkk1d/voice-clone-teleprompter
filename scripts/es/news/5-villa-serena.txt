@@ -1,0 +1,76 @@
+# Titulares
+@fuerza 4
+> Noticiero de un pueblo inventado: tono serio, aunque las noticias sean pequeñas.
+
+Buenas noches, bienvenidos al noticiero de Villa Serena, un pueblo **imaginario** junto al mar.
+Hoy tenemos una edición llena de primeras veces y de planes que no salieron como se esperaba.
+Les contaremos sobre el primer día de una nueva panadería en la plaza **central**.
+También sobre un viaje escolar que terminó en un lugar muy distinto al previsto.
+Y sobre el festival de la cosecha, que esta vez tuvo un invitado inesperado: la **lluvia**.
+Recuerden que todo lo que escucharán esta noche es ficción.
+Cualquier parecido con su propio pueblo es pura coincidencia.
+Comencemos con la primera nota.
+[pausa]
+
+# Primer día de la panadería
+@fuerza 4
+> Nota local, con ritmo constante.
+
+La panadería La Espiga abrió sus puertas este lunes a las seis de la mañana.
+En plena madrugada, ya había una fila de **veinte** vecinos frente a la puerta.
+Su dueña, la joven Rosa Fuentes, contó que no durmió en toda la noche.
+"Llevo tres años soñando con este día", dijo, con las manos llenas de harina.
+Sin embargo, el debut tuvo un pequeño **contratiempo**.
+A las ocho, el horno principal dejó de funcionar.
+Rosa y su ayudante tuvieron que hornear por turnos en un horno prestado por la escuela.
+Los vecinos esperaron con paciencia y nadie se fue sin su pan.
+Entre los primeros clientes estaba el alcalde, que pidió doce panes y un café.
+Al cierre del día, la panadería había vendido más de **quinientos** panes.
+[pausa]
+
+# El viaje escolar
+@fuerza 4
+> Informa sin perder la seriedad.
+
+Un viaje escolar al museo de ciencias de la capital terminó con un **cambio** de planes.
+El bus salió puntual a las siete, con cuarenta estudiantes y tres profesores a bordo.
+A mitad de camino, se reventó un neumático en una zona sin señal.
+¿Qué hicieron mientras esperaban la ayuda? [sube]
+Los profesores improvisaron una **clase** al aire libre, junto a un campo de girasoles.
+Los estudiantes contaron pétalos, midieron sombras y dibujaron insectos.
+Nadie resultó herido y ningún estudiante quiso volver antes de tiempo.
+La grúa llegó tres horas después, cuando ya era tarde para el museo.
+Una de las profesoras lo describió como "el mejor día de ciencias del año".
+La dirección de la escuela confirmó que el viaje al museo se **repetirá** en primavera.
+[pausa]
+
+# Festival bajo la lluvia
+@fuerza 4
+> Mantén la seriedad, con un toque de alegría.
+
+El tradicional festival de la cosecha se celebró este sábado bajo una lluvia **intensa**.
+Los organizadores habían anunciado sol durante toda la semana.
+Por la mañana, sin embargo, nubes negras cubrieron el cielo de Villa Serena.
+A las once empezó a llover y no paró hasta la **noche**.
+Lejos de suspender la fiesta, los vecinos trasladaron los puestos al gimnasio municipal.
+Los puestos de comida vendieron más sopa caliente que en cualquier otra edición.
+La banda del pueblo tocó con los zapatos mojados y el público bailó entre paraguas abiertos.
+El concurso de la calabaza más grande lo ganó un ejemplar de **noventa** kilos, según las reglas oficiales.
+¡Nadie recuerda una fiesta tan húmeda y tan alegre!
+Los organizadores ya prometen una carpa gigante para el próximo año.
+[pausa]
+
+# Cierre
+@fuerza 4
+> Cierre de noticiero: sereno y firme.
+
+Y antes de despedirnos, el pronóstico para mañana.
+Se esperan cielos despejados y vientos suaves desde el mar.
+La panadería de la plaza abrirá a las seis, esta vez con el horno **reparado**.
+Los estudiantes del viaje escolar presentarán sus dibujos de insectos en la biblioteca.
+La entrada es libre y habrá arroz con leche para todos.
+Las familias pueden llegar desde las cinco de la tarde.
+Y el gimnasio municipal sigue buscando al dueño de un paraguas **amarillo** con lunares.
+Si es suyo, puede retirarlo en la recepción.
+Estas fueron las noticias de Villa Serena, el pueblo donde lo pequeño también es noticia.
+Gracias por su compañía y buenas **noches**. [baja]

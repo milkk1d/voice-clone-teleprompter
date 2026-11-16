@@ -1,0 +1,65 @@
+# Antes del amanecer
+@fuerza 2
+> Tono cálido, con algo de humor.
+
+El despertador de Julia sonó a las cuatro de la mañana.
+Era su primer día de trabajo en la panadería de don Ramón, la más antigua del barrio.
+Se vistió a oscuras en plena madrugada, con sueño y nervios.
+En el camino repasó todo lo que había aprendido en el curso: harina, agua, sal y paciencia.
+La panadería olía a leña y a pan fresco.
+Don Ramón la esperaba en la puerta, con un delantal blanco y cara **seria**.
+"Aquí hay una sola regla: no hay que ser rápida, hay que ser **constante**", le dijo.
+Le mostró los hornos, las mesas de madera y una libreta llena de recetas escritas a mano.
+"Hoy harás los panes para la fiesta del colegio", agregó.
+Julia tragó saliva.
+Eran **trescientos** panes.
+
+# El error
+@fuerza 3
+> La tensión sube.
+
+Julia amasó durante horas, con los brazos cada vez más cansados.
+A las siete, metió las primeras bandejas al horno y se sentó a descansar un minuto.
+Solo un minuto.
+[pausa 2s]
+Cuando abrió los ojos, un olor a quemado llenaba toda la cocina.
+"¡No, no, no!", gritó, corriendo hacia el horno.
+Los panes estaban **negros** como el carbón.
+Don Ramón entró en ese momento y miró las bandejas sin decir nada.
+Julia sintió que la cara le ardía de vergüenza.
+"Lo siento mucho. Si quiere, me voy ahora mismo", dijo en voz baja.
+El panadero se cruzó de brazos y la miró un **largo** rato.
+Faltaban apenas dos horas para la entrega.
+
+# Contra el reloj
+@fuerza 4
+> El clímax: ritmo rápido y alegría al final.
+
+"¿Irte? Ni lo sueñes", respondió don Ramón, arremangándose la camisa.
+"Tú amasas, yo armo y el horno no se queda **solo** ni un segundo."
+Trabajaron sin hablar, a un ritmo que Julia no creía posible.
+Ella pesaba la harina, él daba forma a los panes con movimientos rápidos y precisos.
+Cada bandeja que salía del horno era más dorada que la anterior.
+[pausa 2s]
+A las nueve en punto, llegó la camioneta del colegio.
+Trescientos panes, tibios y perfectos, esperaban en canastos sobre el mostrador.
+"¡Lo logramos!", exclamó Julia, con harina hasta en las cejas.
+La directora del colegio probó uno y aplaudió.
+"Este es el mejor pan del **barrio**", dijo.
+Don Ramón le guiñó un ojo a Julia, sin corregir a **nadie**.
+
+# La libreta
+@fuerza 2
+> Íntimo y con humor. Termina despacio.
+
+Al final del día, don Ramón le sirvió un café y abrió su vieja libreta.
+En la primera página había una mancha **oscura** y una fecha de hace cuarenta años.
+Le preguntó, con media sonrisa: "¿Sabes qué es esto?" [sube]
+Julia negó con la cabeza.
+[suave]"Mi primer día. Quemé todo el pan del pueblo."[/suave]
+Ella se rio tan fuerte que casi derrama el café.
+"El error no importa tanto", siguió él. "Lo que importa es lo que haces **después**."
+Desde ese día, Julia llega cada mañana a las cuatro, sin despertador.
+Ya tiene su propia página en la libreta, con su propia receta.
+Y, en una esquina, dibujó un pan pequeño y quemado.
+Dice que es para no olvidar nunca su primer **día**. [baja]

@@ -1,0 +1,79 @@
+# Headlines
+@energy 4
+> Newscast voice, clear and unhurried.
+
+Good evening, this is the everyday technology news.
+We use our phones dozens of times a day, but we rarely know how they **work**.
+Tonight we explain three things that seem like magic.
+First, how your phone knows where you are.
+Second, how Wi-Fi travels through your home.
+And third, how such a tiny camera takes such **sharp** photos.
+Plus, a few tips to take care of your **battery**.
+These stories don't make the headlines, but they're right in your pocket.
+All of it, explained in a few words.
+[pause]
+
+# Satellites that listen
+@energy 4
+> Explain with confidence, step by step.
+
+The global positioning system works with about **thirty** satellites.
+They orbit the Earth about twenty thousand kilometers up.
+Each one sends, nonstop, a signal with its position and the exact time.
+Your phone sends nothing to those satellites: it only **listens**.
+When it receives several signals, it measures how long each one took to arrive.
+The farther away a satellite is, the longer its signal takes to reach you.
+From those time differences, it works out your location on the map.
+That's why it needs to see at least **four** satellites at once.
+Between tall buildings, the signals bounce and the blue dot can jump around.
+Indoors, the phone gets help from cell towers and nearby Wi-Fi networks.
+[pause]
+
+# Wi-Fi at home
+@energy 4
+> A practical story, friendly but firm.
+
+It's a very common problem.
+Why does the Wi-Fi work well in the living room but not in the bedroom? [up]
+The answer lies in the radio waves your router uses.
+Those waves travel through the air with ease, but they lose strength with every **wall**.
+Brick walls, mirrors and large appliances are their worst enemies.
+Experts recommend placing the router somewhere **high** and central.
+It's also a good idea to keep it away from the microwave, which uses a similar frequency.
+Many modern routers work on two bands.
+One reaches farther, and the other is **faster** but has a shorter range.
+Choosing the right one can improve your connection without spending money.
+And if the signal still falls short, a range extender can cover the farthest rooms.
+[pause]
+
+# Smart cameras
+@energy 4
+> Keep a steady pace.
+
+Phone cameras have lenses the size of a lentil.
+Even so, they take photos that a few years ago required **professional** equipment.
+The secret isn't just the lens, but the **processing** of the image.
+When you tap the button, the phone takes several pictures in a fraction of a second.
+Then it combines them to **reduce** noise, brighten shadows and correct colors.
+This process is called computational photography.
+It's also why night photos look brighter than what your eye can see.
+Today, many phones have two or three lenses with different angles.
+One is for wide landscapes, and another for zooming in without losing detail.
+Some models even detect whether the photo shows people, food or a landscape, and adjust the colors.
+[pause]
+
+# Battery care
+@energy 4
+> Newscast close: calm and firm.
+
+To close, a practical story about your battery.
+Most phones use lithium-ion batteries.
+These batteries suffer in extreme **heat**, for example inside a car in the sun.
+They also wear out faster if they are always charged to one hundred percent or fully drained.
+That's why several manufacturers now include **optimized** charging options.
+Do you need to turn your phone off every night? [up]
+It isn't necessary, but restarting it now and then helps free up memory.
+With this care, a battery can stay in good shape for **years**.
+And if your phone gets very hot while charging, it's a good idea to remove the case.
+That's the everyday technology news for tonight.
+Thank you for joining us, and see you in the next **edition**. [down]

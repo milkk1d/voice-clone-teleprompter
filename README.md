@@ -8,7 +8,7 @@ Free scripts and a karaoke-style teleprompter to record your voice for AI voice 
 
 - **Free, no accounts.** Everything runs in your browser.
 - **Your voice never leaves your computer.** You record with your own program (for example, Audacity).
-- **40 ready-made scripts** in English and Spanish: Documentary, Podcast, Commercial and Calm, with 5 topics each.
+- **60 ready-made scripts** in English and Spanish: Documentary, News, Audiobook, Podcast, Commercial and Calm, with 5 topics each.
 - **Want another topic or style?** The site builds a prompt for your own AI (ChatGPT, Claude, Gemini…) to write the script, and checks it when you paste it in.
 
 ## How to use it on your computer
@@ -88,7 +88,7 @@ Guiones gratis y un teleprompter tipo karaoke para grabar tu voz y clonarla con 
 
 - **Gratis y sin cuentas.** Todo funciona en tu navegador.
 - **Tu voz nunca sale de tu computador.** Grabas con tu propio programa (por ejemplo, Audacity).
-- **40 guiones listos** en español e inglés: Documental, Podcast, Comercial y Meditación, con 5 temas cada uno.
+- **60 guiones listos** en español e inglés: Documental, Noticiero, Audiolibro, Podcast, Comercial y Meditación, con 5 temas cada uno.
 - **¿Quieres otro tema o estilo?** La web arma un prompt para que tu IA (ChatGPT, Claude, Gemini…) escriba el guion, y lo revisa cuando lo pegas.
 
 ### Cómo usarlo en tu computador
