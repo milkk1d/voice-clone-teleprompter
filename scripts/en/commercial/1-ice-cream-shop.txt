@@ -1,0 +1,114 @@
+# Seasonal flavors
+@energy 5
+> Open with a question and smile as you say it.
+
+Have you ever tasted **wild** blackberry ice cream? [up]
+At Copo Sur, we make it every morning with **fresh** fruit.
+Every **season** brings new flavors.
+In summer, raspberry and peach.
+In autumn, apple with cinnamon and ginger.
+They're creamy, fresh and full of **real** flavor.
+No two scoops taste the same!
+[loud]Come to Copo Sur and taste the **season**.[/loud]
+[fast]Flavors subject to availability.[/fast]
+
+# Real ingredients
+@energy 5
+> A confident, almost proud tone.
+
+Farm milk, **real** fruit and nothing else.
+That's how simple a Copo Sur ice cream is.
+No coloring, no artificial flavors and no **preservatives**.
+Why complicate something that's already **perfect**? [up]
+Our chocolate comes from fine cacao, and our vanilla from whole pods.
+You notice it in the **color**, the texture and the aroma.
+It's the ice cream you'd love to make at home!
+[loud]Copo Sur: **real** ice cream, made with love.[/loud]
+[fast]Ask about allergens in store.[/fast]
+
+# Your spot on the square
+@energy 5
+> Paint the scene calmly, then speed up.
+
+It's **Sunday** afternoon, and the square is full of sunshine.
+On the corner, Copo Sur has its door wide **open**.
+There are tables on the terrace, soft music and a **friendly** team.
+You order, you sit down and **time** stands still.
+It's the perfect place for a date, a chat or a break.
+A little pleasure in the middle of your week.
+And the wifi is free, if you want to work with dessert!
+Shall we save you a **table**? [up]
+[loud]Copo Sur, your **sweet** spot on the square.[/loud]
+[fast]Open every day, eleven to eleven.[/fast]
+
+# The Volcano Cone
+@energy 5
+> Lots of energy, like a kids' show.
+
+Attention, little **explorers**!
+The Volcano Cone is here, with a surprise at the bottom.
+It's vanilla, chocolate and **rainbow** sprinkles.
+At the end, a **cookie** shaped like a dinosaur is waiting.
+It's a portion made for kids.
+It's smaller, cheaper and just as much **fun**.
+Who dares to reach the bottom of the volcano? [up]
+[loud]Order the Volcano Cone and discover its **secret**.[/loud]
+[fast]While supplies last.[/fast]
+
+# Something for everyone
+@energy 5
+> Warm and friendly.
+
+Watching your sugar, but not ready to give up **dessert**? [up]
+At Copo Sur, we thought of you.
+We have ice cream with no **added** sugar, sweetened with fruit.
+There are also vegan options, made with coconut and almond milk.
+They're **smooth**, creamy and full of flavor.
+No one at the table has to just **watch**.
+Everyone can pick a favorite!
+[loud]Copo Sur: an ice cream for **every** person.[/loud]
+[fast]Nutrition information at the counter.[/fast]
+
+# Ice cream cakes
+@energy 5
+> A party tone.
+
+A birthday without cake isn't a **birthday**.
+And an ice cream cake turns it into a **party**.
+At Copo Sur, we build your cake with the flavors you choose.
+It can have **three** layers, fresh fruit and a chocolate message.
+We make it in a day and deliver it ready to serve.
+How many candles are you blowing out this year? [up]
+Order yours **two** days ahead!
+[loud]Celebrate with Copo Sur and make it **unforgettable**.[/loud]
+[fast]Orders subject to schedule availability.[/fast]
+
+# Copo Sur delivered
+@energy 5
+> Start hot and tired; end with relief.
+
+It's **thirty** degrees and you don't feel like going out.
+Relax: Copo Sur comes to **you**.
+Order by phone or on our website.
+In half an **hour**, we knock on your door.
+It arrives in a thermal box, at just the right **temperature**.
+Choose a half liter, a full liter or the family pack.
+And delivery is **free** on your first order!
+Already know which flavor you want? [up]
+[loud]Copo Sur delivered: cold, fast and **delicious**.[/loud]
+[fast]Free delivery on first order only.[/fast]
+
+# Copo Friend
+@energy 5
+> The closing ad: cheerful and direct.
+
+You love ice cream. We love **seeing** you.
+That's why we created the Copo Friend card.
+Every ice cream you buy earns you a **stamp**.
+With **ten** stamps, your next ice cream is on us.
+No strange rules, no fine print.
+Plus, you get a free scoop on your **birthday**.
+It's free and fits in your **wallet**.
+Ask for yours at the counter today!
+[loud]Copo Friend: every scoop brings you closer to a **free** one.[/loud]
+[fast]One stamp per purchase, valid for one year.[/fast]

@@ -1,0 +1,112 @@
+# Views from the window
+@energy 5
+> Open with the image, with wonder.
+
+**Lakes**, volcanoes and endless forests.
+That's what you see from the window of the Blue Valley Train.
+Our cars have **panoramic** windows, almost floor to ceiling.
+Why look at your phone when the view is better? [up]
+Every window is a **different** painting.
+And the trip becomes part of the **destination**.
+Bring your camera, you're going to need it!
+[loud]Ride the Blue Valley Train and watch the world go **by**.[/loud]
+[fast]Views subject to weather conditions.[/fast]
+
+# Travel in comfort
+@energy 5
+> A tone of relief, almost a sigh at first.
+
+Forget **cramped** seats.
+On the Blue Valley Train, you have **room** to stretch your legs.
+The seats recline, with a power outlet and a fold-down table.
+There's free wifi, clean restrooms and **gentle** air conditioning.
+You can read, work or just sleep.
+When did you last travel and arrive **rested**? [up]
+You'll arrive with more energy than when you **left**!
+[loud]Choose the train and travel in **comfort**.[/loud]
+[fast]Services subject to availability in each car.[/fast]
+
+# The dining car
+@energy 5
+> Tasty, as if you could smell it.
+
+It smells like **fresh** bread.
+It's coming from the dining car of the Blue Valley Train.
+We serve **breakfast** with fruit, juice and fresh-ground coffee.
+At lunch, there are homemade dishes with ingredients from along the route.
+And for dessert, a crunchy apple pie that's already **famous**.
+It's a real pleasure while the hills roll past your window.
+Table for two? [up]
+Food just tastes **better** on a train!
+[loud]Book your table in the **dining** car.[/loud]
+[fast]Menu subject to seasonal changes.[/fast]
+
+# The night train
+@energy 5
+> Mysterious at first, bright at the end.
+
+You board at **night** and wake up in the south.
+That's how the Blue Valley night train works.
+It has private cabins, real beds and clean sheets.
+You save a hotel night and don't lose a single **vacation** day.
+The rocking of the train is the best lullaby.
+Can you picture opening the curtain to a volcano at **dawn**? [up]
+It's an experience you won't **forget**!
+[loud]Sleep on board the Blue Valley **Train**.[/loud]
+[fast]Cabins for two or four people.[/fast]
+
+# Family travel
+@energy 5
+> Cheerful, like a family ad.
+
+"Are we there yet?" That question ends on the **train**.
+The Blue Valley Train has a **family** car, with games and stories.
+Kids can move around, draw and look out the **window**.
+There are **changing** tables for babies and a kids' menu.
+Meanwhile, you enjoy a **quiet** coffee.
+And children under four ride for **free**.
+Your vacation starts from the very first **minute**!
+[loud]Travel as a family on the Blue Valley Train.[/loud]
+[fast]One free child per paying adult.[/fast]
+
+# Your best friend rides too
+@energy 5
+> Fun and affectionate.
+
+Your dog wants to see the **south** too.
+On the Blue Valley Train, small **pets** ride with you.
+All you need is a carrier and a few simple rules.
+Big dogs ride in a special car, with fresh **water**.
+There are stops to stretch their legs at every **long** stop.
+Who said vacations were just for **humans**? [up]
+Woof, what a trip!
+[loud]Bring your **best** friend on the train.[/loud]
+[fast]Check pet conditions when you buy your ticket.[/fast]
+
+# Weekend getaway
+@energy 5
+> A fast pace at first, relaxed at the end.
+
+Friday at six: you leave **work**.
+Friday at seven: you're already on the **train**.
+Two hours later, you arrive in a town of lakes and mountains.
+You have the **whole** weekend to walk, eat and rest.
+On Sunday, the train brings you back with no **stress**.
+Why drive when someone else can take you? [up]
+Your getaway starts the moment you **board**!
+[loud]Book your weekend getaway on the Blue Valley Train.[/loud]
+[fast]Hotel packages available online.[/fast]
+
+# Book early and save
+@energy 5
+> The closing ad: urgent but friendly.
+
+Did you know a train ticket can cost less than **lunch**? [up]
+Book a month ahead, and the fare drops by **half**.
+The sooner you book, the more you **save**.
+You can change the date once at no cost.
+And students and people over sixty get an **extra** discount.
+Deals sell out fast, **especially** in summer.
+Don't leave it for **later**!
+[loud]Buy your Blue Valley Train ticket today and **save**.[/loud]
+[fast]Prices subject to seat availability.[/fast]

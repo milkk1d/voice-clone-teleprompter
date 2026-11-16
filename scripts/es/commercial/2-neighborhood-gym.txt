@@ -1,0 +1,117 @@
+# Tu primera clase
+@fuerza 5
+> Abre con complicidad, como quien conoce la excusa.
+
+¿Hace cuánto que dices "el lunes empiezo"? [sube]
+Este lunes, empieza de **verdad**.
+En el gimnasio La Cuadra, tu **primera** clase es gratis.
+Llegas, conoces el lugar y pruebas sin compromiso.
+Sin excusas.
+Te recibe un equipo **amable**, que no te mira de arriba abajo.
+Hay máquinas nuevas, duchas limpias y música con **energía**.
+¡Solo trae ganas y una botella de agua!
+[fuerte]Ven a La Cuadra y da el primer **paso**.[/fuerte]
+[rápido]Clase de prueba válida una vez por persona.[/rápido]
+
+# Clases en grupo
+@fuerza 5
+> Alegre y con ritmo.
+
+Entrenar **con** gente es más divertido.
+Por eso La Cuadra tiene más de **veinte** clases grupales cada semana.
+Yoga para estirarte, baile para reír y entrenamiento funcional para sudar.
+Cada clase dura **cuarenta y cinco** minutos.
+Los grupos son pequeños, así que nadie se queda **atrás**.
+¡Hasta los más tímidos terminan bailando!
+¿Cuál será tu favorita? [sube]
+[fuerte]Reserva tu lugar en La Cuadra y muévete en **grupo**.[/fuerte]
+[rápido]Cupos limitados en cada clase.[/rápido]
+
+# A tu hora
+@fuerza 5
+> Comprensivo al inicio, enérgico al final.
+
+Sales temprano, vuelves tarde y no tienes **tiempo**.
+Te entendemos.
+Abrimos a las seis de la mañana.
+Y cerramos a las **once** de la noche.
+Entrena antes del trabajo, al almuerzo o después de cenar.
+Los fines de semana también estamos **abiertos**.
+Y con nuestra app, ves en tiempo real cuánta gente hay.
+¡Así eliges el momento más **tranquilo**!
+¿Qué hora te acomoda a ti? [sube]
+[fuerte]La Cuadra: tu gimnasio, a **tu** hora.[/fuerte]
+[rápido]Horario reducido en días festivos.[/rápido]
+
+# Un plan para ti
+@fuerza 5
+> Firme y cercano.
+
+Cada cuerpo es **distinto**.
+Por eso, en La Cuadra no te damos una rutina copiada.
+Nuestros entrenadores te evalúan y arman un plan **solo** para ti.
+Revisan tu postura, tus metas y tu ritmo.
+Cada **mes** ajustan el plan según tu avance.
+¿Quieres bajar el estrés, ganar fuerza o correr más? [sube]
+Te acompañamos en cada etapa.
+¡Tu progreso también es nuestro **orgullo**!
+[fuerte]Pide tu evaluación en La Cuadra y entrena con **sentido**.[/fuerte]
+[rápido]Evaluación incluida en todos los planes.[/rápido]
+
+# Entre vecinos
+@fuerza 5
+> Cálido, como una invitación del barrio.
+
+En La Cuadra no hay **desconocidos**.
+**Aquí** se saluda por el nombre.
+La señora del tercer piso entrena junto al cartero del barrio.
+Los viernes hay una caminata grupal por el parque, gratis para socios.
+Y una vez al mes organizamos un desayuno **saludable** para todos.
+¡Es más que un gimnasio, es una **comunidad**!
+¿Te sumas? [sube]
+[fuerte]Únete a La Cuadra y entrena con tus **vecinos**.[/fuerte]
+[rápido]Actividades sujetas a inscripción previa.[/rápido]
+
+# Moverse no tiene edad
+@fuerza 5
+> Energía amable, sin gritar.
+
+Moverse no tiene **edad**.
+En La Cuadra creamos clases especiales para mayores de sesenta.
+Son sesiones suaves de equilibrio, fuerza y movilidad.
+Te ayudan a subir escaleras, cargar bolsas y jugar con tus **nietos**.
+Las guía una fisioterapeuta con mucha **paciencia**.
+Y siempre terminan con fruta, té y **buena** conversación.
+¡Nunca es tarde para sentirte **fuerte**!
+¿Conoces a alguien a quien le encantaría? [sube]
+[fuerte]Regálale una clase en La Cuadra y que siga en **movimiento**.[/fuerte]
+[rápido]Recomendamos consultar antes con tu médico.[/rápido]
+
+# Sin contratos
+@fuerza 5
+> Tono de alivio y complicidad.
+
+¿Te asustan los contratos de un año? [sube]
+A nosotros **también**.
+Aquí pagas mes a mes, sin matrícula y sin **letra** chica.
+Nada de reglas raras.
+Si un mes viajas, congelas tu plan con un mensaje.
+Si quieres irte, te vas sin **multas** ni preguntas.
+Creemos que vuelves porque te gusta, no porque firmaste.
+¡Así de **simple**!
+[fuerte]Prueba La Cuadra un mes y decide **tú**.[/fuerte]
+[rápido]Precio mensual sujeto a cambios anuales.[/rápido]
+
+# De a dos
+@fuerza 5
+> Cierre de la tanda: alegre y directo.
+
+Entrenar en compañía es **mejor**.
+Y entrenar gratis, **todavía** mejor.
+Este mes, trae a una amistad, tu pareja o tu hermana.
+Si se inscribe, las dos personas reciben un **mes** de regalo.
+Se **motivan**, se esperan y no se saltan ninguna clase.
+¿Quién será tu compañía de entrenamiento? [sube]
+¡Las mejores rutinas se hacen de a **dos**!
+[fuerte]Ven a La Cuadra con alguien que quieras y ganen en **equipo**.[/fuerte]
+[rápido]Promoción válida hasta fin de mes.[/rápido]

@@ -1,0 +1,121 @@
+# Pasos suaves
+@fuerza 5
+> Abre con el problema, y luego ofrece alivio.
+
+Cada paso que das golpea tus rodillas.
+¿Y si cada paso fuera **suave**? [sube]
+Las zapatillas Zancada tienen una suela que **absorbe** el impacto.
+Es como correr sobre pasto recién cortado.
+Tus **pies** se sienten livianos, firmes y protegidos.
+Y tu espalda también lo nota.
+Después de diez kilómetros, todavía quieres seguir.
+Esa es la magia de una buena suela.
+¡Tus rodillas te lo van a **agradecer**!
+[fuerte]Corre con Zancada y siente la **diferencia**.[/fuerte]
+[rápido]Modelos disponibles en tallas seleccionadas.[/rápido]
+
+# Zancada Inicio
+@fuerza 5
+> Cercano, para quien nunca ha corrido.
+
+¿Nunca has corrido más de una **cuadra**? [sube]
+Perfecto, este anuncio es para ti.
+El modelo Zancada Inicio está pensado para tus **primeros** kilómetros.
+Es estable, liviano y muy fácil de usar.
+Además, trae un plan gratis de ocho semanas para empezar.
+Empiezas caminando y terminas trotando **treinta** minutos seguidos.
+Cada semana, un poco más.
+¡Sin dolor y sin **apuro**!
+[fuerte]Da tu primer paso con Zancada **Inicio**.[/fuerte]
+[rápido]Plan descargable con la compra.[/rápido]
+
+# Con estilo propio
+@fuerza 5
+> Ritmo de pasarela, con actitud.
+
+Rojo fuego, azul eléctrico o negro **total**.
+Las Zancada no solo funcionan, también se **lucen**.
+Van con tu ropa de deporte y con tus jeans.
+Tienen detalles **reflectantes** para que te vean de noche.
+Seguridad y estilo en un solo par.
+Y puedes personalizar los cordones con tu color **favorito**.
+¿Cuál combinación te representa? [sube]
+¡Corre con **estilo** propio!
+[fuerte]Elige tus colores en Zancada y deja **huella**.[/fuerte]
+[rápido]Personalización disponible solo en la tienda en línea.[/rápido]
+
+# Hechas para durar
+@fuerza 5
+> Abre con la cifra, firme.
+
+Ochocientos kilómetros.
+Esa es la **distancia** que aguanta una Zancada antes de pedir relevo.
+Su **suela** de goma resistente no se gasta en el asfalto.
+La malla superior es firme, flexible y ligera.
+Las costuras están **reforzadas** en los puntos de más roce.
+Nada se despega, nada se rompe.
+¿Crees que hace falta comprar zapatillas cada tres meses? [sube]
+Con Zancada, **no**.
+¡Ahorras dinero y ganas **kilómetros**!
+[fuerte]Zancada: hechas para **durar**.[/fuerte]
+[rápido]Duración estimada según el uso.[/rápido]
+
+# Zancada Lluvia
+@fuerza 5
+> Empieza con un día gris y termina con energía.
+
+Llueve, hace frío y el parque está lleno de **charcos**.
+¿Te quedas en casa? [sube]
+Con la Zancada Lluvia, **no**.
+Su tela impermeable mantiene tus pies **secos**.
+La suela tiene un **agarre** especial para el piso mojado.
+No resbalas, ni siquiera en las bajadas.
+Y el cuello acolchado evita que entren piedras y barro.
+¡El mal tiempo ya no es **excusa**!
+[fuerte]Sal a correr con Zancada **Lluvia**.[/fuerte]
+[rápido]Impermeabilidad probada en condiciones normales de uso.[/rápido]
+
+# Zancada Montaña
+@fuerza 5
+> Aventura: voz amplia y segura.
+
+El asfalto te queda **chico**.
+Ahora quieres cerros, senderos y vistas que quitan el aliento.
+Para eso existe la Zancada **Montaña**.
+Tiene tacos **profundos** para subir y bajar con seguridad.
+Tus tobillos van firmes en cada curva.
+Protege tus dedos de raíces y piedras.
+Y pesa menos de **trescientos** gramos.
+¿Cuál será tu próxima cumbre? [sube]
+¡La montaña te está **esperando**!
+[fuerte]Sube más alto con Zancada Montaña.[/fuerte]
+[rápido]Usa siempre equipo adecuado en la montaña.[/rápido]
+
+# Treinta días de prueba
+@fuerza 5
+> Comprensivo y luego muy seguro.
+
+Comprar zapatillas por internet da **miedo**.
+¿Y si no te quedan bien? [sube]
+En Zancada tienes **treinta** días para probarlas.
+Corre con ellas, sal a caminar y úsalas en la calle.
+Si no te convencen, las devuelves **gratis**.
+Sin preguntas, sin reglas raras y sin trámites **largos**.
+¡Así de **seguros** estamos de su comodidad!
+[fuerte]Pruébalas treinta días con **Zancada**.[/fuerte]
+[rápido]Devolución con comprobante y caja original.[/rápido]
+
+# Una segunda vida
+@fuerza 5
+> Cierre de la tanda: orgullo y energía.
+
+¿Qué haces con tus zapatillas viejas? [sube]
+La mayoría termina en la **basura**.
+En Zancada las recibimos y les damos una **segunda** vida.
+Las trituramos y las convertimos en pisos para canchas y plazas.
+Por cada par que traes, recibes un **descuento** en tu próxima compra.
+Así cuidas tu bolsillo y tu ciudad.
+Ganas tú, gana tu barrio y gana el **planeta**.
+¡Correr nunca fue tan **limpio**!
+[fuerte]Trae tus zapatillas viejas a Zancada y cierra el **ciclo**.[/fuerte]
+[rápido]Descuento no acumulable con otras promociones.[/rápido]

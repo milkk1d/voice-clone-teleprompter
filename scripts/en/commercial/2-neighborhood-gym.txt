@@ -1,0 +1,117 @@
+# Your first class
+@energy 5
+> Open with a knowing smile, like you know the excuse.
+
+How long have you been saying "I'll start on Monday"? [up]
+This Monday, start for **real**.
+At La Cuadra Gym, your **first** class is free.
+Come in, look around and try it with no commitment.
+No excuses.
+A **friendly** team welcomes you, and nobody looks you up and down.
+There are new machines, clean showers and music full of **energy**.
+Just bring water and a good attitude!
+[loud]Come to La Cuadra and take the first **step**.[/loud]
+[fast]Trial class valid once per person.[/fast]
+
+# Group classes
+@energy 5
+> Cheerful and rhythmic.
+
+Working out **with** people is more fun.
+That's why La Cuadra has over **twenty** group classes every week.
+Yoga to stretch, dance to laugh and functional training to sweat.
+Each class lasts **forty-five** minutes.
+Groups are small, so nobody gets left **behind**.
+Even the shyest people end up dancing!
+Which one will be your favorite? [up]
+[loud]Book your spot at La Cuadra and move as a **team**.[/loud]
+[fast]Limited spots in every class.[/fast]
+
+# On your schedule
+@energy 5
+> Understanding at first, energetic at the end.
+
+You leave early, get home late and have no **time**.
+We get it.
+We open at six in the morning.
+And we close at **eleven** at night.
+Train before work, at lunch or after dinner.
+We're **open** on weekends too.
+And our app shows you how busy we are, live.
+So you can pick the **quietest** moment!
+What time works for you? [up]
+[loud]La Cuadra: your gym, on **your** schedule.[/loud]
+[fast]Reduced hours on holidays.[/fast]
+
+# A plan for you
+@energy 5
+> Firm and warm.
+
+Every body is **different**.
+That's why La Cuadra won't give you a copied routine.
+Our trainers assess you and build a plan just for **you**.
+They check your posture, your goals and your pace.
+Every **month** they measure your progress and adjust the plan.
+Do you want less stress, more strength or longer runs? [up]
+We're with you at every stage.
+Your progress is our **pride** too!
+[loud]Book your assessment at La Cuadra and train with **purpose**.[/loud]
+[fast]Assessment included in every plan.[/fast]
+
+# Among neighbors
+@energy 5
+> Warm, like an invitation from the neighborhood.
+
+At La Cuadra, there are no **strangers**.
+**Here**, people greet you by name.
+The lady from the third floor trains beside the mail carrier.
+On Fridays there's a group walk in the park, free for members.
+And once a month, we host a **healthy** breakfast for everyone.
+It's more than a gym, it's a **community**!
+Want to join us? [up]
+[loud]Join La Cuadra and train with your **neighbors**.[/loud]
+[fast]Activities require prior sign-up.[/fast]
+
+# Movement has no age
+@energy 5
+> Kind energy, no shouting.
+
+Moving has no **age** limit.
+At La Cuadra, we created special classes for people over sixty.
+They're gentle sessions for balance, strength and mobility.
+They help you climb stairs, carry groceries and play with your **grandkids**.
+They're led by a physical therapist with endless **patience**.
+And they always end with fruit, tea and **good** conversation.
+It's never too late to feel **strong**!
+Do you know someone who would love it? [up]
+[loud]Give them a class at La Cuadra and keep them **moving**.[/loud]
+[fast]We recommend checking with your doctor first.[/fast]
+
+# No contracts
+@energy 5
+> A tone of relief and complicity.
+
+Do year-long contracts scare you? [up]
+They scare us **too**.
+Here you pay monthly, with no sign-up fee and no **fine** print.
+No strange rules.
+Traveling for a month? Freeze your plan with a message.
+Want to leave? Go, with no **fees** and no questions.
+You come **back** because you like it, not because you signed.
+It's that **simple**!
+[loud]Try La Cuadra for a month and decide for **yourself**.[/loud]
+[fast]Prices may change once a year.[/fast]
+
+# Better in pairs
+@energy 5
+> The closing ad: cheerful and direct.
+
+Working out with company is **better**.
+And working out for free is even **sweeter**.
+This month, bring a friend, your partner or your sister.
+If they sign up, you **both** get a free month.
+You push each other, wait for each other and never skip **class**.
+Who will be your workout buddy? [up]
+The best routines come in **pairs**!
+[loud]Bring someone you love to La Cuadra and win as a **team**.[/loud]
+[fast]Offer valid until the end of the month.[/fast]

@@ -1,0 +1,113 @@
+# Sabores de temporada
+@fuerza 5
+> Abre con una pregunta y sonríe al decirla.
+
+¿Alguna vez probaste un helado de **mora** silvestre? [sube]
+En Copo Sur lo hacemos cada mañana, con fruta **recién** cosechada.
+Cada **temporada** trae sabores nuevos.
+En verano, frambuesa y durazno.
+En otoño, manzana con canela y jengibre.
+Son helados cremosos, frescos y con sabor de **verdad**.
+¡Ninguna cucharada es igual a la anterior!
+[fuerte]Ven a Copo Sur y prueba la **temporada**.[/fuerte]
+[rápido]Sabores sujetos a disponibilidad.[/rápido]
+
+# Ingredientes reales
+@fuerza 5
+> Tono seguro, casi orgulloso.
+
+Leche de granja, fruta **real** y nada más.
+Así de simple es un helado de Copo Sur.
+Sin colorantes, sin saborizantes artificiales y sin **conservantes**.
+¿Por qué complicar lo que ya es **perfecto**? [sube]
+Nuestro chocolate viene de cacao fino y nuestra vainilla, de vainas enteras.
+Lo notas en el **color**, en la textura y en el aroma.
+¡Es el helado que te gustaría hacer en casa!
+[fuerte]Copo Sur: helado de verdad, hecho con **cariño**.[/fuerte]
+[rápido]Consulta los alérgenos en el local.[/rápido]
+
+# Tu rincón en la plaza
+@fuerza 5
+> Pinta la escena con calma y luego acelera.
+
+Es **domingo** por la tarde y la plaza está llena de sol.
+En la esquina, Copo Sur tiene la puerta **abierta**.
+Hay mesas en la terraza, música suave y un equipo **amable**.
+Pides tu helado, te sientas y el **tiempo** se detiene.
+Es el lugar ideal para una cita, una charla o una pausa.
+¡Y el wifi es gratis, por si quieres trabajar con postre!
+¿Te guardamos una **mesa**? [sube]
+[fuerte]Copo Sur, tu rincón **dulce** en la plaza.[/fuerte]
+[rápido]Abierto todos los días, de once a once.[/rápido]
+
+# El Cono Volcán
+@fuerza 5
+> Mucha energía, como en un programa para niños.
+
+¡Atención, pequeños **exploradores**!
+Llegó el Cono Volcán, con una sorpresa en el fondo.
+Es de vainilla, chocolate y chispas de **colores**.
+Al final te espera una **galleta** con forma de dinosaurio.
+La porción está pensada para niños.
+Es más pequeña, más barata e igual de **divertida**.
+¿Quién se atreve a llegar al fondo del volcán? [sube]
+[fuerte]Pide el Cono Volcán en Copo Sur y descubre su **secreto**.[/fuerte]
+[rápido]Hasta agotar existencias.[/rápido]
+
+# Para cada persona
+@fuerza 5
+> Cercano y amable.
+
+¿Cuidas el azúcar, pero no quieres renunciar al **postre**? [sube]
+En Copo Sur pensamos en ti.
+Tenemos helados sin azúcar **añadida**, endulzados con fruta.
+También hay opciones veganas, hechas con leche de coco y de almendra.
+Son **suaves**, cremosas y llenas de sabor.
+Nadie en la mesa tiene que quedarse **mirando**.
+¡Todos pueden elegir su helado favorito!
+[fuerte]Copo Sur: un helado para **cada** persona.[/fuerte]
+[rápido]Información nutricional disponible en el mostrador.[/rápido]
+
+# Pasteles helados
+@fuerza 5
+> Tono de fiesta.
+
+Un cumpleaños sin pastel no es un **cumpleaños**.
+Y un pastel helado lo convierte en una **fiesta**.
+En Copo Sur armamos tu pastel con los sabores que elijas.
+Puede tener **tres** pisos, frutas frescas y un mensaje de chocolate.
+Lo preparamos en un día y lo entregamos listo para servir.
+¿Cuántas velas vas a soplar este año? [sube]
+¡Pide el tuyo con dos días de **anticipación**!
+[fuerte]Celebra con Copo Sur y que la fiesta sea **inolvidable**.[/fuerte]
+[rápido]Pedidos sujetos a disponibilidad de horario.[/rápido]
+
+# Copo Sur a domicilio
+@fuerza 5
+> Empieza con calor y cansancio; termina con alivio.
+
+Hace **treinta** grados y no tienes ganas de salir.
+Tranquilidad: Copo Sur va a tu **casa**.
+Pide por teléfono o en la web.
+En media **hora** tocamos tu puerta.
+Llega en una caja térmica, a la temperatura **justa**.
+Elige entre medio litro, un litro o el pack familiar.
+¡Y el envío es gratis en tu primer pedido!
+¿Ya sabes qué sabor vas a pedir? [sube]
+[fuerte]Copo Sur a domicilio: frío, rápido y **delicioso**.[/fuerte]
+[rápido]Envío gratis solo en la primera compra.[/rápido]
+
+# Copo Amigo
+@fuerza 5
+> Cierre de la tanda: alegre y directo.
+
+Te gusta el helado. A nosotros nos gusta **verte**.
+Por eso creamos la tarjeta Copo Amigo.
+Por cada helado que compras, sumas un **sello**.
+Con **diez** sellos, el siguiente helado va por nuestra cuenta.
+Sin reglas raras ni letra chica.
+Además, recibes un sabor de regalo el día de tu cumpleaños.
+Es gratis y cabe en tu **billetera**.
+¡Pídela hoy en el mostrador!
+[fuerte]Copo Amigo: cada helado te acerca a uno **gratis**.[/fuerte]
+[rápido]Un sello por compra, válido por un año.[/rápido]

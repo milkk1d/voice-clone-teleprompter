@@ -1,0 +1,112 @@
+# Paisajes por la ventana
+@fuerza 5
+> Abre con la imagen, con asombro.
+
+**Lagos**, volcanes y bosques infinitos.
+Eso es lo que ves desde la ventana del Tren Valle Azul.
+Nuestros vagones tienen ventanas **panorámicas**, casi del techo al piso.
+¿Para qué mirar el celular si el paisaje es mejor? [sube]
+Cada ventana es un **cuadro** distinto.
+Y el viaje se vuelve parte del **destino**.
+¡Lleva tu cámara, la vas a necesitar!
+[fuerte]Viaja en el Tren Valle Azul y mira el mundo **pasar**.[/fuerte]
+[rápido]Paisajes sujetos a condiciones del clima.[/rápido]
+
+# Viaja con comodidad
+@fuerza 5
+> Tono de alivio, casi un suspiro al inicio.
+
+Olvida los asientos **apretados**.
+En el Tren Valle Azul tienes **espacio** para estirar las piernas.
+Los asientos se reclinan, tienen enchufe y una mesita plegable.
+Hay wifi gratis, baños limpios y aire acondicionado **suave**.
+Puedes leer, trabajar o simplemente dormir.
+¿Hace cuánto que no viajas **descansando**? [sube]
+¡Llegarás con más energía que al **salir**!
+[fuerte]Elige el tren y viaja con **comodidad**.[/fuerte]
+[rápido]Servicios sujetos a disponibilidad en cada vagón.[/rápido]
+
+# El coche comedor
+@fuerza 5
+> Sabroso, como si oliera rico.
+
+Huele a pan recién **horneado**.
+Viene del coche comedor del Tren Valle Azul.
+Ahí sirven **desayunos** con frutas, jugos y café de grano.
+Al mediodía hay platos caseros, con ingredientes de la ruta.
+Y de postre, un pastel de manzana crujiente que ya es **famoso**.
+Todo se disfruta mientras pasan los cerros por la ventana.
+¿Mesa para dos? [sube]
+¡Comer viajando sabe **mejor**!
+[fuerte]Reserva tu mesa en el coche **comedor**.[/fuerte]
+[rápido]Menú sujeto a cambios según temporada.[/rápido]
+
+# El tren nocturno
+@fuerza 5
+> Misterioso al inicio, luminoso al final.
+
+Te subes de **noche** y despiertas en el sur.
+Así funciona el tren nocturno del Valle Azul.
+Tiene cabinas privadas, camas de verdad y sábanas limpias.
+Ahorras una noche de hotel y no pierdes **vacaciones**.
+El traqueteo del tren es la mejor canción de cuna.
+¿Te imaginas abrir la cortina y ver un volcán al **amanecer**? [sube]
+¡Es una experiencia que no se **olvida**!
+[fuerte]Duerme a bordo del Tren Valle **Azul**.[/fuerte]
+[rápido]Cabinas para dos o cuatro personas.[/rápido]
+
+# Viaje en familia
+@fuerza 5
+> Alegre, como un anuncio familiar.
+
+"¿Cuánto falta?" Esa pregunta se acaba en el **tren**.
+Nuestro tren tiene un vagón **familiar**, con juegos y cuentos.
+Los niños pueden moverse, dibujar y mirar por la **ventana**.
+Hay **cambiadores** para bebés y menú infantil.
+Mientras tanto, tú tomas un café **tranquilo**.
+Y los menores de cuatro años viajan **gratis**.
+¡Las vacaciones empiezan desde el primer **minuto**!
+[fuerte]Viaja en familia con el Tren Valle Azul.[/fuerte]
+[rápido]Un niño gratis por cada adulto con pasaje.[/rápido]
+
+# Tu mejor amigo también viaja
+@fuerza 5
+> Divertido y cariñoso.
+
+Tu perro también quiere conocer el **sur**.
+En el Tren Valle Azul, las **mascotas** pequeñas viajan contigo.
+Solo necesitas un transportín y seguir unas reglas simples.
+Los perros grandes van en un vagón especial, con **agua** fresca.
+Hay paradas para estirar las patas en cada estación **larga**.
+¿Quién dijo que las vacaciones eran solo para **humanos**? [sube]
+¡Guau, qué viaje!
+[fuerte]Lleva a tu mejor **amigo** en el tren.[/fuerte]
+[rápido]Consulta las condiciones para mascotas al comprar.[/rápido]
+
+# Escapada de fin de semana
+@fuerza 5
+> Ritmo rápido al inicio, relajado al final.
+
+Viernes a las seis: sales del **trabajo**.
+Viernes a las siete: ya estás en el **tren**.
+Dos horas después, llegas a un pueblo de lagos y montañas.
+Tienes el fin de semana **entero** para caminar, comer y descansar.
+El domingo, el tren te trae de vuelta sin tráfico ni **estrés**.
+¿Para qué manejar si alguien puede llevarte? [sube]
+¡Tu escapada empieza al **subir**!
+[fuerte]Compra tu escapada de fin de semana en el Tren Valle Azul.[/fuerte]
+[rápido]Paquetes con hotel disponibles en la web.[/rápido]
+
+# Compra antes y ahorra
+@fuerza 5
+> Cierre de la tanda: urgente pero amable.
+
+¿Sabías que viajar en tren puede costar menos que un **almuerzo**? [sube]
+Si compras un mes antes, el pasaje baja a la **mitad**.
+Mientras antes compras, más **ahorras**.
+Puedes cambiar la fecha una vez sin costo.
+Y si eres estudiante o mayor de sesenta, tienes un **descuento** extra.
+Las ofertas se agotan rápido, sobre todo en verano.
+¡No lo dejes para **después**!
+[fuerte]Compra hoy tu pasaje del Tren Valle Azul y **ahorra**.[/fuerte]
+[rápido]Precios sujetos a disponibilidad de cupos.[/rápido]
