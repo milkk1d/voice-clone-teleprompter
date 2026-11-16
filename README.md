@@ -2,6 +2,8 @@
 
 **English** · [Español](#español)
 
+**▶ Use it online: [milkk1d.github.io/voice-clone-teleprompter](https://milkk1d.github.io/voice-clone-teleprompter/)**
+
 Free scripts and a karaoke-style teleprompter to record your voice for AI voice cloning. Every script marks which word to stress, where to pause and when your voice should rise, so your recording comes out steady and natural.
 
 - **Free, no accounts.** Everything runs in your browser.
@@ -79,6 +81,8 @@ Some links to ElevenLabs are affiliate links: if you subscribe after clicking, t
 ---
 
 ## Español
+
+**▶ Úsalo en línea: [milkk1d.github.io/voice-clone-teleprompter](https://milkk1d.github.io/voice-clone-teleprompter/)**
 
 Guiones gratis y un teleprompter tipo karaoke para grabar tu voz y clonarla con IA. Cada guion marca qué palabra decir con más fuerza, dónde pausar y cuándo subir la entonación, para que tu grabación salga pareja y natural.
 
