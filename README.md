@@ -1,38 +1,102 @@
-# Clona tu voz · Teleprompter
+# Voice Clone Teleprompter
 
-**Español** · [English](#english)
+**English** · [Español](#español)
 
-Guiones y un teleprompter tipo karaoke para grabar tu voz y clonarla con IA. Cada guion marca qué palabra decir con más fuerza, dónde pausar y cuándo subir la entonación, para que tu grabación salga pareja y natural.
+Free scripts and a karaoke-style teleprompter to record your voice for AI voice cloning. Every script marks which word to stress, where to pause and when your voice should rise, so your recording comes out steady and natural.
+
+- **Free, no accounts.** Everything runs in your browser.
+- **Your voice never leaves your computer.** You record with your own program (for example, Audacity).
+- **40 ready-made scripts** in English and Spanish: Documentary, Podcast, Commercial and Calm, with 5 topics each.
+- **Want another topic or style?** The site builds a prompt for your own AI (ChatGPT, Claude, Gemini…) to write the script, and checks it when you paste it in.
+
+## How to use it on your computer
+
+1. Download the project: green **Code → Download ZIP** button, then unzip it.
+2. Open **`index.html`** with a double click.
+3. Answer the four questions, open your script in the teleprompter and record in Audacity.
+
+Nothing to install. Fonts load from the internet; offline, the page uses your system fonts. Use the **ES / EN** switch at the top to change the language.
+
+The [recording guide](guia.html) explains how to set up your room, microphone and Audacity.
+
+## What's in the folder
+
+| | |
+|---|---|
+| `index.html` | Home page and questionnaire: clone language and accent, style, topic and clone type |
+| `teleprompter.html` | The teleprompter: ready-made scripts or your own pasted script, with automatic checking |
+| `guia.html` | Recording guide for Audacity |
+| `privacidad.html` | Privacy policy |
+| `guiones/` | Ready-made scripts (`.txt`) and their bundles for the site |
+| `js/`, `css/` | Code and styles |
+| `especificacion-prompts-v1.md` | The specification: script format, the 10 styles, the prompts and the test history (in Spanish) |
+| `pruebas/` | Build tools and the tests run with ChatGPT and Gemini |
+
+## Script format
+
+```
+# Section title
+@energy 4
+> A note for the reader (not read aloud).
+
+Why is the ocean **salty**? [up]
+Every year, rivers carry [pause] **millions** of tons of salt into the sea.
+[slow]This part is read more slowly.[/slow] [breathe]
+```
+
+`**word**` is the strongest word in the sentence, `[pause]` or `[pause 2s]` add a pause, `[breathe]` marks where to take a breath, `[up]` and `[down]` change the intonation, and `[slow]`, `[fast]`, `[soft]` and `[loud]` mark passages. Spanish commands work too: `@fuerza`, `[pausa]`, `[respira]`, `[sube]`, `[baja]`, `[lento]`, `[rápido]`, `[suave]`, `[fuerte]`. Details are in section 3 of the specification.
+
+## For developers
+
+You need [Node.js](https://nodejs.org/). The specification is the source of truth: after changing it, or after editing or adding a script in `guiones/`, run:
+
+```bash
+node pruebas/construir.js
+```
+
+This regenerates `js/datos.js`, checks every script and bundles them again for the teleprompter. Other tools:
+
+```bash
+node pruebas/validar-guion.js guiones/en/podcast/2-my-bike.txt --lang en --style podcast --words 580 --sections 5
+```
+
+```bash
+node pruebas/armar-prompt.js --style documental --lang en --accent "Neutral / International" --topic 1
+```
+
+## License
+
+- **Code** (`.html`, `.js`, `.css`): [MIT](LICENSE).
+- **Scripts and text**: [CC BY 4.0](LICENSE-guiones.md). You may use and adapt them as long as you credit the source.
+
+Found a bug or have an idea? Open an **Issue**.
+
+## Affiliate links
+
+Some links to ElevenLabs are affiliate links: if you subscribe after clicking, the author earns a commission at no extra cost to you. They live in `js/enlaces.js` and are always labeled as such.
+
+---
+
+## Español
+
+Guiones gratis y un teleprompter tipo karaoke para grabar tu voz y clonarla con IA. Cada guion marca qué palabra decir con más fuerza, dónde pausar y cuándo subir la entonación, para que tu grabación salga pareja y natural.
 
 - **Gratis y sin cuentas.** Todo funciona en tu navegador.
 - **Tu voz nunca sale de tu computador.** Grabas con tu propio programa (por ejemplo, Audacity).
 - **40 guiones listos** en español e inglés: Documental, Podcast, Comercial y Meditación, con 5 temas cada uno.
 - **¿Quieres otro tema o estilo?** La web arma un prompt para que tu IA (ChatGPT, Claude, Gemini…) escriba el guion, y lo revisa cuando lo pegas.
 
-## Cómo usarlo en tu computador
+### Cómo usarlo en tu computador
 
 1. Descarga el proyecto: botón verde **Code → Download ZIP**, y descomprímelo.
 2. Abre **`index.html`** con doble clic.
 3. Responde las cuatro preguntas, abre tu guion en el teleprompter y graba en Audacity.
 
-No hace falta instalar nada. Las tipografías se cargan desde internet; sin conexión, la página usa las del sistema.
+No hace falta instalar nada. Las tipografías se cargan desde internet; sin conexión, la página usa las del sistema. Cambia el idioma con el botón **ES / EN** de arriba.
 
 La [guía de grabación](guia.html) explica cómo preparar el lugar, el micrófono y Audacity.
 
-## Qué hay en la carpeta
-
-| | |
-|---|---|
-| `index.html` | Inicio y cuestionario: idioma y acento del clon, estilo, tema y tipo de clon |
-| `teleprompter.html` | El teleprompter: guiones listos o tu propio guion pegado, con revisión automática |
-| `guia.html` | Guía para grabar con Audacity |
-| `privacidad.html` | Política de privacidad |
-| `guiones/` | Los guiones listos (`.txt`) y sus paquetes para la web |
-| `js/`, `css/` | Código y estilos |
-| `especificacion-prompts-v1.md` | La especificación: formato de los guiones, los 10 estilos, los prompts y el historial de pruebas |
-| `pruebas/` | Herramientas de construcción y las pruebas hechas con ChatGPT y Gemini |
-
-## El formato de los guiones
+### El formato de los guiones
 
 ```
 # Título de la sección
@@ -44,47 +108,19 @@ Cada año, los ríos arrastran [pausa] **millones** de toneladas de sal.
 [lento]Esto se lee más despacio.[/lento] [respira]
 ```
 
-`**palabra**` es la más fuerte de la frase, `[pausa]` o `[pausa 2s]` pausan, `[respira]` marca dónde tomar aire, `[sube]` y `[baja]` cambian la entonación, y `[lento]`, `[rápido]`, `[suave]` y `[fuerte]` marcan tramos. En inglés: `@energy`, `[pause]`, `[breathe]`, `[up]`, `[down]`, `[slow]`, `[fast]`, `[soft]`, `[loud]`. El detalle está en la sección 3 de la especificación.
+`**palabra**` es la más fuerte de la frase, `[pausa]` o `[pausa 2s]` pausan, `[respira]` marca dónde tomar aire, `[sube]` y `[baja]` cambian la entonación, y `[lento]`, `[rápido]`, `[suave]` y `[fuerte]` marcan tramos. El detalle está en la sección 3 de la especificación.
 
-## Para quien quiera modificarlo
+### Para quien quiera modificarlo
 
-Necesitas [Node.js](https://nodejs.org/). La especificación es la fuente de verdad: después de cambiarla, o de editar o agregar un guion en `guiones/`, corre:
+Necesitas [Node.js](https://nodejs.org/). La especificación es la fuente de verdad: después de cambiarla, o de editar o agregar un guion en `guiones/`, corre `node pruebas/construir.js`. Regenera `js/datos.js`, valida todos los guiones y los vuelve a empaquetar.
 
-```bash
-node pruebas/construir.js
-```
-
-Esto regenera `js/datos.js`, valida todos los guiones y los vuelve a empaquetar para el teleprompter. Otras herramientas:
-
-```bash
-node pruebas/validar-guion.js guiones/es/podcast/2-mi-bicicleta.txt --lang es --style podcast --words 580 --sections 5
-```
-
-```bash
-node pruebas/armar-prompt.js --style documental --lang es --accent "Latino neutro" --topic 1
-```
-
-## Licencia
+### Licencia
 
 - **Código** (`.html`, `.js`, `.css`): [MIT](LICENSE).
 - **Guiones y textos**: [CC BY 4.0](LICENSE-guiones.md). Puedes usarlos y adaptarlos citando la fuente.
 
 ¿Encontraste un error o tienes una idea? Escríbela en la pestaña **Issues**.
 
-## Enlaces de afiliado
+### Enlaces de afiliado
 
 Algunos enlaces a ElevenLabs son de afiliado: si te suscribes después de hacer clic, el autor recibe una comisión, sin costo extra para ti. Están en `js/enlaces.js` y siempre van marcados como tales.
-
----
-
-## English
-
-Scripts and a karaoke-style teleprompter to record your voice for AI voice cloning. Each script marks which word to stress, where to pause and when your voice should rise.
-
-- **Free, no accounts:** everything runs in your browser, and your voice never leaves your computer.
-- **40 ready-made scripts** in Spanish and English (Documentary, Podcast, Commercial and Calm).
-- **Want another topic?** The site builds a prompt for your own AI and checks the script when you paste it.
-
-**To use it:** click **Code → Download ZIP**, unzip it and open **`index.html`**. Use the ES/EN switch at the top. The [recording guide](guia.html) explains how to set up your room, microphone and Audacity.
-
-**License:** code under [MIT](LICENSE); scripts and text under [CC BY 4.0](LICENSE-guiones.md) (credit the source). Bugs and ideas: open an **Issue**.
