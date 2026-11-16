@@ -604,30 +604,58 @@ function locate(t) {
   let e = L.ev[L.ev.length - 1];
   for (const ev of L.ev) if (t < ev.t0 + ev.d) { e = ev; break; }
   const ef = Math.min(1, Math.max(0, (t - e.t0) / e.d));
-  const spoken = e.k === "w" ? e.s0 + ef * (e.s1 - e.s0) : e.s0;
   return {
     i,
-    frac: L.syl ? spoken / L.syl : 1,
     word: e.k === "w" ? e.wi : -1,
     wf: e.k === "w" ? ef : 0,
     said: L.ev.filter((v) => v.k === "w" && v.t0 + v.d <= t).length,
-    pause: e.k === "p" ? { rem: Math.max(0, e.t0 + e.d - t), d: e.d, sec: !!e.sec, rs: !!e.rs } : null,
+    pause: e.k === "p" ? { rem: Math.max(0, e.t0 + e.d - t), d: e.d, sec: !!e.sec, rs: !!e.rs, end: !!e.end } : null,
   };
 }
 function measure() {
   tops = lines.map((l) => l.el.offsetTop);
   tops.push(endEl.offsetTop);
+  // renglones visuales de cada línea: en qué renglón cae cada palabra y la altura del centro de cada renglón
+  for (const L of lines) {
+    L.rowOf = []; L.rowY = [];
+    let top = -1e9, sum = 0, n = 0;
+    L.wordEls.forEach((el, k) => {
+      const h = el.offsetHeight, c = el.offsetTop + h / 2;
+      if (el.offsetTop > top + h * 0.5) {
+        if (n) L.rowY.push(sum / n);
+        top = el.offsetTop; sum = 0; n = 0;
+      }
+      sum += c; n++;
+      L.rowOf[k] = L.rowY.length;
+    });
+    if (n) L.rowY.push(sum / n);
+    if (!L.rowY.length) L.rowY.push(L.el.offsetTop + L.el.offsetHeight / 2);
+  }
+}
+// altura (en el texto) que debe quedar en el centro de la franja: el renglón de la palabra que se está diciendo
+function targetY(at) {
+  const L = lines[at.i];
+  if (at.word >= 0) return L.rowY[L.rowOf[at.word]];
+  if (at.pause && at.pause.end) { // pausa al final de la línea: ya se sube a la siguiente
+    const N = lines[at.i + 1];
+    return N ? N.rowY[0] : endEl.offsetTop + state.fs * 0.7;
+  }
+  return L.rowY[L.rowOf[Math.max(0, at.said - 1)] || 0];
 }
 
 // --- dibujo ---
-let lastI = -1, lastSec = -1;
+let lastI = -1, lastSec = -1, viewY = null, lastDraw = 0;
 const mmss = (s) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, "0")}`;
 function render() {
   if (!lines.length) return;
   const at = locate(state.t);
   const { i } = at;
-  const y = tops[i] + (tops[i + 1] - tops[i]) * at.frac;
-  scroller.style.transform = `translateY(${Math.round(stage.clientHeight * 0.36 - y)}px)`;
+  // el texto sube renglón por renglón (con un deslizamiento corto mientras se lee; al instante si se mueve a mano)
+  const now = performance.now(), dt = Math.min(0.1, (now - lastDraw) / 1000);
+  lastDraw = now;
+  const goal = targetY(at);
+  viewY = viewY === null || !state.playing ? goal : viewY + (goal - viewY) * (1 - Math.exp(-dt / 0.09));
+  scroller.style.transform = `translateY(${Math.round(stage.clientHeight * 0.36 + state.fs * 0.7 - viewY)}px)`;
   if (i !== lastI) {
     lines.forEach((l, k) => { l.el.classList.toggle("past", k < i); l.el.classList.toggle("cur", k === i); });
     $("lineNo").textContent = tr("line")(i + 1, lines.length);
