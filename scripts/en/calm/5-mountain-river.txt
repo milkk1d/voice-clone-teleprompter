@@ -1,0 +1,81 @@
+# Arriving
+@energy 2
+> A soft, unhurried voice.
+
+[slow][soft]Find a comfortable position and rest your back well.
+Let your hands open, palms facing up.
+Close your eyes.
+[breathe]
+Breathe in through your nose and feel the cool air.
+Breathe out through your mouth, without hurry.
+Once more, as if the air came down from the mountain.
+[breathe]
+You don't have to go anywhere now.
+Can you notice the weight of your body on the seat? [up][/soft][/slow]
+[pause 3s]
+
+# The riverbank
+@energy 2
+> Paint the landscape with calm.
+
+[soft]Imagine sitting on the bank of a mountain river.
+The water is crystal clear, almost silver, flowing between round stones.
+[breathe]
+Around you there are tall trees, and the air smells of pine.
+A bird sings on a branch somewhere, then falls quiet.
+Higher up, a glacier still holds a little white snow.
+[breathe]
+Listen to the sound of the river, steady and fresh.
+It never stops, but it never rushes either.
+It just keeps going.[/soft]
+[pause 3s]
+
+# The water
+@energy 1
+> Very soft.
+
+[slow][soft]Watch how the water flows around each stone without fighting it.
+It touches it, goes around it and moves on.
+[breathe]
+Now imagine your worries are leaves.
+Pick them up one by one and set them on the water.
+One leaf for each thing that weighs on you today.
+[breathe]
+Watch the river carry them away, downstream.
+You don't need to know where they're going.
+The river knows the way.
+Just watch them **drift** away.[/soft][/slow]
+[pause 3s]
+
+# Cool and calm
+@energy 1
+> Slow, almost a whisper.
+
+[slow][soft]Imagine dipping your hands into the water.
+It's cold and clean, and it gently wakes up your fingers.
+[breathe]
+That coolness rises up your arms and clears your mind.
+Your head feels lighter.
+The morning sun warms your back.
+[breathe]
+How long has it been since you listened only to water? [up]
+Stay here a moment longer, a quiet treasure of time.
+Let the sound of the water fill all the space around you.
+No thinking, no doing, just listening.[/soft][/slow]
+[pause 3s]
+
+# Coming back
+@energy 2
+> Gently, coming back to the present.
+
+[soft]Little by little, the sound of the river grows distant.
+Take with you that feeling of clear water and fresh air.
+Keep it in your chest, like a small treasure.
+[breathe]
+Notice your breathing again, and the place where you are.
+Move your fingers and toes.
+Stretch your back with care.
+[breathe]
+Open your eyes whenever you like.
+The river is still flowing, even if you can't see it, and you can always come back.[/soft]
+[pause 3s]

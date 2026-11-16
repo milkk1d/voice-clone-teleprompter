@@ -1,0 +1,81 @@
+# Llegar
+@fuerza 2
+> Voz cálida y lenta, como una tarde de verano.
+
+[lento][suave]Siéntate o recuéstate en una posición cómoda.
+Deja las manos quietas, sobre las piernas o a los costados.
+Cierra los ojos despacio.
+[respira]
+Toma aire por la nariz, como si olieras una flor.
+Suéltalo por la boca, sin apuro.
+Repite una vez más, sintiendo cómo el pecho se llena y se vacía.
+[respira]
+Ya no hay nada que hacer, solo estar aquí.
+¿Sientes cómo el aire entra y sale por sí solo? [sube][/suave][/lento]
+[pausa 3s]
+
+# El camino
+@fuerza 2
+> Pinta la escena con calma.
+
+[suave]Imagina que caminas por un sendero de tierra, en plena tarde.
+A tu alrededor crece un campo de lavanda, morado hasta el horizonte.
+[respira]
+El sol de la tarde te calienta la espalda.
+Una brisa tibia mueve las flores, que se inclinan y vuelven a su lugar.
+[respira]
+Cada paso es lento.
+Tus pies se hunden apenas en la tierra suave y tibia.
+Ningún reloj, ninguna regla, ningún apuro.
+Solo el camino, el sol y el perfume de las flores.[/suave]
+[pausa 3s]
+
+# El aroma
+@fuerza 1
+> Muy suave.
+
+[lento][suave]Te detienes y respiras hondo.
+El aroma de la lavanda entra suave, limpio, un poco dulce.
+[respira]
+Con cada inhalación, ese perfume baja hasta tu pecho.
+Con cada exhalación, se lleva un poco del **cansancio** del día.
+[respira]
+Escucha a las abejas que vuelan de flor en flor, y a algún pájaro pequeño.
+Su zumbido es parejo, como una canción de cuna.
+Tus hombros se aflojan.
+Tu respiración se vuelve profunda y pareja.
+Tu frente se suaviza.[/suave][/lento]
+[pausa 3s]
+
+# Descansar
+@fuerza 1
+> Lento, casi en susurro.
+
+[lento][suave]Imagina que te recuestas entre las flores, sobre la tierra tibia.
+El cielo es azul claro, con algunas nubes blancas que pasan despacio.
+[respira]
+Siente cómo el suelo te sostiene por completo.
+Tus piernas pesan, tus brazos pesan.
+Hasta tus pensamientos parecen más lentos, como las nubes.
+[respira]
+Si aparece un pensamiento, déjalo flotar como una nube.
+¿Puedes ver cómo se aleja, empujado por el viento? [sube]
+No necesitas seguirlo.
+Solo mira el cielo y respira.[/suave][/lento]
+[pausa 3s]
+
+# Volver
+@fuerza 2
+> Despacio, volviendo al presente.
+
+[suave]Poco a poco, el sol empieza a bajar y el campo se tiñe de dorado.
+Te levantas con calma y vuelves por el mismo sendero.
+[respira]
+Lleva contigo el perfume de la lavanda y el calor de la tarde.
+Guarda ese momento como un pequeño tesoro.
+Ahora, nota de nuevo el lugar donde estás.
+Mueve los dedos y estira el cuello con cuidado.
+[respira]
+Abre los ojos cuando quieras.
+Ese campo sigue ahí, y podrás volver cuando lo necesites.[/suave]
+[pausa 3s]

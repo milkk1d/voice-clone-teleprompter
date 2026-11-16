@@ -1,0 +1,81 @@
+# Arriving
+@energy 2
+> A warm, slow voice, like a summer afternoon.
+
+[slow][soft]Sit or lie down in a comfortable position.
+Rest your hands on your legs or by your sides.
+Close your eyes, without hurry.
+[breathe]
+Breathe in through your nose, as if you were smelling a flower.
+Let it out through your mouth, taking your time.
+Once more, feeling your chest fill and empty.
+[breathe]
+There's nothing left to do but be here.
+Can you feel the air moving in and out on its own? [up][/soft][/slow]
+[pause 3s]
+
+# The path
+@energy 2
+> Paint the scene with calm.
+
+[soft]Imagine you're walking along a dirt path in the afternoon.
+All around you grows a field of lavender, purple to the horizon.
+[breathe]
+The afternoon sun warms your back.
+A warm breeze moves the flowers, which bend and rise again.
+[breathe]
+Every step is slow.
+Your feet sink a little into the soft, warm earth.
+No clock, no rules, no hurry.
+Just the path, the sun and the scent of the flowers.[/soft]
+[pause 3s]
+
+# The scent
+@energy 1
+> Very soft.
+
+[slow][soft]You stop and take a deep breath.
+The lavender smells soft, clean and a little sweet.
+[breathe]
+With each breath in, that scent drops down to your chest.
+With each breath out, it carries away some of the day's **tiredness**.
+[breathe]
+Listen to the bees moving from flower to flower, and to a small bird somewhere.
+Their hum is steady, like a lullaby.
+Your shoulders loosen.
+Your breathing grows deep and even.
+Your forehead softens.[/soft][/slow]
+[pause 3s]
+
+# Resting
+@energy 1
+> Slow, almost a whisper.
+
+[slow][soft]Imagine lying down among the flowers, on the warm earth.
+The sky is pale blue, with a few white clouds drifting by.
+[breathe]
+Feel the ground holding you completely.
+Your legs are heavy, your arms are heavy.
+Even your thoughts seem to move slower, like the clouds.
+[breathe]
+If a thought appears, let it float away like a cloud.
+Can you see it drifting off, pushed by the wind? [up]
+You don't need to follow it.
+Just watch the sky and breathe.[/soft][/slow]
+[pause 3s]
+
+# Coming back
+@energy 2
+> Gently, coming back to the present.
+
+[soft]Little by little, the sun begins to set, and the field turns golden.
+You get up with calm and walk back along the same path.
+[breathe]
+Take with you the scent of lavender and the warmth of the afternoon.
+Keep this moment like a small treasure.
+Now, notice again the place where you are.
+Move your fingers and gently stretch your neck.
+[breathe]
+Open your eyes whenever you like.
+That field is still there, and you can come back whenever you need it.[/soft]
+[pause 3s]

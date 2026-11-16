@@ -1,0 +1,84 @@
+# Arriving
+@energy 2
+> Speak slowly, like walking someone to sleep.
+
+[slow][soft]Find a comfortable position, in bed or in an armchair.
+Let your body rest fully on whatever holds it.
+Close your eyes whenever you like.
+Notice your eyelids growing heavy.
+[breathe]
+Outside, it starts to rain.
+Listen to the first drops tapping on the glass, one by one.
+[breathe]
+You don't have to go anywhere now.
+You're indoors, with a warm blanket over your legs.
+Can you hear the rain becoming steadier? [up][/soft][/slow]
+[pause 3s]
+
+# The sound
+@energy 2
+> Soft, unhurried.
+
+[soft]The rain falls on the roof, on the trees and on the empty street.
+It's a constant sound that asks for nothing.
+[breathe]
+Let your breathing follow its rhythm.
+Breathe in as the drops fall.
+Breathe out as the water runs down the window.
+Breathe in again, without hurry, and breathe out with ease.
+[breathe]
+Each drop that slides down the glass carries a thought away.
+You don't have to stop them: just watch them go.
+One, and another, and another.[/soft]
+[pause 3s]
+
+# The room
+@energy 1
+> Very soft. Like a whisper.
+
+[slow][soft]Imagine the room in dim light, warm and quiet.
+Maybe it smells of tea, of wood or of clean sheets.
+[breathe]
+Feel the weight of the soft blanket on your legs.
+Your feet loosen, your ankles let go.
+Your knees rest.
+Your hands open on the blanket, holding nothing.
+[breathe]
+Outside, the storm passes by.
+Inside, everything is calm.
+Here, you are **safe**.[/soft][/slow]
+[pause 3s]
+
+# Letting go
+@energy 1
+> Slow, almost a whisper.
+
+[slow][soft]Now the rain grows finer, almost a murmur.
+Let your shoulders drop a little more.
+Relax your forehead, your jaw and your tongue.
+[breathe]
+If a worry comes, imagine writing it on the fogged-up window.
+Watch the drops wash it away, little by little.
+One by one, your worries turn into water.
+[breathe]
+Do you notice your body growing heavier? [up]
+There's nothing to fix tonight, and nothing to plan for tomorrow.
+Just listen, and enjoy the simple pleasure of the rain.[/soft][/slow]
+[pause 3s]
+
+# Coming back
+@energy 2
+> Gently, coming back to the present.
+
+[soft]Little by little, the rain stops.
+Only a few drops are left, falling from the roof.
+The air smells of wet earth, clean and fresh.
+[breathe]
+Bring your attention to your breath, now slow and deep.
+If you're going to sleep, stay here, in this calm.
+If you're going on with your day, move your fingers and toes.
+[breathe]
+Stretch your arms gently.
+Open your eyes whenever you like.
+Take a little of this silence with you.[/soft]
+[pause 3s]

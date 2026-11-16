@@ -1,0 +1,84 @@
+# Getting ready
+@energy 2
+> A slow, very soft voice.
+
+[slow][soft]Lie on your back, with your arms by your sides.
+Let the pillow hold your head.
+Close your eyes.
+[breathe]
+Breathe in through your nose, deep.
+Breathe out through your mouth, with a small sigh.
+Once more, and let the sigh be a little longer.
+[breathe]
+We're going to travel through your body, from head to toe.
+There's no right or wrong way to do this.
+Are you in a comfortable position? [up][/soft][/slow]
+[pause 3s]
+
+# Head and face
+@energy 1
+> Very soft.
+
+[slow][soft]Bring your attention to the top of your head.
+Feel your scalp loosen.
+Imagine a warm hand stroking your hair.
+[breathe]
+Move down to your forehead and let it smooth out.
+Let go of your eyelids, your cheeks and your jaw.
+Let your teeth part just a little.
+Your ears, your temples and the back of your neck rest too.
+[breathe]
+Your tongue rests at the bottom of your mouth.
+Your face is **soft**.[/soft][/slow]
+[pause 3s]
+
+# Shoulders, arms and chest
+@energy 1
+> Slow.
+
+[slow][soft]Now feel your neck, long and at ease.
+Let your shoulders drop, away from your ears.
+[breathe]
+The weight flows down your arms, past your elbows, into your hands.
+Your fingers open on their own, without effort.
+Feel the warmth in the palms of your hands.
+[breathe]
+Feel your chest rising and falling with each breath.
+Don't control it; just watch it.
+Each breath out makes it a little softer.[/soft][/slow]
+[pause 3s]
+
+# Back and legs
+@energy 1
+> Almost a whisper.
+
+[slow][soft]Bring your attention to your back, resting on the bed.
+Imagine it melting a little, like warm butter.
+[breathe]
+Feel your hips grow heavy, sinking into the mattress.
+Then your thighs, your knees and your calves.
+Each part grows heavy and sinks a little deeper.
+[breathe]
+And finally, your feet.
+Loosen your ankles, your soles and each one of your toes.
+Does your whole body feel heavier than when you started? [up][/soft][/slow]
+[pause 3s]
+
+# Sleep
+@energy 1
+> Very slow, softer and softer.
+
+[slow][soft]Now your whole body is resting.
+There's no part left that needs your attention.
+[breathe]
+If a thought arrives, let it pass like a faraway train.
+Listen to it fade, until you can't hear it anymore.
+Then the silence returns, soft and dark.
+[breathe]
+Your breathing is slow and deep.
+The night covers you like a blanket.
+You're safe, in your bed, with nothing to do.
+You can come back to this journey any other night, with pleasure.
+Let sleep arrive whenever it wants.
+Good night.[/soft][/slow]
+[pause 3s]

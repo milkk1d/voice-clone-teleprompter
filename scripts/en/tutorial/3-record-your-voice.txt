@@ -1,0 +1,69 @@
+# Before you record
+@energy 3
+> A patient, practical teacher's tone.
+
+Today I'll show you how to record your voice at home with good quality, without a studio.
+It works for a podcast, for your videos or for cloning your voice with artificial intelligence.
+What matters most isn't an expensive microphone, but the **room**.
+A good room with a simple microphone sounds better than a great microphone in a kitchen.
+You'll need a microphone, headphones and a free program like Audacity.
+Do you have everything ready? [up]
+Then let's start with the **space**.
+There are just three steps and a **final** review.
+
+# Step one: the room
+@energy 3
+> Clear and concrete.
+
+First, find the **quietest** spot in your home, with the least echo.
+Even in a small home, there's always a corner that works.
+A closet full of clothes or a bedroom with thick curtains works very well.
+Fabric absorbs sound; smooth walls and glass make it bounce.
+Clap once: if you hear a long echo, that room isn't ready yet.
+You can improve it with blankets, pillows or a mattress against the wall.
+Turn off the fridge, the fan and your phone notifications.
+[loud]Watch out for noises you no longer notice, like a clock or traffic.[/loud]
+Record at night or early in the morning, when the street is **quieter**.
+[pause]
+
+# Step two: the microphone
+@energy 3
+> Patient and precise.
+
+Second, place the microphone about a **hand** away from your mouth, around fifteen centimeters.
+If it's too close, the letters p and b hit it and sound like small explosions.
+To avoid that, put it a little to the side, not right in front of your mouth.
+A pop filter, or even a stocking stretched over a hoop, also **helps**.
+The golden rule: always keep the same distance.
+Why does it matter so much? [up]
+Because if you move closer and farther away, your voice changes in **volume** and tone.
+Consistency is the key to a professional recording!
+[pause]
+
+# Step three: recording in Audacity
+@energy 3
+> A steady rhythm.
+
+Third, open Audacity and choose your microphone in the toolbar.
+Set the recording to **mono**, because a single voice doesn't need stereo.
+Before you begin, say a few test sentences and watch the meter that measures your volume.
+Record one test minute and listen to it with headphones.
+The bars should move around the middle, never reaching the **red**.
+If they hit red, lower the gain; if they hardly move, raise it.
+At the start, leave two seconds of silence, so the program learns how your room sounds.
+[loud]Careful: don't speak while you click, because that sound gets recorded too.[/loud]
+Read with calm, and if you make a mistake, pause and repeat the **whole** sentence.
+[pause]
+
+# Summary
+@energy 3
+> A friendly close.
+
+Let's review the most important points.
+First, the room: quiet, with fabric and no echo.
+Second, the microphone: a hand away, a little to the side and always at the same **distance**.
+Third, Audacity: in mono, with the level at mid-bar and two seconds of silence at the start.
+Drink **warm** water before recording and take breaks every fifteen minutes.
+With this, you can record like you're in a **studio**!
+And if you want scripts made for your voice, you'll find them on this site.
+Now, let's record.

@@ -1,0 +1,84 @@
+# Prepararse
+@fuerza 2
+> Voz lenta y muy suave.
+
+[lento][suave]Acuéstate boca arriba, con los brazos a los costados.
+Deja que la almohada sostenga tu cabeza.
+Cierra los ojos.
+[respira]
+Inhala por la nariz, profundo.
+Exhala por la boca, con un pequeño suspiro.
+Repite una vez más, y deja que el suspiro sea un poco más largo.
+[respira]
+Vamos a recorrer el cuerpo, de la cabeza a los pies.
+No tienes que hacer nada bien ni mal.
+¿Estás en una posición cómoda? [sube][/suave][/lento]
+[pausa 3s]
+
+# La cabeza y la cara
+@fuerza 1
+> Muy suave.
+
+[lento][suave]Lleva tu atención a la parte alta de la cabeza.
+Siente cómo el cuero cabelludo se afloja.
+Imagina una mano tibia que te acaricia el pelo.
+[respira]
+Baja a la frente y deja que se alise, sin arrugas.
+Suelta los párpados, las mejillas y la mandíbula.
+Deja que los dientes se separen un poco.
+Las orejas, las sienes y la nuca también descansan.
+[respira]
+La lengua descansa en el fondo de la boca.
+Tu cara está **suave**.[/suave][/lento]
+[pausa 3s]
+
+# Hombros, brazos y pecho
+@fuerza 1
+> Lento.
+
+[lento][suave]Ahora siente tu cuello, largo y en calma.
+Deja caer los hombros, lejos de las orejas.
+[respira]
+El peso baja por los brazos, cruza los codos y llega hasta las manos.
+Tus dedos se abren solos, sin esfuerzo.
+Siente el calor en las palmas de las manos.
+[respira]
+Siente el pecho, que sube y baja con cada respiración.
+No lo controles; solo obsérvalo.
+Cada exhalación lo hace un poco más blando.[/suave][/lento]
+[pausa 3s]
+
+# La espalda y las piernas
+@fuerza 1
+> Casi en susurro.
+
+[lento][suave]Lleva la atención a la espalda, apoyada en la cama.
+Imagina que se derrite un poco, como mantequilla tibia.
+[respira]
+Siente las caderas y los glúteos pesados, hundiéndose en el colchón.
+Luego los muslos, las rodillas y las pantorrillas.
+Cada parte se vuelve pesada y se hunde un poco más.
+[respira]
+Por último, los pies.
+Afloja los tobillos, la planta y cada uno de los dedos.
+¿Sientes todo tu cuerpo más pesado que al principio? [sube][/suave][/lento]
+[pausa 3s]
+
+# Dormir
+@fuerza 1
+> Muy lento, cada vez más bajo.
+
+[lento][suave]Ahora tu cuerpo entero descansa.
+No queda ninguna parte que necesite tu atención.
+[respira]
+Si llega un pensamiento, déjalo pasar como un tren lejano.
+Escúchalo alejarse, hasta que ya no se oye.
+Después vuelve el silencio, suave y oscuro.
+[respira]
+Tu respiración es lenta y profunda.
+La noche te cubre como una manta.
+Estás a salvo, en tu cama, sin nada que hacer.
+Otra noche podrás volver a este recorrido.
+Deja que el sueño llegue cuando quiera.
+Buenas noches.[/suave][/lento]
+[pausa 3s]

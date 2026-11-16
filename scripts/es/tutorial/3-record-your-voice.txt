@@ -1,0 +1,69 @@
+# Antes de grabar
+@fuerza 3
+> Tono de profesor paciente y práctico.
+
+Hoy te explico cómo grabar tu voz en casa con buena calidad, sin un estudio.
+Esto sirve para un podcast, para tus videos o para clonar tu voz con inteligencia artificial.
+Lo que más importa no es el micrófono caro, sino el **lugar**.
+Un buen lugar con un micrófono sencillo suena mejor que un gran micrófono en una cocina.
+Vas a necesitar un micrófono, audífonos y un programa gratuito como Audacity.
+¿Tienes todo a mano? [sube]
+Entonces empecemos por el **cuarto**.
+Son solo tres pasos y un repaso **final**.
+
+# Paso uno: el lugar
+@fuerza 3
+> Claro y concreto.
+
+Primero, busca el lugar más **silencioso** y con menos eco de tu casa.
+Aunque tu casa sea pequeña, siempre hay un rincón que sirve.
+Un armario lleno de ropa o un dormitorio con cortinas gruesas funcionan muy bien.
+La tela absorbe el sonido; las paredes lisas y el vidrio lo hacen rebotar.
+Aplaude una vez: si escuchas un eco largo, ese cuarto no sirve todavía.
+Puedes mejorarlo con mantas, almohadas o un colchón apoyado en la pared.
+Apaga el refrigerador, el ventilador y las notificaciones del celular.
+[fuerte]Ojo con los ruidos que ya no notas, como el reloj o el tráfico.[/fuerte]
+Graba de noche o de madrugada, cuando la calle está más **tranquila**.
+[pausa]
+
+# Paso dos: el micrófono
+@fuerza 3
+> Paciente, con precisión.
+
+Segundo, coloca el micrófono a un **palmo** de tu boca, unos quince centímetros.
+Si lo pones muy cerca, las letras pe y be golpean y suenan como explosiones.
+Para evitarlo, ponlo un poco al costado, no justo frente a la boca.
+Un filtro antipop, o incluso una media sobre un aro, también **ayuda**.
+La regla de oro: mantén siempre la misma distancia.
+¿Por qué es tan importante? [sube]
+Porque si te acercas y te alejas, tu voz cambia de **volumen** y de tono.
+¡La constancia es la clave de una grabación profesional!
+[pausa]
+
+# Paso tres: grabar en Audacity
+@fuerza 3
+> Ritmo constante.
+
+Tercero, abre Audacity y elige tu micrófono en la barra de arriba.
+Configura la grabación en **mono**, porque una sola voz no necesita estéreo.
+Antes de empezar, di unas frases de prueba y mira el medidor de volumen.
+Graba un minuto de prueba y escúchalo con audífonos.
+Las barras deben moverse cerca de la mitad, sin llegar nunca al **rojo**.
+Si llegan al rojo, baja la ganancia; si apenas se mueven, súbela.
+Al empezar, deja dos segundos de silencio: así el programa aprende cómo suena tu cuarto.
+[fuerte]Cuidado: no hables mientras haces clic, porque también se graba ese sonido.[/fuerte]
+Lee con calma, y si te equivocas, haz una pausa y repite la frase **completa**.
+[pausa]
+
+# Resumen
+@fuerza 3
+> Cierre amable.
+
+Repasemos lo más importante.
+Primero, el lugar: silencioso, con telas y sin eco.
+Segundo, el micrófono: a un palmo, un poco al costado y siempre a la misma **distancia**.
+Tercero, Audacity: en mono, con el volumen a media barra y dos segundos de silencio al inicio.
+Bebe agua **tibia** antes de grabar y haz pausas cada quince minutos.
+¡Con esto ya puedes grabar como en un **estudio**!
+Y si quieres guiones pensados para tu voz, los tienes en esta misma web.
+Ahora, a grabar.

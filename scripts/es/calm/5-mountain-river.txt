@@ -1,0 +1,81 @@
+# Llegar
+@fuerza 2
+> Voz suave y pausada.
+
+[lento][suave]Busca una posición cómoda y apoya bien la espalda.
+Deja las manos abiertas, con las palmas hacia arriba.
+Cierra los ojos.
+[respira]
+Inhala por la nariz y siente el aire fresco.
+Exhala por la boca, despacio.
+Repite una vez más, como si el aire viniera de la montaña.
+[respira]
+Ya no tienes que ir a ningún lado.
+¿Puedes notar el peso de tu cuerpo sobre el asiento? [sube][/suave][/lento]
+[pausa 3s]
+
+# La orilla
+@fuerza 2
+> Pinta el paisaje con calma.
+
+[suave]Imagina que te sientas a la orilla de un río de montaña.
+El agua es cristalina, casi de plata, y baja entre piedras redondas.
+[respira]
+A tu alrededor hay árboles altos y el aire huele a pino.
+Un pájaro canta en alguna rama y luego se calla.
+Más arriba, un glaciar todavía guarda un poco de nieve blanca.
+[respira]
+Escucha el sonido del río, constante y fresco.
+Nunca se detiene, pero tampoco se apura.
+Simplemente sigue su camino.[/suave]
+[pausa 3s]
+
+# El agua
+@fuerza 1
+> Muy suave.
+
+[lento][suave]Mira cómo el agua rodea cada piedra sin pelear con ella.
+La toca, la rodea y sigue adelante.
+[respira]
+Ahora imagina que tus preocupaciones son hojas.
+Tómalas una por una y déjalas sobre el agua.
+Una hoja para cada cosa que te pesa hoy.
+[respira]
+Mira cómo el río se las lleva, río abajo.
+No tienes que saber a dónde van.
+El río sabe el camino.
+Solo mira cómo se **alejan**.[/suave][/lento]
+[pausa 3s]
+
+# El frío y la calma
+@fuerza 1
+> Lento, casi en susurro.
+
+[lento][suave]Imagina que metes las manos en el agua.
+Está fría y limpia, y te despierta los dedos con suavidad.
+[respira]
+Ese frescor sube por tus brazos y te aclara la mente.
+Sientes la cabeza más liviana.
+El sol de la mañana te calienta la espalda.
+[respira]
+¿Cuánto tiempo hacía que no escuchabas solo el agua? [sube]
+Quédate aquí un momento más.
+Deja que el sonido del agua llene todo el espacio.
+Sin pensar, sin hacer, solo escuchando.[/suave][/lento]
+[pausa 3s]
+
+# Volver
+@fuerza 2
+> Despacio, volviendo al presente.
+
+[suave]Poco a poco, el sonido del río se vuelve más lejano.
+Lleva contigo esa sensación de agua clara y aire fresco.
+Guárdala en el pecho, como un pequeño tesoro.
+[respira]
+Vuelve a notar tu respiración y el lugar donde estás.
+Mueve los dedos de las manos y de los pies.
+Estira la espalda con cuidado.
+[respira]
+Abre los ojos cuando quieras.
+El río sigue corriendo, aunque no lo veas, y podrás volver a él.[/suave]
+[pausa 3s]

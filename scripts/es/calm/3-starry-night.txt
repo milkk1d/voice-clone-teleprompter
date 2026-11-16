@@ -1,0 +1,83 @@
+# Llegar
+@fuerza 2
+> Voz muy suave, de noche.
+
+[lento][suave]Busca una posición cómoda y deja el cuerpo quieto.
+Apaga, si puedes, las luces que te rodean.
+Cierra los ojos.
+[respira]
+Toma aire despacio, contando hasta cuatro.
+Suéltalo contando hasta seis.
+Otra vez: inhala en cuatro, exhala en seis.
+[respira]
+Una vez más: entra el aire, sale el aire.
+Ya no hay prisa.
+¿Notas cómo tu cuerpo empieza a ponerse pesado? [sube][/suave][/lento]
+[pausa 3s]
+
+# El campo de noche
+@fuerza 2
+> Pinta la escena con calma.
+
+[suave]Imagina que estás en un campo abierto, lejos de la ciudad.
+Es una noche tibia, sin viento.
+[respira]
+Te recuestas sobre el pasto, con una manta bajo la espalda.
+A lo lejos se oyen grillos, con su canto suave y parejo.
+Huele a tierra y a hierba fresca.
+La noche te envuelve como un abrazo tibio.
+[respira]
+Arriba, el cielo está completamente oscuro.
+Y de a poco, tus ojos empiezan a ver las primeras estrellas.
+Una, dos, diez, cien.[/suave]
+[pausa 3s]
+
+# Las estrellas
+@fuerza 1
+> Muy lento.
+
+[lento][suave]Ahora el cielo está lleno de luces pequeñas.
+Algunas brillan fuerte; otras apenas se ven.
+Esas luces viajaron durante siglos para llegar hasta ti.
+[respira]
+Mira esa franja clara que cruza el cielo, como un río de polvo blanco.
+Es nuestra galaxia, vista desde dentro.
+[respira]
+Frente a ese cielo tan grande, tus preocupaciones se vuelven pequeñas.
+No desaparecen, pero dejan de pesar tanto.
+Las miras desde lejos, con la misma calma con que miras el cielo.
+Respira y deja que el cielo te **acompañe**.[/suave][/lento]
+[pausa 3s]
+
+# Soltar el día
+@fuerza 1
+> Casi en susurro.
+
+[lento][suave]Piensa en algo que pasó hoy, algo pequeño.
+Una conversación, un ruido, una tarea.
+[respira]
+Imagina que lo dejas sobre una de esas estrellas lejanas.
+Ahí puede quedarse esta noche.
+La estrella lo cuida por ti hasta mañana.
+[respira]
+¿Hay algo más que quieras dejar allá arriba? [sube]
+Déjalo con suavidad, sin juzgar.
+No importa si fue grande o pequeño.
+Una estrella para cada cosa del día.[/suave][/lento]
+[pausa 3s]
+
+# Volver
+@fuerza 2
+> Despacio, volviendo al presente.
+
+[suave]Poco a poco, vuelve a sentir la superficie que te sostiene.
+La cama, el sillón o el suelo bajo tu cuerpo.
+Nota el peso de tus brazos y el calor de tus manos.
+[respira]
+Si vas a dormir, podrás quedarte con esa imagen del cielo y dejar que te lleve.
+Si vas a seguir tu noche, mueve suavemente las manos.
+[respira]
+Estira el cuerpo con calma.
+Abre los ojos cuando quieras.
+Las estrellas siguen ahí, aunque no las veas.[/suave]
+[pausa 3s]

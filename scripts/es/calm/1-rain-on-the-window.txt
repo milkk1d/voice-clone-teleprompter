@@ -1,0 +1,84 @@
+# Llegar
+@fuerza 2
+> Habla despacio, como quien acompaña a alguien a dormir.
+
+[lento][suave]Busca una posición cómoda, en la cama o en un sillón.
+Deja que tu cuerpo se apoye por completo.
+Cierra los ojos cuando quieras.
+Nota cómo tus párpados se vuelven pesados.
+[respira]
+Afuera empieza a llover.
+Escucha las primeras gotas golpeando el cristal, una por una.
+[respira]
+Ya no tienes que ir a ninguna parte.
+Estás bajo techo, con una manta tibia sobre las piernas.
+¿Puedes oír cómo la lluvia se vuelve más pareja? [sube][/suave][/lento]
+[pausa 3s]
+
+# El sonido
+@fuerza 2
+> Suave, sin apuro.
+
+[suave]La lluvia cae sobre el techo, sobre los árboles y sobre la calle vacía.
+Es un sonido constante, que no pide nada.
+[respira]
+Deja que tu respiración siga ese ritmo.
+Inhala mientras las gotas caen.
+Exhala mientras el agua corre por el vidrio.
+Inhala de nuevo, despacio, y exhala sin esfuerzo.
+[respira]
+Cada gota que baja por la ventana se lleva un pensamiento.
+No tienes que detenerlos: solo míralos irse.
+Uno, y otro, y otro más.[/suave]
+[pausa 3s]
+
+# La casa
+@fuerza 1
+> Muy suave. Como un susurro.
+
+[lento][suave]Imagina la habitación con una luz tenue, tibia y en silencio.
+Quizás huele a té, a madera o a ropa limpia.
+[respira]
+Siente el peso de la manta blanda sobre tus piernas.
+Tus pies se aflojan, tus tobillos se sueltan.
+Tus rodillas descansan.
+Tus manos se abren sobre la manta, sin apretar nada.
+[respira]
+Afuera, la tormenta pasa de largo.
+Adentro, todo está en calma.
+Aquí estás a **salvo**.[/suave][/lento]
+[pausa 3s]
+
+# Soltar
+@fuerza 1
+> Lento, casi en susurro.
+
+[lento][suave]Ahora la lluvia se vuelve más fina, casi un murmullo.
+Deja que tus hombros bajen un poco más.
+Afloja la frente, la mandíbula y la lengua.
+[respira]
+Si llega una preocupación, imagina que la escribes en la ventana empañada.
+Mira cómo las gotas la borran de a poco.
+Así, una a una, las preocupaciones se vuelven agua.
+[respira]
+¿Notas cómo el cuerpo se pone más pesado? [sube]
+No hay nada que arreglar esta noche, ni que pensar para mañana.
+Solo escuchar.[/suave][/lento]
+[pausa 3s]
+
+# Volver
+@fuerza 2
+> Despacio, volviendo al presente.
+
+[suave]Poco a poco, la lluvia se detiene.
+Queda solo el sonido de algunas gotas que caen desde el techo.
+El aire huele a tierra mojada, limpio y fresco.
+[respira]
+Lleva tu atención a tu respiración, que ahora es lenta y profunda.
+Si vas a dormir, podrás quedarte así, en esta calma.
+Si vas a seguir tu día, mueve los dedos de las manos y de los pies.
+[respira]
+Estira los brazos con suavidad.
+Abre los ojos cuando quieras.
+Trae contigo un poco de este silencio.[/suave]
+[pausa 3s]

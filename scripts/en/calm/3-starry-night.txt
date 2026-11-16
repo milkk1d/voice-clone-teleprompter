@@ -1,0 +1,83 @@
+# Arriving
+@energy 2
+> A very soft voice, at night.
+
+[slow][soft]Find a comfortable position and let your body be still.
+If you can, turn off the lights around you.
+Close your eyes.
+[breathe]
+Breathe in slowly, counting to four.
+Breathe out, counting to six.
+Again: in for four, out for six.
+[breathe]
+Once more: the air comes in, the air goes out.
+There's no hurry anymore.
+Do you notice your body starting to feel heavy? [up][/soft][/slow]
+[pause 3s]
+
+# The field at night
+@energy 2
+> Paint the scene with calm.
+
+[soft]Imagine you're in an open field, far from the city.
+It's a warm night, with no wind.
+[breathe]
+You lie back on the grass, with a blanket under your back.
+In the distance, crickets sing, soft and steady.
+It smells of earth and fresh grass.
+The night wraps around you like a warm hug.
+[breathe]
+Above you, the sky is completely dark.
+And little by little, your eyes begin to see the first stars.
+One, two, ten, a hundred.[/soft]
+[pause 3s]
+
+# The stars
+@energy 1
+> Very slow.
+
+[slow][soft]Now the sky is full of tiny lights.
+Some shine bright; others are faint.
+That light traveled for centuries to reach you, a quiet treasure.
+[breathe]
+Look at that pale band crossing the sky, like a river of white dust.
+It's our galaxy, seen from the inside.
+[breathe]
+Under such a vast sky, your worries become small.
+They don't disappear, but they stop weighing so much.
+You watch them from far away, with the same calm you feel watching the sky.
+Breathe, and let the sky keep you **company**.[/soft][/slow]
+[pause 3s]
+
+# Letting go of the day
+@energy 1
+> Almost a whisper.
+
+[slow][soft]Think of something that happened today, something small.
+A conversation, a noise, a task.
+[breathe]
+Imagine placing it on one of those faraway stars.
+It can stay there tonight.
+The star will keep it for you until tomorrow.
+[breathe]
+Is there anything else you'd like to leave up there? [up]
+Let it go gently, without judging.
+It doesn't matter if it was big or small.
+One star for each thing from your day.[/soft][/slow]
+[pause 3s]
+
+# Coming back
+@energy 2
+> Gently, coming back to the present.
+
+[soft]Little by little, feel again the surface that holds you.
+The bed, the couch or the floor beneath your body.
+Notice the weight of your arms and the warmth of your hands.
+[breathe]
+If you're going to sleep, keep this image of the sky and let it carry you.
+If you're going on with your night, gently move your hands.
+[breathe]
+Stretch your body with calm.
+Open your eyes whenever you like.
+The stars are still there, even when you can't see them.[/soft]
+[pause 3s]
