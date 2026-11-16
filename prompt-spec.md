@@ -748,14 +748,14 @@ Al presionar **Revisar guion**, el teleprompter revisa el texto y muestra avisos
 
 Los problemas encontrados dieron origen a los cambios de la sección 0.
 
-Los guiones de esta prueba y el validador están en la carpeta `pruebas/`.
+Los guiones de esta prueba y el validador están en las carpetas `tests/` y `tools/`.
 
 ### Prueba con el prompt v1.1 — mismo caso, con ChatGPT, Gemini y Qwen
 
-Prompt: `pruebas/prompt-v1.1-documental-es.txt`. Revisión con:
+Prompt: `tests/prompts/v1.1-documentary-es.txt`. Revisión con:
 
 ```
-node pruebas/validar-guion.js <guion.txt> --lang es --style documental --words 560 --sections 5
+node tools/validate-script.js <guion.txt> --lang es --style documentary --words 560 --sections 5
 ```
 
 | | ChatGPT | Gemini | Qwen |
@@ -791,7 +791,7 @@ El validador ya revisa los nuevos casos: `[sube]` en frases que no son preguntas
 
 ### Prueba con el prompt v1.2 — mismo caso, con ChatGPT y Gemini
 
-Prompt: `pruebas/prompt-v1.2-documental-es.txt`. Qwen no se probó en esta ronda.
+Prompt: `tests/prompts/v1.2-documentary-es.txt`. Qwen no se probó en esta ronda.
 
 | | ChatGPT v1.1 → **v1.2** | Gemini v1.1 → **v1.2** |
 |---|---|---|
@@ -824,10 +824,10 @@ Prompt: `pruebas/prompt-v1.2-documental-es.txt`. Qwen no se probó en esta ronda
 
 ### Prueba con el prompt v1.3 — mismo caso, con ChatGPT y Gemini
 
-Prompt: `pruebas/prompt-v1.3-documental-es.txt`. Revisión con:
+Prompt: `tests/prompts/v1.3-documentary-es.txt`. Revisión con:
 
 ```
-node pruebas/validar-guion.js <guion.txt> --lang es --style documental --words 560 --sections 6
+node tools/validate-script.js <guion.txt> --lang es --style documentary --words 560 --sections 6
 ```
 
 | | ChatGPT | Gemini |
@@ -868,12 +868,12 @@ Dos estilos con reglas muy distintas al Documental, en otro idioma, otro acento 
 
 | | Meditación | Comercial |
 |---|---|---|
-| Prompt | `pruebas/prompt-v1.3-meditacion-en.txt` | `pruebas/prompt-v1.3-comercial-es.txt` |
+| Prompt | `tests/prompts/v1.3-calm-en.txt` | `tests/prompts/v1.3-commercial-es.txt` |
 | Idioma y acento | Inglés, US | Español, latino neutro |
 | Tema | Un viaje por un lugar | La historia de algo cotidiano |
 | Estructura | 5 secciones de 8 a 10 frases (≈ 400 palabras) | 8 anuncios de 9 a 11 frases (≈ 660 palabras) |
 | Qué pone a prueba | Que **el estilo mande sobre el prompt base**: sin exclamaciones (el base pide 2), muchas pausas (el base limita a 2), 0 o 1 énfasis | Frases de 12 palabras como máximo, 5 a 7 énfasis por sección, una exclamación por anuncio, `[fuerte]` y `[rápido]`, producto ficticio |
-| Revisión | `--lang en --style meditacion --words 400 --sections 5` | `--lang es --style comercial --words 660 --sections 8` |
+| Revisión | `--lang en --style calm --words 400 --sections 5` | `--lang es --style commercial --words 660 --sections 8` |
 
 #### Resultado: Meditación en inglés
 
@@ -933,15 +933,15 @@ Ninguna IA gana en todo: ChatGPT fue mejor en el Documental, Gemini en la Medita
 
 ### Prueba con el prompt v1.4 — pendiente
 Repetir con **ChatGPT** los dos casos donde falló:
-- Meditación en inglés (`pruebas/prompt-v1.4-meditacion-en.txt`): ¿deja de poner exclamaciones?
-- Comercial en español (`pruebas/prompt-v1.4-comercial-es.txt`): ¿varía la estructura entre anuncios?
+- Meditación en inglés (`tests/prompts/v1.4-calm-en.txt`): ¿deja de poner exclamaciones?
+- Comercial en español (`tests/prompts/v1.4-commercial-es.txt`): ¿varía la estructura entre anuncios?
 
 Opcional: repetirlos también con Gemini para confirmar que no empeoró.
 
-Desde la v1.4, los prompts de prueba se arman con `pruebas/armar-prompt.js`, que lee esta especificación (plantillas, bloques de estilo, números, variables, acentos y temas). Así no se desvían de lo que dice el documento, y sirve de prototipo para el armado de prompts en la web:
+Desde la v1.4, los prompts de prueba se arman con `tools/build-prompt.js`, que lee esta especificación (plantillas, bloques de estilo, números, variables, acentos y temas). Así no se desvían de lo que dice el documento, y sirve de prototipo para el armado de prompts en la web:
 
 ```
-node pruebas/armar-prompt.js --style meditacion --lang en --accent "American (US)" --topic 3 --out pruebas/prompt-v1.4-meditacion-en.txt
+node tools/build-prompt.js --style calm --lang en --accent "American (US)" --topic 3 --out tests/prompts/v1.4-calm-en.txt
 ```
 
 El script también imprime el comando de revisión que corresponde.
@@ -955,9 +955,9 @@ El script también imprime el comando de revisión que corresponde.
 **Hecho** (ver secciones 13 y 14): v1.4 aplicada · 40 guiones listos (ES y EN, cuatro estilos) · la web completa (quest bilingüe, armado de prompts, revisión de guiones pegados, teleprompter conectado) · guía de grabación con Audacity · política de privacidad. La web no recomienda una sola IA: ofrece ChatGPT, Claude y Gemini y confía en la revisión del guion.
 
 **Necesita a una persona:**
-- **Probar el prompt v1.4 con ChatGPT** (Meditación en inglés y Comercial en español): requiere una sesión iniciada. Los prompts están en `pruebas/prompt-v1.4-*.txt`.
+- **Probar el prompt v1.4 con ChatGPT** (Meditación en inglés y Comercial en español): requiere una sesión iniciada. Los prompts están en `tests/prompts/v1.4-*.txt`.
 - **Leer en voz alta** al menos un guion listo de cada estilo y corregir lo que suene raro al decirlo (el validador no ve eso).
-- **Datos de publicación:** correo de contacto en `privacidad.html`, dominio propio y licencia del código (sección 14).
+- **Datos de publicación:** correo de contacto en `privacy.html`, dominio propio y licencia del código (sección 14).
 - Confirmar los 10 estilos (alternativa propuesta: **Corporativo / asistente virtual**, en lugar de Suspenso o Meditación) y los ppm de cada uno después de leerlos.
 
 **Decisiones abiertas:**
@@ -982,19 +982,23 @@ Guiones ya escritos para los 5 temas sugeridos. La persona elige estilo y tema, 
 
 ### Estructura
 ```
-guiones/
-  indice.json                    ← lista para la web (lo genera pruebas/indexar-guiones.js)
-  es/
-    documental/1-oceano-profundo.txt … 5-nervios-del-primer-dia.txt
-    podcast/1-miedo-al-mar-profundo.txt … 5-el-viaje-que-salio-mal.txt
-    comercial/1-oceano-profundo.txt … 5-primer-dia-de-trabajo.txt
+scripts/
+  index.json                     ← lista para la web (lo genera tools/index-scripts.js)
+  scripts.js                     ← paquete para el teleprompter (también lo genera)
+  es/ y en/                      ← mismos nombres de archivo en los dos idiomas
+    documentary/1-deep-ocean.txt … 5-first-day-nerves.txt
+    podcast/1-fear-of-the-deep-sea.txt … 5-the-trip-that-went-wrong.txt
+    commercial/1-deep-ocean.txt … 5-first-day-at-work.txt
+    calm/1-calm-ocean.txt … 5-before-a-big-day.txt
+  examples/01-copper.txt         ← el guion original del canal
 ```
+Todos los nombres de carpetas y archivos van en inglés. Las claves internas de los estilos también: documentary, news, audiobook, podcast, commercial, tutorial, motivational, mystery, social y calm (en la especificación se siguen escribiendo con su nombre en español; `tools/read-spec.js` hace la traducción).
 El número del archivo es el tema de la sección 9. Para revalidar todo y regenerar el índice:
 ```
-node pruebas/indexar-guiones.js
+node tools/index-scripts.js
 ```
 
-El mismo comando genera `guiones/guiones.js`, el paquete que lee `teleprompter.html`. Es un `.js` (y no los `.txt` sueltos) porque así funciona también abriendo la página con doble clic: el navegador no deja leer archivos de texto locales, pero sí cargar un script. **Después de editar cualquier guion, hay que volver a correrlo** para que el teleprompter vea el cambio. El paquete incluye además `guiones/propios/01-cobre.txt`, el guion original del canal convertido al formato nuevo.
+El mismo comando genera `scripts/scripts.js`, el paquete que lee `teleprompter.html`. Es un `.js` (y no los `.txt` sueltos) porque así funciona también abriendo la página con doble clic: el navegador no deja leer archivos de texto locales, pero sí cargar un script. **Después de editar cualquier guion, hay que volver a correrlo** para que el teleprompter vea el cambio. El paquete incluye además `scripts/examples/01-copper.txt`, el guion original del canal convertido al formato nuevo.
 
 ### En el teleprompter
 - Selector arriba: Documental, Podcast, Comercial, Mis guiones (el del cobre) y **Pegar un guion…** (el camino "Ya tengo mi guion"; el texto pegado queda guardado en ese navegador).
@@ -1060,42 +1064,42 @@ Sitio estático, sin servidor ni cuentas: se puede abrir con doble clic o public
 |---|---|
 | `index.html` | Inicio y **quest** (idioma y acento del clon, estilos, tema, tipo de clon) → plan con guiones listos o prompts para la IA |
 | `teleprompter.html` | El teleprompter: guiones listos, guion propio pegado (con revisión), interfaz ES/EN |
-| `guia.html` | Guía de grabación con Audacity (ES/EN) |
-| `privacidad.html` | Política de privacidad (ES/EN); falta el correo de contacto |
+| `guide.html` | Guía de grabación con Audacity (ES/EN) |
+| `privacy.html` | Política de privacidad (ES/EN); falta el correo de contacto |
 | `teleprompter-original.html` | Respaldo de la primera versión (guion del cobre escrito en el código) |
 
 ### Cómo se conectan
-- **Quest → teleprompter:** `teleprompter.html?guion=<id>` abre un guion listo; `teleprompter.html?pegar=1&estilo=…&idioma=…&palabras=…&secciones=…` abre el cuadro para pegar, ya configurado para revisar con lo que se pidió.
+- **Quest → teleprompter:** `teleprompter.html?script=<id>` abre un guion listo; `teleprompter.html?paste=1&style=…&lang=…&words=…&sections=…` abre el cuadro para pegar, ya configurado para revisar con lo que se pidió.
 - **Revisión al pegar:** con errores no deja usarlo; con solo avisos, muestra la lista y ofrece "Usar igual".
 - **Idioma de la interfaz:** se elige en cualquier página y se recuerda en el navegador (`tp.ui`). Es independiente del idioma del clon.
 
 ### Código compartido (`js/`)
 | Archivo | Qué hace | Lo usan |
 |---|---|---|
-| `js/datos.js` | Estilos, acentos, temas, plantillas y variables de esta especificación (generado) | quest, teleprompter |
-| `js/prompt.js` | Arma el prompt para la IA | quest y `pruebas/armar-prompt.js` |
-| `js/validador.js` | Revisa un guion (mensajes ES/EN) | teleprompter y `pruebas/validar-guion.js` |
+| `js/data.js` | Estilos, acentos, temas, plantillas y variables de esta especificación (generado) | quest, teleprompter |
+| `js/prompt.js` | Arma el prompt para la IA | quest y `tools/build-prompt.js` |
+| `js/validator.js` | Revisa un guion (mensajes ES/EN) | teleprompter y `tools/validate-script.js` |
 | `js/quest.js` | La quest de la página de inicio | `index.html` |
-| `js/sitio.js` | Cambio de idioma de la guía y la privacidad | `guia.html`, `privacidad.html` |
-| `js/enlaces.js` | Enlaces de afiliado (hoy: ElevenLabs). Cambiar un enlace aquí lo actualiza en todo el sitio | todas las páginas |
-| `css/sitio.css` | Estilos comunes del sitio | inicio, guía, privacidad |
+| `js/site.js` | Cambio de idioma de la guía y la privacidad | `guide.html`, `privacy.html` |
+| `js/links.js` | Enlaces de afiliado (hoy: ElevenLabs). Cambiar un enlace aquí lo actualiza en todo el sitio | todas las páginas |
+| `css/site.css` | Estilos comunes del sitio | inicio, guía, privacidad |
 
-La web y las herramientas de `pruebas/` usan **los mismos módulos**, así que el prompt que se prueba es exactamente el que entrega la web.
+La web y las herramientas de `tools/` usan **los mismos módulos**, así que el prompt que se prueba es exactamente el que entrega la web.
 
 ### Construir
 ```
-node pruebas/construir.js
+node tools/build.js
 ```
-Genera `js/datos.js` desde esta especificación y valida y empaqueta todos los guiones (`guiones/guiones.js` e `guiones/indice.json`). Si algún guion tiene errores o avisos, lo muestra y termina con error. **Hay que correrlo después de editar la especificación o cualquier guion.**
+Genera `js/data.js` desde esta especificación y valida y empaqueta todos los guiones (`scripts/scripts.js` e `scripts/index.json`). Si algún guion tiene errores o avisos, lo muestra y termina con error. **Hay que correrlo después de editar la especificación o cualquier guion.**
 
 ### Para publicar
-1. Agregar un correo de contacto en `privacidad.html`.
+1. Agregar un correo de contacto en `privacy.html`.
 2. Elegir licencia: sin licencia, el código queda "todos los derechos reservados"; con MIT, cualquiera puede reutilizarlo y venderlo.
-3. Subir la carpeta a un repositorio y activar GitHub Pages (o Netlify / Cloudflare Pages). La carpeta `pruebas/` no se usa en la web; se puede dejar o excluir.
+3. Subir la carpeta a un repositorio y activar GitHub Pages (o Netlify / Cloudflare Pages). Las carpetas `tools/` y `tests/` no se usan en la web; se puede dejar o excluir.
 4. Para AdSense hace falta dominio propio; antes de agregar anuncios, actualizar la política de privacidad y nunca mostrar anuncios en `teleprompter.html`.
 
 ### Enlaces de afiliado
-El enlace de referidos de ElevenLabs está en `js/enlaces.js` y aparece, siempre con el aviso "enlace de afiliado", en:
+El enlace de referidos de ElevenLabs está en `js/links.js` y aparece, siempre con el aviso "enlace de afiliado", en:
 - el teleprompter: al final del guion ("¿Terminaste de grabar?") y en el panel "Listo para grabar", nunca mientras se lee;
 - el plan del inicio, como último paso ("Cuando termines de grabar");
 - la guía de grabación, en el paso 6 ("Subir y clonar").

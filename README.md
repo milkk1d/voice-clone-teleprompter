@@ -17,7 +17,7 @@ Free scripts and a karaoke-style teleprompter to record your voice for AI voice 
 
 Nothing to install. Fonts load from the internet; offline, the page uses your system fonts. Use the **ES / EN** switch at the top to change the language.
 
-The [recording guide](guia.html) explains how to set up your room, microphone and Audacity.
+The [recording guide](guide.html) explains how to set up your room, microphone and Audacity.
 
 ## What's in the folder
 
@@ -25,12 +25,13 @@ The [recording guide](guia.html) explains how to set up your room, microphone an
 |---|---|
 | `index.html` | Home page and questionnaire: clone language and accent, style, topic and clone type |
 | `teleprompter.html` | The teleprompter: ready-made scripts or your own pasted script, with automatic checking |
-| `guia.html` | Recording guide for Audacity |
-| `privacidad.html` | Privacy policy |
-| `guiones/` | Ready-made scripts (`.txt`) and their bundles for the site |
+| `guide.html` | Recording guide for Audacity |
+| `privacy.html` | Privacy policy |
+| `scripts/` | Ready-made scripts (`.txt`) and their bundles for the site |
 | `js/`, `css/` | Code and styles |
-| `especificacion-prompts-v1.md` | The specification: script format, the 10 styles, the prompts and the test history (in Spanish) |
-| `pruebas/` | Build tools and the tests run with ChatGPT and Gemini |
+| `prompt-spec.md` | The specification: script format, the 10 styles, the prompts and the test history (in Spanish) |
+| `tools/` | Build tools: spec reader, prompt builder, script validator |
+| `tests/` | The prompts and the results of the tests run with ChatGPT and Gemini |
 
 ## Script format
 
@@ -48,32 +49,32 @@ Every year, rivers carry [pause] **millions** of tons of salt into the sea.
 
 ## For developers
 
-You need [Node.js](https://nodejs.org/). The specification is the source of truth: after changing it, or after editing or adding a script in `guiones/`, run:
+You need [Node.js](https://nodejs.org/). The specification is the source of truth: after changing it, or after editing or adding a script in `scripts/`, run:
 
 ```bash
-node pruebas/construir.js
+node tools/build.js
 ```
 
-This regenerates `js/datos.js`, checks every script and bundles them again for the teleprompter. Other tools:
+This regenerates `js/data.js`, checks every script and bundles them again for the teleprompter. Other tools:
 
 ```bash
-node pruebas/validar-guion.js guiones/en/podcast/2-my-bike.txt --lang en --style podcast --words 580 --sections 5
+node tools/validate-script.js scripts/en/podcast/2-my-bike.txt --lang en --style podcast --words 580 --sections 5
 ```
 
 ```bash
-node pruebas/armar-prompt.js --style documental --lang en --accent "Neutral / International" --topic 1
+node tools/build-prompt.js --style documentary --lang en --accent "Neutral / International" --topic 1
 ```
 
 ## License
 
 - **Code** (`.html`, `.js`, `.css`): [MIT](LICENSE).
-- **Scripts and text**: [CC BY 4.0](LICENSE-guiones.md). You may use and adapt them as long as you credit the source.
+- **Scripts and text**: [CC BY 4.0](LICENSE-scripts.md). You may use and adapt them as long as you credit the source.
 
 Found a bug or have an idea? Open an **Issue**.
 
 ## Affiliate links
 
-Some links to ElevenLabs are affiliate links: if you subscribe after clicking, the author earns a commission at no extra cost to you. They live in `js/enlaces.js` and are always labeled as such.
+Some links to ElevenLabs are affiliate links: if you subscribe after clicking, the author earns a commission at no extra cost to you. They live in `js/links.js` and are always labeled as such.
 
 ---
 
@@ -94,7 +95,7 @@ Guiones gratis y un teleprompter tipo karaoke para grabar tu voz y clonarla con 
 
 No hace falta instalar nada. Las tipografías se cargan desde internet; sin conexión, la página usa las del sistema. Cambia el idioma con el botón **ES / EN** de arriba.
 
-La [guía de grabación](guia.html) explica cómo preparar el lugar, el micrófono y Audacity.
+La [guía de grabación](guide.html) explica cómo preparar el lugar, el micrófono y Audacity.
 
 ### El formato de los guiones
 
@@ -112,15 +113,15 @@ Cada año, los ríos arrastran [pausa] **millones** de toneladas de sal.
 
 ### Para quien quiera modificarlo
 
-Necesitas [Node.js](https://nodejs.org/). La especificación es la fuente de verdad: después de cambiarla, o de editar o agregar un guion en `guiones/`, corre `node pruebas/construir.js`. Regenera `js/datos.js`, valida todos los guiones y los vuelve a empaquetar.
+Necesitas [Node.js](https://nodejs.org/). La especificación es la fuente de verdad: después de cambiarla, o de editar o agregar un guion en `scripts/`, corre `node tools/build.js`. Regenera `js/data.js`, valida todos los guiones y los vuelve a empaquetar.
 
 ### Licencia
 
 - **Código** (`.html`, `.js`, `.css`): [MIT](LICENSE).
-- **Guiones y textos**: [CC BY 4.0](LICENSE-guiones.md). Puedes usarlos y adaptarlos citando la fuente.
+- **Guiones y textos**: [CC BY 4.0](LICENSE-scripts.md). Puedes usarlos y adaptarlos citando la fuente.
 
 ¿Encontraste un error o tienes una idea? Escríbela en la pestaña **Issues**.
 
 ### Enlaces de afiliado
 
-Algunos enlaces a ElevenLabs son de afiliado: si te suscribes después de hacer clic, el autor recibe una comisión, sin costo extra para ti. Están en `js/enlaces.js` y siempre van marcados como tales.
+Algunos enlaces a ElevenLabs son de afiliado: si te suscribes después de hacer clic, el autor recibe una comisión, sin costo extra para ti. Están en `js/links.js` y siempre van marcados como tales.

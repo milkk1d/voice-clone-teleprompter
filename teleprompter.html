@@ -304,10 +304,10 @@ dialog .row { display: flex; gap: 8px; justify-content: flex-end; margin-top: 10
   </div>
 </dialog>
 
-<script src="js/datos.js"></script>
-<script src="js/enlaces.js"></script>
-<script src="js/validador.js"></script>
-<script src="guiones/guiones.js"></script>
+<script src="js/data.js"></script>
+<script src="js/links.js"></script>
+<script src="js/validator.js"></script>
+<script src="scripts/scripts.js"></script>
 <script>
 // segundos de cada pausa automática o marcada
 const P = { coma: 0.25, frase: 0.45, linea: 0.45, seccion: 1.8, pausa: 1.0, respira: 0.9 };
@@ -360,7 +360,7 @@ const T = {
         <li><b>Si te equivocas,</b> no pares: repite la frase completa y después cortas el error.</li>
         <li><b>Las teclas suenan en el micrófono:</b> apriétalas en las pausas. Con la rueda del mouse también puedes mover el guion.</li>
       </ul></details>
-      <p class="links"><a href="guia.html">Guía de grabación</a> · <a data-afiliado="elevenlabs">Crear mi clon en ElevenLabs ↗</a> <small>(enlace de afiliado)</small></p>`,
+      <p class="links"><a href="guide.html">Guía de grabación</a> · <a data-afiliado="elevenlabs">Crear mi clon en ElevenLabs ↗</a> <small>(enlace de afiliado)</small></p>`,
     nextStep: "<b>¿Terminaste de grabar?</b> Sube tu audio a <a data-afiliado=\"elevenlabs\">ElevenLabs</a> y crea tu clon de voz.<small>Enlace de afiliado: si te suscribes, recibimos una comisión, sin costo extra para ti.</small>",
   },
   en: {
@@ -396,7 +396,7 @@ const T = {
         <li><b>If you make a mistake,</b> don't stop: repeat the whole sentence and cut the mistake later.</li>
         <li><b>Keys can be heard on the mic:</b> press them during pauses. You can also scroll the script with the mouse wheel.</li>
       </ul></details>
-      <p class="links"><a href="guia.html">Recording guide</a> · <a data-afiliado="elevenlabs">Create my clone on ElevenLabs ↗</a> <small>(affiliate link)</small></p>`,
+      <p class="links"><a href="guide.html">Recording guide</a> · <a data-afiliado="elevenlabs">Create my clone on ElevenLabs ↗</a> <small>(affiliate link)</small></p>`,
     nextStep: "<b>Done recording?</b> Upload your audio to <a data-afiliado=\"elevenlabs\">ElevenLabs</a> and create your voice clone.<small>Affiliate link: if you subscribe, we earn a commission at no extra cost to you.</small>",
   },
 };
@@ -672,17 +672,17 @@ function syncUI() {
 
 // --- elegir guion ---
 const D = window.DATOS || { order: [], styles: {} };
-const ORDEN = [...(D.order.length ? D.order : ["documental", "podcast", "comercial"]), "propio"];
+const ORDEN = [...(D.order.length ? D.order : ["documentary", "podcast", "commercial"]), "example"];
 const LISTOS = (Array.isArray(window.GUIONES_LISTOS) ? window.GUIONES_LISTOS : []).slice();
 const PASTE = "__pegar", PASTED = "__pegado";
 const styleName = (k) => D.styles[k]?.nombre[ui] || k;
 function fillPicker(selected) {
   const pick = $("pick");
-  const rank = (g) => [g.estilo === "propio" ? 2 : g.idioma === ui ? 0 : 1, ORDEN.indexOf(g.estilo), g.tema];
+  const rank = (g) => [g.estilo === "example" ? 2 : g.idioma === ui ? 0 : 1, ORDEN.indexOf(g.estilo), g.tema];
   const sorted = LISTOS.slice().sort((a, b) => { const x = rank(a), y = rank(b); return x[0] - y[0] || x[1] - y[1] || x[2] - y[2]; });
   const groups = new Map();
   for (const g of sorted) {
-    const label = g.estilo === "propio" ? tr("ownGroup") : `${styleName(g.estilo)} · ${g.idioma.toUpperCase()}`;
+    const label = g.estilo === "example" ? tr("ownGroup") : `${styleName(g.estilo)} · ${g.idioma.toUpperCase()}`;
     if (!groups.has(label)) groups.set(label, []);
     groups.get(label).push(g);
   }
@@ -716,7 +716,7 @@ function choose(id) {
     return;
   }
   // si el guion no existe, se abre el primer Documental en el idioma de la interfaz
-  const g = LISTOS.find((x) => x.id === id) || LISTOS.find((x) => x.idioma === ui && x.estilo === "documental") || LISTOS[0];
+  const g = LISTOS.find((x) => x.id === id) || LISTOS.find((x) => x.idioma === ui && x.estilo === "documentary") || LISTOS[0];
   if (!g) { loadScript("", {}); return; }
   loadScript(g.texto, { lang: g.idioma, ppm: g.ppm });
   store.set("elegido", g.id);
@@ -727,7 +727,7 @@ function choose(id) {
 let target = { words: 0, sections: 0 }, anyway = false;
 function openPaste(pre = {}) {
   $("dlgStyle").innerHTML = D.order.map((k) => `<option value="${k}">${esc(styleName(k))}</option>`).join("");
-  $("dlgStyle").value = pre.style && D.styles[pre.style] ? pre.style : store.get("pegadoEstilo", "documental");
+  $("dlgStyle").value = pre.style && D.styles[pre.style] ? pre.style : D.styles[store.get("pegadoEstilo")] ? store.get("pegadoEstilo") : "documentary";
   $("dlgLang").value = pre.lang === "en" || pre.lang === "es" ? pre.lang : store.get("pegadoIdioma", ui);
   target = { words: pre.words || 0, sections: pre.sections || 0 };
   $("pasteTxt").value = store.get("pegado", "");
@@ -901,15 +901,15 @@ stage.addEventListener("pointerup", () => { drag = null; });
 stage.addEventListener("pointercancel", () => { drag = null; });
 addEventListener("resize", () => lines.length && measure());
 
-// arranque: ?guion=<id> abre un guion listo; ?pegar=1 abre el cuadro para pegar (con estilo, idioma y largo esperados)
+// arranque: ?script=<id> abre un guion listo; ?paste=1 abre el cuadro para pegar (con estilo, idioma y largo esperados)
 const params = new URLSearchParams(location.search);
 const saved = store.get("elegido", LISTOS[0]?.id || PASTE);
-const first = params.get("guion") || (saved === PASTE ? LISTOS[0]?.id || PASTED : saved);
+const first = params.get("script") || (saved === PASTE ? LISTOS[0]?.id || PASTED : saved);
 applyLang();
 fillPicker(first);
 choose(first);
-if (params.get("pegar")) {
-  openPaste({ style: params.get("estilo"), lang: params.get("idioma"), words: Number(params.get("palabras")) || 0, sections: Number(params.get("secciones")) || 0 });
+if (params.get("paste")) {
+  openPaste({ style: params.get("style"), lang: params.get("lang"), words: Number(params.get("words")) || 0, sections: Number(params.get("sections")) || 0 });
 }
 requestAnimationFrame(frame);
 </script>

@@ -1,14 +1,15 @@
 #!/usr/bin/env node
 // Arma un prompt leyendo directamente la especificación (usa el mismo módulo que la web: js/prompt.js).
-// Uso: node armar-prompt.js --style meditacion --lang en --accent "American (US)" --topic 3 [--min 4] [--parts 1] [--out archivo.txt]
+// Uso: node build-prompt.js --style calm --lang en --accent "American (US)" --topic 3 [--min 4] [--parts 1] [--out archivo.txt]
 const fs = require("fs");
-const { leer, norm } = require("./leer-especificacion.js");
+const { leer, norm, KEY } = require("./read-spec.js");
 const Prompt = require("../js/prompt.js");
 
 const args = process.argv.slice(2);
 const opt = (k, d) => { const i = args.indexOf("--" + k); return i >= 0 ? args[i + 1] : d; };
 const D = leer();
-const style = norm(opt("style", "documental"));
+const rawStyle = norm(opt("style", "documentary"));
+const style = KEY[rawStyle] || rawStyle; // acepta la clave en inglés o el nombre en español
 const lang = opt("lang", "es");
 const topicArg = opt("topic", "1");
 const r = Prompt.build(D, {
@@ -21,4 +22,4 @@ const r = Prompt.build(D, {
 const OUT = opt("out", "");
 if (OUT) fs.writeFileSync(OUT, r.prompt); else process.stdout.write(r.prompt);
 r.continuations.forEach((c, i) => console.error(`Continuación ${i + 2}: ${c}`));
-console.error(`Revisión: node validar-guion.js <guion.txt> --lang ${lang} --style ${style} --words ${r.words} --sections ${r.sections}`);
+console.error(`Revisión: node validate-script.js <guion.txt> --lang ${lang} --style ${style} --words ${r.words} --sections ${r.sections}`);

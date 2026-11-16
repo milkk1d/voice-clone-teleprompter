@@ -1,13 +1,14 @@
 #!/usr/bin/env node
-// Validador del formato de guion (usa el mismo módulo que la web: js/validador.js).
-// Uso: node validar-guion.js <guion.txt> --lang es|en --style documental --words 560 --sections 5
+// Validador del formato de guion (usa el mismo módulo que la web: js/validator.js).
+// Uso: node validate-script.js <guion.txt> --lang es|en --style documentary --words 560 --sections 5
 const fs = require("fs");
-const Validador = require("../js/validador.js");
+const Validador = require("../js/validator.js");
 
 const args = process.argv.slice(2);
 const file = args[0];
 const opt = (k, d) => { const i = args.indexOf("--" + k); return i >= 0 ? args[i + 1] : d; };
-const STYLE = opt("style", "documental");
+const ALIAS = { documental: "documentary", noticiero: "news", audiolibro: "audiobook", comercial: "commercial", motivacional: "motivational", suspenso: "mystery", reels: "social", meditacion: "calm" };
+const STYLE = ALIAS[opt("style", "documentary")] || opt("style", "documentary"); // acepta la clave en inglés o el nombre en español
 if (!Validador.STYLES[STYLE]) { console.error(`Estilo desconocido: ${STYLE}. Usa: ${Object.keys(Validador.STYLES).join(", ")}`); process.exit(1); }
 const TARGET = Number(opt("words", 0)), SECTIONS = Number(opt("sections", 0));
 const r = Validador.validate(fs.readFileSync(file, "utf8"), { lang: opt("lang", "es"), style: STYLE, words: TARGET, sections: SECTIONS, ui: "es" });

@@ -8,16 +8,16 @@
   // exclamaciones [mín, máx], preguntas mínimas, máximo de [pausa] por sección (manyPauses = sin límite).
   // firstShort / lastShort: la primera o la última sección pueden ser más cortas.
   const STYLES = {
-    documental:   { max: 20, frases: [9, 11],  emph: [3, 4], excl: [2, Infinity], q: 2, firstShort: true, lastShort: true },
-    noticiero:    { max: 20, frases: [9, 11],  emph: [3, 4], excl: [0, 1], q: 0, maxPauses: 1 },
-    audiolibro:   { max: 20, frases: [10, 13], emph: [2, 3], excl: [2, Infinity], q: 1 },
+    documentary:  { max: 20, frases: [9, 11],  emph: [3, 4], excl: [2, Infinity], q: 2, firstShort: true, lastShort: true },
+    news:         { max: 20, frases: [9, 11],  emph: [3, 4], excl: [0, 1], q: 0, maxPauses: 1 },
+    audiobook:    { max: 20, frases: [10, 13], emph: [2, 3], excl: [2, Infinity], q: 1 },
     podcast:      { max: 20, frases: [9, 12],  emph: [2, 3], excl: [2, Infinity], q: 2 },
-    comercial:    { max: 12, frases: [9, 11],  emph: [5, 7], excl: [1, Infinity], q: 1, exclPerSection: true },
+    commercial:   { max: 12, frases: [9, 11],  emph: [5, 7], excl: [1, Infinity], q: 1, exclPerSection: true },
     tutorial:     { max: 20, frases: [8, 10],  emph: [3, 4], excl: [2, Infinity], q: 2 },
-    motivacional: { max: 20, frases: [12, 15], emph: [6, 8], excl: [2, Infinity], q: 2 },
-    suspenso:     { max: 20, frases: [11, 13], emph: [2, 3], excl: [0, 1], q: 2, lastShort: true },
-    reels:        { max: 10, frases: [13, 16], emph: [6, 9], excl: [2, Infinity], q: 1, maxPauses: 1 },
-    meditacion:   { max: 20, frases: [8, 10],  emph: [0, 1], excl: [0, 0], q: 2, manyPauses: true },
+    motivational: { max: 20, frases: [12, 15], emph: [6, 8], excl: [2, Infinity], q: 2 },
+    mystery:      { max: 20, frases: [11, 13], emph: [2, 3], excl: [0, 1], q: 2, lastShort: true },
+    social:       { max: 10, frases: [13, 16], emph: [6, 9], excl: [2, Infinity], q: 1, maxPauses: 1 },
+    calm:         { max: 20, frases: [8, 10],  emph: [0, 1], excl: [0, 0], q: 2, manyPauses: true },
   };
   const KNOWN = ["pausa", "pause", "respira", "breathe", "sube", "baja", "up", "down", "lento", "slow", "rápido", "rapido", "fast", "suave", "soft", "fuerte", "loud"];
   const SPANS = { lento: "lento", slow: "lento", "rápido": "rápido", rapido: "rápido", fast: "rápido", suave: "suave", soft: "suave", fuerte: "fuerte", loud: "fuerte" };
@@ -127,7 +127,7 @@
   // o: { lang: "es"|"en", style, words (objetivo), sections (objetivo), ui: idioma de los mensajes }
   function validate(text, o) {
     const LANG = o.lang === "en" ? "en" : "es";
-    const STYLE = STYLES[o.style] ? o.style : "documental";
+    const STYLE = STYLES[o.style] ? o.style : "documentary";
     const P = STYLES[STYLE];
     const T = M[o.ui === "en" ? "en" : o.ui === "es" ? "es" : LANG];
     const TARGET = Number(o.words || 0), SECTIONS = Number(o.sections || 0);
@@ -266,7 +266,7 @@
       if (questions < P.q) add("aviso", 0, T.fewQ(questions, P.q));
       if (exclam < P.excl[0]) add("aviso", 0, T.fewExcl(exclam, P.excl[0]));
       if (exclam > P.excl[1]) add("aviso", 0, T.manyExcl(exclam, P.excl[1]));
-      if (!lists && STYLE !== "meditacion") add("aviso", 0, T.noList);
+      if (!lists && STYLE !== "calm") add("aviso", 0, T.noList);
       if (adverbs.length > adv.max) add("aviso", 0, T.adverbs(adverbs.length, adv.label, adv.max, adverbs.join(", ")));
       if (emphSent >= 5 && emphEnd / emphSent >= 0.8) add("aviso", 0, T.emphEnd(emphEnd, emphSent));
       const missing = Object.entries(SOUNDS[LANG]).filter(([, re]) => !re.test(corpus)).map(([k]) => k);

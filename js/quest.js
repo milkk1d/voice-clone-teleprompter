@@ -112,7 +112,9 @@
   };
 
   let ui = store.get("ui", (navigator.language || "es").toLowerCase().startsWith("es") ? "es" : "en");
-  const q = Object.assign({ lang: ui, accent: { es: "Latino neutro", en: "Neutral / International" }, styles: ["documental"], topic: 1, own: "", tipo: "rapido", shown: false }, store.get("quest", {}));
+  const q = Object.assign({ lang: ui, accent: { es: "Latino neutro", en: "Neutral / International" }, styles: ["documentary"], topic: 1, own: "", tipo: "rapido", shown: false }, store.get("quest", {}));
+  q.styles = (Array.isArray(q.styles) ? q.styles : []).filter((s) => D.styles[s]); // descarta claves viejas guardadas
+  if (!q.styles.length) q.styles = ["documentary"];
   const t = (k) => S[ui][k];
   const save = () => store.set("quest", q);
   const langs = () => (q.lang === "ambos" ? ["es", "en"] : [q.lang]);
@@ -184,7 +186,7 @@
             <input type="text" id="own" value="${esc(q.own)}" placeholder="${esc(t("ownTopicPh"))}" style="position:static;opacity:1" ${q.topic === "propio" ? "" : "tabindex=\"-1\""}>
           </label>
         </div>
-        <p class="muted">${t("haveScript")} <a href="teleprompter.html?pegar=1&idioma=${L[0]}&estilo=${q.styles[0] || "documental"}">${t("haveScriptLink")}</a></p>
+        <p class="muted">${t("haveScript")} <a href="teleprompter.html?paste=1&lang=${L[0]}&style=${q.styles[0] || "documentary"}">${t("haveScriptLink")}</a></p>
       </fieldset>
 
       <fieldset class="panel stack">
@@ -207,7 +209,7 @@
 
   function promptBlock(r, lang, style) {
     const id = `p-${lang}-${style}`;
-    const paste = `teleprompter.html?pegar=1&idioma=${lang}&estilo=${style}&palabras=${r.words}&secciones=${r.sections}`;
+    const paste = `teleprompter.html?paste=1&lang=${lang}&style=${style}&words=${r.words}&sections=${r.sections}`;
     return `<div class="stack">
       <p class="muted">${t("promptSteps")} <span class="kicker">${r.parts > 1 ? t("parts")(r.parts) : t("length")(r.words, r.sections, r.minutes)}</span></p>
       <textarea class="prompt" id="${id}" readonly spellcheck="false">${esc(r.prompt)}</textarea>
@@ -241,12 +243,12 @@
       const accentNote = lang === "es" && ready.length && /rioplatense|españa/i.test(q.accent.es) && t("neutralNote") ? `<p class="note">${t("neutralNote")}</p>` : "";
       if (!pro && one) {
         body = `<div class="actions"><span class="badge">${t("readyTitle")}</span><strong>${esc(one.titulo)}</strong></div>
-          <div class="actions"><a class="btn main" href="teleprompter.html?guion=${encodeURIComponent(one.id)}">${t("open")}</a></div>${accentNote}
+          <div class="actions"><a class="btn main" href="teleprompter.html?script=${encodeURIComponent(one.id)}">${t("open")}</a></div>${accentNote}
           <details><summary>${t("genOwn")}</summary>${promptBlock(r, lang, style)}</details>`;
       } else if (pro && ready.length) {
         const mins = Math.round(ready.reduce((a, g) => a + g.texto.split(/\s+/).length / g.ppm, 0));
         body = `<p>${t("readyAll")(ready.length, mins)}</p>
-          <ul class="clean ready-list">${ready.map((g) => `<li><span>${g.tema}. ${esc(g.titulo)}</span><a href="teleprompter.html?guion=${encodeURIComponent(g.id)}">${t("open")} →</a></li>`).join("")}</ul>
+          <ul class="clean ready-list">${ready.map((g) => `<li><span>${g.tema}. ${esc(g.titulo)}</span><a href="teleprompter.html?script=${encodeURIComponent(g.id)}">${t("open")} →</a></li>`).join("")}</ul>
           <p class="muted">${t("readyPro")}</p>${accentNote}
           <details><summary>${t("genOwn")}</summary>${promptBlock(r, lang, style)}</details>`;
       } else {

@@ -1,15 +1,15 @@
-// Arma el prompt para la IA a partir de los datos de la especificación (js/datos.js).
+// Arma el prompt para la IA a partir de los datos de la especificación (js/data.js).
 // Funciona en el navegador (window.Prompt) y en Node (require).
 (function (root, factory) {
   if (typeof module === "object" && module.exports) module.exports = factory();
   else root.Prompt = factory();
 })(typeof self !== "undefined" ? self : this, function () {
-  const SHORT = { documental: 2, suspenso: 1 }; // secciones cortas de cada estilo (preguntas, cierre)
+  const SHORT = { documentary: 2, mystery: 1 }; // secciones cortas de cada estilo (preguntas, cierre)
 
   function accentGuide(D, lang, accentName, styleKey) {
     const list = D.accents[lang];
     const a = list.find((x) => x.nombre === accentName) || list[0];
-    const casual = ["podcast", "reels"].includes(styleKey) && a.extra;
+    const casual = ["podcast", "social"].includes(styleKey) && a.extra;
     if (lang === "es") {
       let g = `Trato de ${a.trato.toLowerCase().replace(" / ", " y ")}. Palabras de referencia (úsalas solo si encajan natural; no hace falta usarlas todas): ${a.usa}. Evita: ${a.evita}.`;
       if (casual) g += ` Puedes usar con moderación: ${a.extra}.`;

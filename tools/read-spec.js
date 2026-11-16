@@ -1,6 +1,6 @@
-// Lee especificacion-prompts-v1.md y devuelve todos los datos que necesitan la web y las herramientas:
+// Lee prompt-spec.md y devuelve todos los datos que necesitan la web y las herramientas:
 // estilos (bloques, ejemplos, números), variables por estilo, acentos, temas, plantillas y textos de partes.
-// La especificación es la única fuente de verdad: si cambia el documento, se regenera js/datos.js.
+// La especificación es la única fuente de verdad: si cambia el documento, se regenera js/data.js.
 const fs = require("fs");
 const path = require("path");
 
@@ -9,20 +9,26 @@ const cells = (row) => row.split("|").slice(1, -1).map((c) => c.trim());
 const unquote = (s) => s.replace(/^`|`$/g, "");
 
 // Para qué sirve cada estilo, en inglés (la tabla de la especificación solo lo tiene en español).
-const USO_EN = {
-  documental: "Explainer YouTube videos, science content",
-  noticiero: "News, reports, summaries",
-  audiolibro: "Stories, books, narratives",
-  podcast: "Podcasts, casual voice",
-  comercial: "Ads, promotions",
-  tutorial: "Courses, step-by-step explanations",
-  motivacional: "Talks, inspirational content",
-  suspenso: "Mystery, cases, intriguing stories",
-  reels: "TikTok, Shorts, Reels",
-  meditacion: "Relaxation, sleep guides",
+// Clave interna (en inglés) de cada estilo, a partir de su nombre en español en la especificación.
+const KEY = {
+  documental: "documentary", noticiero: "news", audiolibro: "audiobook", podcast: "podcast", comercial: "commercial",
+  tutorial: "tutorial", motivacional: "motivational", suspenso: "mystery", reels: "social", meditacion: "calm",
 };
 
-function leer(specPath = path.join(__dirname, "..", "especificacion-prompts-v1.md")) {
+const USO_EN = {
+  documentary: "Explainer YouTube videos, science content",
+  news: "News, reports, summaries",
+  audiobook: "Stories, books, narratives",
+  podcast: "Podcasts, casual voice",
+  commercial: "Ads, promotions",
+  tutorial: "Courses, step-by-step explanations",
+  motivational: "Talks, inspirational content",
+  mystery: "Mystery, cases, intriguing stories",
+  social: "TikTok, Shorts, Reels",
+  calm: "Relaxation, sleep guides",
+};
+
+function leer(specPath = path.join(__dirname, "..", "prompt-spec.md")) {
   const L = fs.readFileSync(specPath, "utf8").replace(/\r/g, "").split("\n");
   const fail = (m) => { throw new Error("especificación: " + m); };
   function tableAfter(startRe, from = 0) {
@@ -44,7 +50,8 @@ function leer(specPath = path.join(__dirname, "..", "especificacion-prompts-v1.m
   L.forEach((l, i) => {
     const m = l.match(/^### (\d+)\. (.+?) · (.+?) —/);
     if (!m) return;
-    const key = norm(m[2]);
+    const key = KEY[norm(m[2])];
+    if (!key) fail(`estilo sin clave en inglés: ${m[2]}`);
     const quote = (label) => { const j = L.findIndex((x, k) => k > i && x.startsWith(label)); return L[j + 1].replace(/^> /, ""); };
     const ej = L.findIndex((x, k) => k > i && x.startsWith("**Ejemplo / Example**"));
     const code = [];
@@ -58,13 +65,13 @@ function leer(specPath = path.join(__dirname, "..", "especificacion-prompts-v1.m
 
   // uso (tabla resumen de la sección 8)
   for (const r of tableAfter(/^\| # \| ES \| EN \| ppm/)) {
-    const k = norm(r[1]);
+    const k = KEY[norm(r[1])];
     if (styles[k]) styles[k].uso = { es: r[r.length - 1], en: USO_EN[k] || r[r.length - 1] };
   }
 
   // 2. números (sección 5)
   for (const r of tableAfter(/^\| Estilo \| ppm \| Palabras por sección/)) {
-    const k = norm(r[0].replace(/^\d+\s+/, ""));
+    const k = KEY[norm(r[0].replace(/^\d+\s+/, ""))];
     if (!styles[k]) continue;
     const tr = (s) => ({ es: s, en: s.replace(/ a /, " to ").replace(/ o /, " or ") });
     Object.assign(styles[k], { ppm: parseInt(r[1]), wps: parseInt(r[2]), frases: tr(r[3]), enfasis: tr(r[4]) });
@@ -74,7 +81,7 @@ function leer(specPath = path.join(__dirname, "..", "especificacion-prompts-v1.m
   function styleVar(header, key) {
     const rows = tableAfter(new RegExp("^\\*\\*`\\{" + header + "\\}`"));
     const isDefault = (c) => /^(todos|los dem)/i.test(norm(c));
-    const row = rows.find((r) => !isDefault(r[0]) && r[0].split(/,| y /).map(norm).includes(key)) || rows.find((r) => isDefault(r[0]));
+    const row = rows.find((r) => !isDefault(r[0]) && r[0].split(/,| y /).map((n) => KEY[norm(n)]).includes(key)) || rows.find((r) => isDefault(r[0]));
     const clean = (t) => (/^\*\(/.test(t) ? "" : t);
     return { es: clean(row[1]), en: clean(row[2]) };
   }
@@ -88,7 +95,7 @@ function leer(specPath = path.join(__dirname, "..", "especificacion-prompts-v1.m
   // 4. línea de largo
   const largo = {};
   for (const r of tableAfter(/^### Línea de largo/)) {
-    const k = /sin secciones cortas/i.test(r[0]) ? "normal" : norm(r[0]);
+    const k = /sin secciones cortas/i.test(r[0]) ? "normal" : KEY[norm(r[0])];
     largo[k] = { es: unquote(r[1]), en: unquote(r[2]) };
   }
 
@@ -117,4 +124,4 @@ function leer(specPath = path.join(__dirname, "..", "especificacion-prompts-v1.m
   return { version: (L[0].match(/v[\d.]+/) || ["?"])[0], order, styles, largo, accents, topics, templates, parte, continuacion };
 }
 
-module.exports = { leer, norm };
+module.exports = { leer, norm, KEY };

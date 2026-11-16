@@ -1,21 +1,21 @@
-// Generado por pruebas/construir.js desde especificacion-prompts-v1.md (v1.4) — no editar a mano.
+// Generado por tools/build.js desde prompt-spec.md (v1.4) — no editar a mano.
 window.DATOS = {
  "version": "v1.4",
  "order": [
-  "documental",
-  "noticiero",
-  "audiolibro",
+  "documentary",
+  "news",
+  "audiobook",
   "podcast",
-  "comercial",
+  "commercial",
   "tutorial",
-  "motivacional",
-  "suspenso",
-  "reels",
-  "meditacion"
+  "motivational",
+  "mystery",
+  "social",
+  "calm"
  ],
  "styles": {
-  "documental": {
-   "key": "documental",
+  "documentary": {
+   "key": "documentary",
    "num": 1,
    "nombre": {
     "es": "Documental",
@@ -62,8 +62,8 @@ window.DATOS = {
     }
    }
   },
-  "noticiero": {
-   "key": "noticiero",
+  "news": {
+   "key": "news",
    "num": 2,
    "nombre": {
     "es": "Noticiero",
@@ -110,8 +110,8 @@ window.DATOS = {
     }
    }
   },
-  "audiolibro": {
-   "key": "audiolibro",
+  "audiobook": {
+   "key": "audiobook",
    "num": 3,
    "nombre": {
     "es": "Audiolibro",
@@ -206,8 +206,8 @@ window.DATOS = {
     }
    }
   },
-  "comercial": {
-   "key": "comercial",
+  "commercial": {
+   "key": "commercial",
    "num": 5,
    "nombre": {
     "es": "Comercial",
@@ -302,8 +302,8 @@ window.DATOS = {
     }
    }
   },
-  "motivacional": {
-   "key": "motivacional",
+  "motivational": {
+   "key": "motivational",
    "num": 7,
    "nombre": {
     "es": "Motivacional",
@@ -350,8 +350,8 @@ window.DATOS = {
     }
    }
   },
-  "suspenso": {
-   "key": "suspenso",
+  "mystery": {
+   "key": "mystery",
    "num": 8,
    "nombre": {
     "es": "Suspenso",
@@ -398,8 +398,8 @@ window.DATOS = {
     }
    }
   },
-  "reels": {
-   "key": "reels",
+  "social": {
+   "key": "social",
    "num": 9,
    "nombre": {
     "es": "Reels",
@@ -446,8 +446,8 @@ window.DATOS = {
     }
    }
   },
-  "meditacion": {
-   "key": "meditacion",
+  "calm": {
+   "key": "calm",
    "num": 10,
    "nombre": {
     "es": "Meditación",
@@ -500,11 +500,11 @@ window.DATOS = {
    "es": "{SECCIONES} secciones. Cada sección tiene {FRASES} frases (unas {PALABRAS_SECCION} palabras).",
    "en": "{SECTIONS} sections. Each section has {SENTENCES} sentences (about {SECTION_WORDS} words)."
   },
-  "documental": {
+  "documentary": {
    "es": "{SECCIONES} secciones: la primera (preguntas) y la última (cierre) son cortas; cada una de las otras {COMPLETAS} tiene {FRASES} frases (unas {PALABRAS_SECCION} palabras).",
    "en": "{SECTIONS} sections: the first (questions) and the last (closing) are short; each of the other {FULL} has {SENTENCES} sentences (about {SECTION_WORDS} words)."
   },
-  "suspenso": {
+  "mystery": {
    "es": "{SECCIONES} secciones: la última es muy corta; cada una de las otras {COMPLETAS} tiene {FRASES} frases (unas {PALABRAS_SECCION} palabras).",
    "en": "{SECTIONS} sections: the last one is very short; each of the other {FULL} has {SENTENCES} sentences (about {SECTION_WORDS} words)."
   }
