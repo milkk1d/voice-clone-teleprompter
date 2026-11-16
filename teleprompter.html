@@ -597,6 +597,7 @@ function build() {
     L.syl = s; L.end = t;
   });
   total = t;
+  buildKeys();
   if (keep) state.t = lines[keep.i].start + keep.r * (lines[keep.i].end - lines[keep.i].start);
 }
 function locate(t) {
@@ -609,7 +610,7 @@ function locate(t) {
     word: e.k === "w" ? e.wi : -1,
     wf: e.k === "w" ? ef : 0,
     said: L.ev.filter((v) => v.k === "w" && v.t0 + v.d <= t).length,
-    pause: e.k === "p" ? { rem: Math.max(0, e.t0 + e.d - t), d: e.d, sec: !!e.sec, rs: !!e.rs, end: !!e.end } : null,
+    pause: e.k === "p" ? { rem: Math.max(0, e.t0 + e.d - t), d: e.d, sec: !!e.sec, rs: !!e.rs } : null,
   };
 }
 function measure() {
@@ -631,31 +632,44 @@ function measure() {
     if (n) L.rowY.push(sum / n);
     if (!L.rowY.length) L.rowY.push(L.el.offsetTop + L.el.offsetHeight / 2);
   }
+  buildKeys();
 }
-// altura (en el texto) que debe quedar en el centro de la franja: el renglón de la palabra que se está diciendo
-function targetY(at) {
-  const L = lines[at.i];
-  if (at.word >= 0) return L.rowY[L.rowOf[at.word]];
-  if (at.pause && at.pause.end) { // pausa al final de la línea: ya se sube a la siguiente
-    const N = lines[at.i + 1];
-    return N ? N.rowY[0] : endEl.offsetTop + state.fs * 0.7;
+// el texto sube de forma continua: cada renglón queda justo en el centro de la franja cuando se dice su mitad,
+// y entre un renglón y el siguiente el movimiento es parejo (también durante las pausas)
+let keys = [];
+function buildKeys() {
+  keys = [];
+  if (!lines.length || !endEl || !lines[0].rowY) return;
+  for (const L of lines) {
+    if (!L.ev) return;
+    const span = L.rowY.map(() => [Infinity, -Infinity]);
+    for (const ev of L.ev) {
+      if (ev.k !== "w") continue;
+      const sp = span[L.rowOf[ev.wi]];
+      sp[0] = Math.min(sp[0], ev.t0); sp[1] = Math.max(sp[1], ev.t0 + ev.d);
+    }
+    span.forEach((sp, r) => { if (sp[1] > sp[0]) keys.push({ t: (sp[0] + sp[1]) / 2, y: L.rowY[r] }); });
   }
-  return L.rowY[L.rowOf[Math.max(0, at.said - 1)] || 0];
+  keys.push({ t: total, y: endEl.offsetTop + state.fs * 0.7 });
+}
+function scrollY(t) {
+  if (!keys.length) return 0;
+  if (t <= keys[0].t) return keys[0].y;
+  for (let k = 1; k < keys.length; k++) {
+    const a = keys[k - 1], b = keys[k];
+    if (t <= b.t) return a.y + (b.y - a.y) * (b.t > a.t ? (t - a.t) / (b.t - a.t) : 1);
+  }
+  return keys[keys.length - 1].y;
 }
 
 // --- dibujo ---
-let lastI = -1, lastSec = -1, viewY = null, lastDraw = 0;
+let lastI = -1, lastSec = -1;
 const mmss = (s) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, "0")}`;
 function render() {
   if (!lines.length) return;
   const at = locate(state.t);
   const { i } = at;
-  // el texto sube renglón por renglón (con un deslizamiento corto mientras se lee; al instante si se mueve a mano)
-  const now = performance.now(), dt = Math.min(0.1, (now - lastDraw) / 1000);
-  lastDraw = now;
-  const goal = targetY(at);
-  viewY = viewY === null || !state.playing ? goal : viewY + (goal - viewY) * (1 - Math.exp(-dt / 0.09));
-  scroller.style.transform = `translateY(${Math.round(stage.clientHeight * 0.36 + state.fs * 0.7 - viewY)}px)`;
+  scroller.style.transform = `translateY(${Math.round(stage.clientHeight * 0.36 + state.fs * 0.7 - scrollY(state.t))}px)`;
   if (i !== lastI) {
     lines.forEach((l, k) => { l.el.classList.toggle("past", k < i); l.el.classList.toggle("cur", k === i); });
     $("lineNo").textContent = tr("line")(i + 1, lines.length);
