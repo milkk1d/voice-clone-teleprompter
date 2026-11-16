@@ -1,0 +1,54 @@
+# El umbral del abismo
+@fuerza 5
+> Mantén un tono intrigante y cercano, con acento chileno natural.
+¿Alguna vez te has preguntado qué hay más abajo del mar? [sube]
+¿Cómo resiste la **vida** una presión capaz de aplastar un auto? [sube]
+¿Por qué el océano profundo sigue siendo un misterio gigante para la **gente**? [sube]
+
+# La zona crepuscular
+@fuerza 4
+> Explica con claridad y un ritmo dinámico.
+A medida que bajamos por la columna de agua, la luz desaparece por **completo**.
+[respira]
+A los doscientos metros empieza la zona crepuscular, un reino de penumbra y **frío**.
+Aquí nadan criaturas extrañas con ojos gigantescos para cazar en la **oscuridad**.
+Observa bien ese pez linterna que brilla gracias a una reacción **química**.
+Su cuerpo emite destellos para confundir a los depredadores y atraer a sus **presas**.
+El agua presiona con fuerza cada centímetro de su frágil **estructura**.
+
+# La medianoche submarina
+@fuerza 4
+> Sube la intensidad y marca las pausas con precisión.
+Seguimos descendiendo y llegamos a la temida medianoche **marina**.
+[pausa]
+A mil metros de profundidad ya no queda ni un solo rastro de **luz** solar.
+[respira]
+La temperatura baja hasta quedar cerca de los cero **grados**.
+El frío congela los huesos y la presión atmosférica se vuelve **insoportable**.
+[pausa 2s]
+Imagina soportar el peso de un camión aplastando tu **cabeza**.
+Sin embargo, la naturaleza encuentra caminos sorprendentes para **florecer**.
+
+# Gigantes y monstruos
+@fuerza 4
+> Acentúa la enumeración y la sorpresa de los datos.
+En estas llanuras abisales habitan seres fascinantes como el calamar gigante, el pulpo dumbo, el pez dragón y la raya **fantasma**.
+[respira]
+Cada uno de estos animales desarrolló adaptaciones únicas para **sobrevivir**.
+Sus cuerpos están formados por tejidos gelatinosos llenos de **agua**.
+Eso evita que sus huesos se rompan bajo semejante **presión**.
+[pausa]
+Algunos científicos calculan que el peso equivale a mil kilogramos por cada centímetro **cuadrado**.
+Es un examen extremo para cualquier forma de **vida**.
+
+# El secreto de las profundidades
+@fuerza 3
+> Comienza a bajar el ritmo y suaviza la voz.
+[baja]
+[suave] El abismo ya no es un lugar completamente **desconocido**.[/suave]
+[baja]
+Gracias al desarrollo tecnológico y a potentes computadores, hoy exploramos mejor que **antes**.
+[baja]
+Cada expedición revela secretos que cambian nuestra visión del **planeta**.
+[baja]
+Si te gustó este viaje al fondo del mar, dale me gusta y suscríbete para más **contenido**.

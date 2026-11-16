@@ -1,0 +1,64 @@
+You are an expert voice-over scriptwriter. Write a script for a person to read aloud
+and record their voice to create an AI voice clone.
+
+DETAILS
+- Language: English
+- Accent: Neutral / International. Reference words (use them only if they fit naturally; you don't need all of them): plain international vocabulary, metric units. Avoid: regional slang and idioms.
+- Style: Social media
+- Topic: The story of an everyday thing: coffee, the bicycle or chocolate.
+- Length: 7 sections. Each section has 13 to 16 sentences (about 100 words).
+  In total, about 680 words ≈ 4 minutes.
+  Count the sentences in each section before you answer.
+
+HOW THIS STYLE SHOULD SOUND
+Voice-over for short social media videos. Each section is a standalone clip of 30 to 45 seconds. Each clip opens with a hook on the first line ("Nobody tells you this about…"). Sentences of 10 words max, fast pace and almost no pauses; use [fast] for chained facts. You may use the accent's casual expressions in moderation. Close each clip with a call to action ("Follow for more"). Energy 5 in every section.
+If the style contradicts any rule below, the style wins.
+
+WRITE THE WAY PEOPLE SPEAK
+- Simple, direct sentences of 10 words max. Vary the length: mix very short sentences (3 to 5 words) and short ones (6 to 10).
+- No more than 3 adverbs ending in "-ly" in the whole script.
+- Avoid formal written words (furthermore, moreover, considerably,
+  "it is worth mentioning") and don't repeat the same adjective.
+- Include at least 1 question, 2 full sentences ending with ! and 1 list ("A, B and C").
+- Vary the shape between sections: open each one differently (question, fact, exclamation or scene) and don't repeat the same order of sentence types.
+- Naturally use at least one word with each sound:
+  voiced th, voiceless th, r, l, v, b, sh, ch, j, zh, ng, w, wh,
+  long and short vowels, and diphthongs.
+  Reference examples: this, think, river, light, voice, blue, shell, chair, jump,
+  measure, sing, water, whale, sheep, ship, now, boy.
+  Don't copy these examples: find words that fit the topic.
+- The accent guide words are a reference: use them only if they fit naturally.
+- Write numbers, acronyms and symbols as spoken ("thirteen hundred", "percent").
+- Use correct general facts. If you're not sure about a number, leave it out
+  or round it with "about".
+- Don't invent facts about real people or use real brand names.
+- No emojis, decorative headings or stage directions in parentheses.
+
+EMPHASIS
+- In each section, mark exactly 6 to 9 words with **word**.
+  Never more than one per sentence; the other sentences have no emphasis.
+- Pick the word that carries the meaning: a fact, a contrast or something new.
+  Don't put it at the end of the sentence by default.
+  Good: The pressure is a **thousand** times greater than at the surface.
+  Bad:  The pressure is a thousand times greater than at the **surface**.
+
+REQUIRED FORMAT (the teleprompter reads it automatically)
+- # Section title       → one for each requested section
+- @energy 1-5           → right below each title; applies to the whole section
+                          (if a part needs different energy, make another section)
+- > note                → a short direction for the reader (not read aloud)
+- [pause] or [pause 2s] → extra pause; at the end of a sentence or on its own line
+- [breathe]             → where to take a breath
+- Pauses: Almost no pauses: at most 1 [pause] per clip.
+- [slow]...[/slow]  [fast]...[/fast]  [soft]...[/soft]  [loud]...[/loud]
+                        → may span several lines, closing within the same section
+- [up]                  → only on questions, after the question mark:
+                          What's at the bottom of the sea? [up]
+- [down]                → only at the end of the last sentence of a section
+                          Example: And now you know why. [down]
+- word{pro-NUN-ci-a-tion} → only for hard names, stressed syllable in capitals;
+                          with emphasis: **Tajumulco{ta-hu-MUL-co}**
+- One sentence per line. Blank lines only separate; they don't add a pause.
+- Don't use any other symbol or command, and write them exactly as shown.
+
+Return ONLY the script, inside a code block, with no explanation before or after.

@@ -1,0 +1,55 @@
+# Misterios Abisales
+@fuerza 5
+> mantener tono enganchador y cercano
+¿Te has preguntado qué **oculta** la noche eterna del mar chileno? [sube]
+¿Cómo aguanta la vida tanta **presión** a mil metros de profundidad? [sube]
+¿Qué clase de **monstruo** vive donde jamás llega el sol? [sube]
+
+# Tinieblas y Presión
+@fuerza 4
+> tono de documental serio pero relajado
+[respira]
+A medida que bajas, la luz del día **desaparece** por completo. [pausa]
+Solo queda una oscuridad tan **densa** que asusta de verdad. [pausa]
+El peso del agua es **brutal** en este rincón del planeta. [pausa]
+Cada metro extra es como tener una **piedra** gigante encima tuyo. [pausa]
+Fíjate que la presión aplasta un auto al **instante**. [pausa]
+Por eso los animales de la zona tienen cuerpos muy **blandos**. [pausa]
+Si sacas un pez de estos a la superficie, se **rompe**. [pausa]
+Es un misterio **fascinante** de la naturaleza marina. [pausa]
+
+# Criaturas de la Fosa
+@fuerza 4
+> ritmo fluido y descriptivo
+[respira]
+Abajo del todo nadan seres de aspecto **extraño**. [pausa]
+El pez dragón acecha con su propia **luz** brillante. [pausa]
+También encuentras al calamar gigante en su **hábitat**. [pausa]
+La **madre** naturaleza inventó trucos locos para sobrevivir. [pausa]
+Muchos bichos brillan en la oscuridad con **magia** pura. [pausa]
+Cazan presas usando señuelos que parecen una **estrella**. [pausa]
+Nadie cree la **cantidad** de vida que aguanta tanto frío. [pausa]
+Los científicos usan un **computador** para estudiar todo esto. [pausa]
+[lento] El viaje al fondo toma horas de **esfuerzo**. [/lento] [pausa]
+
+# Fuego en el Fondo
+@fuerza 4
+> mantener la tensión y la curiosidad
+[respira]
+Abajo hay chimeneas volcánicas que botan agua **hirviendo**. [pausa]
+El calor sale con una **fuerza** increíble desde la tierra. [pausa]
+Ahí viven bacterias que comen minerales de **hierro**. [pausa]
+Es un **planeta** distinto dentro del mismo océano. [pausa]
+Ningún rayo de sol toca jamás este **fuego** negro. [pausa]
+La plata invertida en explorar este **misterio** vale la pena. [pausa]
+Cada inmersión nos regala un dato **sorprendente**. [pausa]
+[fuerte] ¡Es un mundo totalmente **salvaje** y libre! [/fuerte] [pausa]
+
+# Despedida Abisal
+@fuerza 3
+> tono bajando la energía hacia el cierre
+[respira]
+El océano guarda secretos que aún no **descubrimos**. [baja]
+Queda mucha plata y tiempo por **invertir** en la ciencia. [baja]
+Nos vemos en el próximo **video** para seguir explorando. [baja]
+Dale al botón de **suscribir** para no perderte nada. [baja]

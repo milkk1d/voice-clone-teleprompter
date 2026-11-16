@@ -1,0 +1,77 @@
+# Preguntas
+@fuerza 5
+> Deja cada pregunta en el aire.
+
+¿Qué hay a once kilómetros bajo el **mar**? [sube]
+¿Cómo sobrevive un pez donde la luz nunca llega? [sube]
+¿Por qué tantos animales **brillan** en la oscuridad total? [sube]
+¿Y qué tiene que ver Chile con todo esto? [sube]
+
+# La presión
+@fuerza 4
+> Explica con seguridad, empujando cada frase hacia la palabra marcada.
+
+El océano cubre más de **siete** de cada diez partes del planeta.
+Pero casi todo ese océano es profundo, frío y oscuro.
+Bajo los doscientos metros, la luz del sol empieza a **desaparecer**.
+Bajo los mil metros, ya no queda nada de luz.
+Ahí abajo es de noche [pausa] **siempre**.
+Y a medida que bajas, la presión crece sin descanso.
+En la fosa de las Marianas, la presión es más de [pausa] **mil** veces mayor que en la superficie.
+Es como tener un auto apoyado sobre la punta de tu dedo.
+¡Cualquier submarino común quedaría **aplastado**!
+Por eso, explorar estas profundidades exige **robots** y naves especiales.
+
+# Comer sin sol
+@fuerza 4
+> Curiosidad: como quien cuenta un secreto bueno.
+
+Ahora, piensa en esto: sin sol no hay plantas. [pausa]
+Entonces, ¿de qué se alimentan los animales del fondo? [sube]
+Gran parte de su comida cae desde arriba, muy lentamente.
+Son restos de plancton, de peces y de algas que se hunden durante semanas.
+Los científicos la llaman **nieve marina**.
+Cuando una ballena muere, su cuerpo cae al fondo y se vuelve un banquete.
+Un solo esqueleto puede alimentar a cientos de criaturas durante **décadas**.
+Y en otros rincones, la vida no depende del sol, sino del **calor** de la Tierra.
+De grietas en el suelo marino brotan chorros de agua a más de trescientos grados.
+Alrededor viven gusanos gigantes, cangrejos blancos y almejas enormes.
+¡Todo eso en completa **oscuridad**!
+
+# Luces en la oscuridad
+@fuerza 4
+> Aquí hay asombro: deja que se note.
+
+Aun así, la vida se las arregla para **brillar**.
+Muchos animales del fondo producen su propia luz, igual que una luciérnaga.
+A eso se le llama **bioluminiscencia**.
+Algunos la usan para cazar, otros para esconderse y otros para encontrar pareja.
+El pez linterna lleva pequeñas luces a lo largo del cuerpo.
+El rape abisal cuelga una luz frente a la boca, como una caña de pescar.
+Incluso hay animales que lanzan una nube brillante para escapar de sus depredadores.
+Se calcula que la **mayoría** de los animales de las profundidades produce luz.
+¡Es un mundo oscuro lleno de **luces**!
+
+# Chile y la fosa de Atacama
+@fuerza 4
+> Acércalo a casa: el tono se vuelve más cercano.
+
+Y aquí aparece **Chile**.
+Frente a nuestra costa corre una de las fosas más hondas del planeta: la fosa de **Atacama**.
+Baja a más de [pausa] **ocho mil** metros de profundidad.
+Ahí, la placa de Nazca se hunde bajo el continente.
+Hay fosas parecidas frente a Japón, Filipinas, México y Perú.
+En dos mil dieciocho, una expedición encontró ahí peces que nadie había visto antes.
+Más tarde apareció un pequeño crustáceo **cazador**.
+¿Y sabes cómo lo bautizaron? [sube]
+Su nombre científico es Dulcibella{dul-ci-BE-lla} **camanchaca**.
+Es la niebla espesa que cubre la costa del norte en las mañanas.
+
+# Cierre
+@fuerza 3
+> Bajando, con calma y una leve sonrisa.
+
+El fondo del mar sigue siendo uno de los lugares menos explorados del planeta. [baja]
+Conocemos mejor la superficie de la **Luna** que el fondo de nuestro océano. [baja]
+La próxima vez que mires el mar, recuerda todo lo que esconde allá abajo. [baja]
+Si te gustó, síguenos para la próxima **explicación**. [baja]

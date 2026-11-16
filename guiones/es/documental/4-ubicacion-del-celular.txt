@@ -1,0 +1,83 @@
+# Preguntas
+@fuerza 5
+> Pregunta como si revelaras un truco de magia.
+
+¿Cómo sabe tu celular **dónde** estás, incluso en medio del campo? [sube]
+¿Quién le envía esa información? [sube]
+¿Y por qué a veces se equivoca dentro de un **edificio**? [sube]
+
+# Satélites que escuchan
+@fuerza 4
+> Explica con seguridad, paso a paso.
+
+La respuesta está a unos veinte mil kilómetros sobre tu cabeza.
+Ahí giran unos treinta satélites del sistema de posicionamiento **global**.
+Cada uno da dos vueltas a la Tierra por día.
+Están ordenados para que siempre haya varios sobre cualquier lugar del mundo.
+Cada uno envía, sin parar, una señal con su posición y la hora exacta.
+Tu celular no envía nada: solo **escucha**.
+[pausa]
+Al recibir varias señales, mide cuánto tardó cada una en llegar.
+Como viajan a la velocidad de la luz, ese tiempo se convierte en distancia.
+Con cuatro satélites, puede calcular dónde estás y a qué **altura**.
+Todo eso ocurre en una fracción de segundo.
+¡Y sin que tengas que hacer nada!
+
+# Relojes de precisión
+@fuerza 4
+> Aquí viene el dato sorprendente: dale peso.
+
+Para que funcione, la hora debe ser **perfecta**.
+Por eso, cada satélite lleva relojes atómicos a bordo.
+Estos relojes miden el tiempo con una exactitud asombrosa.
+Un error de un microsegundo te movería cerca de trescientos metros.
+Y hay un detalle más curioso todavía.
+[pausa]
+Los relojes en órbita avanzan un poquito más **rápido** que los de la Tierra.
+Lo explica la teoría de la relatividad de Einstein.
+Es algo que nadie notaría en la vida diaria, pero el sistema sí.
+Si nadie corrigiera esa diferencia, el error crecería unos diez **kilómetros** por día.
+Así que cada vez que usas un mapa, también usas física avanzada.
+¿Quién diría que Einstein te ayuda a llegar a la panadería? [sube]
+
+# No está solo
+@fuerza 4
+> Ritmo ágil, con la enumeración bien marcada.
+
+El sistema de Estados Unidos no es el único en el cielo.
+Europa tiene Galileo, Rusia tiene Glonass{glo-NAS} y China tiene Beidou{bei-DOU}.
+Muchos celulares escuchan **varios** sistemas a la vez.
+Así consiguen más señales y una ubicación más precisa.
+En una calle abierta, el error puede ser de solo unos **pocos** metros.
+Pero entre edificios altos, la ubicación a veces salta de una calle a otra.
+Las señales rebotan en las paredes y llegan con retraso.
+[respira]
+Y dentro de un edificio, el techo y los muros de ladrillo bloquean las señales.
+Entonces tu celular pide **ayuda**.
+Usa las redes de wifi cercanas y las antenas de telefonía.
+Con eso calcula un punto aproximado, aunque menos exacto.
+
+# Cuida tu batería y tu privacidad
+@fuerza 4
+> Tono práctico, como un consejo entre amigos.
+
+Calcular tu posición todo el tiempo gasta **batería**.
+Por eso conviene revisar qué aplicaciones usan tu ubicación.
+Muchas la piden aunque no la necesiten.
+[pausa]
+En la configuración puedes elegir: siempre, solo mientras la usas o nunca.
+Esa elección también protege tu **privacidad**.
+Tu ubicación cuenta dónde vives, dónde trabajas y por dónde caminas.
+Es información valiosa, así que compártela con **cuidado**.
+También puedes apagar la ubicación cuando no la uses.
+Tu batería y tu tranquilidad te lo van a agradecer.
+Un pequeño ajuste hoy te puede ahorrar más de un problema mañana.
+¡Revisa tus permisos esta misma semana!
+
+# Cierre
+@fuerza 3
+> Bajando, con calma y curiosidad.
+
+Cada vez que miras un mapa, conversas con el **espacio**.
+Satélites, relojes atómicos y un poco de Einstein trabajan para ti.
+Si te gustó esta explicación, sígueme para la próxima. [baja]

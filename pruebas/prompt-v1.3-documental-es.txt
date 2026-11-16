@@ -1,0 +1,63 @@
+Eres guionista experto en locución. Escribe un guion para que una persona lo lea
+en voz alta y grabe su voz para crear un clon de voz con IA.
+
+DATOS
+- Idioma: Español
+- Acento: Chileno. Trato de tú. Palabras chilenas de referencia (úsalas solo si encajan natural; no hace falta usarlas todas): harto, al tiro, auto, celular, computador, plata, "fíjate que". Evita: carro, computadora, platicar, vosotros, voseo.
+- Estilo: Documental
+- Tema: El océano profundo: animales, presión, oscuridad.
+- Largo: 6 secciones: la primera (preguntas) y la última (cierre) son cortas; cada una de las otras 4 tiene 9 a 11 frases (unas 110 palabras).
+  En total, unas 560 palabras ≈ 4 minutos.
+  Cuenta las frases de cada sección antes de entregar.
+
+CÓMO DEBE SONAR ESTE ESTILO
+Tono de divulgación con seguridad, como un canal de YouTube explicativo. La primera sección (@fuerza 5) contiene solo 2 a 4 preguntas que enganchen, cada una terminada en [sube]; puede ser más corta que las demás. Las secciones del medio (@fuerza 4) explican con frases que avanzan hacia el dato clave, marcado con **. Pon [pausa] antes de cifras o datos sorprendentes. Incluye al menos una enumeración de lugares o nombres propios. La última sección (@fuerza 3) es corta e invita a seguir el canal; su última frase termina en [baja].
+Si el estilo contradice alguna regla de abajo, manda el estilo.
+
+ESCRIBE COMO SE HABLA
+- Frases simples y directas, de 20 palabras como máximo.
+- Varía el largo: mezcla frases cortas (5 a 8 palabras) y medianas (12 a 18).
+- Como máximo 2 adverbios terminados en "-mente" en todo el guion.
+- Evita palabras de texto escrito (conforme, asimismo, considerablemente,
+  "podemos mencionar") y no repitas el mismo adjetivo.
+- Incluye al menos 2 preguntas, 2 frases completas entre ¡ y ! y 1 enumeración ("A, B y C").
+- Usa, de forma natural, al menos una palabra con cada sonido:
+  r inicial, rr, ñ, ll/y, j/ge/gi, ch, x, z/ce/ci, tr, bl, pl, cr, gl, pr, fr, dr.
+  Ejemplos de referencia: río, tierra, año, lluvia, gente, noche, examen, cielo,
+  tren, blanco, planeta, cristal, siglo (o regla, iglú, inglés), profundo, frío, piedra.
+  No copies estos ejemplos: busca palabras que encajen con el tema.
+- Las palabras de la guía de acento son referencia: úsalas solo si encajan natural.
+- Escribe números, siglas y símbolos como se pronuncian ("mil trescientos", "por ciento").
+- Usa datos generales correctos. Si no estás seguro de una cifra, no la pongas
+  o redondéala con "cerca de".
+- No inventes hechos sobre personas reales ni uses marcas comerciales reales.
+- Nada de emojis, títulos decorativos ni acotaciones entre paréntesis.
+
+ÉNFASIS
+- En cada sección, marca con **palabra** exactamente 3 o 4 palabras.
+  Nunca más de una por frase; las demás frases van sin énfasis.
+- Elige la palabra que carga el sentido: un dato, un contraste o algo nuevo.
+  No la pongas por defecto al final de la frase.
+  Bien: La presión es **mil** veces mayor que en la superficie.
+  Mal:  La presión es mil veces mayor que en la **superficie**.
+
+FORMATO OBLIGATORIO (el teleprompter lo lee automáticamente)
+- # Título de sección   → una por cada sección pedida
+- @fuerza 1-5           → justo debajo de cada título; vale para toda la sección
+                          (si una parte necesita otra energía, haz otra sección)
+- > nota                → una indicación breve para quien lee (no se lee en voz alta)
+- [pausa] o [pausa 2s]  → pausa extra; al final de una frase o en su propia línea.
+                          Como máximo 2 por sección.
+- [respira]             → dónde tomar aire. Como máximo 2 por sección.
+- [lento]...[/lento]  [rápido]...[/rápido]  [suave]...[/suave]  [fuerte]...[/fuerte]
+                        → pueden abarcar varias líneas, cerrándose en la misma sección
+- [sube]                → solo en preguntas, después del signo:
+                          ¿Qué hay en el fondo del mar? [sube]
+- [baja]                → solo al final de la última frase de una sección
+                          Ejemplo: Y ahora ya sabes por qué. [baja]
+- palabra{pro-nun-CIA}  → solo para nombres difíciles, sílaba tónica en mayúsculas;
+                          con énfasis: **Tajumulco{ta-hu-MUL-co}**
+- Una frase por línea. Las líneas en blanco solo separan; no hacen pausa.
+- No uses ningún otro símbolo ni comando, y escríbelos exactamente así.
+
+Entrega SOLO el guion, dentro de un bloque de código, sin explicaciones antes ni después.

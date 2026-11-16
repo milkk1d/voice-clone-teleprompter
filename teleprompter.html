@@ -1,0 +1,915 @@
+<!doctype html>
+<html lang="es">
+<meta charset="utf-8">
+<title>Teleprompter · Clona tu voz</title>
+<meta name="description" content="Teleprompter tipo karaoke para grabar tu voz y clonarla con IA: énfasis, pausas y entonación marcados en cada frase.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%230A1330%27/%3E%3Cpath d=%27M12 8l11 8-11 8z%27 fill=%27%23E0473C%27/%3E%3C/svg%3E">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..900&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: escenario a pantalla completa; el guion sube detrás de una franja de lectura fija (36 % de la altura); controles abajo.
+   Un solo look oscuro a propósito: fondo de océano profundo, texto crema y la palabra clave subrayada en rojo.
+   Las palabras crecen en tamaño y peso según la fuerza con que se dicen (de menos a más hasta la subrayada).
+   Lee el formato de la especificación: # sección, @fuerza, > nota, **énfasis**, [pausa], [respira], [sube]/[baja],
+   tramos [lento] [rápido] [suave] [fuerte] y pronunciación palabra{pro-nun-CIA}. */
+:root {
+  --ground: #0A1330;
+  --band: #15234D;
+  --paper: #F4EBD8;
+  --muted: #8C93AD;
+  --red: #C8372D;
+  --sky: #8AD6F0;
+  --sky-soft: rgba(138, 214, 240, .32);
+  --paper-dim: rgba(244, 235, 216, .42);
+  --ocre: #D9A55B;
+  --rule: #26325C;
+  --display: "Fraunces", Georgia, "Times New Roman", serif;
+  --mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+  --fs: 44px;
+  color-scheme: dark;
+}
+[hidden] { display: none !important; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  box-sizing: border-box;
+  background: var(--ground);
+  color: var(--paper);
+  font-family: var(--display);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0;
+}
+*, *::before, *::after { box-sizing: inherit; }
+
+.top {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px 14px; flex-wrap: wrap;
+  padding-block: 10px;
+  font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted);
+  border-bottom: 1px solid var(--rule);
+}
+.top b { color: var(--paper); font-weight: 500; }
+.picker { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; min-width: 0; }
+.picker select {
+  font: inherit; text-transform: none; letter-spacing: 0; font-size: 13px; color: var(--paper);
+  background: var(--band); border: 1px solid var(--rule); border-radius: 4px; padding: 6px 8px; max-width: min(78vw, 30rem);
+}
+.picker select:focus-visible { outline: 2px solid var(--sky); outline-offset: 2px; }
+.home { color: var(--muted); text-decoration: none; white-space: nowrap; }
+.home:hover { color: var(--paper); }
+.lang { display: inline-flex; border: 1px solid var(--rule); border-radius: 999px; overflow: hidden; }
+.lang button { font: inherit; letter-spacing: inherit; color: var(--muted); background: none; border: 0; padding: 2px 9px; cursor: pointer; }
+.lang button[aria-pressed="true"] { background: var(--paper); color: var(--ground); }
+dialog .pick-row { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
+dialog label { display: grid; gap: 4px; color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .06em; }
+dialog select { font: 13px var(--mono); color: var(--paper); background: var(--band); border: 1px solid var(--rule); border-radius: 4px; padding: 5px 8px; }
+.issues { margin: 10px 0 0; padding: 10px 12px 10px 28px; max-height: 22vh; overflow: auto; background: var(--band); border: 1px solid var(--rule); border-radius: 4px; line-height: 1.5; }
+.issues li.error { color: #F08A82; }
+.issues li.aviso { color: var(--ocre); }
+.issues li.ok { color: var(--sky); list-style: none; margin-left: -16px; }
+.status { display: flex; align-items: center; gap: 14px; font-variant-numeric: tabular-nums; }
+.pill { display: inline-flex; align-items: center; gap: 7px; padding: 3px 10px; border: 1px solid var(--rule); border-radius: 999px; color: var(--muted); }
+.pill i { width: 8px; height: 8px; border-radius: 50%; background: var(--muted); }
+.pill[data-s="leyendo"] { color: var(--paper); border-color: var(--red); }
+.pill[data-s="leyendo"] i { background: var(--red); }
+.pill[data-s="silencio"] { color: var(--sky); border-color: var(--sky); }
+.pill[data-s="silencio"] i { background: var(--sky); }
+
+.stage { position: relative; flex: 1; min-height: 0; overflow: hidden; touch-action: none; cursor: ns-resize; }
+.band {
+  position: absolute; left: 0; right: 0;
+  top: calc(36% - var(--fs) * .3);
+  height: calc(var(--fs) * 2);
+  background: var(--band);
+  border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+  pointer-events: none;
+}
+.band::before {
+  content: ""; position: absolute; left: 0; top: 50%; transform: translateY(-50%);
+  border-left: 12px solid var(--red); border-top: 9px solid transparent; border-bottom: 9px solid transparent;
+}
+.scroller { position: absolute; left: 0; right: 0; top: 0; will-change: transform; padding-bottom: 70vh; }
+.col { max-width: min(100%, 22em); margin: 0 auto; font-size: var(--fs); padding-inline: 24px; text-align: center; }
+
+.sec { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 5px; margin: 1.1em 0 .6em; font-family: var(--mono); font-size: max(12px, calc(var(--fs) * .3)); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.sec:first-child { margin-top: 0; }
+.sec b { color: var(--paper); font-weight: 500; }
+.sec .note { text-transform: none; letter-spacing: .02em; }
+.force { display: inline-flex; align-items: center; gap: 4px; color: var(--ocre); }
+.force i { display: inline-block; width: .9em; height: .55em; border: 1px solid var(--ocre); }
+.force i.on { background: var(--ocre); }
+
+.ln { margin: 0 0 .5em; line-height: 1.38; transition: opacity .25s ease; opacity: .5; text-wrap: pretty; }
+.ln.past { opacity: .2; }
+.ln.cur { opacity: 1; }
+/* karaoke: cada palabra se pinta de celeste de izquierda a derecha mientras se dice */
+.ln.cur .w {
+  color: transparent;
+  background-image: linear-gradient(90deg, var(--sky) var(--p, 0%), var(--paper-dim) var(--p, 0%));
+  -webkit-background-clip: text; background-clip: text;
+}
+.ln.cur .pz { background-image: linear-gradient(90deg, var(--sky-soft) var(--p, 0%), transparent var(--p, 0%)); }
+.w { font-variation-settings: "opsz" 72; }
+.kw { text-decoration: underline; text-decoration-color: var(--red); text-decoration-thickness: .09em; text-underline-offset: .17em; }
+.w.st-lento { letter-spacing: .06em; }
+.w.st-rapido, .w.st-suave { font-style: italic; }
+.pz {
+  display: inline-block; font-family: var(--mono); font-size: .36em; font-weight: 500; color: var(--sky);
+  border: 1px solid var(--sky); border-radius: 3px; padding: .05em .4em; margin: 0 .3em; vertical-align: .55em;
+  font-variant-numeric: tabular-nums; white-space: nowrap;
+}
+.pz.rs { border-style: dashed; }
+.pr { font-family: var(--mono); font-size: .32em; font-weight: 500; color: var(--ocre); vertical-align: .9em; margin-left: .1em; white-space: nowrap; }
+.tg {
+  display: inline-block; font-family: var(--mono); font-size: .3em; font-weight: 500; text-transform: uppercase; letter-spacing: .08em;
+  border: 1px solid currentColor; border-radius: 3px; padding: .05em .4em; margin-right: .3em; vertical-align: .6em; white-space: nowrap;
+}
+.tg-lento { color: var(--sky); }
+.tg-rapido { color: var(--ocre); }
+.tg-suave { color: var(--muted); }
+.tg-fuerte { color: var(--red); }
+.ar { font-family: system-ui, "Segoe UI Symbol", sans-serif; font-size: .8em; }
+.up { color: var(--sky); }
+.dn { color: var(--ocre); }
+.end { margin-top: 1.4em; font-family: var(--mono); font-size: max(13px, calc(var(--fs) * .36)); color: var(--sky); line-height: 1.5; }
+.end .next { display: block; margin-top: 1.2em; padding: .8em 1em; border: 1px solid var(--rule); border-radius: 6px; color: var(--paper); font-size: .85em; }
+.end .next a, .intro .links a { color: var(--sky); }
+.end .next small { display: block; margin-top: .4em; color: var(--muted); font-size: .8em; }
+.intro .links small { color: var(--muted); }
+
+.pause {
+  position: absolute; right: 8px; top: calc(36% - var(--fs) * .3 - 46px);
+  display: flex; align-items: center; gap: 10px;
+  font-family: var(--mono); font-size: 14px; letter-spacing: .1em; text-transform: uppercase; color: var(--sky);
+  background: var(--ground); border: 1px solid var(--sky); border-radius: 4px; padding: 6px 12px;
+}
+.pause b { font-size: 20px; font-weight: 500; color: var(--paper); letter-spacing: 0; font-variant-numeric: tabular-nums; min-width: 3.4em; text-align: right; }
+.pause .meter { width: 90px; height: 6px; background: var(--rule); }
+.pause .meter u { display: block; height: 100%; background: var(--sky); width: 100%; }
+
+/* panel "Listo para grabar": compacto, abajo, para que se vean las primeras líneas del guion detrás */
+.intro {
+  position: absolute; left: 50%; transform: translateX(-50%); bottom: 12px;
+  width: min(100%, 36rem); max-height: calc(60% - 20px); overflow: auto;
+  background: var(--ground); border: 1px solid var(--rule); border-radius: 6px;
+  padding: 14px 18px; font-family: var(--mono); font-size: 13px; line-height: 1.5; color: var(--muted);
+  display: grid; gap: 10px; cursor: default;
+}
+.intro h2 { margin: 0; padding-right: 32px; font-family: var(--display); font-size: 21px; font-weight: 700; color: var(--paper); }
+.intro p { margin: 0; }
+.intro .close { position: absolute; top: 8px; right: 8px; padding: 2px 9px; font-size: 14px; color: var(--muted); }
+.intro .steps { display: flex; flex-wrap: wrap; gap: 4px 14px; color: var(--paper); }
+.intro .steps b { display: inline-grid; place-items: center; width: 18px; height: 18px; margin-right: 5px; border: 1px solid var(--ocre); border-radius: 50%; color: var(--ocre); font-size: 11px; font-weight: 500; }
+.intro table { border-collapse: collapse; width: 100%; }
+.intro td { padding: 5px 0; border-top: 1px solid var(--rule); vertical-align: middle; }
+.intro td:first-child { padding-right: 14px; white-space: nowrap; color: var(--paper); }
+.intro td.demo { font-family: var(--display); font-size: 17px; }
+.intro .pz, .intro .tg { font-size: 11px; vertical-align: middle; margin: 0 4px 0 0; }
+.intro .ar { font-size: 17px; }
+.intro .keys kbd { margin-right: 2px; }
+.intro details { border-top: 1px solid var(--rule); padding-top: 8px; }
+.intro summary { cursor: pointer; color: var(--sky); }
+.intro details ul { margin: 8px 0 0; padding-left: 1.2em; display: grid; gap: 4px; }
+.intro details b { color: var(--paper); font-weight: 500; }
+.intro .links a { color: var(--sky); }
+.help { font: inherit; letter-spacing: 0; color: var(--muted); background: none; border: 1px solid var(--rule); border-radius: 50%; width: 22px; height: 22px; padding: 0; line-height: 20px; cursor: pointer; }
+.help:hover { color: var(--paper); border-color: var(--muted); }
+kbd { font-family: var(--mono); font-size: 12px; border: 1px solid var(--rule); border-radius: 3px; padding: 0 5px; color: var(--paper); }
+
+.count {
+  position: absolute; inset: 0; display: grid; place-content: center; text-align: center; gap: 8px;
+  background: color-mix(in srgb, var(--ground) 82%, transparent);
+}
+.count .n { font-size: clamp(90px, 22vw, 200px); font-weight: 700; line-height: 1; color: var(--paper); font-variant-numeric: tabular-nums; }
+.count .m { font-family: var(--mono); font-size: 14px; letter-spacing: .14em; text-transform: uppercase; color: var(--sky); }
+
+.controls {
+  border-top: 1px solid var(--rule);
+  padding-block: 10px calc(10px + env(safe-area-inset-bottom, 0px));
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px 18px;
+  font-family: var(--mono); font-size: 13px; color: var(--muted);
+  position: relative;
+}
+.progress { position: absolute; left: 0; right: 0; top: -1px; height: 2px; }
+.progress i { display: block; height: 100%; width: 0; background: var(--red); }
+.grp { display: flex; align-items: center; gap: 6px; }
+.grp .val { min-width: 4.5em; text-align: center; color: var(--paper); font-variant-numeric: tabular-nums; }
+button {
+  font: inherit; color: var(--paper); background: transparent; border: 1px solid var(--rule); border-radius: 4px;
+  padding: 7px 12px; cursor: pointer; line-height: 1.2;
+}
+button:hover { border-color: var(--muted); }
+button:focus-visible { outline: 2px solid var(--sky); outline-offset: 2px; }
+button.main { background: var(--paper); color: var(--ground); border-color: var(--paper); font-weight: 500; min-width: 9.5em; }
+button.main:hover { background: #fff; }
+
+dialog {
+  width: min(92vw, 44rem); max-height: 86vh; padding: 18px 20px; border: 1px solid var(--rule); border-radius: 6px;
+  background: var(--ground); color: var(--paper); font-family: var(--mono); font-size: 13px;
+}
+dialog::backdrop { background: rgba(5, 10, 26, .7); }
+dialog h2 { margin: 0 0 6px; font-family: var(--display); font-size: 22px; }
+dialog p { margin: 0 0 10px; color: var(--muted); line-height: 1.5; }
+dialog textarea {
+  width: 100%; height: 46vh; resize: vertical; font: 13px/1.5 var(--mono); color: var(--paper);
+  background: var(--band); border: 1px solid var(--rule); border-radius: 4px; padding: 10px;
+}
+dialog .row { display: flex; gap: 8px; justify-content: flex-end; margin-top: 10px; flex-wrap: wrap; }
+
+@media (max-width: 560px) {
+  .col { padding-inline: 18px; }
+  .top { font-size: 11px; }
+  .controls { gap: 8px 10px; }
+  .hide-sm { display: none; }
+  .pause { font-size: 12px; }
+  .pause .meter { width: 50px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ln { transition: none; }
+}
+</style>
+
+<header class="top">
+  <div class="picker">
+    <a class="home" href="index.html" id="homeLink">← Inicio</a>
+    <select id="pick" aria-label="Elegir guion"></select>
+  </div>
+  <div class="status">
+    <button type="button" class="help" id="helpBtn" aria-label="Ayuda">?</button>
+    <span class="lang" role="group" aria-label="Idioma / Language"><button type="button" data-lang="es">ES</button><button type="button" data-lang="en">EN</button></span>
+    <span class="pill" id="pill" data-s="pausa"><i></i><span id="pillTxt">En pausa</span></span>
+    <span id="clock">0:00 / 0:00</span>
+    <span id="lineNo" class="hide-sm">línea 1 de 1</span>
+  </div>
+</header>
+
+<main class="stage" id="stage" aria-label="Guion">
+  <div class="band" aria-hidden="true"></div>
+  <div class="scroller" id="scroller"><div class="col" id="col"></div></div>
+
+  <div class="pause" id="pause" hidden aria-live="off">
+    <span id="pauseLbl">Pausa</span>
+    <b id="pauseS">0,0 s</b>
+    <span class="meter" aria-hidden="true"><u id="pauseBar"></u></span>
+  </div>
+
+  <section class="intro" id="intro"></section>
+
+  <div class="count" id="count" hidden>
+    <div class="n" id="countN">3</div>
+    <div class="m" id="countM">Silencio</div>
+  </div>
+</main>
+
+<footer class="controls">
+  <div class="progress" aria-hidden="true"><i id="bar"></i></div>
+  <div class="grp">
+    <button id="prev" type="button" aria-label="Línea anterior">←</button>
+    <button id="play" type="button" class="main">Empezar</button>
+    <button id="next" type="button" aria-label="Línea siguiente">→</button>
+  </div>
+  <div class="grp" aria-label="Velocidad">
+    <button id="slower" type="button" aria-label="Más lento">−</button>
+    <span class="val" id="wpm">140 ppm</span>
+    <button id="faster" type="button" aria-label="Más rápido">+</button>
+  </div>
+  <div class="grp" aria-label="Tamaño de letra">
+    <button id="smaller" type="button" aria-label="Letra más chica">A−</button>
+    <button id="bigger" type="button" aria-label="Letra más grande">A+</button>
+  </div>
+  <div class="grp">
+    <button id="restart" type="button">Reiniciar</button>
+    <button id="full" type="button" class="hide-sm">Pantalla completa</button>
+  </div>
+</footer>
+
+<dialog id="pasteDlg">
+  <h2 id="dlgTitle"></h2>
+  <p id="dlgHelp"></p>
+  <div class="pick-row">
+    <label><span id="dlgStyleLbl"></span><select id="dlgStyle"></select></label>
+    <label><span id="dlgLangLbl"></span><select id="dlgLang"><option value="es">Español</option><option value="en">English</option></select></label>
+  </div>
+  <textarea id="pasteTxt" spellcheck="false" placeholder="# Mi primera sección&#10;@fuerza 4&#10;> Una nota para quien lee.&#10;&#10;¿Sabías que el mar es **salado**? [sube]"></textarea>
+  <ul id="dlgIssues" class="issues" hidden></ul>
+  <div class="row">
+    <button id="pasteCancel" type="button"></button>
+    <button id="pasteOk" type="button" class="main"></button>
+  </div>
+</dialog>
+
+<script src="js/datos.js"></script>
+<script src="js/enlaces.js"></script>
+<script src="js/validador.js"></script>
+<script src="guiones/guiones.js"></script>
+<script>
+// segundos de cada pausa automática o marcada
+const P = { coma: 0.25, frase: 0.45, linea: 0.45, seccion: 1.8, pausa: 1.0, respira: 0.9 };
+// cuánto se estira cada palabra dentro de un tramo
+const SPEED = { lento: 1.35, rapido: 0.75, suave: 1.1, fuerte: 1 };
+const SPAN = { lento: "lento", slow: "lento", "rápido": "rapido", rapido: "rapido", fast: "rapido", suave: "suave", soft: "suave", fuerte: "fuerte", loud: "fuerte" };
+const SPAN_LABEL = { lento: "lento", rapido: "rápido", suave: "suave", fuerte: "fuerte" };
+const SYL = { es: 2.2, en: 1.5 }; // sílabas promedio por palabra
+
+const $ = (id) => document.getElementById(id);
+const stage = $("stage"), scroller = $("scroller"), col = $("col");
+
+const store = {
+  get(k, d) { try { const v = localStorage.getItem("tp." + k); return v === null ? d : JSON.parse(v); } catch (e) { return d; } },
+  set(k, v) { try { localStorage.setItem("tp." + k, JSON.stringify(v)); } catch (e) {} },
+};
+// --- idioma de la interfaz (el del guion es aparte: state.lang) ---
+let ui = store.get("ui", (navigator.language || "es").toLowerCase().startsWith("es") ? "es" : "en");
+const T = {
+  es: {
+    home: "← Inicio", help: "Ayuda", title: "Teleprompter · Clona tu voz", pick: "Elegir guion", restart: "Reiniciar", full: "Pantalla completa",
+    pill: { leyendo: "Leyendo", pausa: "En pausa", silencio: "Silencio", fin: "Terminado" },
+    start: "Empezar", pauseBtn: "Pausa", resume: "Seguir", silence: "Silencio", backIn: "Sigue en",
+    pause: "Pausa", breathe: "Respira", force: "Fuerza",
+    line: (i, n) => `línea ${i} de ${n}`,
+    end: "Fin del guion. Quédate 2 segundos en silencio y detén la grabación en Audacity.",
+    empty: "Este guion no tiene líneas para leer. Revisa el formato.",
+    span: { lento: "lento", rapido: "rápido", suave: "suave", fuerte: "fuerte" },
+    myGroup: "Mi guion", ownGroup: "Ejemplos", pasted: "Guion pegado", pasteOpt: "Pegar un guion…",
+    dlgTitle: "Pega tu guion", dlgStyle: "Estilo", dlgLang: "Idioma del guion",
+    dlgHelp: "Usa el formato del guion: <code># Sección</code>, <code>@fuerza 4</code>, <code>&gt; nota</code>, <code>**palabra**</code>, <code>[pausa]</code>, <code>[respira]</code>, <code>[sube]</code>/<code>[baja]</code>, <code>[lento]…[/lento]</code>. Si lo copiaste de una IA, pega solo lo que está dentro del bloque de código. Al usarlo, lo revisamos según el estilo.",
+    cancel: "Cancelar", check: "Revisar y usar", anyway: "Usar igual",
+    fixErrors: "Corrige lo que está en rojo antes de usarlo.", warnsOnly: "Se puede leer igual; estos avisos ayudan a que el clon quede mejor:",
+    intro: `<button type="button" class="close" data-close aria-label="Cerrar">✕</button>
+      <h2>Listo para grabar</h2>
+      <p class="steps"><span><b>1</b>Elige un guion arriba</span><span><b>2</b>Graba en Audacity</span><span><b>3</b>Presiona <kbd>Espacio</kbd> (3 s de silencio y empieza)</span></p>
+      <table><tbody>
+        <tr><td class="demo"><span style="font-size:.84em;font-weight:330">Casi</span> <span style="font-size:.9em;font-weight:420">uno</span> <span style="font-size:.96em;font-weight:520">de</span> <span style="font-size:1.03em;font-weight:620">cada</span> <span class="kw" style="font-size:1.18em;font-weight:800">cuatro</span></td><td>Sube la fuerza hasta la subrayada</td></tr>
+        <tr><td><span class="pz">1 s</span></td><td>Pausa</td></tr>
+        <tr><td><span class="ar up">↗</span> <span class="ar dn">↘</span></td><td>La voz sube o baja</td></tr>
+        <tr><td><span class="tg tg-lento">lento</span><span class="tg tg-rapido">rápido</span></td><td>Cambia el ritmo</td></tr>
+      </tbody></table>
+      <p class="keys"><kbd>Espacio</kbd> pausa · <kbd>↑</kbd><kbd>↓</kbd> velocidad · <kbd>←</kbd><kbd>→</kbd> línea · <kbd>F</kbd> pantalla completa</p>
+      <details><summary>¿Qué significa cada marca?</summary><ul>
+        <li><b>Palabras que crecen:</b> la fuerza sube de menos a más; la subrayada en rojo es la más fuerte.</li>
+        <li><b>Cajitas celestes:</b> pausas con sus segundos. Las de borde punteado («respira») son para tomar aire. Las comas y los puntos también pausan, sin cajita.</li>
+        <li><b>Etiquetas de color:</b> marcan dónde empieza un tramo lento, rápido, suave o fuerte.</li>
+        <li><b>Texto ocre pequeño:</b> cómo se pronuncia la palabra.</li>
+        <li><b>Cuadros ocres:</b> la fuerza de cada sección, de 1 a 5.</li>
+        <li><b>Si te equivocas,</b> no pares: repite la frase completa y después cortas el error.</li>
+        <li><b>Las teclas suenan en el micrófono:</b> apriétalas en las pausas. Con la rueda del mouse también puedes mover el guion.</li>
+      </ul></details>
+      <p class="links"><a href="guia.html">Guía de grabación</a> · <a data-afiliado="elevenlabs">Crear mi clon en ElevenLabs ↗</a> <small>(enlace de afiliado)</small></p>`,
+    nextStep: "<b>¿Terminaste de grabar?</b> Sube tu audio a <a data-afiliado=\"elevenlabs\">ElevenLabs</a> y crea tu clon de voz.<small>Enlace de afiliado: si te suscribes, recibimos una comisión, sin costo extra para ti.</small>",
+  },
+  en: {
+    home: "← Home", help: "Help", title: "Teleprompter · Clone your voice", pick: "Choose a script", restart: "Restart", full: "Full screen",
+    pill: { leyendo: "Reading", pausa: "Paused", silencio: "Silence", fin: "Finished" },
+    start: "Start", pauseBtn: "Pause", resume: "Resume", silence: "Silence", backIn: "Back in",
+    pause: "Pause", breathe: "Breathe", force: "Energy",
+    line: (i, n) => `line ${i} of ${n}`,
+    end: "End of the script. Stay silent for 2 seconds and stop the recording in Audacity.",
+    empty: "This script has no lines to read. Check the format.",
+    span: { lento: "slow", rapido: "fast", suave: "soft", fuerte: "loud" },
+    myGroup: "My script", ownGroup: "Examples", pasted: "Pasted script", pasteOpt: "Paste a script…",
+    dlgTitle: "Paste your script", dlgStyle: "Style", dlgLang: "Script language",
+    dlgHelp: "Use the script format: <code># Section</code>, <code>@energy 4</code>, <code>&gt; note</code>, <code>**word**</code>, <code>[pause]</code>, <code>[breathe]</code>, <code>[up]</code>/<code>[down]</code>, <code>[slow]…[/slow]</code>. If you copied it from an AI, paste only what's inside the code block. We check it against the style when you use it.",
+    cancel: "Cancel", check: "Check and use", anyway: "Use anyway",
+    fixErrors: "Fix what's in red before using it.", warnsOnly: "You can read it anyway; these notes help your clone come out better:",
+    intro: `<button type="button" class="close" data-close aria-label="Close">✕</button>
+      <h2>Ready to record</h2>
+      <p class="steps"><span><b>1</b>Choose a script above</span><span><b>2</b>Record in Audacity</span><span><b>3</b>Press <kbd>Space</kbd> (3 s of silence, then it starts)</span></p>
+      <table><tbody>
+        <tr><td class="demo"><span style="font-size:.84em;font-weight:330">Almost</span> <span style="font-size:.9em;font-weight:420">one</span> <span style="font-size:.96em;font-weight:520">in</span> <span style="font-size:1.03em;font-weight:620">every</span> <span class="kw" style="font-size:1.18em;font-weight:800">four</span></td><td>Build up to the underlined word</td></tr>
+        <tr><td><span class="pz">1 s</span></td><td>Pause</td></tr>
+        <tr><td><span class="ar up">↗</span> <span class="ar dn">↘</span></td><td>Your voice rises or falls</td></tr>
+        <tr><td><span class="tg tg-lento">slow</span><span class="tg tg-rapido">fast</span></td><td>Change the pace</td></tr>
+      </tbody></table>
+      <p class="keys"><kbd>Space</kbd> pause · <kbd>↑</kbd><kbd>↓</kbd> speed · <kbd>←</kbd><kbd>→</kbd> line · <kbd>F</kbd> full screen</p>
+      <details><summary>What does each mark mean?</summary><ul>
+        <li><b>Growing words:</b> energy builds from low to high; the one underlined in red is the strongest.</li>
+        <li><b>Light blue boxes:</b> pauses with their seconds. Dotted ones ("breathe") are for taking a breath. Commas and periods also pause, without a box.</li>
+        <li><b>Colored tags:</b> mark where a slow, fast, soft or loud passage starts.</li>
+        <li><b>Small ochre text:</b> how to pronounce the word.</li>
+        <li><b>Ochre squares:</b> each section's energy, from 1 to 5.</li>
+        <li><b>If you make a mistake,</b> don't stop: repeat the whole sentence and cut the mistake later.</li>
+        <li><b>Keys can be heard on the mic:</b> press them during pauses. You can also scroll the script with the mouse wheel.</li>
+      </ul></details>
+      <p class="links"><a href="guia.html">Recording guide</a> · <a data-afiliado="elevenlabs">Create my clone on ElevenLabs ↗</a> <small>(affiliate link)</small></p>`,
+    nextStep: "<b>Done recording?</b> Upload your audio to <a data-afiliado=\"elevenlabs\">ElevenLabs</a> and create your voice clone.<small>Affiliate link: if you subscribe, we earn a commission at no extra cost to you.</small>",
+  },
+};
+const tr = (k) => T[ui][k];
+
+const state = {
+  wpm: 140, lang: "es",
+  fs: store.get("fs", Math.round(Math.min(48, Math.max(26, innerWidth / 22)))),
+  t: 0, playing: false, counting: false,
+};
+
+const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const secs = (s) => (Math.round(s * 10) / 10).toLocaleString("es-CL", { minimumFractionDigits: s % 1 ? 1 : 0, maximumFractionDigits: 1 }) + " s";
+const syl = (w) => Math.max(1, (w.toLowerCase().match(/[aeiouyáéíóúü]+/g) || []).length);
+const mergeAfter = (a, b) => (!a ? b : !b ? a : { d: a.box && b.box ? a.d + b.d : Math.max(a.d, b.d), box: b.box || a.box, rs: a.rs || b.rs });
+
+// --- leer el guion: secciones, notas, fuerza, énfasis, pausas, tramos, entonación y pronunciación ---
+function parseScript(text) {
+  const sections = [];
+  let sec = null, open = [], pending = null, inKw = false;
+  const newSec = (t) => { sec = { t, f: null, n: [], lines: [] }; sections.push(sec); open = []; pending = null; inKw = false; };
+  for (const raw of text.replace(/\r/g, "").split("\n")) {
+    const t = raw.trim();
+    if (!t || /^```/.test(t)) continue;
+    if (/^#\s+/.test(t)) { newSec(t.replace(/^#\s+/, "")); continue; }
+    const fm = t.match(/^@(fuerza|energy)\s+(\d+)/i);
+    if (fm) { if (!sec) newSec(""); sec.f = Math.max(1, Math.min(5, +fm[2])); continue; }
+    if (/^>/.test(t)) { if (!sec) newSec(""); sec.n.push(t.replace(/^>\s*/, "")); continue; }
+    if (!sec) newSec("");
+
+    const segs = [];
+    const blank = () => ({ words: [], up: false, dn: false, after: null });
+    let cur = blank(), lead = pending;
+    pending = null;
+    const endSeg = (after) => {
+      if (cur.words.length) { cur.after = after; segs.push(cur); cur = blank(); }
+      else if (after) { const last = segs[segs.length - 1]; if (last) last.after = mergeAfter(last.after, after); else lead = mergeAfter(lead, after); }
+    };
+    const lastSeg = () => {
+      if (cur.words.length) return cur;
+      if (segs.length) return segs[segs.length - 1];
+      const prev = sec.lines[sec.lines.length - 1];
+      return prev ? prev.segs[prev.segs.length - 1] : null;
+    };
+    for (const m of t.matchAll(/\[[^\]]*\]|[^\s\[]+/g)) {
+      const tok = m[0];
+      const cmd = tok.match(/^\[(\/?)\s*([^\]]*?)\s*\]$/);
+      if (cmd) {
+        const name = cmd[2].toLowerCase();
+        if (SPAN[name]) { const s = SPAN[name]; open = cmd[1] ? open.filter((x) => x !== s) : open.includes(s) ? open : [...open, s]; continue; }
+        if (!cmd[1]) {
+          const pm = name.match(/^(pausa|pause)(?:\s+(\d+(?:[.,]\d+)?)\s*s?)?$/);
+          if (pm) { const d = pm[2] ? parseFloat(pm[2].replace(",", ".")) : P.pausa; endSeg({ d, box: secs(d) }); continue; }
+          if (name === "respira" || name === "breathe") { endSeg({ d: P.respira, box: "respira", rs: true }); continue; }
+          if (name === "sube" || name === "up") { const s = lastSeg(); if (s) s.up = true; continue; }
+          if (name === "baja" || name === "down") { const s = lastSeg(); if (s) s.dn = true; continue; }
+        }
+      }
+      let w = tok, pron = "";
+      const pm = w.match(/^(.*?)\{([^}]*)\}(.*)$/);
+      if (pm) { w = pm[1] + pm[3]; pron = pm[2]; }
+      if (w.startsWith("**")) inKw = true;
+      const closes = /\*\*/.test(w.replace(/^\*\*/, ""));
+      const word = w.replace(/\*\*/g, "");
+      // signos sueltos (por ejemplo, el punto después de [/rápido]) se pegan a la palabra anterior
+      const prevWord = cur.words[cur.words.length - 1] || segs[segs.length - 1]?.words.slice(-1)[0];
+      if (word && /^[.,;:!?…»”")]+$/.test(word) && prevWord) {
+        prevWord.text += word;
+        if (cur.words.length) {
+          if (/[,;:]$/.test(word)) endSeg({ d: P.coma });
+          else if (/[.?!…]$/.test(word)) endSeg({ d: P.frase });
+        }
+        if (closes) inKw = false;
+        continue;
+      }
+      if (word) {
+        cur.words.push({ text: word, kw: inKw, syl: syl(word), pron, st: open.slice() });
+        if (closes) inKw = false;
+        if (/[,;:]$/.test(word)) endSeg({ d: P.coma });
+        else if (/[.?!…]["”»)]*$/.test(word)) endSeg({ d: P.frase });
+      } else if (closes) inKw = false;
+    }
+    endSeg(null);
+    if (!segs.length) {
+      // línea con solo comandos ([respira], [pausa]): la pausa se suma al final de la línea anterior
+      if (lead) {
+        const prev = sec.lines[sec.lines.length - 1];
+        if (prev) { const ls = prev.segs[prev.segs.length - 1]; ls.after = mergeAfter(ls.after, lead); }
+        else pending = mergeAfter(pending, lead);
+      }
+      continue;
+    }
+    sec.lines.push({ segs, lead });
+  }
+  return sections.filter((s) => s.lines.length);
+}
+
+// --- fuerza de cada palabra (0 a 1): de menos a más hasta la palabra clave ---
+function dynamics(seg) {
+  const n = seg.words.length;
+  const ramp = (a, b, k, m) => (m <= 1 ? b : a + ((b - a) * k) / (m - 1));
+  const ki = seg.words.findIndex((w) => w.kw);
+  return seg.words.map((w, k) => {
+    let d;
+    if (w.kw) d = 1;
+    else if (ki >= 0 && k < ki) d = ramp(0.15, 0.75, k, ki);
+    else if (ki >= 0) d = seg.up ? ramp(0.55, 0.9, k - ki - 1, n - ki - 1) : 0.5;
+    else if (seg.up) d = ramp(0.15, 1, k, n);
+    else if (seg.dn) d = ramp(0.8, 0.1, k, n);
+    else d = ramp(0.3, 0.6, k, n);
+    if (w.st.includes("fuerte")) d = Math.min(1, d + 0.25);
+    if (w.st.includes("suave")) d *= 0.6;
+    return d;
+  });
+}
+
+// --- armar el guion en pantalla ---
+let lines = [], endEl = null;
+function renderScript(sections) {
+  col.innerHTML = "";
+  lines = [];
+  sections.forEach((sec, si) => {
+    const h = document.createElement("div");
+    h.className = "sec";
+    const bars = sec.f ? `<span class="force" aria-label="${tr("force")} ${sec.f}/5">${tr("force")} ${Array.from({ length: 5 }, (_, k) => `<i class="${k < sec.f ? "on" : ""}"></i>`).join("")}</span>` : "";
+    h.innerHTML = `<b>${si + 1}${sec.t ? " · " + esc(sec.t) : ""}</b>${bars}${sec.n.length ? `<span class="note">${esc(sec.n.join(" "))}</span>` : ""}`;
+    col.appendChild(h);
+    let prevSt = [];
+    sec.lines.forEach((L, li) => {
+      L.secEnd = li === sec.lines.length - 1 && si < sections.length - 1;
+      let html = "", bi = 0;
+      const box = (a) => { a.bi = bi++; return `<span class="pz${a.rs ? " rs" : ""}">${esc(a.box)}</span> `; };
+      if (L.lead && L.lead.box) html += box(L.lead);
+      L.segs.forEach((s) => {
+        const d = dynamics(s);
+        s.words.forEach((w, j) => {
+          for (const st of w.st) if (!prevSt.includes(st)) html += `<span class="tg tg-${st}">${tr("span")[st]}</span>`;
+          prevSt = w.st;
+          const size = (0.84 + 0.34 * d[j]).toFixed(2);
+          const weight = Math.round(320 + 480 * d[j]);
+          const cls = "w" + (w.kw ? " kw" : "") + w.st.map((x) => " st-" + x).join("");
+          html += `<span class="${cls}" style="font-size:${size}em;font-weight:${weight}">${esc(w.text)}</span>`;
+          html += (w.pron ? `<span class="pr">${esc(w.pron)}</span>` : "") + " ";
+        });
+        if (s.up) html += '<span class="ar up" aria-label="sube">↗</span> ';
+        if (s.dn) html += '<span class="ar dn" aria-label="baja">↘</span> ';
+        if (s.after && s.after.box) html += box(s.after);
+      });
+      const p = document.createElement("p");
+      p.className = "ln";
+      p.innerHTML = html;
+      col.appendChild(p);
+      L.el = p;
+      L.wordEls = [...p.querySelectorAll(".w")];
+      L.pzEls = [...p.querySelectorAll(".pz")];
+      lines.push(L);
+    });
+  });
+  endEl = document.createElement("p");
+  endEl.className = "end";
+  endEl.innerHTML = lines.length ? `${esc(tr("end"))}<span class="next">${tr("nextStep")}</span>` : esc(tr("empty"));
+  window.aplicarEnlaces?.(endEl);
+  col.appendChild(endEl);
+}
+
+// --- tiempos: cada palabra dura según sus sílabas (y su tramo); las pausas son fijas ---
+let total = 0, tops = [];
+function lineAt(t) {
+  for (let i = lines.length - 1; i >= 0; i--) if (t >= lines[i].start) return i;
+  return 0;
+}
+function build() {
+  let keep = null;
+  if (total && lines.length) { const i = lineAt(state.t); const L = lines[i]; keep = { i, r: (state.t - L.start) / (L.end - L.start) }; }
+  const sps = 60 / (state.wpm * (SYL[state.lang] || SYL.es));
+  let t = 0;
+  lines.forEach((L) => {
+    L.start = t; L.ev = [];
+    let s = 0, wi = 0;
+    if (L.lead) { L.ev.push({ k: "p", t0: t, d: L.lead.d, s0: 0, bi: L.lead.box ? L.lead.bi : -1, rs: L.lead.rs }); t += L.lead.d; }
+    L.segs.forEach((seg, k) => {
+      seg.words.forEach((w) => {
+        const f = w.st.reduce((a, x) => a * (SPEED[x] || 1), 1);
+        const d = w.syl * sps * f;
+        L.ev.push({ k: "w", t0: t, d, s0: s, s1: s + w.syl, wi: wi++ });
+        t += d; s += w.syl;
+      });
+      const a = seg.after;
+      if (k === L.segs.length - 1) {
+        const hold = (a && a.box ? a.d : P.linea) + (L.secEnd ? P.seccion : 0);
+        L.ev.push({ k: "p", t0: t, d: hold, s0: s, end: true, sec: L.secEnd, bi: a && a.box ? a.bi : -1, rs: a && a.rs });
+        t += hold;
+      } else if (a) {
+        L.ev.push({ k: "p", t0: t, d: a.d, s0: s, bi: a.box ? a.bi : -1, rs: a.rs });
+        t += a.d;
+      }
+    });
+    L.syl = s; L.end = t;
+  });
+  total = t;
+  if (keep) state.t = lines[keep.i].start + keep.r * (lines[keep.i].end - lines[keep.i].start);
+}
+function locate(t) {
+  const i = lineAt(t), L = lines[i];
+  let e = L.ev[L.ev.length - 1];
+  for (const ev of L.ev) if (t < ev.t0 + ev.d) { e = ev; break; }
+  const ef = Math.min(1, Math.max(0, (t - e.t0) / e.d));
+  const spoken = e.k === "w" ? e.s0 + ef * (e.s1 - e.s0) : e.s0;
+  return {
+    i,
+    frac: L.syl ? spoken / L.syl : 1,
+    word: e.k === "w" ? e.wi : -1,
+    wf: e.k === "w" ? ef : 0,
+    said: L.ev.filter((v) => v.k === "w" && v.t0 + v.d <= t).length,
+    pause: e.k === "p" ? { rem: Math.max(0, e.t0 + e.d - t), d: e.d, sec: !!e.sec, rs: !!e.rs } : null,
+  };
+}
+function measure() {
+  tops = lines.map((l) => l.el.offsetTop);
+  tops.push(endEl.offsetTop);
+}
+
+// --- dibujo ---
+let lastI = -1, lastSec = -1;
+const mmss = (s) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, "0")}`;
+function render() {
+  if (!lines.length) return;
+  const at = locate(state.t);
+  const { i } = at;
+  const y = tops[i] + (tops[i + 1] - tops[i]) * at.frac;
+  scroller.style.transform = `translateY(${Math.round(stage.clientHeight * 0.36 - y)}px)`;
+  if (i !== lastI) {
+    lines.forEach((l, k) => { l.el.classList.toggle("past", k < i); l.el.classList.toggle("cur", k === i); });
+    $("lineNo").textContent = tr("line")(i + 1, lines.length);
+    lastI = i;
+  }
+  const L = lines[i];
+  L.wordEls.forEach((el, k) => {
+    const p = k < at.said ? 100 : k === at.word ? Math.round(at.wf * 100) : 0;
+    if (el._p !== p) { el.style.setProperty("--p", p + "%"); el._p = p; }
+  });
+  for (const ev of L.ev) {
+    if (ev.k !== "p" || ev.bi < 0) continue;
+    const el = L.pzEls[ev.bi];
+    if (!el) continue;
+    const p = state.t >= ev.t0 + ev.d ? 100 : state.t >= ev.t0 ? Math.round((100 * (state.t - ev.t0)) / ev.d) : 0;
+    if (el._p !== p) { el.style.setProperty("--p", p + "%"); el._p = p; }
+  }
+  const showPause = !!at.pause && at.pause.d >= 0.3 && (state.playing || state.t > 0) && state.t < total;
+  $("pause").hidden = !showPause;
+  if (showPause) {
+    $("pauseLbl").textContent = at.pause.sec || at.pause.rs ? tr("breathe") : tr("pause");
+    $("pauseS").textContent = secs(at.pause.rem);
+    $("pauseBar").style.width = `${(100 * at.pause.rem) / at.pause.d}%`;
+  }
+  const s = Math.floor(state.t);
+  if (s !== lastSec) { $("clock").textContent = `${mmss(state.t)} / ${mmss(total)}`; lastSec = s; }
+  $("bar").style.width = `${total ? (100 * state.t) / total : 0}%`;
+}
+function setPill(s) {
+  const txt = tr("pill")[s];
+  $("pill").dataset.s = s;
+  $("pillTxt").textContent = txt;
+}
+function syncUI() {
+  $("play").textContent = state.playing || state.counting ? tr("pauseBtn") : state.t > 0 && state.t < total ? tr("resume") : tr("start");
+  // el panel aparece al inicio (salvo que la persona lo haya cerrado) o cuando se pide con "?"; nunca mientras se lee
+  const idle = !state.playing && !state.counting;
+  $("intro").hidden = !(idle && (introAsked || (state.t === 0 && !store.get("introCerrado", false))));
+  $("wpm").textContent = `${state.wpm} ppm`;
+  document.documentElement.style.setProperty("--fs", state.fs + "px");
+}
+
+// --- elegir guion ---
+const D = window.DATOS || { order: [], styles: {} };
+const ORDEN = [...(D.order.length ? D.order : ["documental", "podcast", "comercial"]), "propio"];
+const LISTOS = (Array.isArray(window.GUIONES_LISTOS) ? window.GUIONES_LISTOS : []).slice();
+const PASTE = "__pegar", PASTED = "__pegado";
+const styleName = (k) => D.styles[k]?.nombre[ui] || k;
+function fillPicker(selected) {
+  const pick = $("pick");
+  const rank = (g) => [g.estilo === "propio" ? 2 : g.idioma === ui ? 0 : 1, ORDEN.indexOf(g.estilo), g.tema];
+  const sorted = LISTOS.slice().sort((a, b) => { const x = rank(a), y = rank(b); return x[0] - y[0] || x[1] - y[1] || x[2] - y[2]; });
+  const groups = new Map();
+  for (const g of sorted) {
+    const label = g.estilo === "propio" ? tr("ownGroup") : `${styleName(g.estilo)} · ${g.idioma.toUpperCase()}`;
+    if (!groups.has(label)) groups.set(label, []);
+    groups.get(label).push(g);
+  }
+  let html = "";
+  for (const [label, list] of groups) {
+    html += `<optgroup label="${esc(label)}">` + list.map((g) => `<option value="${esc(g.id)}">${g.tema ? g.tema + ". " : ""}${esc(g.titulo)}</option>`).join("") + "</optgroup>";
+  }
+  const pasted = store.get("pegado", "");
+  html += `<optgroup label="${esc(tr("myGroup"))}">${pasted ? `<option value="${PASTED}">${esc(tr("pasted"))}</option>` : ""}<option value="${PASTE}">${esc(tr("pasteOpt"))}</option></optgroup>`;
+  pick.innerHTML = html;
+  pick.setAttribute("aria-label", tr("pick"));
+  if (selected) pick.value = selected;
+}
+function loadScript(text, opts) {
+  pause();
+  state.lang = opts.lang || (/(@energy|\[(pause|breathe|up|down|slow|fast|soft|loud)\b)/i.test(text) ? "en" : "es");
+  if (opts.ppm) state.wpm = opts.ppm;
+  renderScript(parseScript(text));
+  total = 0; state.t = 0; lastI = -1; lastSec = -1;
+  build(); syncUI(); measure(); setPill("pausa");
+  document.fonts?.ready.then(measure);
+}
+function choose(id) {
+  if (id === PASTE) { openPaste(); return; }
+  if (id === PASTED && !store.get("pegado", "")) id = LISTOS[0]?.id;
+  if (id === PASTED) {
+    const st = store.get("pegadoEstilo", "");
+    loadScript(store.get("pegado", ""), { lang: store.get("pegadoIdioma", ""), ppm: D.styles[st]?.ppm });
+    store.set("elegido", id);
+    $("pick").value = PASTED;
+    return;
+  }
+  // si el guion no existe, se abre el primer Documental en el idioma de la interfaz
+  const g = LISTOS.find((x) => x.id === id) || LISTOS.find((x) => x.idioma === ui && x.estilo === "documental") || LISTOS[0];
+  if (!g) { loadScript("", {}); return; }
+  loadScript(g.texto, { lang: g.idioma, ppm: g.ppm });
+  store.set("elegido", g.id);
+  $("pick").value = g.id;
+}
+
+// --- pegar un guion propio, con revisión según el estilo ---
+let target = { words: 0, sections: 0 }, anyway = false;
+function openPaste(pre = {}) {
+  $("dlgStyle").innerHTML = D.order.map((k) => `<option value="${k}">${esc(styleName(k))}</option>`).join("");
+  $("dlgStyle").value = pre.style && D.styles[pre.style] ? pre.style : store.get("pegadoEstilo", "documental");
+  $("dlgLang").value = pre.lang === "en" || pre.lang === "es" ? pre.lang : store.get("pegadoIdioma", ui);
+  target = { words: pre.words || 0, sections: pre.sections || 0 };
+  $("pasteTxt").value = store.get("pegado", "");
+  resetCheck();
+  $("pasteDlg").showModal();
+}
+function resetCheck() { anyway = false; $("dlgIssues").hidden = true; $("pasteOk").textContent = tr("check"); }
+function acceptPaste(text) {
+  store.set("pegado", text);
+  store.set("pegadoEstilo", $("dlgStyle").value);
+  store.set("pegadoIdioma", $("dlgLang").value);
+  $("pasteDlg").close();
+  fillPicker(PASTED);
+  choose(PASTED);
+}
+$("pick").addEventListener("change", (e) => { choose(e.target.value); e.target.blur(); });
+$("pasteCancel").addEventListener("click", () => { $("pasteDlg").close(); $("pick").value = store.get("elegido", LISTOS[0]?.id || PASTE); });
+["pasteTxt", "dlgStyle", "dlgLang"].forEach((id) => $(id).addEventListener("input", resetCheck));
+$("pasteOk").addEventListener("click", () => {
+  const text = $("pasteTxt").value.trim();
+  if (!text) return;
+  if (anyway || !window.Validador) { acceptPaste(text); return; }
+  const r = window.Validador.validate(text, { lang: $("dlgLang").value, style: $("dlgStyle").value, words: target.words, sections: target.sections, ui });
+  if (!r.issues.length) { acceptPaste(text); return; }
+  const where = (i) => (i.line ? (ui === "es" ? `línea ${i.line}: ` : `line ${i.line}: `) : "");
+  $("dlgIssues").innerHTML = `<li class="ok">${esc(r.errors ? tr("fixErrors") : tr("warnsOnly"))}</li>` +
+    r.issues.slice().sort((a, b) => (a.sev === "error" ? 0 : 1) - (b.sev === "error" ? 0 : 1)).map((i) => `<li class="${i.sev}">${esc(where(i) + i.msg)}</li>`).join("");
+  $("dlgIssues").hidden = false;
+  if (!r.errors) { anyway = true; $("pasteOk").textContent = tr("anyway"); }
+});
+
+// --- textos de la interfaz en el idioma elegido ---
+function applyLang() {
+  document.documentElement.lang = ui;
+  document.title = tr("title");
+  $("homeLink").textContent = tr("home");
+  $("helpBtn").setAttribute("aria-label", tr("help"));
+  $("helpBtn").title = tr("help");
+  $("restart").textContent = tr("restart");
+  $("full").textContent = tr("full");
+  $("intro").innerHTML = tr("intro");
+  window.aplicarEnlaces?.($("intro"));
+  $("dlgTitle").textContent = tr("dlgTitle");
+  $("dlgHelp").innerHTML = tr("dlgHelp");
+  $("dlgStyleLbl").textContent = tr("dlgStyle");
+  $("dlgLangLbl").textContent = tr("dlgLang");
+  $("pasteCancel").textContent = tr("cancel");
+  if (!anyway) $("pasteOk").textContent = tr("check");
+  document.querySelectorAll(".status .lang button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.lang === ui)));
+  fillPicker($("pick").value || store.get("elegido", ""));
+  setPill($("pill").dataset.s || "pausa");
+  syncUI();
+}
+document.querySelectorAll(".status .lang button").forEach((b) => b.addEventListener("click", () => {
+  ui = b.dataset.lang;
+  store.set("ui", ui);
+  applyLang();
+  if (state.t === 0 && !state.playing) choose($("pick").value); // vuelve a dibujar etiquetas y secciones en el idioma nuevo
+  b.blur();
+}));
+
+// --- panel "Listo para grabar": ✕ lo cierra y lo recuerda; "?" lo vuelve a abrir ---
+let introAsked = false;
+$("intro").addEventListener("click", (e) => {
+  if (!e.target.closest("[data-close]")) return;
+  introAsked = false;
+  store.set("introCerrado", true);
+  syncUI();
+});
+$("helpBtn").addEventListener("click", (e) => {
+  if (state.playing || state.counting) pause();
+  introAsked = $("intro").hidden;
+  syncUI();
+  e.currentTarget.blur();
+});
+
+// --- reproducir ---
+let wake = null, countTimer = null;
+async function keepAwake() { try { wake = await navigator.wakeLock?.request("screen"); } catch (e) {} }
+function startCount() {
+  if (!lines.length) return;
+  if (state.t >= total) state.t = 0;
+  let n = state.t === 0 ? 3 : 2;
+  state.counting = true;
+  $("count").hidden = false;
+  $("countN").textContent = n;
+  $("countM").textContent = state.t === 0 ? tr("silence") : tr("backIn");
+  setPill("silencio");
+  syncUI();
+  keepAwake();
+  countTimer = setInterval(() => {
+    n -= 1;
+    if (n > 0) { $("countN").textContent = n; return; }
+    clearInterval(countTimer);
+    $("count").hidden = true;
+    state.counting = false;
+    state.playing = true;
+    setPill("leyendo");
+    syncUI();
+  }, 1000);
+}
+function pause() {
+  clearInterval(countTimer);
+  $("count").hidden = true;
+  state.counting = false;
+  state.playing = false;
+  setPill(total && state.t >= total ? "fin" : "pausa");
+  syncUI();
+  try { wake?.release(); } catch (e) {}
+}
+function toggle() { introAsked = false; state.playing || state.counting ? pause() : startCount(); }
+function seek(t) { state.t = Math.max(0, Math.min(total, t)); syncUI(); }
+function jump(d) {
+  if (!lines.length) return;
+  const i = lineAt(state.t), L = lines[i];
+  const k = d < 0 && state.t - L.start > 0.6 ? i : Math.max(0, Math.min(lines.length - 1, i + d));
+  seek(lines[k].start);
+}
+function setWpm(v) { state.wpm = Math.max(90, Math.min(200, v)); build(); syncUI(); lastSec = -1; }
+function setFs(v) { state.fs = Math.max(22, Math.min(96, v)); store.set("fs", state.fs); syncUI(); measure(); }
+
+let last = performance.now();
+function frame(now) {
+  const dt = Math.min(0.1, (now - last) / 1000);
+  last = now;
+  if (state.playing) {
+    state.t += dt;
+    if (state.t >= total) { state.t = total; pause(); }
+  }
+  render();
+  requestAnimationFrame(frame);
+}
+
+// --- controles ---
+const clickOnly = (fn) => (e) => { fn(); if (e.detail > 0) e.currentTarget.blur(); };
+$("play").addEventListener("click", clickOnly(toggle));
+$("prev").addEventListener("click", clickOnly(() => jump(-1)));
+$("next").addEventListener("click", clickOnly(() => jump(1)));
+$("slower").addEventListener("click", clickOnly(() => setWpm(state.wpm - 5)));
+$("faster").addEventListener("click", clickOnly(() => setWpm(state.wpm + 5)));
+$("smaller").addEventListener("click", clickOnly(() => setFs(state.fs - 4)));
+$("bigger").addEventListener("click", clickOnly(() => setFs(state.fs + 4)));
+$("restart").addEventListener("click", clickOnly(() => { pause(); seek(0); setPill("pausa"); }));
+function fullscreen() { const d = document.documentElement; (document.fullscreenElement ? document.exitFullscreen() : d.requestFullscreen?.())?.catch?.(() => {}); }
+$("full").addEventListener("click", clickOnly(fullscreen));
+
+document.addEventListener("keydown", (e) => {
+  if (e.ctrlKey || e.metaKey || e.altKey) return;
+  if ($("pasteDlg").open || e.target.closest?.("select, textarea, input")) return;
+  const k = e.key;
+  if (k === " ") { e.preventDefault(); if (!e.repeat) toggle(); }
+  else if (k === "ArrowUp") { e.preventDefault(); setWpm(state.wpm + 5); }
+  else if (k === "ArrowDown") { e.preventDefault(); setWpm(state.wpm - 5); }
+  else if (k === "ArrowLeft") { e.preventDefault(); jump(-1); }
+  else if (k === "ArrowRight") { e.preventDefault(); jump(1); }
+  else if (k === "+" || k === "=") setFs(state.fs + 4);
+  else if (k === "-" || k === "_") setFs(state.fs - 4);
+  else if (k === "Home") { pause(); seek(0); }
+  else if (k === "f" || k === "F") fullscreen();
+});
+stage.addEventListener("wheel", (e) => { e.preventDefault(); seek(state.t + e.deltaY * 0.012); }, { passive: false });
+let drag = null;
+stage.addEventListener("pointerdown", (e) => {
+  if (e.target.closest(".intro, a") || !lines.length) return;
+  const span = tops[tops.length - 1] - tops[0] || 1;
+  drag = { y: e.clientY, t: state.t, k: total / span };
+  stage.setPointerCapture(e.pointerId);
+});
+stage.addEventListener("pointermove", (e) => { if (drag) seek(drag.t + (drag.y - e.clientY) * drag.k); });
+stage.addEventListener("pointerup", () => { drag = null; });
+stage.addEventListener("pointercancel", () => { drag = null; });
+addEventListener("resize", () => lines.length && measure());
+
+// arranque: ?guion=<id> abre un guion listo; ?pegar=1 abre el cuadro para pegar (con estilo, idioma y largo esperados)
+const params = new URLSearchParams(location.search);
+const saved = store.get("elegido", LISTOS[0]?.id || PASTE);
+const first = params.get("guion") || (saved === PASTE ? LISTOS[0]?.id || PASTED : saved);
+applyLang();
+fillPicker(first);
+choose(first);
+if (params.get("pegar")) {
+  openPaste({ style: params.get("estilo"), lang: params.get("idioma"), words: Number(params.get("palabras")) || 0, sections: Number(params.get("secciones")) || 0 });
+}
+requestAnimationFrame(frame);
+</script>

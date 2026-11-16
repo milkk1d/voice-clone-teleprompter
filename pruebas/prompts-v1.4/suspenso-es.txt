@@ -1,0 +1,62 @@
+Eres guionista experto en locución. Escribe un guion para que una persona lo lea
+en voz alta y grabe su voz para crear un clon de voz con IA.
+
+DATOS
+- Idioma: Español
+- Acento: Latino neutro. Trato de tú y ustedes. Palabras de referencia (úsalas solo si encajan natural; no hace falta usarlas todas): auto, celular, computadora, dinero. Evita: modismos regionales, vosotros, voseo.
+- Estilo: Suspenso
+- Tema: El océano profundo: animales, presión, oscuridad.
+- Largo: 5 secciones: la última es muy corta; cada una de las otras 4 tiene 11 a 13 frases (unas 120 palabras).
+  En total, unas 480 palabras ≈ 4 minutos.
+  Cuenta las frases de cada sección antes de entregar.
+
+CÓMO DEBE SONAR ESTE ESTILO
+Narración de misterio o suspenso, sin violencia explícita. Construye tensión con detalles sensoriales: sonidos, sombras, silencios. Usa [lento] y [suave] en los momentos de tensión y [pausa 2s] antes de cada revelación. El énfasis va solo en la palabra que inquieta. Como máximo 1 exclamación en todo el guion. Incluye preguntas sin respuesta terminadas en [sube]. Fuerza 2 en las primeras secciones, 4 en la sección de la revelación y 2 en una última sección muy corta.
+Si el estilo contradice alguna regla de abajo, manda el estilo.
+
+ESCRIBE COMO SE HABLA
+- Frases simples y directas, de 20 palabras como máximo. Varía el largo: mezcla frases cortas (5 a 8 palabras) y medianas (12 a 18).
+- Como máximo 2 adverbios terminados en "-mente" en todo el guion.
+- Evita palabras de texto escrito (conforme, asimismo, considerablemente,
+  "podemos mencionar") y no repitas el mismo adjetivo.
+- Incluye al menos 2 preguntas sin respuesta, 1 enumeración ("A, B y C") y como máximo 1 frase entre ¡ y !.
+- Usa, de forma natural, al menos una palabra con cada sonido:
+  r inicial, rr, ñ, ll/y, j/ge/gi, ch, x, z/ce/ci, tr, bl, pl, cr, gl, pr, fr, dr.
+  Ejemplos de referencia: río, tierra, año, lluvia, gente, noche, examen, cielo,
+  tren, blanco, planeta, cristal, siglo (o regla, iglú, inglés), profundo, frío, piedra.
+  No copies estos ejemplos: busca palabras que encajen con el tema.
+- Las palabras de la guía de acento son referencia: úsalas solo si encajan natural.
+- Escribe números, siglas y símbolos como se pronuncian ("mil trescientos", "por ciento").
+- Usa datos generales correctos. Si no estás seguro de una cifra, no la pongas
+  o redondéala con "cerca de".
+- No inventes hechos sobre personas reales ni uses marcas comerciales reales.
+- Nada de emojis, títulos decorativos ni acotaciones entre paréntesis.
+
+ÉNFASIS
+- En cada sección, marca con **palabra** exactamente 2 o 3 palabras.
+  Nunca más de una por frase; las demás frases van sin énfasis.
+- Elige la palabra que carga el sentido: un dato, un contraste o algo nuevo.
+  No la pongas por defecto al final de la frase.
+  Bien: La presión es **mil** veces mayor que en la superficie.
+  Mal:  La presión es mil veces mayor que en la **superficie**.
+
+FORMATO OBLIGATORIO (el teleprompter lo lee automáticamente)
+- # Título de sección   → una por cada sección pedida
+- @fuerza 1-5           → justo debajo de cada título; vale para toda la sección
+                          (si una parte necesita otra energía, haz otra sección)
+- > nota                → una indicación breve para quien lee (no se lee en voz alta)
+- [pausa] o [pausa 2s]  → pausa extra; al final de una frase o en su propia línea
+- [respira]             → dónde tomar aire
+- Pausas: Como máximo 2 [pausa] y 2 [respira] por sección.
+- [lento]...[/lento]  [rápido]...[/rápido]  [suave]...[/suave]  [fuerte]...[/fuerte]
+                        → pueden abarcar varias líneas, cerrándose en la misma sección
+- [sube]                → solo en preguntas, después del signo:
+                          ¿Qué hay en el fondo del mar? [sube]
+- [baja]                → solo al final de la última frase de una sección
+                          Ejemplo: Y ahora ya sabes por qué. [baja]
+- palabra{pro-nun-CIA}  → solo para nombres difíciles, sílaba tónica en mayúsculas;
+                          con énfasis: **Tajumulco{ta-hu-MUL-co}**
+- Una frase por línea. Las líneas en blanco solo separan; no hacen pausa.
+- No uses ningún otro símbolo ni comando, y escríbelos exactamente así.
+
+Entrega SOLO el guion, dentro de un bloque de código, sin explicaciones antes ni después.

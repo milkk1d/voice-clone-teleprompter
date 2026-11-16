@@ -1,0 +1,83 @@
+# Questions
+@energy 5
+> Ask as if you were revealing a magic trick.
+
+How does your phone know **where** you are, even in the middle of nowhere? [up]
+Who sends it that information? [up]
+And why does it sometimes get it wrong inside a **building**? [up]
+
+# Satellites that listen
+@energy 4
+> Explain with confidence, step by step.
+
+The answer is about twenty thousand kilometers above your head.
+Around thirty satellites of the **global** positioning system orbit up there.
+Each one circles the Earth twice a day.
+They're arranged so there are always several above any place on the planet.
+Each satellite sends, nonstop, a signal with its position and the exact time.
+Your phone sends nothing: it only **listens**.
+[pause]
+When it receives several signals, it measures how long each one took to arrive.
+Since they travel at the speed of light, that time becomes distance.
+With four satellites, it can work out where you are and your **altitude**.
+All of that happens in a fraction of a second.
+And you don't have to do a thing!
+
+# Clocks of precision
+@energy 4
+> Here comes the surprising fact: give it weight.
+
+For this to work, the time has to be **perfect**.
+That's why every satellite carries atomic clocks on board.
+These clocks keep time with amazing accuracy.
+An error of one microsecond would move you about three hundred meters.
+And there's an even stranger detail.
+[pause]
+Clocks in orbit run a tiny bit **faster** than clocks on Earth.
+Einstein's theory of relativity explains why.
+Nobody would notice it in daily life, but the system does.
+If no one corrected that difference, the error would grow by about ten **kilometers** a day.
+So every time you use a map, you're also using advanced physics.
+Who would have thought Einstein helps you get to the bakery? [up]
+
+# It's not alone
+@energy 4
+> Brisk pace, with the list clearly marked.
+
+The United States system isn't the only one in the sky.
+Europe has Galileo, Russia has Glonass{glo-NASS} and China has BeiDou{bay-DOH}.
+Many phones listen to **several** systems at once.
+That way they get more signals and a more precise location.
+On an open street, the error can be just a **few** meters.
+But among tall buildings, your location sometimes jumps from one street to another.
+The signals bounce off walls and arrive late.
+[breathe]
+And inside a building, the roof and brick walls block the signals.
+Then your phone asks for **help**.
+It uses nearby Wi-Fi networks and cell towers.
+With that, it estimates a rough position, though less exact.
+
+# Protect your battery and your privacy
+@energy 4
+> Practical tone, like advice between friends.
+
+Calculating your position all the time drains your **battery**.
+That's why it's worth checking which apps use your location.
+Many ask for it even when they don't need it.
+[pause]
+In the settings you can choose: always, only while using the app, or never.
+That choice also protects your **privacy**.
+Your location reveals where you live, where you work and where you walk.
+It's valuable information, so share it with **care**.
+You can also switch location off when you're not using it.
+Your battery and your peace of mind will thank you.
+A small change today can save you more than one problem tomorrow.
+Check your permissions this week!
+
+# Closing
+@energy 3
+> Winding down, calm and curious.
+
+Every time you look at a map, you're talking to **space**.
+Satellites, atomic clocks and a bit of Einstein are working for you.
+If you enjoyed this explanation, follow me for the next one. [down]

@@ -1,0 +1,119 @@
+# El despertar del café
+@fuerza 5
+> Voz entusiasta, con energía desde la primera palabra.
+¿Tu mañana necesita un nuevo **impulso**? [sube]
+Despertar cuesta cuando la rutina se vuelve pesada.
+¡Descubre **Aurora**, el café que transforma tus mañanas!
+Su historia comienza con granos cultivados y tostados con cuidado.
+Disfruta su **aroma**, su sabor y su textura.
+Cada taza ofrece una experiencia **intensa** y agradable.
+[respira]
+Olvida las mañanas sin **inspiración**.
+Comparte una pausa deliciosa antes de salir al trabajo.
+[fuerte]¡Prueba Aurora y comienza tu día con **energía**![/fuerte]
+[rápido]Aplican condiciones.[/rápido]
+
+# El secreto de los granos
+@fuerza 5
+> Tono intrigante al comenzar, luego entusiasmo creciente.
+¿Sabías que cada grano guarda una **historia**? [sube]
+Muchos cafés pierden su encanto por una preparación descuidada.
+¡Conoce **Raíz**, nuestra propuesta para descubrir mejores sabores!
+Seleccionamos granos y cuidamos cada etapa del tostado.
+Disfruta **fragancia**, cuerpo y equilibrio en cada preparación.
+La molienda adecuada ayuda a conservar su **frescura**.
+[respira]
+Un buen café merece atención desde su origen.
+Descubre sus notas, reconoce sus matices y disfruta su **carácter**.
+[fuerte]¡Elige Raíz y descubre una nueva **experiencia**![/fuerte]
+[rápido]Aplican condiciones.[/rápido]
+
+# Café para llevar
+@fuerza 5
+> Ritmo ágil, juvenil y cercano, como un anuncio urbano.
+¿Sales corriendo y nunca alcanzas a preparar café? [sube]
+El tráfico, las reuniones y los pendientes consumen tiempo.
+¡Llegó **Rumbo**, tu nueva estación de café para llevar!
+Pide desde tu celular y recoge tu bebida.
+Disfruta **rapidez**, variedad y comodidad durante tu recorrido.
+Elige café caliente, bebidas frías y opciones **cremosas**.
+[respira]
+Cada pedido está pensado para acompañar tu jornada.
+Desde el auto hasta la oficina, disfruta tu **libertad**.
+[fuerte]¡Visita Rumbo y recupera tus **minutos**![/fuerte]
+[rápido]Servicio sujeto a disponibilidad.[/rápido]
+
+# El arte de preparar café
+@fuerza 5
+> Voz expresiva, transmitiendo sorpresa y entusiasmo.
+¿Tu café casero nunca sabe como esperabas? [sube]
+Una molienda incorrecta puede cambiar toda la preparación.
+¡Presentamos **Brío**, el equipo que simplifica tu ritual!
+Controla el agua y prepara tu bebida favorita.
+Consigue **precisión**, comodidad y resultados más constantes.
+Su diseño facilita la limpieza después de cada uso.
+[respira]
+Aprende a reconocer el **aroma** del café recién molido.
+Explora distintas recetas y encuentra tu combinación **ideal**.
+[fuerte]¡Descubre Brío y transforma tu cocina en una **cafetería**![/fuerte]
+[rápido]Accesorios adicionales vendidos por separado.[/rápido]
+
+# Una pausa extraordinaria
+@fuerza 5
+> Comienza con urgencia y termina con entusiasmo contagioso.
+¿Tu agenda está llena y necesitas un descanso? [sube]
+Las horas avanzan entre mensajes, llamadas y obligaciones.
+¡Con **Nube**, cada pausa puede convertirse en un placer!
+Nuestra mezcla combina café, leche y una espuma delicada.
+Disfruta **suavidad**, sabor y una textura envolvente.
+Elige una bebida caliente o una versión **helada**.
+[respira]
+Acompaña tu descanso con chocolate y pequeños bocados.
+Regálate un instante de **calma** durante el día.
+[fuerte]¡Pide Nube y disfruta un descanso **delicioso**![/fuerte]
+[rápido]Productos sujetos a disponibilidad.[/rápido]
+
+# El viaje del café
+@fuerza 5
+> Tono aventurero, con emoción y curiosidad por descubrir.
+¿Imaginas cuántos lugares recorre el café hasta tu taza? [sube]
+Su viaje comienza mucho antes de llegar a casa.
+¡Descubre **Travesía**, una colección de cafés con distintos orígenes!
+Conoce regiones productoras y explora sus perfiles de sabor.
+Encuentra notas **frutales**, aromas tostados y matices dulces.
+Cada variedad ofrece una **identidad** que puedes reconocer.
+[respira]
+Viaja con tus sentidos sin comprar un boleto.
+Comparte una degustación y descubre nuevas **preferencias**.
+[fuerte]¡Prueba Travesía y despierta tu espíritu **explorador**![/fuerte]
+[rápido]Variedades sujetas a disponibilidad.[/rápido]
+
+# Café para compartir
+@fuerza 5
+> Voz cálida y alegre, destacando la conexión entre personas.
+¿Cuándo fue la última vez que compartiste un buen café? [sube]
+Las conversaciones especiales merecen algo más que una bebida.
+¡Bienvenidos a **Encuentro**, donde cada taza reúne historias!
+Invita a tus amigos y disfruta una tarde diferente.
+Tenemos **capuchinos**, bebidas frías y postres para compartir.
+Celebra una ocasión especial con un ambiente **acogedor**.
+[respira]
+Entre charlas y sonrisas, nacen recuerdos inolvidables.
+Descubre el **placer** de conversar sin mirar el reloj.
+[fuerte]¡Ven a Encuentro y comparte momentos **únicos**![/fuerte]
+[rápido]Reservaciones sujetas a disponibilidad.[/rápido]
+
+# El futuro de tu café
+@fuerza 5
+> Cierre poderoso, con tono innovador y máxima energía comercial.
+¿Y si preparar café fuera más fácil que nunca? [sube]
+Buscar ingredientes y calcular cantidades puede resultar complicado.
+¡Conoce **Órbita**, una nueva forma de preparar café!
+Selecciona tu receta desde una pantalla sencilla.
+Disfruta **control**, variedad y comodidad en casa.
+Ajusta la intensidad y descubre nuevas combinaciones.
+[respira]
+Su diseño **práctico** acompaña tus mañanas y tus noches.
+Comparte una taza y disfruta cada **descubrimiento**.
+[fuerte]¡Elige Órbita y lleva tu café al **futuro**![/fuerte]
+[rápido]Funciones sujetas a configuración.[/rápido]

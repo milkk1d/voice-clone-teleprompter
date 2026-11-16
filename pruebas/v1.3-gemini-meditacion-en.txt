@@ -1,0 +1,64 @@
+# Entering the Quiet Desert
+@energy 1
+> Speak gently with a warm, unhurried pace.
+[slow] [soft] Settle into your chair and place your cell phone face down.
+Close your eyes and let your shoulders drop away from your ears. [breathe]
+Imagine standing at the edge of a vast desert at dusk.
+The air is dry and cooling down to sixty degrees Fahrenheit.
+You feel soft sand beneath your bare feet. [breathe]
+Look out across the endless miles of red rock and dunes.
+Everything around you is still and free of rush.
+Take a deep breath and let the quiet hold you. [down] [/soft] [/slow]
+[pause 3s]
+
+# Colors of the Canyon
+@energy 2
+> Keep the tone soothing and steady.
+[slow] [soft] Walk forward along a narrow path between tall canyon walls.
+Notice the rich color of the stone shifting from orange to deep purple. [breathe]
+A gentle breeze whispers through the dry brush beside you.
+Do you feel that cool air brushing against your skin? [up] [breathe]
+You pass smooth boulders, ancient arches and flat mesas in the distance.
+Every shadow grows longer as the sun dips below the ridge. [breathe]
+There is nowhere else you need to be right now.
+Just follow the path deeper into the peaceful valley. [down] [/soft] [/slow]
+[pause 3s]
+
+# Night Under the Stars
+@energy 1
+> Drop your volume slightly for deep calm.
+[slow] [soft] Stop beside a quiet ridge and sit on a warm stone.
+Above you, thousands of stars begin to shine in the dark sky. [breathe]
+The Milky Way stretches like a silver ribbon from north to south.
+No city lights reach this far into the wilderness. [breathe]
+Listen to the profound silence of the desert night.
+Can you hear the faint rustle of a nocturnal owl nearby? [up] [breathe]
+Let your thoughts drift away like clouds over the horizon.
+Breathe in the crisp night air and release all tension. [down] [/soft] [/slow]
+[pause 3s]
+
+# Dawn on the Dunes
+@energy 2
+> Maintain a serene, grounded delivery.
+[slow] [soft] After hours of deep rest, the eastern sky starts to glow.
+Soft golden light spills over the highest sand dunes. [breathe]
+The desert wakes up in complete, unhurried harmony.
+Feel the first **warmth** of morning touching your face. [breathe]
+A tiny desert bird sings a clear, single note from a cactus.
+You stand up and stretch your arms toward the bright sky. [breathe]
+Every breath feels lighter and easier than before.
+Carry this calm stillness with you as you turn back. [down] [/soft] [/slow]
+[pause 3s]
+
+# Returning to the Room
+@energy 1
+> Gently guide the listener back to the present.
+[slow] [soft] Begin to let the desert landscape fade from your mind.
+Bring your awareness back to the room around you. [breathe]
+Notice the steady rise and fall of your chest.
+Feel the support of the floor beneath your feet again. [breathe]
+Gently wiggle your fingers and toes to wake up your body.
+Take one more full, refreshing breath in through your nose. [breathe]
+When you feel ready, slowly open your eyes.
+Welcome back to a calm and centered day. [down] [/soft] [/slow]
+[pause 3s]

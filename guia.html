@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guía para grabar tu voz · Clona tu voz</title>
+<meta name="title-es" content="Guía para grabar tu voz · Clona tu voz">
+<meta name="title-en" content="Recording guide · Clone your voice">
+<meta name="description" content="Cómo grabar tu voz con Audacity para clonarla con IA: el lugar, el micrófono, los niveles, la lectura y la exportación.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="css/sitio.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%230A1330%27/%3E%3Cpath d=%27M12 8l11 8-11 8z%27 fill=%27%23E0473C%27/%3E%3C/svg%3E">
+<style>
+/* Guía: una columna de lectura con pasos numerados y una lista de chequeo al final. */
+.doc { padding-block: 44px 20px; }
+.doc header { display: grid; gap: 14px; margin-bottom: 26px; }
+.doc .lead { font-size: 18px; color: var(--muted); }
+.doc h2 { margin: 34px 0 12px; display: flex; gap: 12px; align-items: baseline; }
+.doc h2 .num { font: 500 14px/1 var(--mono); color: var(--ocre); border: 1px solid var(--ocre); border-radius: 50%; width: 30px; height: 30px; display: inline-grid; place-items: center; flex: none; }
+.doc ul { padding-left: 1.2em; margin: 0; }
+.doc li + li { margin-top: 8px; }
+.check { list-style: none; padding: 0; display: grid; gap: 8px; }
+.check li { padding-left: 30px; position: relative; }
+.check li::before { content: "✓"; position: absolute; left: 0; top: 0; width: 20px; height: 20px; border: 1px solid var(--sky); border-radius: 4px; color: var(--sky); font-size: 13px; display: grid; place-items: center; }
+.toc { display: flex; gap: 8px 16px; flex-wrap: wrap; font-size: 14px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="nav">
+    <a class="brand" href="index.html"><span data-l="es">Clona tu voz</span><span data-l="en" hidden>Clone your voice</span></a>
+    <nav>
+      <a href="index.html"><span data-l="es">Inicio</span><span data-l="en" hidden>Home</span></a>
+      <a href="teleprompter.html">Teleprompter</a>
+      <a href="guia.html" aria-current="page"><span data-l="es">Guía de grabación</span><span data-l="en" hidden>Recording guide</span></a>
+      <span class="lang" role="group" aria-label="Idioma / Language">
+        <button type="button" data-lang="es" aria-pressed="true">ES</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </span>
+    </nav>
+  </header>
+
+  <main class="doc narrow">
+    <!-- ===================== ESPAÑOL ===================== -->
+    <article data-l="es">
+      <header>
+        <p class="kicker">Guía de grabación</p>
+        <h1>Cómo grabar tu voz para clonarla</h1>
+        <p class="lead">Lo que más influye en un buen clon no es un micrófono caro: es grabar parejo, en un lugar sin eco y sin ruido. Esta guía te lleva paso a paso con Audacity, que es gratis.</p>
+        <nav class="toc" aria-label="En esta guía"><a href="#es-lugar">El lugar</a><a href="#es-mic">El micrófono</a><a href="#es-audacity">Audacity</a><a href="#es-durante">Al grabar</a><a href="#es-despues">Después</a><a href="#es-subir">Subir y clonar</a></nav>
+      </header>
+
+      <h2 id="es-lugar"><span class="num">1</span>El lugar</h2>
+      <ul>
+        <li>Elige la habitación más "apagada": con cortinas, alfombra, cama o ropa colgada. Evita cocinas, baños y piezas con paredes vacías.</li>
+        <li>Apaga ventiladores y aire acondicionado, cierra las ventanas y silencia el celular y las notificaciones del computador.</li>
+        <li>Haz una prueba: aplaude una vez. Si escuchas una "cola" de eco, busca otro rincón o agrega mantas alrededor.</li>
+      </ul>
+
+      <h2 id="es-mic"><span class="num">2</span>El micrófono</h2>
+      <ul>
+        <li>Sirve cualquier micrófono USB decente o uno de solapa. Si puedes, evita el micrófono incorporado del computador.</li>
+        <li>Ponte a unos 15 a 20 centímetros (un palmo) y mantén siempre la misma distancia.</li>
+        <li>Habla un poco de lado al micrófono, o usa un filtro antipop, para que la "p" y la "b" no golpeen.</li>
+        <li>Si tu micrófono permite elegir patrón, usa cardioide, apuntando a tu boca.</li>
+      </ul>
+
+      <h2 id="es-audacity"><span class="num">3</span>Configura Audacity</h2>
+      <ul>
+        <li>Descárgalo gratis desde su sitio oficial: <a href="https://www.audacityteam.org/" target="_blank" rel="noopener">audacityteam.org</a>.</li>
+        <li>En la configuración de audio, elige tu micrófono como dispositivo de grabación y <b>1 canal (mono)</b>.</li>
+        <li>Usa una frecuencia de proyecto de <b>44 100 Hz o 48 000 Hz</b>.</li>
+        <li>Activa el medidor de grabación y habla como lo harás al grabar: los picos deberían quedar entre <b>−12 y −6 dB</b>, sin llegar nunca a 0. Si el medidor llega al rojo, el audio se satura: baja el volumen de entrada o aléjate un poco.</li>
+        <li>Graba 10 segundos de silencio y escúchalos con audífonos. Si oyes un zumbido o ruido de fondo, resuélvelo antes de seguir.</li>
+      </ul>
+
+      <h2 id="es-durante"><span class="num">4</span>Al grabar</h2>
+      <ul>
+        <li>Ten agua sin gas a mano y bebe en las pausas entre secciones.</li>
+        <li>Abre el <a href="teleprompter.html">teleprompter</a> y elige tu guion. Empieza a grabar en Audacity <b>antes</b> de apretar Espacio: tendrás 3 segundos de silencio.</li>
+        <li>Lee con el estilo que quieres para tu clon y mantenlo igual toda la sesión.</li>
+        <li>Si te equivocas, no pares: deja un segundo de silencio y repite la frase completa. Después cortas el error.</li>
+        <li>No toques el teclado ni el mouse mientras hablas; el guion avanza solo. Si necesitas tocar algo, hazlo en una pausa.</li>
+        <li>Graba cada estilo en una sesión distinta, en el mismo lugar y a la misma distancia.</li>
+      </ul>
+
+      <h2 id="es-despues"><span class="num">5</span>Después de grabar</h2>
+      <ul>
+        <li>Escucha la grabación completa con audífonos.</li>
+        <li>Corta los errores, las toses y los silencios largos del inicio y del final.</li>
+        <li>No apliques efectos fuertes: nada de reverberación, ecualizaciones extremas ni reducción de ruido agresiva. Los servicios de clonación funcionan mejor con tu voz natural.</li>
+        <li>Exporta en <b>WAV</b> (PCM de 16 o 24 bits). Si el servicio pide MP3, usa la mejor calidad disponible.</li>
+      </ul>
+
+      <h2 id="es-subir"><span class="num">6</span>Subir y clonar</h2>
+      <ul>
+        <li>Revisa qué pide el servicio que vas a usar: duración mínima, formato y cantidad de archivos.</li>
+        <li>Si aún no eliges uno, puedes probar <a data-afiliado="elevenlabs">ElevenLabs ↗</a>. <span class="muted">(Enlace de afiliado: si te suscribes, recibimos una comisión, sin costo extra para ti.)</span></li>
+        <li>Sube solo audio tuyo, limpio y en el mismo estilo. Más minutos de buena calidad dan un clon más fiel.</li>
+        <li>Clona solo tu propia voz, o una voz para la que tengas permiso explícito de su dueño.</li>
+      </ul>
+
+      <h2><span class="num">✓</span>Lista rápida antes de grabar</h2>
+      <ul class="check panel">
+        <li>Habitación silenciosa y sin eco</li>
+        <li>Celular y notificaciones en silencio</li>
+        <li>Micrófono a un palmo, un poco de lado</li>
+        <li>Nivel entre −12 y −6 dB, sin rojo</li>
+        <li>Agua a mano</li>
+        <li>Guion elegido en el teleprompter y Audacity grabando</li>
+      </ul>
+      <p style="margin-top:22px"><a class="btn main" href="teleprompter.html">Abrir el teleprompter</a></p>
+    </article>
+
+    <!-- ===================== ENGLISH ===================== -->
+    <article data-l="en" hidden>
+      <header>
+        <p class="kicker">Recording guide</p>
+        <h1>How to record your voice for cloning</h1>
+        <p class="lead">What matters most for a good clone isn't an expensive microphone: it's recording consistently, in a place with no echo and no noise. This guide walks you through it with Audacity, which is free.</p>
+        <nav class="toc" aria-label="In this guide"><a href="#en-room">The room</a><a href="#en-mic">The microphone</a><a href="#en-audacity">Audacity</a><a href="#en-during">While recording</a><a href="#en-after">Afterwards</a><a href="#en-upload">Upload and clone</a></nav>
+      </header>
+
+      <h2 id="en-room"><span class="num">1</span>The room</h2>
+      <ul>
+        <li>Pick the most "dead" room: curtains, carpet, a bed or hanging clothes. Avoid kitchens, bathrooms and rooms with bare walls.</li>
+        <li>Turn off fans and air conditioning, close the windows and silence your phone and computer notifications.</li>
+        <li>Try this: clap once. If you hear an echo tail, find another corner or add blankets around you.</li>
+      </ul>
+
+      <h2 id="en-mic"><span class="num">2</span>The microphone</h2>
+      <ul>
+        <li>Any decent USB or lavalier microphone works. If you can, avoid your computer's built-in mic.</li>
+        <li>Stay about 6 to 8 inches (a hand's width) away and keep that distance the whole time.</li>
+        <li>Speak slightly off-axis, or use a pop filter, so your "p" and "b" sounds don't pop.</li>
+        <li>If your microphone has selectable patterns, use cardioid, pointed at your mouth.</li>
+      </ul>
+
+      <h2 id="en-audacity"><span class="num">3</span>Set up Audacity</h2>
+      <ul>
+        <li>Download it for free from the official site: <a href="https://www.audacityteam.org/" target="_blank" rel="noopener">audacityteam.org</a>.</li>
+        <li>In the audio settings, choose your microphone as the recording device and <b>1 channel (mono)</b>.</li>
+        <li>Use a project rate of <b>44,100 Hz or 48,000 Hz</b>.</li>
+        <li>Turn on the recording meter and speak the way you will when recording: peaks should land between <b>−12 and −6 dB</b> and never reach 0. If the meter hits red, the audio clips: lower the input volume or move back a little.</li>
+        <li>Record 10 seconds of silence and listen with headphones. If you hear a hum or background noise, fix it before you go on.</li>
+      </ul>
+
+      <h2 id="en-during"><span class="num">4</span>While recording</h2>
+      <ul>
+        <li>Keep still water nearby and drink during the pauses between sections.</li>
+        <li>Open the <a href="teleprompter.html">teleprompter</a> and choose your script. Start recording in Audacity <b>before</b> pressing Space: you'll get 3 seconds of silence.</li>
+        <li>Read in the style you want for your clone and keep it the same for the whole session.</li>
+        <li>If you make a mistake, don't stop: leave a second of silence and repeat the whole sentence. Cut the mistake later.</li>
+        <li>Don't touch the keyboard or mouse while you speak; the script scrolls by itself. If you need to touch something, do it during a pause.</li>
+        <li>Record each style in a separate session, in the same place and at the same distance.</li>
+      </ul>
+
+      <h2 id="en-after"><span class="num">5</span>After recording</h2>
+      <ul>
+        <li>Listen to the whole recording with headphones.</li>
+        <li>Cut out mistakes, coughs and long silences at the start and end.</li>
+        <li>Don't apply heavy effects: no reverb, extreme EQ or aggressive noise reduction. Cloning services work best with your natural voice.</li>
+        <li>Export as <b>WAV</b> (16- or 24-bit PCM). If the service asks for MP3, use the highest quality available.</li>
+      </ul>
+
+      <h2 id="en-upload"><span class="num">6</span>Upload and clone</h2>
+      <ul>
+        <li>Check what your service requires: minimum length, format and number of files.</li>
+        <li>If you haven't picked one yet, you can try <a data-afiliado="elevenlabs">ElevenLabs ↗</a>. <span class="muted">(Affiliate link: if you subscribe, we earn a commission at no extra cost to you.)</span></li>
+        <li>Upload only your own clean audio, in the same style. More minutes of good quality give a more faithful clone.</li>
+        <li>Only clone your own voice, or a voice you have explicit permission from its owner to clone.</li>
+      </ul>
+
+      <h2><span class="num">✓</span>Quick checklist before you record</h2>
+      <ul class="check panel">
+        <li>Quiet room with no echo</li>
+        <li>Phone and notifications silenced</li>
+        <li>Microphone a hand's width away, slightly off-axis</li>
+        <li>Level between −12 and −6 dB, never red</li>
+        <li>Water nearby</li>
+        <li>Script chosen in the teleprompter and Audacity recording</li>
+      </ul>
+      <p style="margin-top:22px"><a class="btn main" href="teleprompter.html">Open the teleprompter</a></p>
+    </article>
+  </main>
+
+  <footer class="site">
+    <span><span data-l="es">Hecho para grabar mejor. Sin cuentas, sin subir tu voz.</span><span data-l="en" hidden>Made to help you record better. No accounts, no uploading your voice.</span></span>
+    <nav>
+      <a href="index.html"><span data-l="es">Inicio</span><span data-l="en" hidden>Home</span></a>
+      <a href="privacidad.html"><span data-l="es">Privacidad</span><span data-l="en" hidden>Privacy</span></a>
+    </nav>
+  </footer>
+</div>
+<script src="js/enlaces.js"></script>
+<script src="js/sitio.js"></script>
+</body>
+</html>

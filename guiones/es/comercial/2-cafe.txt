@@ -1,0 +1,119 @@
+# Montaña Alta
+@fuerza 5
+> Abre con el dato, como quien cuenta un secreto, y luego acelera.
+
+Dicen que unas cabras **inquietas** descubrieron el café en Etiopía.
+Siglos después, sigue despertando al mundo entero.
+Montaña Alta trae ese **origen** a tu taza.
+Granos cultivados en altura, cosechados a mano y tostados en pequeños lotes.
+Su sabor es suave, con notas de chocolate y **frutas** rojas.
+¡Un café con **historia** en cada sorbo!
+Lo encuentras en grano o molido, listo para tu cafetera.
+¿Ya sabes cuál vas a elegir? [sube]
+[fuerte]Prueba Montaña Alta y despierta con **sabor** de origen.[/fuerte]
+[rápido]Disponible en tiendas seleccionadas.[/rápido]
+
+# Taza Libre
+@fuerza 5
+> Escena apurada al inicio y alivio al final.
+
+Son las seis y media y sales **corriendo** de casa.
+No alcanzas a tomar café y el día recién empieza.
+Con Taza Libre, eso se **acabó**.
+Es una cafetera portátil del tamaño de una botella.
+Pones café, agua caliente y presionas **tres** veces.
+En un minuto tienes un espresso cremoso donde estés.
+¡En el bus, en la oficina o en la **montaña**!
+No usa pilas ni cables, y se lava en segundos.
+[fuerte]Lleva Taza Libre y que el café vaya **contigo**.[/fuerte]
+[rápido]Garantía de un año por defectos de fábrica.[/rápido]
+
+# Grano y Charla
+@fuerza 5
+> Pregunta cercana y termina con calidez enérgica.
+
+¿Cuándo fue la **última** vez que conversaste sin mirar el celular? [sube]
+En Grano y Charla, eso pasa **todos** los días.
+Somos una cafetería de barrio, a una cuadra de tu casa.
+Preparamos cada taza al momento, con granos **recién** tostados.
+Tenemos pasteles caseros, tostadas y jugos de fruta.
+Hay juegos de mesa, libros y un rincón para **niños**.
+¡Aquí el **tiempo** pasa más despacio!
+Ven a solas, en pareja o con tus amigos.
+[fuerte]Visítanos este fin de semana y trae a quien **quieras**.[/fuerte]
+[rápido]Abierto todos los días, de ocho a ocho.[/rápido]
+
+# Noche Tranquila
+@fuerza 5
+> Energía alta desde el inicio, sin perder simpatía.
+
+¡Ahora puedes tomar café a las **diez** de la noche!
+Noche Tranquila es café descafeinado con **todo** el sabor.
+Quitamos la cafeína con agua, sin químicos **fuertes**.
+Conserva su **aroma**, su cuerpo y su color intenso.
+¿Te encanta el café, pero te quita el sueño? [sube]
+Este es el tuyo.
+Acompaña una buena película o una charla larga.
+Y duerme como **siempre**.
+[fuerte]Pide Noche Tranquila y disfruta tu café sin **culpa**.[/fuerte]
+[rápido]Contiene una cantidad mínima de cafeína.[/rápido]
+
+# Club del Grano
+@fuerza 5
+> Pregunta curiosa y termina con mucha emoción.
+
+¿Sabías que el café cambia de sabor según el país donde **crece**? [sube]
+Club del Grano te lo **demuestra** cada mes.
+Recibes en tu casa un café distinto de algún rincón del mundo.
+Colombia, Etiopía, Brasil, Guatemala y muchos más.
+Cada bolsa trae una **tarjeta** con su historia.
+Aprendes a reconocer aromas que ni sabías que **existían**.
+¡Es como viajar sin salir de tu **cocina**!
+Puedes pausar o cancelar cuando quieras.
+[fuerte]Únete al Club del Grano y recibe tu primera bolsa con descuento.[/fuerte]
+[rápido]Descuento válido solo para el primer mes.[/rápido]
+
+# Molino Fino
+@fuerza 5
+> Dato firme al inicio y entusiasmo creciente.
+
+El café molido pierde gran parte de su **aroma** en pocos minutos.
+Por eso, los expertos muelen justo antes de **preparar**.
+Molino Fino lo hace por ti, en solo diez segundos.
+Tiene **quince** niveles de molienda, de fino a grueso.
+Sirve para espresso, prensa francesa o cafetera de filtro.
+Es silencioso, estable y fácil de **limpiar**.
+¡Tu cocina va a oler a cafetería!
+¿Qué esperas para probarlo? [sube]
+[fuerte]Compra Molino Fino y descubre el café **recién** molido.[/fuerte]
+[rápido]Garantía de dos años. Aplican condiciones.[/rápido]
+
+# Arte Latte
+@fuerza 5
+> Empieza como una escena soñada y termina con energía.
+
+Imagina servir un café con un **corazón** perfecto de espuma.
+Tus amigos sacan el celular para tomarle una foto.
+Eso lo aprendes en Arte Latte, nuestro curso de **barista**.
+Son cuatro clases prácticas, en grupos pequeños.
+Aprendes a moler, a preparar espresso y a **dibujar** con leche.
+Al final, recibes un **diploma** y tu propia jarra de acero.
+¡Puede ser tu pasatiempo o tu nuevo **trabajo**!
+No necesitas experiencia previa.
+[fuerte]Inscríbete en Arte Latte y llena tu taza de **arte**.[/fuerte]
+[rápido]Cupos limitados por grupo.[/rápido]
+
+# Brisa Fría
+@fuerza 5
+> Explosión de energía, ritmo veloz.
+
+¡Hace calor y el café caliente no se **antoja**!
+Llegó Brisa Fría, café **helado** listo para tomar.
+Viene en lata, con tres sabores: clásico, vainilla y caramelo.
+Se prepara en frío durante doce **horas**, para un sabor más suave.
+Tiene **menos** acidez y nada de azúcar agregada.
+¿Lo mejor? [sube]
+Cabe en tu mochila y en tu **refrigerador**.
+Ábrela, agítala y disfruta.
+[fuerte]Busca Brisa Fría en el pasillo de bebidas **heladas**.[/fuerte]
+[rápido]Consumir bien frío. Mantener refrigerado.[/rápido]

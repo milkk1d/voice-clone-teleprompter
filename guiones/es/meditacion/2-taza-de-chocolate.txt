@@ -1,0 +1,80 @@
+# Preparar
+@fuerza 2
+> Voz suave, como quien prepara algo con cariño.
+
+[lento][suave]Imagina que es una tarde fría y estás en casa.
+Afuera llueve despacio sobre las calles y el cielo está nublado.
+[respira]
+En tus manos tienes una taza de chocolate caliente.
+Siente su peso y su calor en las palmas.
+¿Lo notas subir por tus dedos, poco a poco? [sube]
+[respira]
+Deja que tus hombros bajen y que tu espalda se apoye.
+No hay prisa: esta tarde es solo para ti.
+Ya no tienes que ir a ningún lado.[/suave][/lento]
+[pausa 3s]
+
+# El aroma
+@fuerza 1
+> Muy lento, dejando espacio entre cada imagen.
+
+[suave]Acerca la taza a tu cara, sin beber todavía.
+Respira su aroma: cacao, un toque de canela y algo de vainilla.
+[respira]
+El vapor sube y te entibia la nariz y las mejillas.
+Cierra los ojos y quédate con ese olor un momento.
+Es un aroma de siglos, que viajó desde la selva hasta tu cocina.
+[respira]
+Piensa en las manos que cultivaron el cacao bajo los árboles.
+En el sol, la lluvia y la tierra que lo hicieron crecer.
+Todo eso cabe ahora en tu taza.[/suave]
+[pausa 3s]
+
+# El primer sorbo
+@fuerza 1
+> Casi un susurro, saboreando cada palabra.
+
+[lento][suave]Ahora toma un sorbo pequeño, muy despacio.
+Deja que el chocolate descanse en tu boca antes de tragarlo.
+Siente lo dulce, lo amargo y lo cremoso, todo a la vez.
+[respira]
+Nota cómo el calor baja por tu pecho y se queda ahí.
+Es un calor tranquilo, como un abrazo por dentro.
+[respira]
+Si tu mente se va a otro lugar, no pasa nada.
+Vuelve con suavidad al sabor de la taza.
+Este momento no necesita nada más.[/suave][/lento]
+[pausa 3s]
+
+# La lluvia
+@fuerza 2
+> Suave y constante, como la lluvia que describes.
+
+[suave]Escucha otra vez la lluvia sobre el techo.
+Cada gota es un pequeño ritmo, siempre distinto.
+La ventana parece un cuadro pintado de gris.
+[respira]
+Respira al ritmo de la lluvia: inhala, sostén, exhala.
+Deja que el sonido limpie los pensamientos del día.
+Lo que te preocupaba puede esperar afuera, como el frío.
+[respira]
+Aquí adentro todo es tibio, lento y **seguro**.
+¿Hace cuánto no te regalabas una pausa así? [sube]
+Disfrútala sin culpa.[/suave]
+[pausa 3s]
+
+# Volver
+@fuerza 2
+> Regresa con calma; al final, un tono cálido.
+
+[lento]Termina tu taza con el último sorbo, sin apuro.
+Déjala sobre un plato y apoya tus manos tibias sobre las piernas.[/lento]
+[respira]
+Respira profundo una vez más y nota tu cuerpo entero.
+Mueve los dedos, estira un poco el cuello y abre los ojos.
+[respira]
+El día sigue ahí, pero tú vuelves con otra calma.
+Puedes repetir este ritual cada vez que lo necesites.
+Una taza, un aroma y unos minutos solo para ti. [baja]
+Gracias por regalarte este momento.
+[pausa 3s]

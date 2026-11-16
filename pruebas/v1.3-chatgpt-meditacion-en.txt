@@ -1,0 +1,94 @@
+# Section 1: The Journey Begins
+@energy 2
+> Speak with a warm, peaceful voice, leaving space between thoughts.
+
+[slow][soft]
+Close your eyes and imagine a distant land.
+You are standing in Patagonia, where the mountains meet the open sky.
+[breathe]
+Can you feel the cool air against your face? [up]
+Take a deep breath and let your shoulders relax.
+The morning sun paints the distant peaks in shades of gold.
+[breathe]
+A narrow path stretches ahead, inviting you to explore.
+There is no schedule, no rush, and nowhere else you need to be.
+What might you discover beyond those hills? [up]
+For now, just enjoy this moment of **peace**. [down]
+[/soft][/slow]
+[pause 3s]
+
+# Section 2: Along the Mountain Trail
+@energy 2
+> Keep a steady rhythm, with a gentle sense of movement.
+
+[slow][soft]
+Imagine yourself walking along a quiet mountain trail.
+Small stones rest beneath your boots, and wild grass moves in the breeze.
+[breathe]
+You hear the distant sound of water flowing through a valley.
+Each step brings you closer to a beautiful lake.
+Its surface reflects the clouds, the trees, and the pale morning sky.
+[breathe]
+You stop beside a smooth rock and look across the water.
+A bird glides overhead, following the wind toward the mountains.
+There is something **comforting** about this wide, open landscape.
+Let the fresh air fill your chest, and release whatever weighs on your mind. [down]
+[/soft][/slow]
+[pause 3s]
+
+# Section 3: The Hidden Valley
+@energy 1
+> Lower your voice and create a feeling of deep stillness.
+
+[slow][soft]
+The trail leads you into a sheltered valley.
+Here, the wind grows quiet, and the world seems to rest.
+[breathe]
+A small stream winds between dark stones and patches of green moss.
+You notice the soft colors of flowers growing near the water.
+Some are white, others purple, and a few shine with golden petals.
+[breathe]
+Imagine sitting beneath a tree, with your back against its trunk.
+You hear the gentle movement of branches above your head.
+Nothing needs to change in this **moment**.
+You can stay here, breathe, and enjoy the silence. [down]
+[/soft][/slow]
+[pause 3s]
+
+# Section 4: Beneath the Evening Sky
+@energy 2
+> Speak with quiet wonder, allowing each image to settle.
+
+[slow][soft]
+As the afternoon passes, the sky begins to change.
+Soft orange light spreads across the mountains, touching the snow on their highest peaks.
+[breathe]
+You find a comfortable place beside the lake.
+The water turns silver as the first stars appear overhead.
+Look at that beautiful sky!
+[breathe]
+Far away, a bird calls from the edge of the forest.
+You feel the earth beneath you, steady and **safe**.
+The evening brings a sense of freedom, as if every worry has drifted away.
+What a wonderful place to rest!
+[/soft][/slow]
+[pause 3s]
+
+# Section 5: Returning Home
+@energy 1
+> Slow down toward the end, returning to the present with care.
+
+[slow][soft]
+Now imagine the mountains fading into the distance.
+The lake, the valley, and the evening sky become a peaceful memory.
+[breathe]
+You carry that feeling of calm wherever you go.
+Begin to notice the surface beneath your body.
+Feel the air around you and listen to the sounds nearby.
+[breathe]
+Take one more deep breath, and let it go.
+Move your fingers, relax your jaw, and allow your eyes to open.
+You are here, in this **present** moment.
+The journey is complete, and you can return whenever you need a little peace. [down]
+[/soft][/slow]
+[pause 3s]

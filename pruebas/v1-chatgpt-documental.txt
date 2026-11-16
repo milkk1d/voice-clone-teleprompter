@@ -1,0 +1,121 @@
+# Las preguntas que esconde el océano
+@fuerza 5
+> Comienza con curiosidad y misterio. Aumenta ligeramente la intensidad en cada pregunta.
+
+¿Qué criaturas sobreviven donde jamás llega la luz del sol? [sube]
+¿Cómo resisten una presión capaz de destruir estructuras de metal? [sube]
+¿Por qué algunos animales producen su propia luz en medio de la oscuridad? [sube]
+¿Y qué secretos permanecen ocultos bajo kilómetros de agua? [sube]
+
+[pausa 2s]
+
+Imagina que estás flotando sobre el océano, lejos de cualquier costa.
+Debajo de tus pies existe un universo que todavía conocemos muy poco.
+
+Un lugar donde la oscuridad es permanente y el frío domina el paisaje.
+Un territorio inmenso, silencioso y lleno de criaturas extraordinarias.
+
+Hoy vamos a explorar las **profundidades** del océano.
+Y descubriremos por qué este ambiente resulta tan fascinante como peligroso.
+
+# Un descenso hacia la oscuridad
+@fuerza 4
+> Mantén un tono explicativo y seguro. Destaca las cifras con asombro controlado.
+
+La luz solar comienza a desaparecer conforme descendemos por la columna de agua.
+A unos doscientos metros, la iluminación ya es considerablemente más débil.
+
+[pausa]
+
+Por debajo de aproximadamente mil metros, la luz del sol prácticamente no llega.
+Aquí comienza un mundo dominado por la **oscuridad**.
+
+La temperatura suele mantenerse cerca del punto de congelación.
+Sin embargo, el frío no representa el único desafío.
+
+La presión aumenta constantemente con la profundidad.
+Por cada diez metros de descenso, se suma aproximadamente una atmósfera de presión.
+
+[pausa 2s]
+
+A cuatro mil metros, la presión supera las **cuatrocientas** atmósferas.
+Es una fuerza extraordinaria, difícil de imaginar desde la superficie.
+
+Para comprenderlo, piensa en un submarino descendiendo lentamente.
+Su estructura necesita resistir una carga enorme, distribuida sobre cada centímetro de superficie.
+
+Y aun así, existen animales que viven tranquilamente en estas condiciones.
+
+# Criaturas de otro mundo
+@fuerza 4
+> Transmite admiración científica. Pronuncia claramente los nombres y las descripciones.
+
+Entre las criaturas más sorprendentes encontramos al pez dragón, el calamar gigante y el rape abisal.
+También existen medusas transparentes, crustáceos diminutos y extraños peces de cuerpo gelatinoso.
+
+Cada especie desarrolla soluciones diferentes para sobrevivir.
+
+El rape utiliza un órgano luminoso para atraer posibles presas.
+Su estrategia aprovecha una capacidad conocida como **bioluminiscencia**.
+
+Algunos organismos producen luz mediante reacciones químicas dentro de sus cuerpos.
+Otros utilizan bacterias luminosas que viven asociadas a ellos.
+
+[pausa]
+
+El calamar gigante posee ojos enormes, adaptados para detectar señales luminosas muy débiles.
+Y ciertos peces presentan cuerpos flexibles, adecuados para soportar condiciones extremas.
+
+Pero no todos los habitantes del océano profundo parecen monstruos.
+
+Existen criaturas pequeñas, delicadas y sorprendentemente hermosas.
+Sus movimientos recuerdan una danza lenta entre corrientes invisibles.
+
+[respira]
+
+En este ambiente, cada adaptación puede marcar la diferencia entre vivir y desaparecer.
+
+# Los secretos del fondo marino
+@fuerza 4
+> Aumenta el suspenso antes de revelar cada dato. Conserva una dicción precisa.
+
+El fondo oceánico no es una llanura uniforme.
+Contiene montañas, volcanes, cañones y enormes fosas submarinas.
+
+Podemos mencionar la fosa de las Marianas, la fosa de Tonga y la fosa de Puerto Rico.
+Estos lugares forman parte de algunas de las regiones más profundas del planeta.
+
+[pausa 2s]
+
+En la fosa de las Marianas, la profundidad máxima conocida supera los **once mil metros**.
+
+Allí, explorar requiere tecnología especializada y una planificación extremadamente rigurosa.
+Un pequeño problema técnico puede convertirse rápidamente en una situación crítica.
+
+Sin embargo, la vida también aparece en ambientes inesperados.
+
+Cerca de ciertas fuentes hidrotermales, el agua emerge cargada de minerales.
+Allí prosperan comunidades que dependen de procesos químicos, no directamente de la luz solar.
+
+Es una demostración extraordinaria de la capacidad de adaptación de la naturaleza.
+
+Desde México hasta Japón, diferentes expediciones científicas investigan estos ecosistemas.
+Cada examen de muestras revela nuevas preguntas sobre su origen y funcionamiento.
+
+# Un mundo que todavía espera
+@fuerza 3
+> Reduce gradualmente la energía. Termina con cercanía, serenidad y una invitación natural.
+
+[lento]El océano profundo nos recuerda cuánto queda por descubrir.[/lento] [baja]
+
+Bajo las olas existe un mundo complejo, frágil y extraordinario. [baja]
+
+[pausa]
+
+Cada nueva exploración amplía nuestra comprensión de la **vida**.
+
+Y quizás, en algún lugar de esa inmensa oscuridad, todavía esperan descubrimientos sorprendentes.
+
+[suave]Si te apasiona conocer los misterios de nuestro planeta, suscríbete y sigue acompañándonos.[/suave] [baja]
+
+Nos encontramos en la próxima exploración. [baja]

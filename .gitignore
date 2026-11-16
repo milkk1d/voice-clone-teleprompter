@@ -1,0 +1,10 @@
+# Configuración local de herramientas (rutas de este computador)
+.claude/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Dependencias, si algún día se agregan
+node_modules/

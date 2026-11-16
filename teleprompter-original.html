@@ -1,0 +1,576 @@
+<title>Teleprompter del clon</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..900&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: escenario a pantalla completa; el guion sube detrás de una franja de lectura fija (36 % de la altura); controles abajo.
+   Un solo look oscuro a propósito: fondo de océano profundo, texto crema y la palabra clave subrayada en rojo, como los subtítulos del canal.
+   Las palabras crecen en tamaño y peso según la fuerza con que se dicen (de menos a más hasta la subrayada). */
+:root {
+  --ground: #0A1330;
+  --band: #15234D;
+  --paper: #F4EBD8;
+  --muted: #8C93AD;
+  --red: #C8372D;
+  --sky: #8AD6F0;
+  --sky-soft: rgba(138, 214, 240, .32);
+  --paper-dim: rgba(244, 235, 216, .42);
+  --ocre: #D9A55B;
+  --rule: #26325C;
+  --display: "Fraunces", Georgia, "Times New Roman", serif;
+  --mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+  --fs: 44px;
+  color-scheme: dark;
+}
+html, body { height: 100%; }
+body {
+  margin: 0;
+  box-sizing: border-box;
+  background: var(--ground);
+  color: var(--paper);
+  font-family: var(--display);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0;
+}
+*, *::before, *::after { box-sizing: inherit; }
+
+.top {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+  padding-block: 12px;
+  font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted);
+  border-bottom: 1px solid var(--rule);
+}
+.top b { color: var(--paper); font-weight: 500; }
+.status { display: flex; align-items: center; gap: 14px; font-variant-numeric: tabular-nums; }
+.pill { display: inline-flex; align-items: center; gap: 7px; padding: 3px 10px; border: 1px solid var(--rule); border-radius: 999px; color: var(--muted); }
+.pill i { width: 8px; height: 8px; border-radius: 50%; background: var(--muted); }
+.pill[data-s="leyendo"] { color: var(--paper); border-color: var(--red); }
+.pill[data-s="leyendo"] i { background: var(--red); }
+.pill[data-s="silencio"] { color: var(--sky); border-color: var(--sky); }
+.pill[data-s="silencio"] i { background: var(--sky); }
+
+.stage { position: relative; flex: 1; min-height: 0; overflow: hidden; touch-action: none; cursor: ns-resize; }
+.band {
+  position: absolute; left: 0; right: 0;
+  top: calc(36% - var(--fs) * .3);
+  height: calc(var(--fs) * 2);
+  background: var(--band);
+  border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+  pointer-events: none;
+}
+.band::before {
+  content: ""; position: absolute; left: 0; top: 50%; transform: translateY(-50%);
+  border-left: 12px solid var(--red); border-top: 9px solid transparent; border-bottom: 9px solid transparent;
+}
+.scroller { position: absolute; left: 0; right: 0; top: 0; will-change: transform; padding-bottom: 70vh; }
+.col { max-width: min(100%, 22em); margin: 0 auto; font-size: var(--fs); padding-inline: 24px; text-align: center; }
+
+.sec { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 5px; margin: 1.1em 0 .6em; font-family: var(--mono); font-size: max(12px, calc(var(--fs) * .3)); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.sec:first-child { margin-top: 0; }
+.sec b { color: var(--paper); font-weight: 500; }
+.sec .note { text-transform: none; letter-spacing: .02em; }
+.force { display: inline-flex; align-items: center; gap: 4px; color: var(--ocre); }
+.force i { display: inline-block; width: .9em; height: .55em; border: 1px solid var(--ocre); }
+.force i.on { background: var(--ocre); }
+
+.ln { margin: 0 0 .5em; line-height: 1.38; transition: opacity .25s ease; opacity: .5; text-wrap: pretty; }
+.ln.past { opacity: .2; }
+.ln.cur { opacity: 1; }
+/* karaoke: cada palabra se pinta de celeste de izquierda a derecha mientras se dice */
+.ln.cur .w {
+  color: transparent;
+  background-image: linear-gradient(90deg, var(--sky) var(--p, 0%), var(--paper-dim) var(--p, 0%));
+  -webkit-background-clip: text; background-clip: text;
+}
+.ln.cur .pz { background-image: linear-gradient(90deg, var(--sky-soft) var(--p, 0%), transparent var(--p, 0%)); }
+.w { font-variation-settings: "opsz" 72; }
+.kw { text-decoration: underline; text-decoration-color: var(--red); text-decoration-thickness: .09em; text-underline-offset: .17em; }
+.pz {
+  display: inline-block; font-family: var(--mono); font-size: .36em; font-weight: 500; color: var(--sky);
+  border: 1px solid var(--rule); border-radius: 3px; padding: .05em .4em; margin: 0 .3em; vertical-align: .55em;
+  font-variant-numeric: tabular-nums; white-space: nowrap;
+}
+.pz2 { border-color: var(--sky); }
+.ar { font-family: system-ui, "Segoe UI Symbol", sans-serif; font-size: .8em; }
+.up { color: var(--sky); }
+.dn { color: var(--ocre); }
+.end { margin-top: 1.4em; font-family: var(--mono); font-size: max(13px, calc(var(--fs) * .36)); color: var(--sky); line-height: 1.5; }
+
+.pause {
+  position: absolute; right: 8px; top: calc(36% - var(--fs) * .3 - 46px);
+  display: flex; align-items: center; gap: 10px;
+  font-family: var(--mono); font-size: 14px; letter-spacing: .1em; text-transform: uppercase; color: var(--sky);
+  background: var(--ground); border: 1px solid var(--sky); border-radius: 4px; padding: 6px 12px;
+}
+.pause b { font-size: 20px; font-weight: 500; color: var(--paper); letter-spacing: 0; font-variant-numeric: tabular-nums; min-width: 3.4em; text-align: right; }
+.pause .meter { width: 90px; height: 6px; background: var(--rule); }
+.pause .meter u { display: block; height: 100%; background: var(--sky); width: 100%; }
+
+.intro {
+  position: absolute; left: 50%; transform: translateX(-50%); bottom: 16px;
+  width: min(100%, 38rem); max-height: calc(64% - 24px); overflow: auto;
+  background: var(--ground); border: 1px solid var(--rule); border-radius: 6px;
+  padding: 18px 20px; font-family: var(--mono); font-size: 13px; line-height: 1.6; color: var(--muted);
+  display: grid; gap: 10px; cursor: default;
+}
+.intro h2 { margin: 0; font-family: var(--display); font-size: 22px; font-weight: 700; color: var(--paper); text-wrap: balance; }
+.intro ol { margin: 0; padding-left: 1.3em; color: var(--paper); }
+.intro p { margin: 0; }
+.intro .legend { display: grid; gap: 6px; border-top: 1px solid var(--rule); padding-top: 10px; }
+.intro .legend .demo { font-family: var(--display); color: var(--paper); font-size: 20px; line-height: 1.3; }
+.intro .tip { border-top: 1px solid var(--rule); padding-top: 10px; }
+.intro .tip b { color: var(--ocre); font-weight: 500; }
+kbd { font-family: var(--mono); font-size: 12px; border: 1px solid var(--rule); border-radius: 3px; padding: 0 5px; color: var(--paper); }
+
+.count {
+  position: absolute; inset: 0; display: grid; place-content: center; text-align: center; gap: 8px;
+  background: color-mix(in srgb, var(--ground) 82%, transparent);
+}
+.count .n { font-size: clamp(90px, 22vw, 200px); font-weight: 700; line-height: 1; color: var(--paper); font-variant-numeric: tabular-nums; }
+.count .m { font-family: var(--mono); font-size: 14px; letter-spacing: .14em; text-transform: uppercase; color: var(--sky); }
+
+.controls {
+  border-top: 1px solid var(--rule);
+  padding-block: 10px calc(10px + env(safe-area-inset-bottom, 0px));
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px 18px;
+  font-family: var(--mono); font-size: 13px; color: var(--muted);
+  position: relative;
+}
+.progress { position: absolute; left: 0; right: 0; top: -1px; height: 2px; }
+.progress i { display: block; height: 100%; width: 0; background: var(--red); }
+.grp { display: flex; align-items: center; gap: 6px; }
+.grp .val { min-width: 4.5em; text-align: center; color: var(--paper); font-variant-numeric: tabular-nums; }
+button {
+  font: inherit; color: var(--paper); background: transparent; border: 1px solid var(--rule); border-radius: 4px;
+  padding: 7px 12px; cursor: pointer; line-height: 1.2;
+}
+button:hover { border-color: var(--muted); }
+button:focus-visible { outline: 2px solid var(--sky); outline-offset: 2px; }
+button.main { background: var(--paper); color: var(--ground); border-color: var(--paper); font-weight: 500; min-width: 9.5em; }
+button.main:hover { background: #fff; }
+
+@media (max-width: 560px) {
+  .col { padding-inline: 18px; }
+  .top { font-size: 11px; }
+  .controls { gap: 8px 10px; }
+  .hide-sm { display: none; }
+  .pause { font-size: 12px; }
+  .pause .meter { width: 50px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ln { transition: none; }
+}
+</style>
+
+<header class="top">
+  <div><b>Clon de voz</b> · guion 01 · Yeti X</div>
+  <div class="status">
+    <span class="pill" id="pill" data-s="pausa"><i></i><span id="pillTxt">En pausa</span></span>
+    <span id="clock">0:00 / 0:00</span>
+    <span id="lineNo" class="hide-sm">línea 1 de 1</span>
+  </div>
+</header>
+
+<main class="stage" id="stage" aria-label="Guion">
+  <div class="band" aria-hidden="true"></div>
+  <div class="scroller" id="scroller"><div class="col" id="col"></div></div>
+
+  <div class="pause" id="pause" hidden aria-live="off">
+    <span id="pauseLbl">Pausa</span>
+    <b id="pauseS">0,0 s</b>
+    <span class="meter" aria-hidden="true"><u id="pauseBar"></u></span>
+  </div>
+
+  <section class="intro" id="intro">
+    <h2>Antes de grabar</h2>
+    <ol>
+      <li>En Audacity, presiona grabar.</li>
+      <li>Vuelve aquí y presiona <kbd>Espacio</kbd>: hay 3 segundos de silencio y el guion empieza a subir.</li>
+      <li>Como en un karaoke: di cada palabra mientras se pinta de celeste. Si te equivocas, no pares: repite la frase completa.</li>
+    </ol>
+    <div class="legend">
+      <p class="demo"><span style="font-size:.84em;font-weight:330">Casi</span> <span style="font-size:.9em;font-weight:420">uno</span> <span style="font-size:.96em;font-weight:520">de</span> <span style="font-size:1.03em;font-weight:620">cada</span> <span class="kw" style="font-size:1.18em;font-weight:800">cuatro</span></p>
+      <p><b style="color:var(--paper);font-weight:500">Palabras que crecen:</b> sube la fuerza de menos a más. La más grande, subrayada en rojo, es la más fuerte.</p>
+      <p><b style="color:var(--paper);font-weight:500">Cajitas celestes:</b> los segundos que dura cada pausa. Cuando llega una, la cajita se llena y arriba de la franja aparece la cuenta.</p>
+      <p><b style="color:var(--paper);font-weight:500">Cuadros ocres:</b> la fuerza de cada sección, de 1 a 5.</p>
+    </div>
+    <p class="tip"><b>De tu toma 2:</b> las preguntas ya suenan bien. Ahora dale más fuerza a las explicaciones, y ponte un poco de lado para que la "p" y la "t" no saturen.</p>
+    <p><kbd>Espacio</kbd> pausa · <kbd>↑</kbd> <kbd>↓</kbd> velocidad · <kbd>←</kbd> <kbd>→</kbd> línea · rueda del mouse para mover · <kbd>F</kbd> pantalla completa. Las teclas suenan en el micrófono: apriétalas en las pausas.</p>
+  </section>
+
+  <div class="count" id="count" hidden>
+    <div class="n" id="countN">3</div>
+    <div class="m" id="countM">Silencio</div>
+  </div>
+</main>
+
+<footer class="controls">
+  <div class="progress" aria-hidden="true"><i id="bar"></i></div>
+  <div class="grp">
+    <button id="prev" type="button" aria-label="Línea anterior">←</button>
+    <button id="play" type="button" class="main">Empezar</button>
+    <button id="next" type="button" aria-label="Línea siguiente">→</button>
+  </div>
+  <div class="grp" aria-label="Velocidad">
+    <button id="slower" type="button" aria-label="Más lento">−</button>
+    <span class="val" id="wpm">140 ppm</span>
+    <button id="faster" type="button" aria-label="Más rápido">+</button>
+  </div>
+  <div class="grp" aria-label="Tamaño de letra">
+    <button id="smaller" type="button" aria-label="Letra más chica">A−</button>
+    <button id="bigger" type="button" aria-label="Letra más grande">A+</button>
+  </div>
+  <div class="grp">
+    <button id="restart" type="button">Reiniciar</button>
+    <button id="full" type="button" class="hide-sm">Pantalla completa</button>
+  </div>
+</footer>
+
+<script>
+// f = fuerza de la sección (1 a 5)
+const GUION = [
+  { t: "Preguntas de portada", f: 5, n: "Sube ↗ al final y deja la pregunta en el aire. Aquí va la mayor melodía.", l: [
+    "¿Por qué Chile tiene tanto **cobre**? ↗ //",
+    "¿Qué glaciares se derriten más **rápido**? ↗ //",
+    "¿Por qué Guatemala tiene tantos **volcanes**? ↗ //",
+    "¿Y por qué justo **aquí**, / en este rincón del planeta? ↗ //",
+  ]},
+  { t: "El cobre", f: 4, n: "Explicando con seguridad. Empuja cada frase hacia la palabra subrayada.", l: [
+    "Casi uno de cada **cuatro** kilos de cobre del mundo / sale de Chile. //",
+    "La respuesta empieza **bajo el mar**. //",
+    "Frente a la costa, / la placa de Nazca se **hunde** bajo el continente: / casi ocho centímetros cada año. //",
+    "Al hundirse, / libera agua que derrite el manto / y forma **magma**. //",
+    "Ese magma sube, / levanta los Andes / y trae **metales** desde las profundidades. //",
+    "Al enfriarse, / el cobre queda **atrapado** en la roca. //",
+    "Y hoy se saca en minas como Escondida, / la más **grande** del mundo. //",
+    "Solo esta mina produjo más de **un millón trescientas mil** toneladas el año pasado. //",
+  ]},
+  { t: "Hacia dónde va", f: 5, n: "Más energía: es la parte que mueve el video.", l: [
+    "Desde Antofagasta, / el cobre viaja en barco a través del **Pacífico**. //",
+    "Su mayor comprador es **China**: / se lleva cerca de la mitad. //",
+    "¿Para qué tanto? ↗ / Sin cobre / no hay **cables**, / ni energía eólica. //",
+    "Y un auto eléctrico usa más de **tres veces** el cobre / de uno a bencina. //",
+  ]},
+  { t: "Los glaciares", f: 3, n: "Más pausado, casi en confianza, pero con voz firme.", l: [
+    "Los glaciares que se derriten más rápido / son los que terminan en **lagos** / o en el **mar**. //",
+    "Son apenas el **tres por ciento** de los glaciares del mundo… //",
+    "pero, desde el año dos mil, / explican más de la **mitad** del hielo perdido en el planeta. //",
+  ]},
+  { t: "Los volcanes", f: 4, n: "Con algo de tensión, sin dramatizar.", l: [
+    "El volcán de Fuego, en Guatemala, / lanzó ceniza a **cuatro mil** metros de altura. //",
+    "La respuesta está frente a la costa: / la placa de **Cocos** se hunde bajo el continente. //",
+    "¿Te suena? ↗ / Es lo mismo que pasa en Chile / con la placa de **Nazca**. //",
+  ]},
+  { t: "Nombres y lugares", f: 3, n: "Claros, sin apurarte. Cada nombre con su propia fuerza.", l: [
+    "Arica y Parinacota. / Tarapacá. / **Antofagasta**. / Atacama. //",
+    "Perú, / Bolivia / y Argentina. //",
+    "La fosa de Atacama / baja a más de **ocho mil** metros de profundidad. //",
+    "Campo de Hielo Sur. / Perito **Moreno**. //",
+    "Tacaná, / Tajumulco, / Santa María, / Atitlán, / Acatenango, / Fuego, / Agua / y **Pacaya**. //",
+  ]},
+  { t: "Cierres", f: 3, n: "Bajando ↘, con calma y una leve sonrisa. Firme hasta la última sílaba.", l: [
+    "Por eso, / el mundo mira a **Chile**. ↘ //",
+    "Y ahora ya sabes **por qué**. ↘ //",
+    "Si te gustó, / síguenos para la próxima **explicación**. ↘ //",
+  ]},
+];
+
+// segundos de cada pausa
+const PAUSA_CORTA = 0.4, PAUSA_LARGA = 1.0, FIN_LINEA = 0.25, FIN_SECCION = 1.8;
+const SILABAS_POR_PALABRA = 2.2;
+
+const $ = (id) => document.getElementById(id);
+const stage = $("stage"), scroller = $("scroller"), col = $("col");
+
+const store = {
+  get(k, d) { try { const v = localStorage.getItem("tp." + k); return v === null ? d : JSON.parse(v); } catch (e) { return d; } },
+  set(k, v) { try { localStorage.setItem("tp." + k, JSON.stringify(v)); } catch (e) {} },
+};
+const state = {
+  wpm: store.get("wpm", 140),
+  fs: store.get("fs", Math.round(Math.min(48, Math.max(26, innerWidth / 22)))),
+  t: 0, playing: false, counting: false,
+};
+
+const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const secs = (s) => (Math.round(s * 10) / 10).toLocaleString("es-CL", { minimumFractionDigits: s % 1 ? 1 : 0, maximumFractionDigits: 1 }) + " s";
+const syl = (w) => Math.max(1, (w.toLowerCase().match(/[aeiouáéíóúü]+/g) || []).length);
+
+// --- leer una línea del guion: segmentos separados por " / ", palabras clave entre ** **, flechas ↗ ↘ ---
+function parseLine(raw) {
+  const longP = /\/\/\s*$/.test(raw);
+  const body = raw.replace(/\s*\/\/\s*$/, "");
+  const segs = body.split(/\s\/\s/).map((seg) => {
+    const up = seg.includes("↗"), dn = seg.includes("↘");
+    const words = [];
+    let inKw = false;
+    seg.replace(/[↗↘]/g, "").trim().split(/\s+/).forEach((tok) => {
+      if (!tok) return;
+      if (tok.startsWith("**")) { inKw = true; tok = tok.slice(2); }
+      const closes = tok.includes("**");
+      const text = tok.replace(/\*\*/g, "");
+      words.push({ text, kw: inKw, syl: syl(text) });
+      if (closes) inKw = false;
+    });
+    return { words, up, dn };
+  });
+  return { segs, longP };
+}
+
+// --- fuerza de cada palabra (0 a 1): de menos a más hasta la palabra clave ---
+function dynamics(seg) {
+  const n = seg.words.length;
+  const ramp = (a, b, k, m) => (m <= 1 ? b : a + ((b - a) * k) / (m - 1));
+  const ki = seg.words.findIndex((w) => w.kw);
+  return seg.words.map((w, k) => {
+    if (w.kw) return 1;
+    if (ki >= 0 && k < ki) return ramp(0.15, 0.75, k, ki);
+    if (ki >= 0) return seg.up ? ramp(0.55, 0.9, k - ki - 1, n - ki - 1) : 0.5;
+    if (seg.up) return ramp(0.15, 1, k, n);
+    if (seg.dn) return ramp(0.8, 0.1, k, n);
+    return ramp(0.3, 0.6, k, n);
+  });
+}
+
+// --- armar el guion ---
+const lines = [];
+GUION.forEach((sec, si) => {
+  const h = document.createElement("div");
+  h.className = "sec";
+  const bars = Array.from({ length: 5 }, (_, k) => `<i class="${k < sec.f ? "on" : ""}"></i>`).join("");
+  h.innerHTML = `<b>${si + 1} · ${esc(sec.t)}</b><span class="force" aria-label="Fuerza ${sec.f} de 5">Fuerza ${bars}</span><span class="note">${esc(sec.n)}</span>`;
+  col.appendChild(h);
+  sec.l.forEach((raw, li) => {
+    const L = parseLine(raw);
+    L.secEnd = li === sec.l.length - 1 && si < GUION.length - 1;
+    L.hold = (L.longP ? PAUSA_LARGA : FIN_LINEA) + (L.secEnd ? FIN_SECCION : 0);
+    let html = "";
+    L.segs.forEach((s, k) => {
+      const d = dynamics(s);
+      s.words.forEach((w, j) => {
+        const size = (0.84 + 0.34 * d[j]).toFixed(2);
+        const weight = Math.round(320 + 480 * d[j]);
+        html += `<span class="w${w.kw ? " kw" : ""}" style="font-size:${size}em;font-weight:${weight}">${esc(w.text)}</span> `;
+      });
+      if (s.up) html += '<span class="ar up" aria-label="sube">↗</span> ';
+      if (s.dn) html += '<span class="ar dn" aria-label="baja">↘</span> ';
+      if (k < L.segs.length - 1) html += `<span class="pz">${secs(PAUSA_CORTA)}</span> `;
+    });
+    if (L.longP) html += `<span class="pz pz2">${secs(L.hold)}</span>`;
+    const p = document.createElement("p");
+    p.className = "ln";
+    p.innerHTML = html;
+    col.appendChild(p);
+    L.el = p;
+    L.wordEls = [...p.querySelectorAll(".w")];
+    L.pzEls = [...p.querySelectorAll(".pz")];
+    lines.push(L);
+  });
+});
+const endEl = document.createElement("p");
+endEl.className = "end";
+endEl.textContent = "Fin del guion. Quédate 2 segundos en silencio y detén la grabación en Audacity.";
+col.appendChild(endEl);
+
+// --- tiempos: cada palabra dura según sus sílabas; las pausas son fijas ---
+let total = 0, tops = [];
+function lineAt(t) {
+  for (let i = lines.length - 1; i >= 0; i--) if (t >= lines[i].start) return i;
+  return 0;
+}
+function build() {
+  let keep = null;
+  if (total) { const i = lineAt(state.t); const L = lines[i]; keep = { i, r: (state.t - L.start) / (L.end - L.start) }; }
+  const sps = 60 / (state.wpm * SILABAS_POR_PALABRA);
+  let t = 0;
+  lines.forEach((L) => {
+    L.start = t; L.ev = [];
+    let s = 0, wi = 0;
+    L.segs.forEach((seg, k) => {
+      seg.words.forEach((w) => {
+        const d = w.syl * sps;
+        L.ev.push({ k: "w", t0: t, d, s0: s, s1: s + w.syl, wi: wi++ });
+        t += d; s += w.syl;
+      });
+      if (k < L.segs.length - 1) { L.ev.push({ k: "p", t0: t, d: PAUSA_CORTA, s0: s, pi: k }); t += PAUSA_CORTA; }
+    });
+    L.ev.push({ k: "p", t0: t, d: L.hold, s0: s, end: true, pi: L.longP ? L.segs.length - 1 : -1 });
+    t += L.hold;
+    L.syl = s; L.end = t;
+  });
+  total = t;
+  if (keep) state.t = lines[keep.i].start + keep.r * (lines[keep.i].end - lines[keep.i].start);
+}
+function locate(t) {
+  const i = lineAt(t), L = lines[i];
+  let e = L.ev[L.ev.length - 1];
+  for (const ev of L.ev) if (t < ev.t0 + ev.d) { e = ev; break; }
+  const ef = Math.min(1, Math.max(0, (t - e.t0) / e.d));
+  const spoken = e.k === "w" ? e.s0 + ef * (e.s1 - e.s0) : e.s0;
+  return {
+    i,
+    frac: L.syl ? spoken / L.syl : 1,
+    word: e.k === "w" ? e.wi : -1,
+    wf: e.k === "w" ? ef : 0,
+    pz: e.k === "p" ? e.pi : -1,
+    pzDone: L.ev.filter((v) => v.k === "p" && v.pi >= 0 && v.t0 + v.d <= t).length,
+    pf: e.k === "p" ? ef : 0,
+    said: L.ev.filter((v) => v.k === "w" && v.t0 + v.d <= t).length,
+    pause: e.k === "p" ? { rem: Math.max(0, e.t0 + e.d - t), d: e.d, end: !!e.end, sec: L.secEnd && e.end } : null,
+  };
+}
+function measure() {
+  tops = lines.map((l) => l.el.offsetTop);
+  tops.push(endEl.offsetTop);
+}
+
+// --- dibujo ---
+let lastI = -1, lastSec = -1;
+const mmss = (s) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, "0")}`;
+function render() {
+  const at = locate(state.t);
+  const { i } = at;
+  const y = tops[i] + (tops[i + 1] - tops[i]) * at.frac;
+  scroller.style.transform = `translateY(${Math.round(stage.clientHeight * 0.36 - y)}px)`;
+  if (i !== lastI) {
+    lines.forEach((l, k) => { l.el.classList.toggle("past", k < i); l.el.classList.toggle("cur", k === i); });
+    $("lineNo").textContent = `línea ${i + 1} de ${lines.length}`;
+    lastI = i;
+  }
+  const L = lines[i];
+  L.wordEls.forEach((el, k) => {
+    const p = k < at.said ? 100 : k === at.word ? Math.round(at.wf * 100) : 0;
+    if (el._p !== p) { el.style.setProperty("--p", p + "%"); el._p = p; }
+  });
+  L.pzEls.forEach((el, k) => {
+    const p = k < at.pzDone ? 100 : k === at.pz ? Math.round(at.pf * 100) : 0;
+    if (el._p !== p) { el.style.setProperty("--p", p + "%"); el._p = p; }
+  });
+  const showPause = !!at.pause && at.pause.d >= 0.3 && (state.playing || state.t > 0) && state.t < total;
+  $("pause").hidden = !showPause;
+  if (showPause) {
+    $("pauseLbl").textContent = at.pause.sec ? "Respira" : "Pausa";
+    $("pauseS").textContent = secs(at.pause.rem);
+    $("pauseBar").style.width = `${(100 * at.pause.rem) / at.pause.d}%`;
+  }
+  const s = Math.floor(state.t);
+  if (s !== lastSec) { $("clock").textContent = `${mmss(state.t)} / ${mmss(total)}`; lastSec = s; }
+  $("bar").style.width = `${(100 * state.t) / total}%`;
+}
+function setPill(s) {
+  const txt = { leyendo: "Leyendo", pausa: "En pausa", silencio: "Silencio", fin: "Terminado" }[s];
+  $("pill").dataset.s = s;
+  $("pillTxt").textContent = txt;
+}
+function syncUI() {
+  $("play").textContent = state.playing || state.counting ? "Pausa" : state.t > 0 && state.t < total ? "Seguir" : "Empezar";
+  $("intro").hidden = !(state.t === 0 && !state.playing && !state.counting);
+  $("wpm").textContent = `${state.wpm} ppm`;
+  document.documentElement.style.setProperty("--fs", state.fs + "px");
+}
+
+// --- reproducir ---
+let wake = null, countTimer = null;
+async function keepAwake() { try { wake = await navigator.wakeLock?.request("screen"); } catch (e) {} }
+function startCount() {
+  if (state.t >= total) state.t = 0;
+  let n = state.t === 0 ? 3 : 2;
+  state.counting = true;
+  $("count").hidden = false;
+  $("countN").textContent = n;
+  $("countM").textContent = state.t === 0 ? "Silencio" : "Sigue en";
+  setPill("silencio");
+  syncUI();
+  keepAwake();
+  countTimer = setInterval(() => {
+    n -= 1;
+    if (n > 0) { $("countN").textContent = n; return; }
+    clearInterval(countTimer);
+    $("count").hidden = true;
+    state.counting = false;
+    state.playing = true;
+    setPill("leyendo");
+    syncUI();
+  }, 1000);
+}
+function pause() {
+  clearInterval(countTimer);
+  $("count").hidden = true;
+  state.counting = false;
+  state.playing = false;
+  setPill(state.t >= total ? "fin" : "pausa");
+  syncUI();
+  try { wake?.release(); } catch (e) {}
+}
+function toggle() { state.playing || state.counting ? pause() : startCount(); }
+function seek(t) { state.t = Math.max(0, Math.min(total, t)); syncUI(); }
+function jump(d) {
+  const i = lineAt(state.t), L = lines[i];
+  const k = d < 0 && state.t - L.start > 0.6 ? i : Math.max(0, Math.min(lines.length - 1, i + d));
+  seek(lines[k].start);
+}
+function setWpm(v) { state.wpm = Math.max(100, Math.min(200, v)); store.set("wpm", state.wpm); build(); syncUI(); lastSec = -1; }
+function setFs(v) { state.fs = Math.max(22, Math.min(96, v)); store.set("fs", state.fs); syncUI(); measure(); }
+
+let last = performance.now();
+function frame(now) {
+  const dt = Math.min(0.1, (now - last) / 1000);
+  last = now;
+  if (state.playing) {
+    state.t += dt;
+    if (state.t >= total) { state.t = total; pause(); }
+  }
+  render();
+  requestAnimationFrame(frame);
+}
+
+// --- controles ---
+const clickOnly = (fn) => (e) => { fn(); if (e.detail > 0) e.currentTarget.blur(); };
+$("play").addEventListener("click", clickOnly(toggle));
+$("prev").addEventListener("click", clickOnly(() => jump(-1)));
+$("next").addEventListener("click", clickOnly(() => jump(1)));
+$("slower").addEventListener("click", clickOnly(() => setWpm(state.wpm - 5)));
+$("faster").addEventListener("click", clickOnly(() => setWpm(state.wpm + 5)));
+$("smaller").addEventListener("click", clickOnly(() => setFs(state.fs - 4)));
+$("bigger").addEventListener("click", clickOnly(() => setFs(state.fs + 4)));
+$("restart").addEventListener("click", clickOnly(() => { pause(); seek(0); setPill("pausa"); }));
+function fullscreen() { const d = document.documentElement; (document.fullscreenElement ? document.exitFullscreen() : d.requestFullscreen?.())?.catch?.(() => {}); }
+$("full").addEventListener("click", clickOnly(fullscreen));
+
+document.addEventListener("keydown", (e) => {
+  if (e.ctrlKey || e.metaKey || e.altKey) return;
+  const k = e.key;
+  if (k === " ") { e.preventDefault(); if (!e.repeat) toggle(); }
+  else if (k === "ArrowUp") { e.preventDefault(); setWpm(state.wpm + 5); }
+  else if (k === "ArrowDown") { e.preventDefault(); setWpm(state.wpm - 5); }
+  else if (k === "ArrowLeft") { e.preventDefault(); jump(-1); }
+  else if (k === "ArrowRight") { e.preventDefault(); jump(1); }
+  else if (k === "+" || k === "=") setFs(state.fs + 4);
+  else if (k === "-" || k === "_") setFs(state.fs - 4);
+  else if (k === "Home") { pause(); seek(0); }
+  else if (k === "f" || k === "F") fullscreen();
+});
+stage.addEventListener("wheel", (e) => { e.preventDefault(); seek(state.t + e.deltaY * 0.012); }, { passive: false });
+let drag = null;
+stage.addEventListener("pointerdown", (e) => {
+  if (e.target.closest(".intro")) return;
+  const span = tops[tops.length - 1] - tops[0] || 1;
+  drag = { y: e.clientY, t: state.t, k: total / span };
+  stage.setPointerCapture(e.pointerId);
+});
+stage.addEventListener("pointermove", (e) => { if (drag) seek(drag.t + (drag.y - e.clientY) * drag.k); });
+stage.addEventListener("pointerup", () => { drag = null; });
+stage.addEventListener("pointercancel", () => { drag = null; });
+addEventListener("resize", measure);
+document.fonts?.ready.then(measure);
+
+build();
+syncUI();
+measure();
+requestAnimationFrame(frame);
+</script>

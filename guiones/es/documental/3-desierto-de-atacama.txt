@@ -1,0 +1,83 @@
+# Preguntas
+@fuerza 5
+> Pregunta con asombro, como si mostraras un lugar imposible.
+
+¿Existe un lugar donde casi **nunca** llueve? [sube]
+¿Por qué los astrónomos del mundo quieren trabajar ahí? [sube]
+¿Y qué tiene que ver ese desierto con **Marte**? [sube]
+
+# El lugar más seco
+@fuerza 4
+> Seguridad y claridad: los datos hablan solos.
+
+El desierto de Atacama está en el norte de Chile.
+Es el desierto no polar más **seco** del planeta.
+En algunas zonas, durante años, no se ha registrado ni una gota de lluvia.
+Al este, la cordillera de los Andes frena las nubes.
+Al oeste, una corriente fría del Pacífico impide que se formen lluvias.
+Así, la región queda atrapada entre dos **barreras**.
+De día, el sol quema la piel en pocos minutos.
+De noche, la temperatura puede bajar cerca de cero grados.
+[respira]
+Entre piedras y arena, el suelo es tan seco que casi no hay bacterias.
+¡Hay zonas donde no crece ni una sola planta!
+Pero el Atacama guarda **sorpresas**.
+
+# Agua de la niebla
+@fuerza 4
+> Curiosidad: cuéntalo como un truco ingenioso.
+
+Si no llueve, ¿de dónde sacan agua las plantas y las personas? [sube]
+La respuesta llega desde el mar, en forma de niebla.
+En la costa, esa niebla espesa tiene un nombre: **camanchaca{ca-man-CHA-ca}**.
+Algunos pueblos instalaron grandes mallas para atraparla.
+Se llaman **atrapanieblas**.
+Las gotas chocan con la malla, se juntan y caen a un canal.
+Cada malla puede juntar muchos litros de agua al día.
+[pausa]
+Con ellas se riegan huertos y hasta se fabrica cerveza.
+Es un sistema simple, barato y que no usa **electricidad**.
+Otros desiertos del mundo ya copiaron la idea.
+Así, un pueblo casi sin lluvia logra tener su propio jardín.
+
+# El mejor cielo del mundo
+@fuerza 4
+> Maravilla: aquí la voz se abre, como el cielo.
+
+Sin nubes ni humedad, el cielo del Atacama es uno de los más **limpios** del planeta.
+Tiene más de trescientas noches despejadas al año.
+Por eso ahí se construyeron algunos de los observatorios más grandes del mundo.
+Uno de ellos usa sesenta y seis antenas que trabajan juntas.
+Están a más de cinco mil metros de altura.
+[respira]
+Desde ahí se estudian galaxias lejanas y el nacimiento de las **estrellas**.
+De noche, a simple vista, la Vía Láctea parece una nube blanca.
+Hay quienes dicen que es como mirar el universo con lentes nuevos.
+¡Es un espectáculo que muchos viajeros vienen a buscar!
+Y hay más: cuando llueve fuerte, el desierto se **llena** de flores.
+Ocurre cada pocos años y dura unas semanas.
+
+# Un pedazo de Marte
+@fuerza 4
+> Tono intrigante, casi de ciencia ficción.
+
+Su suelo rojizo, seco y lleno de minerales se parece mucho al de **Marte**.
+Por eso, las agencias espaciales prueban ahí sus robots exploradores.
+Si una máquina funciona en el Atacama, tiene más posibilidades en otro planeta.
+Por eso también se han filmado ahí películas de ciencia ficción.
+[pausa]
+Los científicos también buscan **microbios** que sobreviven en esas condiciones.
+Si encuentran vida aquí, quizá sepamos dónde buscarla allá.
+Algunos rincones parecen tan vacíos como la superficie del planeta rojo.
+El desierto también guarda salares enormes, de un blanco que encandila.
+Bajo ellos hay **litio**, un metal clave para las baterías.
+El mismo lugar ayuda a mirar el universo y a cargar tu celular.
+Es un lugar que rompe todas las reglas: extremo y útil a la vez.
+
+# Cierre
+@fuerza 3
+> Bajando, con calma y admiración.
+
+El Atacama parece vacío, pero está lleno de **respuestas**.
+Agua de la niebla, cielos perfectos y un pedacito de Marte.
+Si te gustó este viaje, sígueme para el próximo destino. [baja]

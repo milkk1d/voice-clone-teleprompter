@@ -1,0 +1,79 @@
+# Arriving at the forest
+@energy 2
+> Slow and kind, like opening a door.
+
+[slow][soft]Close your eyes and let your breathing find its own pace.
+Imagine you're at the edge of a southern forest, in Patagonia.
+[breathe]
+The air is fresh and smells of damp earth and wood.
+The trees are tall, with ancient trunks covered in moss.
+Can you hear the leaves crunch beneath your steps? [up]
+[breathe]
+Walk slowly, with no hurry at all.
+Each step takes you further from the noise of the city.
+You're here now, and that's enough.[/soft][/slow]
+[pause 3s]
+
+# The trail
+@energy 1
+> Very soft; leave space between each image.
+
+[soft]The trail winds between ferns, plants and roots.
+Light comes through the branches in thin rays.
+[breathe]
+A small bird sings far away, and another one answers.
+Feel the soft ground under your feet, firm and steady.
+With every step, your shoulders feel a little lighter.
+[breathe]
+If a thought appears, let it go like a leaf in the wind.
+You don't have to follow it.
+Just walk, breathe and look around.[/soft]
+[pause 3s]
+
+# The lake
+@energy 1
+> Almost a whisper, with deep calm.
+
+[slow][soft]All at once, the forest opens and a lake of clear water appears.
+It's so still that it mirrors the mountains like glass.
+[breathe]
+You sit on a warm stone by the shore.
+Look at the water: it doesn't move, it isn't in a hurry.
+Your mind can be like that too.
+[breathe]
+Breathe with the lake: slow on the way in, slower on the way out.
+Listen to the silence, which here is vast and soft.
+Stay for a moment without doing anything.[/soft][/slow]
+[pause 3s]
+
+# The snow
+@energy 2
+> Soft, with a touch of wonder.
+
+[soft]High above, on the peaks, the **snow** shines in the afternoon sun.
+Imagine that clean white entering your chest with every breath.
+[breathe]
+As you exhale, let tiredness leave, like a gray cloud drifting away.
+Breathe in white, breathe out gray, again and again.
+Your body feels lighter with each round.
+[breathe]
+Do you notice how much space there is inside you now? [up]
+That space is yours too.
+You can come back to it whenever you want.[/soft]
+[pause 3s]
+
+# Returning
+@energy 2
+> Come back with care; a warm tone at the end.
+
+[slow]Say goodbye to the lake with one last look.
+Walk back along the trail, unhurried, between the trees.[/slow]
+[breathe]
+Little by little, the forest stays behind and you return to your room.
+Feel the weight of your body and the air around you.
+[breathe]
+Move your hands, stretch your back and open your eyes when you're ready.
+Take the forest's silence with you.
+It's kept inside you, a quiet treasure for whenever you need it. [down]
+Thank you for this walk.
+[pause 3s]

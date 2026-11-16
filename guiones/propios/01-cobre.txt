@@ -1,0 +1,66 @@
+# Preguntas de portada
+@fuerza 5
+> Sube al final y deja la pregunta en el aire. Aquí va la mayor melodía.
+
+¿Por qué Chile tiene tanto **cobre**? [sube]
+¿Qué glaciares se derriten más **rápido**? [sube]
+¿Por qué Guatemala tiene tantos **volcanes**? [sube]
+¿Y por qué justo **aquí**, en este rincón del planeta? [sube]
+
+# El cobre
+@fuerza 4
+> Explicando con seguridad. Empuja cada frase hacia la palabra subrayada.
+
+Casi uno de cada **cuatro** kilos de cobre del mundo [pausa 0.4s] sale de Chile.
+La respuesta empieza **bajo el mar**.
+Frente a la costa, la placa de Nazca se **hunde** bajo el continente: casi ocho centímetros cada año.
+Al hundirse, libera agua que derrite el manto y forma **magma**.
+Ese magma sube, levanta los Andes y trae **metales** desde las profundidades.
+Al enfriarse, el cobre queda **atrapado** en la roca.
+Y hoy se saca en minas como Escondida, la más **grande** del mundo.
+Solo esta mina produjo más de **un millón trescientas mil** toneladas el año pasado.
+
+# Hacia dónde va
+@fuerza 5
+> Más energía: es la parte que mueve el video.
+
+Desde Antofagasta, el cobre viaja en barco a través del **Pacífico**.
+Su mayor comprador es **China**: se lleva cerca de la mitad.
+¿Para qué tanto? [sube]
+Sin cobre no hay **cables**, ni energía eólica.
+Y un auto eléctrico usa más de **tres veces** el cobre de uno a bencina.
+
+# Los glaciares
+@fuerza 3
+> Más pausado, casi en confianza, pero con voz firme.
+
+Los glaciares que se derriten más rápido son los que terminan en **lagos** o en el mar.
+Son apenas el **tres por ciento** de los glaciares del mundo…
+pero, desde el año dos mil, explican más de la **mitad** del hielo perdido en el planeta.
+
+# Los volcanes
+@fuerza 4
+> Con algo de tensión, sin dramatizar.
+
+El volcán de Fuego, en Guatemala, lanzó ceniza a **cuatro mil** metros de altura.
+La respuesta está frente a la costa: la placa de **Cocos** se hunde bajo el continente.
+¿Te suena? [sube]
+Es lo mismo que pasa en Chile con la placa de **Nazca**.
+
+# Nombres y lugares
+@fuerza 3
+> Claros, sin apurarte. Cada nombre con su propia fuerza.
+
+Arica y Parinacota. Tarapacá. **Antofagasta**. Atacama.
+Perú, Bolivia y Argentina.
+La fosa de Atacama baja a más de **ocho mil** metros de profundidad.
+Campo de Hielo Sur. Perito **Moreno**.
+Tacaná, Tajumulco, Santa María, Atitlán, Acatenango, Fuego, Agua y **Pacaya**.
+
+# Cierres
+@fuerza 3
+> Bajando, con calma y una leve sonrisa. Firme hasta la última sílaba.
+
+Por eso, el mundo mira a **Chile**. [baja]
+Y ahora ya sabes **por qué**. [baja]
+Si te gustó, síguenos para la próxima **explicación**. [baja]

@@ -1,0 +1,58 @@
+# El misterio de las profundidades
+@fuerza 5
+> Mantén el tono curioso y cercano, como hablando con un amigo.
+¿Te has preguntado alguna vez qué hay al fondo del mar [sube]
+Imaginas la **oscuridad** total bajo las olas [sube]
+Sabes cuánta **presión** soporta un pez allí abajo [sube]
+
+# Un reino de tinieblas
+@fuerza 4
+> Ve bajando el ritmo, sumergiéndote de golpe en la ciencia.
+La luz del sol desaparece por completo a los mil metros.
+[respira]
+No llega ningún rayo a iluminar este rincón del planeta.
+El agua se vuelve fría como el **hielo** de la cordillera.
+[pausa]
+La **temperatura** ronda siempre los dos grados sobre cero.
+Los animales deben adaptarse para sobrevivir sin ver nada.
+Algunos peces fabrican su propia luz con órganos especiales.
+Esto les ayuda a cazar o a **chocar** con otros de su especie.
+Es un paisaje extraño y fascinante que pocos conocen.
+La naturaleza es **increíble** cuando se esconde de esta forma.
+
+# El peso del océano
+@fuerza 4
+> Pon fuerza en el dato científico clave de la presión.
+A medida que bajas, el peso del agua aumenta harto.
+Cada diez metros la presión sube con una fuerza brutal.
+[pausa]
+En las fosas marinas equivale a soportar cincuenta elefantes.
+Ningún **auto** resistiría un viaje tan profundo sin romperse.
+Por eso los seres que viven ahí tienen cuerpos de gelatina.
+No tienen huesos duros que puedan **quebrarse** tan fácil.
+El agua entra y sale de sus tejidos sin **lastimarlos**.
+[respira]
+Es una solución perfecta para un entorno tan hostil.
+[lento] La **vida** siempre se abre camino de algún modo. [/lento]
+
+# Criaturas de otro mundo
+@fuerza 4
+> Habla con asombro, mencionando varios ejemplos.
+Aquí abajo nadan criaturas que parecen sacadas de un libro.
+Encuentras al pez dragón, al pulpo dumbo y al rape gigante.
+Cada uno tiene una **estrategia** única para alimentarse.
+El calamar colosal patrulla la zona buscando presas lentas.
+Sus ojos gigantescos capturan el mínimo destello en el **vacío**.
+[respira]
+La comida es escasa y hay que aprovechar al tiro cualquier oportunidad.
+Muchos se alimentan de la **nieve** marina que cae desde arriba.
+Son restos de materia orgánica que bajan desde la superficie.
+Este ciclo alimenta a todo el ecosistema de la zona abisal.
+
+# El abismo final
+@fuerza 3
+> Cierra con tranquilidad y despídete invitando al canal.
+Nos falta mucho por **descubrir** en estos rincones oscuros.
+El océano es el gran misterio que nos queda por explorar.
+Si te gustó este video, suscríbete y dale un buen **like**.
+Nos vemos en la próxima aventura para seguir aprendiendo. [baja]

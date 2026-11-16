@@ -1,0 +1,64 @@
+You are an expert voice-over scriptwriter. Write a script for a person to read aloud
+and record their voice to create an AI voice clone.
+
+DETAILS
+- Language: English
+- Accent: Neutral / International. Reference words (use them only if they fit naturally; you don't need all of them): plain international vocabulary, metric units. Avoid: regional slang and idioms.
+- Style: News
+- Topic: How everyday technology works: phone location, wifi or the camera.
+- Length: 5 sections. Each section has 9 to 11 sentences (about 125 words).
+  In total, about 620 words ≈ 4 minutes.
+  Count the sentences in each section before you answer.
+
+HOW THIS STYLE SHOULD SOUND
+News anchor tone: clear, neutral and authoritative, with no opinions. Each section is a short news item about the topic (@energy 4); the first one opens with a headline. The first sentence of each item sums up the essentials. Mark key numbers, names and dates with **. Keep a steady pace: use [pause] only between items. Use general, verifiable facts or clearly fictional events; never attribute invented facts to real people or institutions. At most 1 exclamation in the whole script. The last item closes with a newscast sign-off.
+If the style contradicts any rule below, the style wins.
+
+WRITE THE WAY PEOPLE SPEAK
+- Simple, direct sentences of 20 words max. Vary the length: mix short sentences (5 to 8 words) and medium ones (12 to 18).
+- No more than 3 adverbs ending in "-ly" in the whole script.
+- Avoid formal written words (furthermore, moreover, considerably,
+  "it is worth mentioning") and don't repeat the same adjective.
+- Include 1 list ("A, B and C") and at most 1 sentence ending with !. Questions are optional.
+- Vary the shape between sections: open each one differently (question, fact, exclamation or scene) and don't repeat the same order of sentence types.
+- Naturally use at least one word with each sound:
+  voiced th, voiceless th, r, l, v, b, sh, ch, j, zh, ng, w, wh,
+  long and short vowels, and diphthongs.
+  Reference examples: this, think, river, light, voice, blue, shell, chair, jump,
+  measure, sing, water, whale, sheep, ship, now, boy.
+  Don't copy these examples: find words that fit the topic.
+- The accent guide words are a reference: use them only if they fit naturally.
+- Write numbers, acronyms and symbols as spoken ("thirteen hundred", "percent").
+- Use correct general facts. If you're not sure about a number, leave it out
+  or round it with "about".
+- Don't invent facts about real people or use real brand names.
+- No emojis, decorative headings or stage directions in parentheses.
+
+EMPHASIS
+- In each section, mark exactly 3 or 4 words with **word**.
+  Never more than one per sentence; the other sentences have no emphasis.
+- Pick the word that carries the meaning: a fact, a contrast or something new.
+  Don't put it at the end of the sentence by default.
+  Good: The pressure is a **thousand** times greater than at the surface.
+  Bad:  The pressure is a thousand times greater than at the **surface**.
+
+REQUIRED FORMAT (the teleprompter reads it automatically)
+- # Section title       → one for each requested section
+- @energy 1-5           → right below each title; applies to the whole section
+                          (if a part needs different energy, make another section)
+- > note                → a short direction for the reader (not read aloud)
+- [pause] or [pause 2s] → extra pause; at the end of a sentence or on its own line
+- [breathe]             → where to take a breath
+- Pauses: Use [pause] only between items: at most 1 per section, at the end.
+- [slow]...[/slow]  [fast]...[/fast]  [soft]...[/soft]  [loud]...[/loud]
+                        → may span several lines, closing within the same section
+- [up]                  → only on questions, after the question mark:
+                          What's at the bottom of the sea? [up]
+- [down]                → only at the end of the last sentence of a section
+                          Example: And now you know why. [down]
+- word{pro-NUN-ci-a-tion} → only for hard names, stressed syllable in capitals;
+                          with emphasis: **Tajumulco{ta-hu-MUL-co}**
+- One sentence per line. Blank lines only separate; they don't add a pause.
+- Don't use any other symbol or command, and write them exactly as shown.
+
+Return ONLY the script, inside a code block, with no explanation before or after.

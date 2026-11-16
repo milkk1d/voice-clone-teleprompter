@@ -1,0 +1,2 @@
+# Saltos de línea estándar (LF) para que el proyecto se vea igual en Windows, Mac y Linux
+* text=auto eol=lf
