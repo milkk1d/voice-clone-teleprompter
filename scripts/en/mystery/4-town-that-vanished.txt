@@ -1,0 +1,74 @@
+# The detour
+@energy 2
+> A low voice, a night drive.
+
+Sofia was driving at night on a southern road, with an almost empty tank.
+Her phone's navigation app had lost signal an hour earlier.
+Then she saw a wooden sign, half hidden by fog: "Valle Quieto, two kilometers."
+She didn't remember that town on any map.
+But she needed **gas** and a place to sleep.
+She crossed a bridge and took the detour.
+The dirt road wound down between tall, silent trees.
+[pause 2s]
+All at once, the **first** lights appeared.
+A small town, with stone houses, a square and a church with a clock.
+Everything seemed calm, too calm.
+Why was there no one in the streets, if it was only nine o'clock? [up]
+
+# The town
+@energy 2
+> Slow, with detail.
+
+[slow][soft]Sofia parked in front of an inn with lit windows.
+Inside, an old woman was knitting by the fireplace.
+"Welcome to Valle Quieto," she said without looking up. "We've been expecting you."
+Sofia smiled, a little puzzled.[/soft][/slow]
+She thought it was just a friendly way of talking.
+The woman gave her a brass key and a bowl of hot soup.
+The room had an iron bed, an oval mirror and a calendar on the wall.
+The calendar showed a very old **year**.
+She didn't think it was unusual.
+She was exhausted after so many hours on the road.
+She fell asleep listening to the church clock, which struck the hours with a **deep** sound.
+
+# The morning
+@energy 3
+> Very slow. Something doesn't fit.
+
+The next morning, the town was full of people.
+Children played in the square, a baker pulled bread from the oven and a dog slept in the sun.
+Everyone greeted her by name, though she hadn't told it to anyone.
+[soft]Nobody had a phone. Nobody had a car.[/soft]
+The shop signs were painted by hand, with letters from another time.
+Sofia asked where she could find a gas station.
+"You won't need one here," the baker said with a smile.
+"Whoever comes to Valle Quieto never needs to leave."
+A shiver ran down Sofia's spine.
+[pause 2s]
+She went back to the inn for her things, but her car was no longer in the **street**.
+In its place was a wooden cart, with a white **horse**.
+
+# The reveal
+@energy 4
+> The reveal: firm, no shouting.
+
+Sofia ran to the church and climbed the bell tower.
+From the top, she could see the whole valley.
+[pause 2s]
+And then she understood.
+The town had no roads **out**.
+The streets ended in the fog, as if someone had erased them.
+On the wall of the bell tower was a brass plaque with a very old date.
+"Here stood Valle Quieto, until the river covered it."
+[slow][soft]The town had been underwater for more than a hundred years.[/soft][/slow]
+But from that tower, the river was nowhere to be seen.
+Where, then, was the **water**? [up]
+And where was she? [up]
+
+# The end
+@energy 2
+> Very short. Leave the doubt hanging.
+
+A truck driver found Sofia's car on the shore of a lake, with the keys still in it.
+On the seat were a brass key and an old photo of a town with a church.
+On the map, that lake is called **Valle Quieto**.

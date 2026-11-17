@@ -1,0 +1,76 @@
+# El ático
+@fuerza 2
+> Voz baja, polvorienta.
+
+Cuando Elena heredó la casa de su tía abuela, encontró el ático cerrado con un candado.
+Nadie en la familia sabía dónde estaba la llave.
+Una tarde de lluvia, decidió romperlo con un martillo.
+La puerta se abrió con un quejido largo.
+Adentro olía a polvo, a papel viejo y a aceite de pintura.
+Había baúles, sillas rotas y un caballete cubierto con una sábana.
+Elena tiró de la sábana despacio.
+[pausa 2s]
+Debajo había un retrato al óleo de una **mujer** joven.
+Tenía un vestido azul, un collar de perlas y una sonrisa apenas insinuada.
+Sus ojos parecían seguirla a cualquier lugar del ático.
+¿**Quién** era esa mujer, y por qué la habían escondido? [sube]
+
+# Los cambios
+@fuerza 2
+> Lento. La tensión crece.
+
+[lento][suave]Elena bajó el retrato y lo colgó en el salón.
+Le pareció una pena dejarlo en la oscuridad.[/suave][/lento]
+Esa noche, antes de dormir, lo miró un largo rato.
+A la mañana siguiente, algo era extraño.
+La **sonrisa** de la mujer parecía un poco más amplia.
+Elena pensó que era la luz.
+Pero al tercer día, el collar de perlas ya no estaba en el cuadro.
+Y al quinto, el vestido azul se había vuelto **gris**.
+[pausa 2s]
+Elena revisó la pintura con una lupa.
+No había marcas de pincel nuevas, ni rastros de pintura fresca.
+¿Cómo podía cambiar un cuadro sin que nadie lo tocara? [sube]
+
+# Las cartas
+@fuerza 3
+> Muy lento. Cada detalle inquieta.
+
+Buscando respuestas, Elena volvió al ático.
+En el fondo de un baúl encontró un paquete de cartas atadas con una cinta.
+Eran de su tía abuela, escritas cuando tenía veinte años.
+Había pasado casi un siglo.
+En una de ellas hablaba del retrato.
+[suave]"Lo pintó un artista que conocí en el puerto. Dijo que guardaría mi alma."[/suave]
+En otra, escrita años después, la letra temblaba.
+"El cuadro envejece en mi lugar. Pero ya no puedo mirarlo."
+Elena dejó caer la carta.
+Recordó a su tía abuela: una mujer de noventa años con la piel de una joven.
+[pausa 2s]
+Y en la última carta, una sola frase, escrita con tinta **roja**.
+"Si alguien lo cuelga a la luz otra vez, el cuadro buscará otro **rostro**."
+
+# El espejo
+@fuerza 4
+> La revelación: firme, sin gritar.
+
+Elena corrió escaleras abajo, hasta el salón.
+El retrato seguía colgado sobre la chimenea.
+[pausa 2s]
+Pero la mujer del cuadro ya no era su tía abuela.
+Tenía el pelo corto, una chaqueta de lana y unos **ojos** cansados.
+Eran los ojos de Elena.
+Era su propio rostro, pintado al óleo, con todos sus detalles.
+Hasta el pequeño lunar junto a la boca.
+[lento][suave]Elena se acercó al espejo del pasillo, temblando.[/suave][/lento]
+Su reflejo le devolvió una imagen lisa, sin una sola arruga, como si hubiera rejuvenecido diez años.
+¿Era un regalo, o era una **condena**? [sube]
+Detrás de ella, en el cuadro, la mujer pintada sonreía.
+
+# El final
+@fuerza 2
+> Muy corto. Deja la duda en el aire.
+
+Elena volvió a cubrir el retrato con la sábana y lo subió al ático.
+Cerró la puerta con un candado nuevo.
+Pero a veces, de noche, desde arriba, se escucha a alguien **reír**.

@@ -1,0 +1,74 @@
+# El desvío
+@fuerza 2
+> Voz baja, de viaje nocturno.
+
+Sofía manejaba de noche por una ruta del sur, con el tanque casi vacío.
+El navegador del celular había perdido la señal hacía una hora.
+Entonces vio un cartel de madera, medio cubierto por la niebla: "Valle Quieto, dos kilómetros".
+No recordaba ese pueblo en ningún mapa.
+Pero necesitaba **gasolina** y un lugar donde dormir.
+Cruzó un puente y tomó el desvío.
+El camino de tierra bajaba entre árboles altos y silenciosos.
+[pausa 2s]
+De pronto, aparecieron las **primeras** luces.
+Un pueblo pequeño, con casas de piedra, una plaza y una iglesia con reloj.
+Todo parecía tranquilo, demasiado tranquilo.
+¿Por qué no había nadie en las calles, si apenas eran las nueve? [sube]
+
+# El pueblo
+@fuerza 2
+> Lento, con detalles.
+
+[lento][suave]Sofía estacionó frente a una posada con las ventanas iluminadas.
+Adentro, una mujer mayor tejía junto a la chimenea.
+"Bienvenida a Valle Quieto", dijo sin levantar la vista. "La estábamos esperando."
+Sofía sonrió, un poco extrañada.[/suave][/lento]
+Pensó que era una forma amable de hablar.
+La mujer le dio una llave de bronce y un plato de sopa caliente.
+La habitación tenía una cama de hierro, un espejo ovalado y un calendario en la pared.
+El calendario marcaba un **año** muy antiguo.
+Sofía no le dio importancia.
+Estaba agotada después de tantas horas de camino.
+Se durmió escuchando el reloj de la iglesia, que daba las horas con un sonido **profundo**.
+
+# La mañana
+@fuerza 3
+> Muy lento. Algo no encaja.
+
+A la mañana siguiente, el pueblo estaba lleno de gente.
+Había niños jugando en la plaza, un panadero sacando pan del horno y un perro dormido al sol.
+Todos la saludaban por su nombre, aunque ella no se lo había dicho a nadie.
+[suave]Nadie usaba celular. Nadie tenía auto.[/suave]
+Los carteles de las tiendas estaban pintados a mano, con letras de otra época.
+Sofía preguntó por una gasolinera.
+"Aquí no hace falta", le dijo el panadero, sonriendo.
+"Quien llega a Valle Quieto, ya no necesita irse."
+Sofía sintió un escalofrío.
+[pausa 2s]
+Volvió a la posada a buscar sus cosas, pero su auto ya no estaba en la **calle**.
+En su lugar había una carreta de madera, con un **caballo** blanco.
+
+# La revelación
+@fuerza 4
+> La revelación: firme, sin gritar.
+
+Sofía corrió hasta la iglesia y subió al campanario.
+Desde arriba se veía todo el valle.
+[pausa 2s]
+Y entonces lo entendió.
+El pueblo no tenía caminos de **salida**.
+Las calles terminaban en la niebla, como si alguien las hubiera borrado.
+En la pared del campanario había una placa de bronce con una fecha muy antigua.
+"Aquí estuvo Valle Quieto, hasta que el río lo cubrió."
+[lento][suave]El pueblo había quedado bajo el agua hacía más de cien años.[/suave][/lento]
+Pero desde ese campanario, el río no se veía por ninguna parte.
+¿Dónde estaba, entonces, el **agua**? [sube]
+¿Y dónde estaba ella? [sube]
+
+# El final
+@fuerza 2
+> Muy corto. Deja la duda en el aire.
+
+Un camionero encontró el auto de Sofía a la orilla de una laguna, con las llaves puestas.
+En el asiento había una llave de bronce y una foto antigua de un pueblo con iglesia.
+En el mapa, esa laguna se llama **Valle Quieto**.

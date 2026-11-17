@@ -1,0 +1,77 @@
+# La estación
+@fuerza 2
+> Voz baja, nocturna.
+
+Clara perdió el último tren a las once y cuarto.
+Lo vio alejarse desde la escalera, con la bolsa a medio cerrar y el **corazón** agitado.
+La estación quedó vacía en un minuto.
+Ya no había nadie en el andén.
+Solo quedaban un reloj que hacía tic tac y una máquina de café apagada.
+Miró el horario pegado en la pared.
+El siguiente tren salía a las seis de la mañana.
+Siete horas en un banco de metal, con un frío que se metía por los zapatos.
+Se sentó, se abrazó las rodillas y cerró los ojos.
+[pausa 2s]
+A las doce en punto, escuchó un **silbato** a lo lejos.
+Un tren se acercaba.
+¿Pero qué tren, si no había ninguno en el horario? [sube]
+
+# El tren
+@fuerza 2
+> Lento, con detalles.
+
+[lento][suave]El tren se detuvo sin hacer ruido.
+Era antiguo, de madera oscura, con lámparas de bronce en cada vagón.
+Las lámparas brillaban con un resplandor de otro siglo.
+Las ventanas estaban empañadas, y adentro se movían siluetas de gente.
+Una puerta se abrió frente a Clara, como una **invitación**.[/suave][/lento]
+Un revisor de uniforme gris asomó la cabeza.
+Tenía la cara pálida y una sonrisa amable.
+"¿Viene, señorita? Este tren la lleva a casa."
+Clara dudó.
+El reloj de la estación marcaba las doce, pero sus agujas no se movían.
+Tomó la bolsa y subió.
+La puerta se cerró detrás de ella, sin un **solo** sonido.
+
+# El vagón
+@fuerza 3
+> Muy lento. La tensión sube.
+
+Adentro hacía calor y olía a lavanda.
+Los pasajeros iban callados, con la mirada fija en las ventanas.
+Había una mujer con un sombrero de plumas, un niño con un trompo y un anciano leyendo un diario.
+Clara notó algo extraño en ese diario.
+La fecha era de hacía cincuenta años.
+[suave]Nadie hablaba. Nadie la miraba.[/suave]
+Por la ventana no se veía el paisaje de siempre.
+Se veían campos de trigo bajo una luna enorme, y casas con **chimeneas** encendidas.
+Lugares que Clara no conocía, pero que le parecían extrañamente familiares.
+[pausa 2s]
+Entonces el revisor se acercó y le pidió el **boleto**.
+Clara buscó en su bolsa y encontró uno que nunca había comprado.
+
+# La revelación
+@fuerza 4
+> La revelación: firme, sin gritar.
+
+El boleto era de papel amarillo, con letras gastadas.
+Tenía su nombre escrito con tinta azul.
+Y una fecha de hacía **cincuenta** años.
+[pausa 2s]
+"Este boleto era de su abuela", dijo el revisor en voz baja.
+"Lo compró para volver a casa, pero esa noche se quedó dormida en la estación."
+"Desde entonces, este tren pasa cada año, a la misma hora, esperando a que alguien lo use."
+Clara sintió un nudo en la garganta.
+Su abuela le había contado esa historia muchas veces, y ella siempre creyó que era un **cuento**.
+[lento]El tren empezó a frenar.[/lento]
+Afuera se veía la estación de su pueblo, iluminada como en una fiesta.
+¿Era posible que todo eso fuera real? [sube]
+
+# El final
+@fuerza 2
+> Muy corto. Deja la duda en el aire.
+
+Clara despertó en el banco de metal, de madrugada.
+El primer tren de las seis llegaba puntual.
+En su mano tenía un boleto **amarillo**, con su nombre.
+Y en el horario, por primera vez, había una línea nueva: doce en punto.

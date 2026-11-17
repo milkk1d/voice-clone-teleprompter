@@ -1,0 +1,80 @@
+# The empty house
+@energy 2
+> A low, slow voice, like telling a secret at night.
+
+At the end of Poplar Street there's a house **nobody** has lived in for years.
+It has dirty windows, a dry garden and a rusty gate set in a stone wall.
+The neighbors say the last owner moved away without saying goodbye to anyone.
+Nobody knows where she went.
+Lucas walks past that house every night, on his way home from work.
+He always walks a little faster on that stretch.
+He always looks the other way.
+But that winter night, something made him look.
+[pause 2s]
+In the second-floor window, a light was **on**.
+A yellow, warm light, like a table lamp.
+Who could be in there, if the house had been closed for years? [up]
+
+# The light
+@energy 2
+> Slow. The tension builds.
+
+[slow][soft]Lucas stopped by the gate.
+Nobody was out at that hour.
+The street was silent, except for the hum of a streetlight.
+The light in the window didn't flicker.
+There was something unusual about it.
+It was still and steady, as if someone were reading beside it.
+He looked for a simple explanation, but couldn't find one.
+Then he saw a **shadow** pass behind the curtain.[/soft][/slow]
+The hair on his arms stood up.
+He thought about calling someone, but what would he say? [up]
+"There's a light on in an empty house" didn't sound like an emergency.
+So he did something he had never done before.
+He pushed the gate, which creaked long and sharp, like a complaint.
+The light on the second floor went **out** all at once.
+
+# The door
+@energy 3
+> Very slow, every detail counts.
+
+[slow]The front door was ajar.[/slow]
+Lucas pushed it open with his fingertips.
+Inside, it smelled of dust, old wood and something sweet, like cinnamon.
+The air inside was icy.
+He turned on his phone's flashlight.
+The furniture was covered with white sheets.
+On the dining table there was a cup of tea.
+[soft]It was still **warm**.[/soft]
+From upstairs came a soft sound: a slow tune, from a music box.
+Lucas climbed the stairs, step by step.
+Each board creaked under his feet.
+The music was coming from the room at the end of the hall.
+[pause 2s]
+And the door to that room was **locked**.
+
+# The reveal
+@energy 4
+> The reveal: tense, but no shouting.
+
+Lucas knocked on the door three times.
+The music stopped.
+[pause 2s]
+A woman's voice, calm and old, said from inside: "You're late, Lucas."
+He took a step back.
+He had never told anyone on that street his name.
+The key turned in the lock on its own, and the door swung open.
+The room was **empty**.
+There was only a lamp switched on, an armchair and an open music box.
+On the armchair lay a letter with his name written by hand.
+[slow][soft]The handwriting was his **grandmother's**, and she had died ten years before.[/soft][/slow]
+How could she have known this house? [up]
+
+# The end
+@energy 2
+> Very short. Leave the doubt hanging.
+
+Lucas never opened the letter.
+He keeps it in a drawer, where it still is today.
+But every night, when he walks past that house, the second-floor light comes **on**.
+As if someone were **waiting** for him.

@@ -1,0 +1,79 @@
+# La casa vacía
+@fuerza 2
+> Voz baja y pausada, como quien cuenta un secreto de noche.
+
+Al final de la calle Los Álamos hay una casa que **nadie** habita desde hace años.
+Tiene las ventanas sucias, el jardín seco y una reja oxidada sobre un muro de piedra.
+Los vecinos dicen que la última dueña se mudó sin despedirse de nadie.
+Nadie sabe a dónde fue.
+Lucas pasa frente a esa casa todas las noches, al volver del trabajo.
+Siempre camina un poco más rápido en ese tramo.
+Siempre mira hacia otro lado.
+Pero esa noche de invierno, algo lo obligó a mirar.
+[pausa 2s]
+En la ventana del segundo piso había una luz **encendida**.
+Una luz amarilla, tibia, como la de una lámpara de mesa.
+¿Quién podía estar ahí, si la casa llevaba años cerrada? [sube]
+
+# La luz
+@fuerza 2
+> Lento. La tensión crece.
+
+[lento][suave]Lucas se detuvo junto a la reja.
+Ya no pasaba nadie a esa hora.
+La calle estaba en silencio, salvo por el zumbido de un poste de luz.
+La luz de la ventana no parpadeaba.
+Era quieta, constante, como si alguien estuviera leyendo junto a ella.
+Buscó una explicación simple, pero no encontró ninguna.
+Entonces vio una **sombra** pasar detrás de la cortina.[/suave][/lento]
+Se le erizó la piel de los brazos.
+Pensó en llamar a alguien, pero ¿qué iba a decir? [sube]
+"Hay una luz encendida en una casa vacía" no sonaba a emergencia.
+Así que hizo algo que nunca había hecho.
+Empujó la reja, que chirrió larga y aguda, como una queja.
+La luz del segundo piso se **apagó** de golpe.
+
+# La puerta
+@fuerza 3
+> Muy lento, cada detalle cuenta.
+
+[lento]La puerta principal estaba entreabierta.[/lento]
+Lucas la empujó con la punta de los dedos.
+Adentro olía a polvo, a madera vieja y a algo dulce, como canela.
+Adentro, el aire era glacial.
+Encendió la linterna del celular.
+Los muebles estaban cubiertos con sábanas blancas.
+En la mesa del comedor había una taza de té.
+[suave]Todavía estaba **tibia**.[/suave]
+Desde arriba llegó un sonido suave: una melodía lenta, de caja de música.
+Lucas subió la escalera, peldaño a peldaño.
+Cada tabla crujía bajo sus pies.
+La música venía de la habitación del fondo.
+[pausa 2s]
+Y la puerta de esa habitación estaba **cerrada** con llave.
+
+# La revelación
+@fuerza 4
+> El momento de la revelación: tenso, pero sin gritar.
+
+Lucas golpeó la puerta tres veces.
+La música se detuvo.
+[pausa 2s]
+Una voz de mujer, tranquila y anciana, dijo desde adentro: "Llegas tarde, Lucas."
+Él retrocedió un paso.
+Nunca le había dicho su nombre a nadie en esa calle.
+La llave giró sola en la cerradura, y la puerta se abrió.
+La habitación estaba **vacía**.
+Solo había una lámpara encendida, un sillón y una caja de música abierta.
+Sobre el sillón, una carta con su nombre escrito a mano.
+[lento][suave]La letra era la de su **abuela**, que había muerto hacía diez años.[/suave][/lento]
+¿Cómo podía ella conocer esta casa? [sube]
+
+# El final
+@fuerza 2
+> Muy corto. Deja la duda en el aire.
+
+Lucas nunca abrió la carta.
+La guardó en un cajón, donde sigue hasta hoy.
+Pero cada noche, cuando pasa frente a esa casa, la luz del segundo piso se **enciende**.
+Como si alguien lo estuviera **esperando**.

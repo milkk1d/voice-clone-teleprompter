@@ -1,0 +1,77 @@
+# The station
+@energy 2
+> A low, nighttime voice.
+
+Clara missed the last train at a quarter past eleven.
+She watched it pull away from the stairs, her bag half closed and her **heart** racing.
+The station emptied in a minute.
+There was no one left on the platform.
+Only a clock going tick tock and a coffee machine switched off.
+She looked at the schedule taped to the wall.
+The next train left at six in the morning.
+Seven hours on a metal bench, with a cold that crept into her shoes.
+She sat down, hugged her knees and closed her eyes.
+[pause 2s]
+At midnight, she heard a **whistle** in the distance.
+A train was coming.
+But what train, if there was none on the schedule? [up]
+
+# The train
+@energy 2
+> Slow, with detail.
+
+[slow][soft]The train stopped without a sound.
+It was old, made of dark wood, with brass lamps in every car.
+The lamps glowed with the light of another century.
+The windows were fogged up, and inside, silhouettes of people moved.
+A door opened in front of Clara, like an **invitation**.[/soft][/slow]
+A conductor in a gray uniform leaned out.
+He had a pale face and a kind smile.
+"Coming, miss? This train will take you home."
+Clara hesitated.
+The station clock read twelve, but its hands weren't moving.
+She picked up her bag and climbed aboard.
+The door closed behind her without a **single** sound.
+
+# The car
+@energy 3
+> Very slow. The tension rises.
+
+Inside it was warm and smelled of lavender.
+The passengers sat in silence, staring out the windows.
+There was a woman in a feathered hat, a boy with a top and an old man with a newspaper.
+Clara noticed something strange about that newspaper.
+Its date was from fifty years ago.
+[soft]Nobody spoke. Nobody looked at her.[/soft]
+Outside the window, the usual landscape was gone.
+Instead there were wheat fields under a huge moon, and houses with **chimneys** glowing.
+Places Clara didn't know, but that felt strangely familiar.
+[pause 2s]
+Then the conductor came over and asked for her **ticket**.
+Clara searched her bag and found one she had never bought.
+
+# The reveal
+@energy 4
+> The reveal: firm, no shouting.
+
+The ticket was made of yellow paper, with faded letters.
+It had her name written in blue ink.
+And a date from **fifty** years ago.
+[pause 2s]
+"This ticket belonged to your grandmother," the conductor said in a low voice.
+"She bought it to go home, but that night she fell asleep at the station."
+"Since then, this train comes every year, at the same hour, waiting for someone to use it."
+Clara felt a lump in her throat.
+Her grandmother had told her that story many times, and she had always thought it was a **fairy tale**.
+[slow]The train began to slow down.[/slow]
+Outside, she could see the station of her hometown, lit up as if for a party.
+Could all of this be real? [up]
+
+# The end
+@energy 2
+> Very short. Leave the doubt hanging.
+
+Clara woke up on the metal bench before dawn.
+The first train at six arrived right on time.
+In her hand was a **yellow** ticket with her name on it.
+And on the schedule, for the first time, there was a new line: twelve o'clock.
