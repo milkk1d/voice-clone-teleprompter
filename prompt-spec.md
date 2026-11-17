@@ -1008,7 +1008,7 @@ El script también imprime el comando de revisión que corresponde.
 
 ## 12. Pendientes
 
-**Hecho** (ver secciones 13 y 14): v1.4 aplicada · 60 guiones listos (ES y EN, seis estilos) · la web completa (quest bilingüe, armado de prompts, revisión de guiones pegados, teleprompter conectado) · guía de grabación con Audacity · política de privacidad. La web no recomienda una sola IA: ofrece ChatGPT, Claude y Gemini y confía en la revisión del guion.
+**Hecho** (ver secciones 13 y 14): v1.4 aplicada · 100 guiones listos (ES y EN, los 10 estilos, cada uno con sus propios 5 temas) · la web completa (quest bilingüe, armado de prompts, revisión de guiones pegados, teleprompter conectado) · guía de grabación con Audacity · política de privacidad. La web no recomienda una sola IA: ofrece ChatGPT, Claude y Gemini y confía en la revisión del guion.
 
 **Necesita a una persona:**
 - **Probar el prompt v1.4 con ChatGPT** (Meditación en inglés y Comercial en español): requiere una sesión iniciada. Los prompts están en `tests/prompts/v1.4-*.txt`.
@@ -1018,7 +1018,6 @@ El script también imprime el comando de revisión que corresponde.
 
 **Decisiones abiertas:**
 - Insistir o no en las 6 secciones del Documental cuando lo genera una IA (por ejemplo, con una estructura numerada), o aceptar que haga 5.
-- Guiones listos para los otros 4 estilos: Tutorial y Motivacional (próxima tanda), y después Suspenso y Reels.
 - Variantes de los guiones listos en rioplatense (voseo) y español de España (vosotros), si hay demanda.
 - Versión de unos 6 minutos de cada guion, para que un solo estilo alcance los 30 minutos de un clon profesional.
 - Anuncios (AdSense): activar recién con contenido y visitas, y nunca en el modo grabación. Revisar los términos del programa de afiliados de ElevenLabs (aviso de afiliado, uso de la marca).
@@ -1057,8 +1056,8 @@ node tools/index-scripts.js
 El mismo comando genera `scripts/scripts.js`, el paquete que lee `teleprompter.html`. Es un `.js` (y no los `.txt` sueltos) porque así funciona también abriendo la página con doble clic: el navegador no deja leer archivos de texto locales, pero sí cargar un script. **Después de editar cualquier guion, hay que volver a correrlo** para que el teleprompter vea el cambio. El paquete incluye además `scripts/examples/01-copper.txt`, el guion original del canal convertido al formato nuevo.
 
 ### En el teleprompter
-- Selector arriba: Documental, Podcast, Comercial, Mis guiones (el del cobre) y **Pegar un guion…** (el camino "Ya tengo mi guion"; el texto pegado queda guardado en ese navegador).
-- Al elegir un guion, la velocidad inicial es la del estilo (140, 145 o 165 ppm).
+- Selector arriba: los 10 estilos en el idioma de la interfaz y en el otro, Ejemplos (el del cobre) y **Pegar un guion…** (el camino "Ya tengo mi guion"; el texto pegado queda guardado en ese navegador).
+- Al elegir un guion, la velocidad inicial es la del estilo (de 100 ppm en Meditación a 170 ppm en Reels).
 - Pausas: coma 0,25 s y punto 0,45 s, sin cajita; `[pausa]` 1 s (o lo indicado) y `[respira]` 0,9 s, con cajita (punteada para respirar); cambio de sección 1,8 s.
 - Tramos: `[lento]` estira las palabras un 35 % y `[rápido]` las acorta un 25 %; los cuatro tramos se marcan con una etiqueta de color al empezar.
 - La versión anterior, con el guion del cobre escrito dentro del código, quedó respaldada en `teleprompter-original.html`.
@@ -1070,59 +1069,41 @@ El mismo comando genera `scripts/scripts.js`, el paquete que lee `teleprompter.h
 4. **Datos revisados**: cifras generales y verificables; en caso de duda, redondear o sacar el dato.
 5. **Productos ficticios** en los comerciales, sin marcas reales.
 
-### Primera tanda (español neutro)
+### La biblioteca completa
 
-| Tema | Documental | Podcast | Comercial |
-|---|---|---|---|
-| 1 | El océano profundo | Mi miedo al mar profundo | Océano: acuario, lámpara, app para dormir, submarino turístico, serie, peluche, buceo, protector solar |
-| 2 | La historia del chocolate | Mi bicicleta | Café: grano de origen, cafetera portátil, cafetería, descafeinado, suscripción, molinillo, curso de barista, café frío |
-| 3 | El desierto de Atacama | Primera vez en la gran ciudad | Patagonia: glaciares, chaqueta, hostal, app de senderos, termo, ballenas, mochila, kit sin huella |
-| 4 | Cómo sabe tu celular dónde estás | El wifi de mi casa | Cámara del celular: lentes, app de edición, trípode, curso, aro de luz, respaldo, funda, impresora |
-| 5 | Los nervios del primer día | El viaje que salió mal | Primer día de trabajo: app, camisa, curso de oratoria, mochila, desayuno, mentoría, bici plegable, libreta |
-| **Total de lectura** | **≈ 18 min** | **≈ 18 min** | **≈ 20 min** |
+Cada estilo tiene 5 guiones, uno por tema (sección 9), en español y en inglés: **100 guiones** (unos 374 minutos de lectura) más el del cobre. Los temas son distintos en cada estilo, así que al cambiar de estilo no se repite el mismo contenido contado de otra forma.
 
-Todos pasan el validador con 0 errores y 0 avisos.
+| Estilo | 1 | 2 | 3 | 4 | 5 |
+|---|---|---|---|---|---|
+| Documental | El océano profundo | La historia del chocolate | El desierto de Atacama | Cómo sabe tu celular dónde estás | Los nervios del primer día |
+| Noticiero | El clima de la semana en Puerto Alba | La final de la Liga Femenina del Valle | La lluvia de estrellas de esta noche | El nuevo tren de Valle Hondo | Noticiero de Villa Serena |
+| Audiolibro | La guardiana del faro | El reloj que se atrasaba | La carta que llegó cuarenta años tarde | El perro que esperaba en la estación | La niña que coleccionaba nubes |
+| Podcast | Cocinando con mi abuela | Mi primera mascota | Cómo dejé de dejarlo todo para mañana | Mi peor corte de pelo | Aprender piano después de los treinta |
+| Comercial (8 anuncios) | Heladería Copo Sur | Gimnasio La Cuadra | Zapatillas Zancada | Tren Valle Azul | App Charla |
+| Tutorial | Pan casero | Huerto en el balcón | Grabar tu voz en casa | Mochila de viaje | Plantas de interior |
+| Motivacional | Empezar de nuevo | El poder de los pasos pequeños | Fallar sin rendirse | Tu primera carrera | Cuidar tu energía |
+| Suspenso | La casa del final de la calle | El tren que no aparece en el horario | La llamada de las tres de la mañana | El pueblo que desapareció del mapa | El retrato del ático |
+| Reels (7 clips) | Datos curiosos del cuerpo humano | Animales con superpoderes | Trucos de cocina | Inventos que nacieron por accidente | Récords de la naturaleza |
+| Meditación | Lluvia en la ventana | Un campo de lavanda | Una noche estrellada | Relajar el cuerpo para dormir | Un río de montaña |
 
-**Duración:** los 5 temas de un estilo suman unos 18 a 20 minutos de lectura (más las pausas). Sirve para un clon rápido con margen; para uno profesional (30 minutos o más) hoy hay que leer dos estilos. Si se quiere un estilo solo de 30 minutos, la siguiente tanda puede alargar cada guion a unos 6 minutos.
+- Los 100 pasan el validador con 0 errores y 0 avisos.
+- **Inventado a propósito:** las ciudades y ligas del Noticiero (Puerto Alba, Valle Hondo, Villa Serena, la Liga Femenina del Valle) y todas las marcas de los comerciales. Las noticias ficticias lo dicen en voz alta, para que nunca se atribuyan a personas o lugares reales.
+- **Datos reales:** Documental, la lluvia de estrellas y los Reels usan datos generales y verificables (cifras redondeadas). Los inventos por accidente nombran a sus inventores reales con hechos conocidos.
+- **Narrador sin género gramatical** en los textos en primera persona (Podcast y Motivacional). En Audiolibro y Suspenso narra una tercera persona y los personajes sí tienen nombre y género.
+- **Duración:** los 5 guiones de un estilo suman unos 36 a 40 minutos de lectura. Alcanzan para un clon profesional (30 minutos) con un solo estilo.
 
 ### Lo que aprendimos escribiéndolos
-Los guiones los escribió Claude con las mismas reglas del prompt, y **cayó en los mismos errores que las IAs**: primero quedaron un 15–25 % cortos y, en 6 de los 15, más del 80 % de los énfasis estaban al final de la frase. El validador detectó todo y se corrigió antes de publicar. Confirma dos cosas:
-- El validador es indispensable, incluso para guiones "propios".
-- El idioma tiende a poner la fuerza al final de la frase; hay que mover los énfasis a propósito.
+Los guiones los escribió Claude con las mismas reglas del prompt, y **cayó en los mismos errores que las IAs**, tanda tras tanda:
+- La primera versión casi siempre quedó corta (un 10–25 % bajo el largo pedido), sobre todo en Noticiero, Meditación y Motivacional.
+- En Comercial, Suspenso y Reels, más del 80 % de los énfasis quedó en la última palabra de la frase. Hubo que moverlos a la palabra importante.
+- En Comercial y Reels, varias frases pasaron el límite de 10 o 12 palabras.
 
-### Segunda tanda (inglés y Meditación)
-
-| Tema | Documentary | Podcast | Commercial | Meditación (ES) | Calm (EN) |
-|---|---|---|---|---|---|
-| 1 | The deep ocean | Why the deep sea scares me | Eight deep-ocean ads | Un océano en calma | A calm ocean |
-| 2 | The history of chocolate | My bike | Eight coffee ads | Una taza de chocolate caliente | A cup of hot chocolate |
-| 3 | The Atacama Desert | First time in the big city | Eight Patagonia ads | Un bosque del sur | A southern forest |
-| 4 | How your phone knows where you are | My home Wi-Fi | Eight phone camera ads | Soltar el celular | Unplugging from your phone |
-| 5 | First-day nerves | The trip that went wrong | Eight first-day-at-work ads | Antes de un día importante | Before a big day |
-
-- Los guiones en inglés adaptan los mismos temas y productos ficticios que los españoles, con vocabulario internacional y ortografía de EE. UU.
-- Las meditaciones usan cada tema como paisaje o ritual (el mar, una taza de chocolate, un bosque patagónico, soltar el celular, la noche antes de un día importante).
-- Los 25 pasan el validador con 0 errores y 0 avisos.
-
-### Tercera tanda (Noticiero y Audiolibro)
-
-| Tema | Noticiero (ES) | News (EN) | Audiolibro (ES) | Audiobook (EN) |
-|---|---|---|---|---|
-| 1 | Noticias del océano profundo | Deep ocean news | La última inmersión | The last dive |
-| 2 | La historia del chocolate, en noticias | The history of chocolate, as news | La bicicleta del abuelo | Grandpa's bicycle |
-| 3 | Informe especial desde Atacama | Special report from the Atacama | Viento en la Patagonia | Wind in Patagonia |
-| 4 | Noticias de la tecnología diaria | Everyday tech news | Sin señal | No signal |
-| 5 | Noticiero de Villa Serena | The Villa Serena newscast | El primer día de Julia | Julia's first day |
-
-- **Noticiero:** cinco notas por guion, con datos generales y verificables (fechas y cifras redondeadas). El tema 5 es el noticiero de **Villa Serena, un pueblo inventado**, y lo dice en voz alta: así las noticias ficticias nunca se atribuyen a personas o lugares reales.
-- **Audiolibro:** cuentos con narrador en tercera persona, inicio, conflicto y desenlace, diálogos entre comillas, `[suave]` en los momentos íntimos y `[pausa 2s]` en los giros. Como el narrador no habla de sí, la regla de no darle género no aplica; los personajes sí tienen nombre y género.
-- Los 20 pasan el validador con 0 errores y 0 avisos. Igual que en las tandas anteriores, la primera versión de los noticieros quedó corta (un 12–17 % bajo el largo pedido) y se alargó con datos antes de publicar.
-- En total la biblioteca tiene **60 guiones listos** (unos 227 minutos de lectura) más el del cobre.
+El validador detectó todo y se corrigió antes de publicar. Confirma que el validador es indispensable, incluso para guiones "propios", y que el idioma tiende a poner la fuerza al final de la frase.
 
 ### Pendientes de la biblioteca
 - **Leerlos en voz alta** y corregir lo que suene raro al decirlo (el validador no ve eso).
 - Variantes rioplatense y España, si hay demanda.
-- Los otros 4 estilos: Tutorial, Motivacional, Suspenso y Reels.
+- Libros clásicos de dominio público para Audiolibro y Suspenso (los textos ya están ubicados en Wikisource).
 
 ---
 
