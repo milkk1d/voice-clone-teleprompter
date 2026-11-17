@@ -768,6 +768,7 @@ Al presionar **Revisar guion**, el teleprompter revisa el texto y muestra avisos
 | Frase más larga que el máximo del estilo (20; 12 en Comercial; 10 en Reels) | Aviso | Frase muy larga: agrega una coma o divídela. | Sentence too long: add a comma or split it. |
 | Más de un `**` en una frase | Aviso | Deja solo una palabra fuerte por frase. | Keep only one strong word per sentence. |
 | **Énfasis por sección fuera de lo pedido** (±1) | Aviso | Esta sección tiene pocos (o demasiados) énfasis. | This section has too few (or too many) emphases. |
+| **Ningún énfasis en todo el guion** (en estilos que los piden) | Aviso, en lugar de los avisos por sección | Los asteriscos se perdieron al copiar el texto con formato: usa el botón Copiar del bloque de código. | The asterisks were lost when copying formatted text: use the code block's Copy button. |
 | **Frases por sección fuera de lo pedido** (±2) | Aviso | Esta sección es más corta (o larga) que lo pedido. | This section is shorter (or longer) than requested. |
 | **Más de 2 `[pausa]` en una sección** (salvo Meditación) | Aviso | Demasiadas pausas: se pierde el efecto. | Too many pauses: they lose their effect. |
 | **Más de 2 `[baja]` en una sección** | Aviso | Usa `[baja]` solo en la última frase. | Use `[down]` only on the last sentence. |

@@ -61,6 +61,7 @@
       long: (w, m) => `Frase de ${w} palabras (máximo ${m} en este estilo).`,
       repeated: (top, n, pos) => `Estructura repetida: ${top} de ${n} secciones siguen la misma secuencia de frases${pos ? ` y ${pos} posiciones abren casi siempre con la misma palabra` : ""}. Para el clon conviene más variedad.`,
       emphCount: (t, e, a, b) => `La sección "${t}" tiene ${e} énfasis; se pidieron ${a} a ${b}.`,
+      noEmph: "No hay ninguna palabra marcada con **. Si copiaste el guion desde el chat de la IA, lo más probable es que los asteriscos se perdieran al copiar el texto con formato (se ven como negrita). Usa el botón Copiar del bloque de código, o pídele a la IA que entregue el guion dentro de un bloque de código.",
       sentCount: (t, s, a, b) => `La sección "${t}" tiene ${s} frases; se pidieron ${a} a ${b}.`,
       sections: (n, m) => `Tiene ${n} secciones; se pidieron ${m}.`,
       length: (w, m) => `Largo: ${w} palabras; se pidieron unas ${m} (±15 %).`,
@@ -101,6 +102,7 @@
       long: (w, m) => `Sentence of ${w} words (max ${m} for this style).`,
       repeated: (top, n, pos) => `Repeated structure: ${top} of ${n} sections follow the same sentence sequence${pos ? ` and ${pos} positions almost always open with the same word` : ""}. More variety helps the clone.`,
       emphCount: (t, e, a, b) => `Section "${t}" has ${e} emphases; ${a} to ${b} were requested.`,
+      noEmph: "No word is marked with **. If you copied the script from the AI chat, the asterisks were most likely lost when copying formatted text (they show up as bold). Use the Copy button on the code block, or ask the AI to return the script inside a code block.",
       sentCount: (t, s, a, b) => `Section "${t}" has ${s} sentences; ${a} to ${b} were requested.`,
       sections: (n, m) => `It has ${n} sections; ${m} were requested.`,
       length: (w, m) => `Length: ${w} words; about ${m} were requested (±15%).`,
@@ -254,9 +256,12 @@
       if (top / sections.length >= 0.75 || samePos >= 2) add("aviso", 0, T.repeated(top, sections.length, samePos));
     }
     const tol = P.emph[1] <= 1 ? 0 : 1;
+    // sin ningún ** en un estilo que los pide: casi siempre se perdieron al copiar el texto con formato desde el chat
+    const noEmph = P.emph[0] > 0 && sentences > 0 && sections.every((s) => s.emph === 0);
+    if (noEmph) add("aviso", 0, T.noEmph);
     sections.forEach((s, i) => {
       const short = (P.firstShort && i === 0) || (P.lastShort && i === sections.length - 1);
-      if (!short && s.emph < P.emph[0] - tol) add("aviso", s.line, T.emphCount(s.title, s.emph, P.emph[0], P.emph[1]));
+      if (!short && !noEmph && s.emph < P.emph[0] - tol) add("aviso", s.line, T.emphCount(s.title, s.emph, P.emph[0], P.emph[1]));
       if (s.emph > P.emph[1] + tol) add("aviso", s.line, T.emphCount(s.title, s.emph, P.emph[0], P.emph[1]));
       if ((!short && s.sent < P.frases[0] - 2) || s.sent > P.frases[1] + 2) add("aviso", s.line, T.sentCount(s.title, s.sent, P.frases[0], P.frases[1]));
     });
