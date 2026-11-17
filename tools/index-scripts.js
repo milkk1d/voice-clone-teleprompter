@@ -144,13 +144,29 @@ for (const lang of fs.readdirSync(ROOT).filter((d) => fs.statSync(path.join(ROOT
     }
   }
 }
-fs.writeFileSync(path.join(ROOT, "index.json"), JSON.stringify({ generado: new Date().toISOString().slice(0, 10), guiones: items }, null, 2) + "\n");
+// Clásicos de dominio público (scripts/<idioma>/classics/<estilo>/): son textos originales, así que solo se exigen
+// 0 errores de formato; las reglas de largo y énfasis de los guiones listos no aplican. Metadatos: scripts/classics.json.
+const classics = [];
+const CMETA = JSON.parse(fs.readFileSync(path.join(ROOT, "classics.json"), "utf8"));
+for (const c of CMETA) {
+  const out = execFileSync("node", [path.join(__dirname, "validate-script.js"), path.join(ROOT, c.archivo),
+    "--lang", c.idioma, "--style", c.estilo], { encoding: "utf8" });
+  const words = Number(out.match(/Palabras: (\d+)/)[1]);
+  const errs = Number(out.match(/Errores: (\d+)/)[1]);
+  if (errs) { problems++; console.log(out.trim()); }
+  classics.push({ id: c.id, idioma: c.idioma, estilo: c.estilo, estiloNombre: STYLES[c.estilo].nombre, tema: c.n, clasico: true,
+    titulo: c.titulo, autor: c.autor, obra: c.obra, archivo: c.archivo, palabras: words,
+    minutos: Math.round((words / STYLES[c.estilo].ppm) * 10) / 10, errores: errs });
+}
+fs.writeFileSync(path.join(ROOT, "index.json"), JSON.stringify({ generado: new Date().toISOString().slice(0, 10), guiones: items, clasicos: classics }, null, 2) + "\n");
 
 // Paquete para el teleprompter: un .js que se puede cargar con <script> aunque la página
 // se abra con doble clic (file://), donde el navegador no deja leer .txt sueltos.
 const EXAMPLES = [{ archivo: "examples/01-copper.txt", titulo: "El cobre de Chile (guion original del canal)", ppm: 140 }];
 const bundle = items.map((i) => ({ id: i.id, idioma: i.idioma, estilo: i.estilo, estiloNombre: i.estiloNombre, tema: i.tema,
   titulo: i.titulo, ppm: STYLES[i.estilo].ppm, texto: fs.readFileSync(path.join(ROOT, i.archivo), "utf8").replace(/\r/g, "") }));
+for (const c of classics) bundle.push({ id: c.id, idioma: c.idioma, estilo: c.estilo, estiloNombre: c.estiloNombre, tema: c.tema, clasico: true,
+  titulo: c.titulo, autor: c.autor, ppm: STYLES[c.estilo].ppm, texto: fs.readFileSync(path.join(ROOT, c.archivo), "utf8").replace(/\r/g, "") });
 for (const p of EXAMPLES) {
   const f = path.join(ROOT, p.archivo);
   if (fs.existsSync(f)) bundle.push({ id: p.archivo.replace(/\.txt$/, ""), idioma: "es", estilo: "example", estiloNombre: "Mis guiones",
@@ -158,7 +174,7 @@ for (const p of EXAMPLES) {
 }
 fs.writeFileSync(path.join(ROOT, "scripts.js"), "// Generado por tools/index-scripts.js — no editar a mano.\nwindow.GUIONES_LISTOS = " + JSON.stringify(bundle, null, 1) + ";\n");
 console.log(`scripts/scripts.js: ${bundle.length} guiones empaquetados para el teleprompter`);
-console.log(`${items.length} guiones indexados · ${problems} con errores o avisos`);
+console.log(`${items.length} guiones indexados y ${classics.length} clásicos · ${problems} con errores o avisos`);
 for (const s of Object.keys(STYLES)) {
   const g = items.filter((i) => i.estilo === s);
   if (g.length) console.log(`  ${s}: ${g.length} guiones · ${g.reduce((a, i) => a + i.minutos, 0).toFixed(1)} min de lectura en total`);

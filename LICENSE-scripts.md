@@ -4,10 +4,12 @@ The scripts in the `scripts/` folder, the specification (`prompt-spec.md`), the 
 
 You may copy, adapt and use them for any purpose, including commercial use, as long as you **credit the source**: "Scripts from voice-clone-teleprompter by milkk1d", with a link to the repository.
 
+**Exception: the public-domain classics** in `scripts/es/classics/` and `scripts/en/classics/` (stories by Poe, O. Henry, Wilde, Twain, Saki, Bierce, Bécquer, Darío, Palma and Pardo Bazán) are in the public domain. They were taken from Wikisource; only the section breaks and reader notes were added, and the Spanish spelling was modernized.
+
 The code (`.html`, `.js` and `.css` files) is MIT-licensed; see `LICENSE`.
 
 ---
 
-Los guiones de la carpeta `scripts/`, la especificación, la guía de grabación y los demás textos del sitio están bajo la licencia **Creative Commons Atribución 4.0 Internacional (CC BY 4.0)**. Puedes copiarlos, adaptarlos y usarlos para cualquier fin, incluso comercial, siempre que **cites la fuente**: "Guiones de voice-clone-teleprompter, de milkk1d", con un enlace al repositorio. El código está bajo la licencia MIT; ver `LICENSE`.
+Los guiones de la carpeta `scripts/`, la especificación, la guía de grabación y los demás textos del sitio están bajo la licencia **Creative Commons Atribución 4.0 Internacional (CC BY 4.0)**. Puedes copiarlos, adaptarlos y usarlos para cualquier fin, incluso comercial, siempre que **cites la fuente**: "Guiones de voice-clone-teleprompter, de milkk1d", con un enlace al repositorio. **Excepción: los clásicos** de `scripts/es/classics/` y `scripts/en/classics/` son de dominio público. Se tomaron de Wikisource; solo se agregaron las divisiones en partes y las notas para quien lee, y se actualizó la ortografía en español. El código está bajo la licencia MIT; ver `LICENSE`.
 
 Full legal text / Texto legal completo: https://creativecommons.org/licenses/by/4.0/legalcode

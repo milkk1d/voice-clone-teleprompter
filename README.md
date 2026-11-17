@@ -9,6 +9,7 @@ Free scripts and a karaoke-style teleprompter to record your voice for AI voice 
 - **Free, no accounts.** Everything runs in your browser.
 - **Your voice never leaves your computer.** You record with your own program (for example, Audacity).
 - **100 ready-made scripts** in English and Spanish: all 10 styles (Documentary, News, Audiobook, Podcast, Commercial, Tutorial, Motivational, Mystery, Social media and Calm), each with its own 5 topics.
+- **20 public-domain classics** to read aloud (10 to 24 minutes each): stories by Poe, O. Henry, Wilde, Twain, Saki and Bierce in English, and by Bécquer, Darío, Palma and Pardo Bazán in Spanish.
 - **Want another topic or style?** The site builds a prompt for your own AI (ChatGPT, Claude, Gemini…) to write the script, and checks it when you paste it in.
 
 ## How to use it on your computer
@@ -89,6 +90,7 @@ Guiones gratis y un teleprompter tipo karaoke para grabar tu voz y clonarla con 
 - **Gratis y sin cuentas.** Todo funciona en tu navegador.
 - **Tu voz nunca sale de tu computador.** Grabas con tu propio programa (por ejemplo, Audacity).
 - **100 guiones listos** en español e inglés: los 10 estilos (Documental, Noticiero, Audiolibro, Podcast, Comercial, Tutorial, Motivacional, Suspenso, Reels y Meditación), cada uno con sus propios 5 temas.
+- **20 clásicos de dominio público** para leer en voz alta (de 10 a 24 minutos cada uno): cuentos de Bécquer, Darío, Palma y Pardo Bazán en español, y de Poe, O. Henry, Wilde, Twain, Saki y Bierce en inglés.
 - **¿Quieres otro tema o estilo?** La web arma un prompt para que tu IA (ChatGPT, Claude, Gemini…) escriba el guion, y lo revisa cuando lo pegas.
 
 ### Cómo usarlo en tu computador

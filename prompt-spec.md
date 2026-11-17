@@ -1103,9 +1103,23 @@ El validador detectó todo y se corrigió antes de publicar. Confirma que el val
 ### Pendientes de la biblioteca
 - **Leerlos en voz alta** y corregir lo que suene raro al decirlo (el validador no ve eso).
 - Variantes rioplatense y España, si hay demanda.
-- Libros clásicos de dominio público para Audiolibro y Suspenso (los textos ya están ubicados en Wikisource).
 
 ---
+
+### Clásicos de dominio público
+
+Además de los guiones listos, Audiolibro y Suspenso tienen **5 cuentos clásicos por idioma** (20 en total), de 10 a 24 minutos cada uno. Están en `scripts/<idioma>/classics/<estilo>/` y sus metadatos en `scripts/classics.json`.
+
+| | Audiolibro | Suspenso |
+|---|---|---|
+| ES | El alacrán de fray Gómez y La camisa de Margarita (Ricardo Palma) · El rey burgués, El sátiro sordo y El rubí (Rubén Darío) | Los ojos verdes, El monte de las ánimas y La ajorca de oro (Bécquer) · El talismán (Emilia Pardo Bazán) · El caso de la señorita Amelia (Rubén Darío) |
+| EN | The Gift of the Magi y The Last Leaf (O. Henry) · The Selfish Giant y The Nightingale and the Rose (Oscar Wilde) · The Story of the Good Little Boy (Mark Twain) | The Oval Portrait, The Cask of Amontillado y The Masque of the Red Death (Poe) · The Open Window (Saki) · An Inhabitant of Carcosa (Ambrose Bierce) |
+
+- **Dominio público en todas partes:** obras publicadas antes de 1931 de autores que murieron hace más de 100 años (así también cubren la regla de 100 años de México). En cada idioma solo hay textos originales, nunca traducciones, porque una traducción tiene sus propios derechos.
+- **Fuente:** Wikisource. Se agregaron solo las divisiones en partes (unas 250 palabras), la fuerza de cada parte y una nota inicial con autor y obra. El texto no se cambió, salvo la ortografía antigua en español ("á" → "a", "fué" → "fue") y un error de transcripción ("se haban" → "se liaban" en Los ojos verdes).
+- **Sin violencia explícita:** se descartaron The Tell-Tale Heart, The Boarded Window y La resucitada por sus descripciones gráficas o su final, y se reemplazaron por The Oval Portrait, An Inhabitant of Carcosa y La ajorca de oro.
+- **Validación:** solo se exigen 0 errores de formato. Las reglas de largo, frases y énfasis de los guiones listos no aplican a un texto original, así que los clásicos no llevan énfasis marcados.
+- **En la web:** el teleprompter los muestra en grupos aparte ("Clásicos · Audiolibro · ES", etc.) con el autor junto al título, y el plan de la quest los ofrece debajo de los guiones de Audiolibro y Suspenso.
 
 ## 14. La web
 

@@ -336,7 +336,7 @@ const T = {
     end: "Fin del guion. Quédate 2 segundos en silencio y detén la grabación en Audacity.",
     empty: "Este guion no tiene líneas para leer. Revisa el formato.",
     span: { lento: "lento", rapido: "rápido", suave: "suave", fuerte: "fuerte" },
-    myGroup: "Mi guion", ownGroup: "Ejemplos", pasted: "Guion pegado", pasteOpt: "Pegar un guion…",
+    myGroup: "Mi guion", ownGroup: "Ejemplos", classics: "Clásicos", pasted: "Guion pegado", pasteOpt: "Pegar un guion…",
     dlgTitle: "Pega tu guion", dlgStyle: "Estilo", dlgLang: "Idioma del guion",
     dlgHelp: "Usa el formato del guion: <code># Sección</code>, <code>@fuerza 4</code>, <code>&gt; nota</code>, <code>**palabra**</code>, <code>[pausa]</code>, <code>[respira]</code>, <code>[sube]</code>/<code>[baja]</code>, <code>[lento]…[/lento]</code>. Si lo copiaste de una IA, pega solo lo que está dentro del bloque de código. Al usarlo, lo revisamos según el estilo.",
     cancel: "Cancelar", check: "Revisar y usar", anyway: "Usar igual",
@@ -372,7 +372,7 @@ const T = {
     end: "End of the script. Stay silent for 2 seconds and stop the recording in Audacity.",
     empty: "This script has no lines to read. Check the format.",
     span: { lento: "slow", rapido: "fast", suave: "soft", fuerte: "loud" },
-    myGroup: "My script", ownGroup: "Examples", pasted: "Pasted script", pasteOpt: "Paste a script…",
+    myGroup: "My script", ownGroup: "Examples", classics: "Classics", pasted: "Pasted script", pasteOpt: "Paste a script…",
     dlgTitle: "Paste your script", dlgStyle: "Style", dlgLang: "Script language",
     dlgHelp: "Use the script format: <code># Section</code>, <code>@energy 4</code>, <code>&gt; note</code>, <code>**word**</code>, <code>[pause]</code>, <code>[breathe]</code>, <code>[up]</code>/<code>[down]</code>, <code>[slow]…[/slow]</code>. If you copied it from an AI, paste only what's inside the code block. We check it against the style when you use it.",
     cancel: "Cancel", check: "Check and use", anyway: "Use anyway",
@@ -720,17 +720,20 @@ const PASTE = "__pegar", PASTED = "__pegado";
 const styleName = (k) => D.styles[k]?.nombre[ui] || k;
 function fillPicker(selected) {
   const pick = $("pick");
-  const rank = (g) => [g.estilo === "example" ? 2 : g.idioma === ui ? 0 : 1, ORDEN.indexOf(g.estilo), g.tema];
-  const sorted = LISTOS.slice().sort((a, b) => { const x = rank(a), y = rank(b); return x[0] - y[0] || x[1] - y[1] || x[2] - y[2]; });
+  // orden: guiones listos en el idioma de la interfaz, luego en el otro idioma, luego los clásicos y al final los ejemplos
+  const rank = (g) => [g.estilo === "example" ? 3 : g.clasico ? 2 : g.idioma === ui ? 0 : 1, g.idioma === ui ? 0 : 1, ORDEN.indexOf(g.estilo), g.tema];
+  const sorted = LISTOS.slice().sort((a, b) => { const x = rank(a), y = rank(b); return x[0] - y[0] || x[1] - y[1] || x[2] - y[2] || x[3] - y[3]; });
   const groups = new Map();
   for (const g of sorted) {
-    const label = g.estilo === "example" ? tr("ownGroup") : `${styleName(g.estilo)} · ${g.idioma.toUpperCase()}`;
+    const label = g.estilo === "example" ? tr("ownGroup")
+      : g.clasico ? `${tr("classics")} · ${styleName(g.estilo)} · ${g.idioma.toUpperCase()}`
+      : `${styleName(g.estilo)} · ${g.idioma.toUpperCase()}`;
     if (!groups.has(label)) groups.set(label, []);
     groups.get(label).push(g);
   }
   let html = "";
   for (const [label, list] of groups) {
-    html += `<optgroup label="${esc(label)}">` + list.map((g) => `<option value="${esc(g.id)}">${g.tema ? g.tema + ". " : ""}${esc(g.titulo)}</option>`).join("") + "</optgroup>";
+    html += `<optgroup label="${esc(label)}">` + list.map((g) => `<option value="${esc(g.id)}">${g.tema ? g.tema + ". " : ""}${esc(g.titulo)}${g.autor ? " — " + esc(g.autor) : ""}</option>`).join("") + "</optgroup>";
   }
   const pasted = store.get("pegado", "");
   html += `<optgroup label="${esc(tr("myGroup"))}">${pasted ? `<option value="${PASTED}">${esc(tr("pasted"))}</option>` : ""}<option value="${PASTE}">${esc(tr("pasteOpt"))}</option></optgroup>`;

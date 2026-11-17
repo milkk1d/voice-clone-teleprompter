@@ -2,7 +2,9 @@
 // Usa window.DATOS (especificación), window.Prompt (armado de prompts) y window.GUIONES_LISTOS (guiones listos).
 (function () {
   const D = window.DATOS;
-  const LISTOS = Array.isArray(window.GUIONES_LISTOS) ? window.GUIONES_LISTOS : [];
+  const TODOS = Array.isArray(window.GUIONES_LISTOS) ? window.GUIONES_LISTOS : [];
+  const LISTOS = TODOS.filter((g) => !g.clasico); // los 5 guiones de cada estilo
+  const CLASICOS = TODOS.filter((g) => g.clasico); // cuentos de dominio público, aparte
   const $ = (s, el = document) => el.querySelector(s);
   const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
   const store = {
@@ -44,7 +46,9 @@
       seePlan: "Ver mi plan", needStyle: "Elige al menos un estilo.", needTopic: "Escribe tu tema.",
       readyTitle: "Guion listo", open: "Abrir en el teleprompter",
       readyAll: (n, m) => `Los ${n} guiones listos de este estilo suman unos ${m} minutos de lectura.`,
-      readyPro: "Para llegar a 30 minutos, suma otro estilo o genera partes nuevas con tu IA (abajo).",
+      readyPro: "Con eso alcanzas los 30 minutos de un clon profesional. Si quieres más, genera partes nuevas con tu IA (abajo).",
+      classicsTitle: "Además: cuentos clásicos de dominio público para leer",
+      classicsNote: "Textos originales tomados de Wikisource, con la ortografía actualizada. No traen marcas de énfasis: léelos con naturalidad, como un audiolibro.",
       neutralNote: "Los guiones listos están en español neutro. Si hablas con voseo o con «vosotros», genera uno con tu IA para que el texto calce con tu forma de hablar.",
       genOwn: "¿Prefieres un guion nuevo? Genéralo con tu IA",
       promptTitle: "Prompt para tu IA",
@@ -93,7 +97,9 @@
       seePlan: "See my plan", needStyle: "Pick at least one style.", needTopic: "Write your topic.",
       readyTitle: "Ready-made script", open: "Open in the teleprompter",
       readyAll: (n, m) => `The ${n} ready-made scripts for this style add up to about ${m} minutes of reading.`,
-      readyPro: "To reach 30 minutes, add another style or generate new parts with your AI (below).",
+      readyPro: "That's enough for the 30 minutes of a professional clone. If you want more, generate new parts with your AI (below).",
+      classicsTitle: "Also: public-domain classic stories to read",
+      classicsNote: "Original texts taken from Wikisource. They have no emphasis marks: read them naturally, like an audiobook.",
       neutralNote: "",
       genOwn: "Prefer a new script? Generate it with your AI",
       promptTitle: "Prompt for your AI",
@@ -264,6 +270,12 @@
           <details><summary>${t("genOwn")}</summary>${promptBlock(r, lang, style)}</details>`;
       } else {
         body = `<h4 class="kicker" style="margin:0">${t("promptTitle")}</h4>${promptBlock(r, lang, style)}`;
+      }
+      const cls = CLASICOS.filter((g) => g.idioma === lang && g.estilo === style);
+      if (cls.length) {
+        body += `<details><summary>${t("classicsTitle")}</summary>
+          <ul class="clean ready-list">${cls.map((g) => `<li><span>${esc(g.titulo)} — ${esc(g.autor)} · ${Math.round(g.texto.split(/\s+/).length / g.ppm)} min</span><a href="teleprompter.html?script=${encodeURIComponent(g.id)}">${t("open")} →</a></li>`).join("")}</ul>
+          <p class="muted">${t("classicsNote")}</p></details>`;
       }
       items.push(`<article class="plan-item"><h3>${esc(st.nombre[ui])} <small>${langName} · ${esc(q.accent[lang])}</small></h3>${body}</article>`);
     }
