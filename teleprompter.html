@@ -134,6 +134,16 @@ dialog select { font: 13px var(--mono); color: var(--paper); background: var(--b
 .tg-rapido { color: var(--ocre); }
 .tg-suave { color: var(--muted); }
 .tg-fuerte { color: var(--red); }
+/* líneas para grabar de nuevo */
+.ln.redo { border-left: 4px solid var(--red); padding-left: .45em; margin-left: -.45em; }
+.ln.redo:not(.cur) { opacity: .75; }
+.ln.redo.past { opacity: .3; }
+.redo-tag {
+  display: inline-block; font-family: var(--mono); font-size: .3em; font-weight: 600; text-transform: uppercase; letter-spacing: .1em;
+  color: var(--paper); background: var(--red); border-radius: 3px; padding: .1em .5em; margin-right: .5em; vertical-align: .6em; white-space: nowrap;
+}
+.redo-why { display: block; margin-top: .25em; font-family: var(--mono); font-size: max(12px, .34em); font-weight: 500; color: var(--ocre); line-height: 1.4; }
+#redoOnly[aria-pressed="true"] { color: var(--paper); background: var(--red); border-color: var(--red); }
 .ar { font-family: system-ui, "Segoe UI Symbol", sans-serif; font-size: .8em; }
 .up { color: var(--sky); }
 .dn { color: var(--ocre); }
@@ -284,6 +294,7 @@ dialog .row { display: flex; gap: 8px; justify-content: flex-end; margin-top: 10
     <button id="bigger" type="button" aria-label="Letra más grande">A+</button>
   </div>
   <div class="grp">
+    <button id="redoOnly" type="button" aria-pressed="false" hidden>Solo regrabar</button>
     <button id="restart" type="button">Reiniciar</button>
     <button id="full" type="button" class="hide-sm">Pantalla completa</button>
   </div>
@@ -329,6 +340,7 @@ let ui = store.get("ui", (navigator.language || "es").toLowerCase().startsWith("
 const T = {
   es: {
     home: "← Inicio", help: "Ayuda", title: "Teleprompter · Clona tu voz", pick: "Elegir guion", restart: "Reiniciar", full: "Pantalla completa",
+    redoTag: "regrabar", redoOnly: (n) => `Solo regrabar (${n})`, redoAll: "Ver todo el guion",
     pill: { leyendo: "Leyendo", pausa: "En pausa", silencio: "Silencio", fin: "Terminado" },
     start: "Empezar", pauseBtn: "Pausa", resume: "Seguir", silence: "Silencio", backIn: "Sigue en",
     pause: "Pausa", breathe: "Respira", force: "Fuerza",
@@ -358,6 +370,7 @@ const T = {
         <li><b>Texto ocre pequeño:</b> cómo se pronuncia la palabra.</li>
         <li><b>Cuadros ocres:</b> la fuerza de cada sección, de 1 a 5.</li>
         <li><b>Si te equivocas,</b> no pares: repite la frase completa y después cortas el error.</li>
+        <li><b>Líneas con borde rojo («regrabar»):</b> hay que grabarlas de nuevo; abajo, en ocre, dice por qué. El botón <b>Solo regrabar</b> deja solo esas, cada una con la fuerza y la nota de su sección. Se marcan escribiendo <code>[regrabar: motivo]</code> al comienzo de la línea.</li>
         <li><b>Las teclas suenan en el micrófono:</b> apriétalas en las pausas. Con la rueda del mouse también puedes mover el guion.</li>
       </ul></details>
       <p class="links"><a href="guide.html">Guía de grabación</a> · <a data-afiliado="elevenlabs">Crear mi clon en ElevenLabs ↗</a> <small>(enlace de afiliado)</small></p>`,
@@ -365,6 +378,7 @@ const T = {
   },
   en: {
     home: "← Home", help: "Help", title: "Teleprompter · Clone your voice", pick: "Choose a script", restart: "Restart", full: "Full screen",
+    redoTag: "retake", redoOnly: (n) => `Retakes only (${n})`, redoAll: "Show full script",
     pill: { leyendo: "Reading", pausa: "Paused", silencio: "Silence", fin: "Finished" },
     start: "Start", pauseBtn: "Pause", resume: "Resume", silence: "Silence", backIn: "Back in",
     pause: "Pause", breathe: "Breathe", force: "Energy",
@@ -394,6 +408,7 @@ const T = {
         <li><b>Small ochre text:</b> how to pronounce the word.</li>
         <li><b>Ochre squares:</b> each section's energy, from 1 to 5.</li>
         <li><b>If you make a mistake,</b> don't stop: repeat the whole sentence and cut the mistake later.</li>
+        <li><b>Lines with a red edge ("retake"):</b> record them again; the ochre note below says why. The <b>Retakes only</b> button keeps just those, each with its section's energy and note. Mark one by starting the line with <code>[retake: reason]</code>.</li>
         <li><b>Keys can be heard on the mic:</b> press them during pauses. You can also scroll the script with the mouse wheel.</li>
       </ul></details>
       <p class="links"><a href="guide.html">Recording guide</a> · <a data-afiliado="elevenlabs">Create my clone on ElevenLabs ↗</a> <small>(affiliate link)</small></p>`,
@@ -406,6 +421,7 @@ const state = {
   wpm: 140, lang: "es",
   fs: store.get("fs", Math.round(Math.min(48, Math.max(26, innerWidth / 22)))),
   t: 0, playing: false, counting: false,
+  redoOnly: store.get("soloRegrabar", true),   // si el guion trae líneas para regrabar, parte mostrando solo esas
 };
 
 const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
@@ -419,13 +435,17 @@ function parseScript(text) {
   let sec = null, open = [], pending = null, inKw = false;
   const newSec = (t) => { sec = { t, f: null, n: [], lines: [] }; sections.push(sec); open = []; pending = null; inKw = false; };
   for (const raw of text.replace(/\r/g, "").split("\n")) {
-    const t = raw.trim();
+    let t = raw.trim();
     if (!t || /^```/.test(t)) continue;
     if (/^#\s+/.test(t)) { newSec(t.replace(/^#\s+/, "")); continue; }
     const fm = t.match(/^@(fuerza|energy)\s+(\d+)/i);
     if (fm) { if (!sec) newSec(""); sec.f = Math.max(1, Math.min(5, +fm[2])); continue; }
     if (/^>/.test(t)) { if (!sec) newSec(""); sec.n.push(t.replace(/^>\s*/, "")); continue; }
     if (!sec) newSec("");
+    // [regrabar: motivo] al comienzo de la línea: hay que grabarla de nuevo (lo escribe la revisión de la toma)
+    let redo = null;
+    t = t.replace(/^\[\s*(?:regrabar|retake)\s*(?::\s*([^\]]*))?\]\s*/i, (_, why) => { redo = (why || "").trim(); return ""; });
+    if (!t) continue;
 
     const segs = [];
     const blank = () => ({ words: [], up: false, dn: false, after: null });
@@ -489,9 +509,17 @@ function parseScript(text) {
       }
       continue;
     }
-    sec.lines.push({ segs, lead });
+    sec.lines.push({ segs, lead, redo });
   }
   return sections.filter((s) => s.lines.length);
+}
+
+// --- solo las líneas para grabar de nuevo, cada una con el tono de su sección ---
+const countRedo = (sections) => sections.reduce((n, s) => n + s.lines.filter((L) => L.redo !== null).length, 0);
+function onlyRedo(sections) {
+  return sections
+    .map((s) => ({ ...s, lines: s.lines.filter((L) => L.redo !== null).map((L) => ({ ...L, alone: true })) }))
+    .filter((s) => s.lines.length);
 }
 
 // --- fuerza de cada palabra (0 a 1): de menos a más hasta la palabra clave ---
@@ -527,7 +555,10 @@ function renderScript(sections) {
     let prevSt = [];
     sec.lines.forEach((L, li) => {
       L.secEnd = li === sec.lines.length - 1 && si < sections.length - 1;
+      // al regrabar líneas sueltas, entre una y otra hay tiempo de volver a entrar en el tono
+      if (L.alone && !(si === sections.length - 1 && li === sec.lines.length - 1)) L.secEnd = true;
       let html = "", bi = 0;
+      if (L.redo !== null && L.redo !== undefined) html += `<span class="redo-tag">${esc(tr("redoTag"))}</span>`;
       const box = (a) => { a.bi = bi++; return `<span class="pz${a.rs ? " rs" : ""}">${esc(a.box)}</span> `; };
       if (L.lead && L.lead.box) html += box(L.lead);
       L.segs.forEach((s) => {
@@ -545,8 +576,9 @@ function renderScript(sections) {
         if (s.dn) html += '<span class="ar dn" aria-label="baja">↘</span> ';
         if (s.after && s.after.box) html += box(s.after);
       });
+      if (L.redo) html += `<span class="redo-why">${esc(L.redo)}</span>`;
       const p = document.createElement("p");
-      p.className = "ln";
+      p.className = "ln" + (L.redo !== null && L.redo !== undefined ? " redo" : "");
       p.innerHTML = html;
       col.appendChild(p);
       L.el = p;
@@ -741,11 +773,25 @@ function fillPicker(selected) {
   pick.setAttribute("aria-label", tr("pick"));
   if (selected) pick.value = selected;
 }
+let lastText = "", lastOpts = {};
+$("redoOnly").addEventListener("click", (e) => {
+  state.redoOnly = !state.redoOnly;
+  store.set("soloRegrabar", state.redoOnly);
+  loadScript(lastText, { lang: state.lang, ppm: state.wpm });
+  e.currentTarget.blur();
+});
 function loadScript(text, opts) {
   pause();
   state.lang = opts.lang || (/(@energy|\[(pause|breathe|up|down|slow|fast|soft|loud)\b)/i.test(text) ? "en" : "es");
   if (opts.ppm) state.wpm = opts.ppm;
-  renderScript(parseScript(text));
+  const sections = parseScript(text);
+  const nRedo = countRedo(sections);
+  const btn = $("redoOnly");
+  btn.hidden = !nRedo;
+  btn.setAttribute("aria-pressed", String(!!(nRedo && state.redoOnly)));
+  btn.textContent = nRedo && state.redoOnly ? tr("redoAll") : tr("redoOnly")(nRedo);
+  lastText = text; lastOpts = opts;
+  renderScript(nRedo && state.redoOnly ? onlyRedo(sections) : sections);
   total = 0; state.t = 0; lastI = -1; lastSec = -1;
   build(); syncUI(); measure(); setPill("pausa");
   document.fonts?.ready.then(measure);

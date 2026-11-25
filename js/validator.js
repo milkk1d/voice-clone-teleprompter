@@ -47,6 +47,7 @@
       unknownDirective: (t) => `Directiva desconocida: ${t}`,
       preamble: "Hay texto antes de la primera sección (¿texto extra de la IA?).",
       unknownCmd: (c, s) => `Comando no reconocido: [${c}] (se mostrará como texto).${s ? ` ¿Quisiste decir [${s}]?` : ""}`,
+      retakePlace: (c) => `[${c}] va al comienzo de la línea; en otro lugar no marca nada.`,
       closesNothing: (c) => `[${c}] cierra algo que no estaba abierto.`,
       mismatch: (c, raw, l) => `[${c}] no coincide con [${raw}] abierto en la línea ${l}.`,
       aloneTone: (c) => `[${c}] está solo o al inicio: debe ir al final de la frase que modifica.`,
@@ -88,6 +89,7 @@
       unknownDirective: (t) => `Unknown directive: ${t}`,
       preamble: "There is text before the first section (extra text from the AI?).",
       unknownCmd: (c, s) => `Unknown command: [${c}] (it will be shown as text).${s ? ` Did you mean [${s}]?` : ""}`,
+      retakePlace: (c) => `[${c}] goes at the start of the line; anywhere else it marks nothing.`,
       closesNothing: (c) => `[${c}] closes something that was not open.`,
       mismatch: (c, raw, l) => `[${c}] doesn't match [${raw}] opened on line ${l}.`,
       aloneTone: (c) => `[${c}] is alone or at the start: it must go at the end of the sentence it changes.`,
@@ -184,6 +186,11 @@
 
       for (const m of t.matchAll(/\[([^\]]*)\]/g)) {
         const inner = m[1].trim();
+        // [regrabar: motivo] marca una línea para grabarla de nuevo; solo vale al comienzo de la línea
+        if (/^(regrabar|retake)\b/i.test(inner)) {
+          if (m.index !== 0) add("aviso", n, T.retakePlace(inner.split(/[\s:]/)[0]));
+          continue;
+        }
         if (inner.startsWith("/")) {
           const name = SPANS[inner.slice(1).toLowerCase()];
           if (!name) { add("aviso", n, T.unknownCmd(inner, suggest(inner.slice(1)))); continue; }
